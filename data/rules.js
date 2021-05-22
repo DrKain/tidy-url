@@ -61,6 +61,6 @@ const $kurlc_rules = [
     }
 ];
 
-if (typeof module !== 'udefined') {
-    module.exports = $kurlc_rules;
-}
+module = module ?? { exports: null };
+
+module.exports = $kurlc_rules;
