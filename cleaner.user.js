@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kain's URL Cleaner
 // @namespace    https://ksir.pw
-// @version      0.1.3
+// @version      0.1.5
 // @description  Removes garbage parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
@@ -68,6 +68,12 @@ const kurlc = [
         name: 'spotify',
         match: /open.spotify.com/i,
         rules: ['si', 'utm_source'],
+        replace: []
+    },
+    {
+        name: 'aliexpress',
+        match: /.*.aliexpress.com/i,
+        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid'],
         replace: []
     }
 ];
