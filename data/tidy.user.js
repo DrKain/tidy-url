@@ -25,7 +25,7 @@ let kurlc = [];
 if (typeof $kurlc_rules === 'udefined') console.error('[TidyURL] Failed to load rules.js - Script will not work');
 else kurlc = $kurlc_rules;
 
-console.log(`Target: ${url}\nOrigin: ${original.origin}`);
+console.log(`Target: ${window.location.href}\nOrigin: ${original.origin}`);
 
 for (let rule of kurlc) {
     if (rule.match.exec(host) !== null) {

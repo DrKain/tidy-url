@@ -10,7 +10,8 @@ const tests = [
     'https://www.mightyape.co.nz/search?page=1&r=3386626&utm_content=grd-nz-1195453813162301200&q=Sony',
     'https://www.humblebundle.com/subscription?hmb_campaign=210504_12for12_premium_banner&hmb_medium=banner',
     'https://watch.plex.tv/?plex_utm=1&utm_source=Plex&utm_medium=marketing-site&utm_campaign=Free%20Movies%20%7C%20Watch%20Free%20With%20Plex&origin=marketing',
-    'https://www.amazon.com/dp/B014N4Q7AK/ref=cm_sw_r_cp_apa_glt_fabc_FCDDJCWWMV22T0THJS3D'
+    'https://www.amazon.com/dp/B014N4Q7AK/ref=cm_sw_r_cp_apa_glt_fabc_FCDDJCWWMV22T0THJS3D',
+    'https://www.amazon.com/stores/page/178CFE22-9512-4C2F-BC37-8070B261FDB6&ref_=af_gw_tallhero_apr_katyperry?pf_rd_r=V7VBS6NHY2DK5XE7TRM9&pf_rd_p=de3491ec-f98c-420b-b1b2-d06e1f3b0a48'
 ];
 
 TidyURL.debug = true;
