@@ -61,6 +61,5 @@ const $kurlc_rules = [
     }
 ];
 
-module = module ?? { exports: null };
-
+var module = module ?? { exports: null };
 module.exports = $kurlc_rules;
