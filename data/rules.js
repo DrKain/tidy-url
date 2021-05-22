@@ -8,7 +8,7 @@ const $kurlc_rules = [
     {
         name: 'audible.com',
         match: /www.audible.com/i,
-        rules: ['qid', 'sr', 'pf_rd_p', 'pf_rd_r', 'plink'],
+        rules: ['qid', 'sr', 'pf_rd_p', 'pf_rd_r', 'plink', 'ref'],
         replace: []
     },
     {
