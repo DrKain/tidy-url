@@ -6,6 +6,8 @@
 // @author       Kain (ksir.pw)
 // @include      *
 // @icon         https://www.google.com/s2/favicons?domain=ksir.pw
+// @updateURL    https://github.com/DrKain/url-cleaner/raw/main/cleaner.user.js
+// @downloadURL  https://github.com/DrKain/url-cleaner/raw/main/cleaner.user.js
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
