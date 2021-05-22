@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Kain's URL Cleaner
 // @namespace    https://ksir.pw
-// @version      0.1
+// @version      0.1.1
 // @description  Removes garbage parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
-// @icon         https://www.google.com/s2/favicons?domain=ksir.pw
+// @icon         data:image/gif;base64,R0lGODlhEAAQAMIDAAAAAIAAAP8AAP///////////////////yH5BAEKAAQALAAAAAAQABAAAAMuSLrc/jA+QBUFM2iqA2ZAMAiCNpafFZAs64Fr66aqjGbtC4WkHoU+SUVCLBohCQA7
 // @updateURL    https://github.com/DrKain/url-cleaner/raw/main/cleaner.user.js
 // @downloadURL  https://github.com/DrKain/url-cleaner/raw/main/cleaner.user.js
 // @grant        none
@@ -13,8 +13,8 @@
 // ==/UserScript==
 
 const cleaner = new URLSearchParams(window.location.search);
-const modified = 0;
-const queue = [];
+let modified = 0;
+let queue = [];
 const host = window.location.hostname;
 
 // ---------------------------------------
