@@ -1,7 +1,7 @@
 ---
 name: Broken Website
 about: Report a broken website
-title: 'Broken Website: example.com'
+title: 'Broken: example.com'
 labels: bug
 assignees: DrKain
 
