@@ -21,7 +21,7 @@ const $kurlc_rules = [
         name: 'amazon.com',
         match: /www.amazon.com/i,
         rules: ['pd_rd_w', 'qid', 'sr', 'keywords', 'dchild', 'ref', 'ref_', 'rnid', 'pf_rd_r', 'pf_rd_p', 'rh', 'pd_rd_r', 'smid', 'pd_rd_wg'],
-        replace: [/\/ref=[^\/?]*/i]
+        replace: [/(\/ref|&ref_)=[^\/?]*/i]
     },
     {
         name: 'reddit.com',
