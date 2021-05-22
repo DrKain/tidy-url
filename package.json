@@ -1,0 +1,20 @@
+{
+    "name": "url-cleaner",
+    "version": "1.0.0",
+    "description": "Removes tracking or garbage parameters from URLs",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DrKain/url-cleaner.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DrKain/url-cleaner/issues"
+    },
+    "homepage": "https://github.com/DrKain/url-cleaner#readme",
+    "devDependencies": {
+        "prettier": "^2.3.0"
+    }
+}
