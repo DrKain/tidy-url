@@ -2,7 +2,7 @@ const $kurlc_rules = [
     {
         name: 'Global',
         match: /.*/,
-        rules: ['ga_source', 'ga_medium', 'ga_term', 'ga_content', 'ga_campaign', 'ga_place'],
+        rules: ['ga_source', 'ga_medium', 'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'utm_campaign', 'utm_source', 'utm_medium', 'utm_content'],
         replace: []
     },
     {
@@ -62,13 +62,49 @@ const $kurlc_rules = [
     {
         name: 'deezer.com',
         match: /www.deezer.com/i,
-        rules: ['utm_campaign', 'utm_source', 'utm_medium', 'utm_content'],
+        rules: [],
         replace: []
     },
     {
         name: 'youtube.com',
         match: /.*.youtube.com/i,
         rules: ['gclid'],
+        replace: []
+    },
+    {
+        name: 'stackoverflow.com',
+        match: /stackoverflow.com/i,
+        rules: [],
+        replace: []
+    },
+    {
+        name: 'reuters.com',
+        match: /www.reuters.com/i,
+        rules: [],
+        replace: []
+    },
+    {
+        name: 'humblebundle.com',
+        match: /www.humblebundle.com/i,
+        rules: ['hmb_source', 'hmb_medium', 'hmb_campaign'],
+        replace: []
+    },
+    {
+        name: 'greenmangaming.com',
+        match: /www.greenmangaming.com/i,
+        rules: ['CJEVENT'],
+        replace: []
+    },
+    {
+        name: 'fanatical.com',
+        match: /www.fanatical.com/i,
+        rules: ['cj_aid', 'aff_track', 'CJEVENT'],
+        replace: []
+    },
+    {
+        name: 'gamebillet.com',
+        match: /www.gamebillet.com/i,
+        rules: ['affiliate'],
         replace: []
     }
 ];

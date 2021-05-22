@@ -4,10 +4,16 @@
 | amazon.com           | 14    |
 | audible.com          | 6     |
 | bandcamp.com         | 7     |
-| deezer.com           | 4     |
+| deezer.com           | 0     |
+| fanatical.com        | 3     |
+| gamebillet.com       | 1     |
 | google.com           | 13    |
+| greenmangaming.com   | 1     |
+| humblebundle.com     | 3     |
 | pixiv.net            | 3     |
 | reddit.com           | 2     |
+| reuters.com          | 0     |
 | spotify.com          | 2     |
+| stackoverflow.com    | 0     |
 | twitch.tv            | 2     |
 | youtube.com          | 1     |
