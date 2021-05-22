@@ -1,7 +1,10 @@
 ## ♡ Kain's URL Cleaner
 
 Removes tracking or garbage parameters from URLs making them shorter, cleaner and a lot nicer to read.  
-This is a personal userscript I made to remove garbage parameters from URLs I visit.
+This is a userscript I made for personal use but you're welcome to use it too.
+
+| :warning: This may break certain functions on the websites it cleans. If you encounter an error please open an [issue](https://github.com/DrKain/url-cleaner/issues) |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### Install
 
