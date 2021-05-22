@@ -21,7 +21,7 @@ const $kurlc_rules = [
         name: 'amazon.com',
         match: /www.amazon.com/i,
         rules: ['pd_rd_w', 'qid', 'sr', 'keywords', 'dchild', 'ref', 'ref_', 'rnid', 'pf_rd_r', 'pf_rd_p', 'rh', 'pd_rd_r', 'smid', 'pd_rd_wg'],
-        replace: [/\/ref=[^/?]*/i]
+        replace: [/\/ref=[^\/?]*/i]
     },
     {
         name: 'reddit.com',
@@ -33,6 +33,12 @@ const $kurlc_rules = [
         name: 'twitch.tv',
         match: /www.twitch.tv/i,
         rules: ['tt_medium', 'tt_content'],
+        replace: []
+    },
+    {
+        name: 'blog.twitch.tv',
+        match: /blog.twitch.tv/i,
+        rules: ['utm_referrer'],
         replace: []
     },
     {
@@ -60,27 +66,9 @@ const $kurlc_rules = [
         replace: []
     },
     {
-        name: 'deezer.com',
-        match: /www.deezer.com/i,
-        rules: [],
-        replace: []
-    },
-    {
         name: 'youtube.com',
         match: /.*.youtube.com/i,
         rules: ['gclid'],
-        replace: []
-    },
-    {
-        name: 'stackoverflow.com',
-        match: /stackoverflow.com/i,
-        rules: [],
-        replace: []
-    },
-    {
-        name: 'reuters.com',
-        match: /www.reuters.com/i,
-        rules: [],
         replace: []
     },
     {
@@ -98,13 +86,31 @@ const $kurlc_rules = [
     {
         name: 'fanatical.com',
         match: /www.fanatical.com/i,
-        rules: ['cj_aid', 'aff_track', 'CJEVENT'],
+        rules: ['cj_pid', 'cj_aid', 'aff_track', 'CJEVENT'],
         replace: []
     },
     {
         name: 'gamebillet.com',
         match: /www.gamebillet.com/i,
         rules: ['affiliate'],
+        replace: []
+    },
+    {
+        name: 'newsweek.com',
+        match: /www.newsweek.com/i,
+        rules: ['subref'],
+        replace: []
+    },
+    {
+        name: 'imgur.com',
+        match: /imgur.com/i,
+        rules: ['source'],
+        replace: []
+    },
+    {
+        name: 'plex.tv',
+        match: /.*.plex.tv/i,
+        rules: ['origin', 'plex_utm', 'sl', 'ckhid'],
         replace: []
     }
 ];
