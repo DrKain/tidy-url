@@ -8,6 +8,9 @@ A Node Package & Userscript that removes tracking or garbage parameters from URL
 
 ## Install
 
+Want this to automatically work in the browser? Click [here](https://github.com/DrKain/tidy-url/wiki/Userscript) to see how!  
+If not, the NodeJS guide is below. More information in the [wiki](https://github.com/DrKain/tidy-url/wiki).
+
 ```
 npm install tidy-url
 ```
