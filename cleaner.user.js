@@ -75,6 +75,12 @@ const kurlc = [
         match: /.*.aliexpress.com/i,
         rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid'],
         replace: []
+    },
+    {
+        name: 'google.com',
+        match: /www.google.com/i,
+        rules: ['sxsrf', 'uact', 'ved', 'iflsig', 'source', 'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa'],
+        replace: []
     }
 ];
 
