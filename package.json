@@ -1,20 +1,39 @@
 {
-    "name": "url-cleaner",
-    "version": "1.0.0",
-    "description": "Removes tracking or garbage parameters from URLs",
-    "scripts": {},
+    "name": "tidy-url",
+    "version": "1.0.1",
+    "description": "Cleans/removes tracking or garbage parameters from URLs",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "test": "ts-node test.ts",
+        "build": "tsc && node scripts/postbuild.js",
+        "prepare": "npm run build",
+        "version": "git add -A src",
+        "postversion": "git push && git push --tags"
+    },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/DrKain/url-cleaner.git"
+        "url": "git+https://github.com/DrKain/tidy-url.git"
     },
-    "keywords": [],
+    "keywords": [
+        "tidy",
+        "clean",
+        "sanitize",
+        "url",
+        "website",
+        "tracking",
+        "remove",
+        "junk"
+    ],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/DrKain/url-cleaner/issues"
+        "url": "https://github.com/DrKain/tidy-url/issues"
     },
-    "homepage": "https://github.com/DrKain/url-cleaner#readme",
+    "homepage": "https://github.com/DrKain/tidy-url#readme",
     "devDependencies": {
-        "prettier": "^2.3.0"
+        "@types/node": "^14.17.0",
+        "prettier": "^2.3.0",
+        "typescript": "^4.2.4"
     }
 }
