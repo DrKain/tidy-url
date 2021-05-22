@@ -1,22 +1,66 @@
-## ♡ Kain's URL Cleaner
+## ♡ Tidy URL
 
-Removes tracking or garbage parameters from URLs making them shorter, cleaner and a lot nicer to read.  
-This is a userscript I made for personal use but you're welcome to use it too.
+A Node Package & Userscript that removes tracking or garbage parameters from URLs making them shorter, cleaner and a lot nicer to read.
 
-| :warning: This may break certain functions on the websites it cleans. If you encounter an error please open an [issue](https://github.com/DrKain/url-cleaner/issues) |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+[![NPM](https://img.shields.io/npm/v/tidy-url)](https://www.npmjs.com/package/tidy-url)
+[![NPM](https://img.shields.io/npm/dt/tidy-url)](https://www.npmjs.com/package/tidy-url)
+[![NPM](https://img.shields.io/npm/types/tidy-url)](https://www.npmjs.com/package/tidy-url)
 
-### Install
+## Install
 
-1. Install Tampermonkey for [Chrome, Microsoft Edge, Safari, Opera Next or Firefox](https://www.tampermonkey.net/)
-2. Click [this link](https://github.com/DrKain/url-cleaner/raw/main/cleaner.user.js)
-3. Done
+```
+npm install tidy-url
+```
 
-### How it works
+### Require
 
-Simply reads each [URL Parameter](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) and deletes them if they're in the list of bad parameters. Regex is used to match the host and the page will only redirect if one or more search parameter has been deleted.  
-Some parameters are useful and required by websites to function so this helps avoid accidentally breaking pages.
-In some cases the URL itself needs to be modified.
+```js
+import { TidyURL } from 'tidy-url';
+// or
+const { TidyURL } = require('tidy-url');
+```
+
+### Usage
+
+Then pass it a URL and let the magic happen:
+
+```js
+const cleaned = TidyURL.clean('https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link');
+console.log(cleaned); // https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih
+```
+
+### Validating
+
+You can validate a URL using the `validate` function.
+
+```js
+TidyURL.validate('https://example.com'); // true
+TidyURL.validate('cat'); // false
+```
+
+### Note
+
+If the URL is not supported the original URL will be returned. You can view all supported sites [here](https://github.com/DrKain/tidy-url/wiki/Supported-Sites)
+
+### Debug
+
+Turning on debug will print information to the console as the cleaner works.
+
+```js
+TidyURL.debug = true;
+TidyURL.clean('https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link');
+```
+
+Output:
+
+```
+Target: https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link
+Origin: https://open.spotify.com
+Matched Global (/.*/)
+Matched spotify (/open.spotify.com/i)
+Deleted 2 items: si utm_source
+Final: https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih
+```
 
 ### Example
 
