@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kain's URL Cleaner
 // @namespace    https://ksir.pw
-// @version      0.1.5
+// @version      0.1.6
 // @description  Removes garbage parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
@@ -13,11 +13,11 @@
 // ==/UserScript==
 
 const cleaner = new URLSearchParams(window.location.search);
+const host = window.location.hostname;
+let pathname = window.location.pathname;
 let modified = 0;
 let queue = [];
 let replace = [];
-let pathname = window.location.pathname;
-const host = window.location.hostname;
 
 // ---------------------------------------
 
@@ -78,8 +78,8 @@ const kurlc = [
     },
     {
         name: 'google.com',
-        match: /www.google.com/i,
-        rules: ['sxsrf', 'uact', 'ved', 'iflsig', 'source', 'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa'],
+        match: /www.google\..*/i,
+        rules: ['sxsrf', 'uact', 'ved', 'iflsig', 'source', 'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr'],
         replace: []
     }
 ];
