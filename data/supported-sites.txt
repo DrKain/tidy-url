@@ -1,9 +1,13 @@
-audible.com
-bandcamp.com
-amazon.com
-reddit.com
-twitch.tv
-pixiv.net
-open.spotify.com
-aliexpress.com
-google.com
+| Match                | Rules |
+| :------------------- | :---- |
+| aliexpress.com       | 17    |
+| amazon.com           | 14    |
+| audible.com          | 6     |
+| bandcamp.com         | 7     |
+| deezer.com           | 4     |
+| google.com           | 13    |
+| pixiv.net            | 3     |
+| reddit.com           | 2     |
+| spotify.com          | 2     |
+| twitch.tv            | 2     |
+| youtube.com          | 1     |

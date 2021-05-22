@@ -12,7 +12,7 @@ const $kurlc_rules = [
         replace: []
     },
     {
-        name: 'bandcamp',
+        name: 'bandcamp.com',
         match: /.*.bandcamp.com/gi,
         rules: ['from', 'search_item_id', 'search_item_type', 'search_match_part', 'search_page_no', 'search_rank', 'search_sig'],
         replace: []
@@ -42,13 +42,13 @@ const $kurlc_rules = [
         replace: []
     },
     {
-        name: 'spotify',
+        name: 'spotify.com',
         match: /open.spotify.com/i,
         rules: ['si', 'utm_source'],
         replace: []
     },
     {
-        name: 'aliexpress',
+        name: 'aliexpress.com',
         match: /.*.aliexpress.com/i,
         rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid'],
         replace: []
@@ -57,6 +57,18 @@ const $kurlc_rules = [
         name: 'google.com',
         match: /www.google\..*/i,
         rules: ['sxsrf', 'uact', 'ved', 'iflsig', 'source', 'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr'],
+        replace: []
+    },
+    {
+        name: 'deezer.com',
+        match: /www.deezer.com/i,
+        rules: ['utm_campaign', 'utm_source', 'utm_medium', 'utm_content'],
+        replace: []
+    },
+    {
+        name: 'youtube.com',
+        match: /.*.youtube.com/i,
+        rules: ['gclid'],
         replace: []
     }
 ];
