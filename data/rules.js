@@ -112,6 +112,24 @@ const $kurlc_rules = [
         match: /.*.plex.tv/i,
         rules: ['origin', 'plex_utm', 'sl', 'ckhid'],
         replace: []
+    },
+    {
+        name: 'imdb.com',
+        match: /www.imdb.com/i,
+        rules: ['ref_'],
+        replace: []
+    },
+    {
+        name: 'bestbuy.com',
+        match: /www.bestbuy.com/i,
+        rules: ['skuId'],
+        replace: []
+    },
+    {
+        name: 'tiktok.com',
+        match: /www.tiktok.com/i,
+        rules: ['is_copy_url', 'is_from_webapp', 'sender_device', 'sender_web_id'],
+        replace: []
     }
 ];
 
