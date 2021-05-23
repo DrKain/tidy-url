@@ -50,7 +50,7 @@ const $kurlc_rules = [
     {
         name: 'spotify.com',
         match: /open.spotify.com/i,
-        rules: ['si', 'utm_source'],
+        rules: ['si', 'utm_source', 'context'],
         replace: []
     },
     {
@@ -120,9 +120,9 @@ const $kurlc_rules = [
         replace: []
     },
     {
-        name: 'bestbuy.com',
-        match: /www.bestbuy.com/i,
-        rules: ['skuId'],
+        name: 'gog.com',
+        match: /www.gog.com/i,
+        rules: ['at_gd'],
         replace: []
     },
     {

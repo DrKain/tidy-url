@@ -4,7 +4,7 @@
 | amazon.com           | 19    |
 | audible.com          | 6     |
 | bandcamp.com         | 7     |
-| bestbuy.com          | 1     |
+| bestbuy.com          | 0     |
 | blog.twitch.tv       | 1     |
 | fanatical.com        | 4     |
 | gamebillet.com       | 1     |
