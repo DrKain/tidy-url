@@ -1,7 +1,7 @@
 | Match                | Rules |
 | :------------------- | :---- |
 | aliexpress.com       | 17    |
-| amazon.com           | 14    |
+| amazon.com           | 19    |
 | audible.com          | 6     |
 | bandcamp.com         | 7     |
 | blog.twitch.tv       | 1     |
