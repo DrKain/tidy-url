@@ -4,10 +4,11 @@
 | amazon.com           | 19    |
 | audible.com          | 6     |
 | bandcamp.com         | 7     |
-| bestbuy.com          | 0     |
 | blog.twitch.tv       | 1     |
+| facebook.com         | 3     |
 | fanatical.com        | 4     |
 | gamebillet.com       | 1     |
+| gog.com              | 1     |
 | google.com           | 13    |
 | greenmangaming.com   | 1     |
 | humblebundle.com     | 3     |
@@ -17,7 +18,8 @@
 | pixiv.net            | 3     |
 | plex.tv              | 4     |
 | reddit.com           | 2     |
-| spotify.com          | 2     |
+| spotify.com          | 3     |
 | tiktok.com           | 4     |
 | twitch.tv            | 2     |
+| yandex.com           | 5     |
 | youtube.com          | 1     |

@@ -2,7 +2,7 @@ const $kurlc_rules = [
     {
         name: 'Global',
         match: /.*/,
-        rules: ['ga_source', 'ga_medium', 'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'utm_campaign', 'utm_source', 'utm_medium', 'utm_content'],
+        rules: ['ga_source', 'ga_medium', 'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'utm_campaign', 'utm_source', 'utm_medium', 'utm_content', 'utm_term', 'gclid', 'gclsrc'],
         replace: []
     },
     {
@@ -129,6 +129,18 @@ const $kurlc_rules = [
         name: 'tiktok.com',
         match: /www.tiktok.com/i,
         rules: ['is_copy_url', 'is_from_webapp', 'sender_device', 'sender_web_id'],
+        replace: []
+    },
+    {
+        name: 'facebook.com',
+        match: /www.facebook.com/i,
+        rules: ['fbclid', 'fb_ref', 'fb_source'],
+        replace: []
+    },
+    {
+        name: 'yandex.com',
+        match: /yandex.com/i,
+        rules: ['lr', 'from', 'grhow', 'origin', '_openstat'],
         replace: []
     }
 ];
