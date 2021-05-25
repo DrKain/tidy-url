@@ -43,8 +43,9 @@ TidyURL.validate('cat'); // false
 
 ### Note
 
-The `clean` funtion will always return a URL even if nothing was cleaned or modified.
-You can view all supported sites [here](https://github.com/DrKain/tidy-url/wiki/Supported-Sites). Even if a website is not on that list the global rules will still work, this means TidyURL will work for thousands of different websites around the internet.  
+The `clean` funtion will always return a URL even if nothing was cleaned or modified.  
+You can view all supported sites [here](https://github.com/DrKain/tidy-url/wiki/Supported-Sites).  
+Even if a website is not on that list the global rules will still work, this means TidyURL will work for thousands of different websites around the internet.  
 Request direct support for a website [here](https://github.com/DrKain/tidy-url/issues/new?assignees=&labels=&template=add-website.md&title=Website%3A+example.com)
 
 ### Debug
