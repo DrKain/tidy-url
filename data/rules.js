@@ -142,6 +142,12 @@ const $kurlc_rules = [
         match: /yandex.com/i,
         rules: ['lr', 'from', 'grhow', 'origin', '_openstat'],
         replace: []
+    },
+    {
+        name: 'store.steampowered.com',
+        match: /store.steampowered.com/i,
+        rules: ['snr'],
+        replace: []
     }
 ];
 

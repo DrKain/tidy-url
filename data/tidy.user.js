@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tidy URL
 // @namespace    https://ksir.pw
-// @version      1.0.11
+// @version      1.0.12
 // @description  Cleans/removes garbage or tracking parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
