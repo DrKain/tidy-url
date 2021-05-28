@@ -21,12 +21,36 @@ const bumpUserscript = () => {
  */
 const generateSupported = () => {
     try {
-        let body = '| Match                | Rules |\n| :------------------- | :---- |\n';
-        body += rules
+        let p = 0;
+        let count = 0;
+        let body = 'Total unique rules: %RULE_COUNT%\n\n';
+
+        // Sort rules and set padding width
+        let lines = rules
             .filter((rule) => rule.name !== 'Global')
             .sort((a, b) => a.name.localeCompare(b.name))
-            .map((rule) => `| ${rule.name.padEnd(20, ' ')} | ${`${rule.rules.length}`.padEnd(5, ' ')} |`)
-            .join('\n');
+            .map(rule => {
+                if (rule.name.length > p) p = rule.name.length;
+                return rule;
+            });
+
+        // Create table header
+        body += [
+            '| Match'.padEnd(p + 2, ' ') + ' | Rules |',
+            '| :'.padEnd(p + 2, '-') + ' | :---- |'
+        ].join('\n') + '\n'
+
+        // Append rules to table
+        body += lines.map((rule) => {
+            const n = rule.rules.length;
+            count += n;
+            return `| ${rule.name.padEnd(p, ' ')} | ${`${n}`.padEnd(5, ' ')} |`;
+        }).join('\n');
+
+        // Update the rule count
+        body = body.replace('%RULE_COUNT%', count);
+
+        // Write
         writeFileSync('./data/supported-sites.txt', body);
         console.log('Updated supported-sites.txt');
     } catch (e) {
