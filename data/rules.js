@@ -148,8 +148,45 @@ const $kurlc_rules = [
         match: /store.steampowered.com/i,
         rules: ['snr'],
         replace: []
+    },
+    {
+        name: 'findojobs.co.nz',
+        match: /www.findojobs.co.nz/i,
+        rules: ['source'],
+        replace: []
+    },
+    {
+        name: 'linkedin.com',
+        match: /.*.linkedin.com/i,
+        rules: ['contextUrn', 'destRedirectURL', 'lipi', 'trk', 'trkInfo', 'originalReferer', 'upsellOrderOrigin', 'upsellTrk', 'upsellTrackingId', 'src'],
+        replace: []
+    },
+    {
+        name: 'indeed.com',
+        match: /.*.indeed.com/i,
+        rules: ['from', 'attributionid'],
+        replace: []
+    },
+    {
+        name: 'discord.com',
+        match: /.*.discord.com/i,
+        rules: ['source'],
+        replace: []
+    },
+    {
+        name: 'medium.com',
+        match: /medium.com/i,
+        rules: ['source'],
+        replace: []
+    },
+    {
+        name: 'twitter.com',
+        match: /twitter.com/i,
+        rules: ['s', 'src', 'ref_url', 'ref_src'],
+        replace: []
     }
 ];
+
 
 var module = module ?? { exports: null };
 module.exports = $kurlc_rules;
