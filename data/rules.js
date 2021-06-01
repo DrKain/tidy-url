@@ -14,7 +14,7 @@ const $kurlc_rules = [
     {
         name: 'bandcamp.com',
         match: /.*.bandcamp.com/gi,
-        rules: ['from', 'search_item_id', 'search_item_type', 'search_match_part', 'search_page_no', 'search_rank', 'search_sig'],
+        rules: ['from', 'search_item_id', 'search_item_type', 'search_match_part', 'search_page_id', 'search_page_no', 'search_rank', 'search_sig'],
         replace: []
     },
     {
