@@ -1,11 +1,11 @@
-Total unique rules: 123
+Total unique rules: 128
 
 | Match                  | Rules |
 | :--------------------- | :---- |
 | aliexpress.com         | 17    |
-| amazon.com             | 19    |
+| amazon.com             | 22    |
 | audible.com            | 6     |
-| bandcamp.com           | 7     |
+| bandcamp.com           | 8     |
 | blog.twitch.tv         | 1     |
 | discord.com            | 1     |
 | facebook.com           | 3     |
@@ -19,7 +19,7 @@ Total unique rules: 123
 | imdb.com               | 1     |
 | imgur.com              | 1     |
 | indeed.com             | 2     |
-| linkedin.com           | 10    |
+| linkedin.com           | 11    |
 | medium.com             | 1     |
 | newsweek.com           | 1     |
 | pixiv.net              | 3     |
