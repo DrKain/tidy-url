@@ -1,4 +1,4 @@
-Total unique rules: 128
+Total unique rules: 131
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -13,7 +13,7 @@ Total unique rules: 128
 | findojobs.co.nz        | 1     |
 | gamebillet.com         | 1     |
 | gog.com                | 1     |
-| google.com             | 13    |
+| google.com             | 16    |
 | greenmangaming.com     | 1     |
 | humblebundle.com       | 3     |
 | imdb.com               | 1     |

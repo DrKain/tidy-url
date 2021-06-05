@@ -62,7 +62,7 @@ const $kurlc_rules = [
     {
         name: 'google.com',
         match: /www.google\..*/i,
-        rules: ['sxsrf', 'uact', 'ved', 'iflsig', 'source', 'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr'],
+        rules: ['sourceid', 'client', 'aqs', 'sxsrf', 'uact', 'ved', 'iflsig', 'source', 'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr'],
         replace: []
     },
     {
