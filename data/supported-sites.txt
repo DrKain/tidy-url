@@ -1,9 +1,9 @@
-Total unique rules: 131
+Total unique rules: 138
 
 | Match                  | Rules |
 | :--------------------- | :---- |
 | aliexpress.com         | 17    |
-| amazon.com             | 22    |
+| amazon.com             | 21    |
 | audible.com            | 6     |
 | bandcamp.com           | 8     |
 | blog.twitch.tv         | 1     |
@@ -12,15 +12,18 @@ Total unique rules: 131
 | fanatical.com          | 4     |
 | findojobs.co.nz        | 1     |
 | gamebillet.com         | 1     |
+| gamebillet.com         | 1     |
+| gamesload.com          | 1     |
 | gog.com                | 1     |
 | google.com             | 16    |
 | greenmangaming.com     | 1     |
-| humblebundle.com       | 3     |
+| humblebundle.com       | 5     |
 | imdb.com               | 1     |
 | imgur.com              | 1     |
 | indeed.com             | 2     |
 | linkedin.com           | 11    |
 | medium.com             | 1     |
+| mightyape              | 1     |
 | newsweek.com           | 1     |
 | pixiv.net              | 3     |
 | plex.tv                | 4     |
@@ -28,7 +31,9 @@ Total unique rules: 131
 | spotify.com            | 3     |
 | store.steampowered.com | 1     |
 | tiktok.com             | 4     |
-| twitch.tv              | 2     |
+| twitch.tv              | 3     |
 | twitter.com            | 4     |
+| voidu.com              | 1     |
+| wingamestore.com       | 1     |
 | yandex.com             | 5     |
 | youtube.com            | 1     |

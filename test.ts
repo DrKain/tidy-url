@@ -15,7 +15,12 @@ const tests = [
     'https://www.linkedin.com/learning/subscription/products?courseSlug=learning-typescript-2&destRedirectURL=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Flearning-typescript-2&trk=course_info&upsellTrk=lil_upsell_course_info_subscription&upsellOrderOrigin=homepage-basic_intent-module-learning&upsellTrackingId=61%2B9XTYCSVm%2BXktDSeAPrQ%3D%3D&contextUrn=urn%3Ali%3AlyndaCourse%3A5025110&lipi=urn%3Ali%3Apage%3Ad_learning_course_guest_jsbeacon%3BynyajXiZRAq_y3eoadwhzw',
     'https://learning.linkedin.com/en-us/elearning-solutions-contact-us?disableLocaleAutoRedirect=true&trk=lil-b2b-prod_upx_general&src=enterprise_defensibility_hero',
     'https://twitter.com/PoetsOfTheFall/status/1371420629380034564/photo/1?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1371420629380034564%7Ctwgr%5E%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fpublish.twitter.com%2F%3Fquery%3Dhttps3A2F2Ftwitter.com2FPoetsOfTheFall2Fstatus2F1371420629380034564widget%3DTweet',
-    'https://www.amazon.co.uk/Novacene-Coming-Hyperintelligence-James-Lovelock/dp/0141990791?_encoding=UTF8&qid=1620889178&sr=8-1&linkCode=sl1&tag=tomscottcom-21&linkId=85a56bda850c6eded8c89560592872f4&language=en_GB&ref_=as_li_ss_tl'
+    'https://www.amazon.co.uk/Novacene-Coming-Hyperintelligence-James-Lovelock/dp/0141990791?_encoding=UTF8&qid=1620889178&sr=8-1&linkCode=sl1&tag=tomscottcom-21&linkId=85a56bda850c6eded8c89560592872f4&language=en_GB&ref_=as_li_ss_tl',
+    'https://www.humblebundle.com/books/isekai-kodansha-books?mcID=102:610b4f27ac003a12e902e318:ot:5914ac0b66d5d92055543a3e:1&linkID=610b4f2891ccf74a322ba90a&utm_campaign=2021_08_05_isekaikodansha_bookbundle&utm_source=Humble+Bundle+Newsletter&utm_medium=email',
+    'https://www.voidu.com/en/battlefield-4-vehicle-shortcut-bundle?utm_campaign=isthereanydeal&utm_content=Battlefield+4:+Vehicle+Shortcut+Bundle&utm_source=isthereanydeal&utm_medium=pricecomp&utm_term=EA&affiliate=isthereanydeal',
+    'https://www.wingamestore.com/product/6236/Shadow-Warrior-2/?ars=itad',
+    'https://www.gamebillet.com/shadow-warrior-2-n?affiliate=1c8adfeb-78f3-4d89-9a91-5b697ec73e37',
+    'https://www.gamesload.com/product.html?REF=817181&affil=33615'
 ];
 
 TidyURL.debug = true;

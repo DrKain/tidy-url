@@ -32,7 +32,7 @@ const $kurlc_rules = [
     {
         name: 'twitch.tv',
         match: /www.twitch.tv/i,
-        rules: ['tt_medium', 'tt_content'],
+        rules: ['tt_medium', 'tt_content', 'tt_email_id'],
         replace: []
     },
     {
@@ -74,7 +74,7 @@ const $kurlc_rules = [
     {
         name: 'humblebundle.com',
         match: /www.humblebundle.com/i,
-        rules: ['hmb_source', 'hmb_medium', 'hmb_campaign'],
+        rules: ['hmb_source', 'hmb_medium', 'hmb_campaign', 'mcID', 'linkID'],
         replace: []
     },
     {
@@ -183,6 +183,36 @@ const $kurlc_rules = [
         name: 'twitter.com',
         match: /twitter.com/i,
         rules: ['s', 'src', 'ref_url', 'ref_src'],
+        replace: []
+    },
+    {
+        name: 'voidu.com',
+        match: /voidu.com/i,
+        rules: ['affiliate'],
+        replace: []
+    },
+    {
+        name: 'wingamestore.com',
+        match: /wingamestore.com/i,
+        rules: ['ars'],
+        replace: []
+    },
+    {
+        name: 'gamebillet.com',
+        match: /gamebillet.com/i,
+        rules: ['affiliate'],
+        replace: []
+    },
+    {
+        name: 'gamesload.com',
+        match: /gamesload.com/i,
+        rules: ['affil'],
+        replace: []
+    },
+    {
+        name: 'mightyape',
+        match: /mightyape.co.(nz|au)/i,
+        rules: ['m'],
         replace: []
     }
 ];
