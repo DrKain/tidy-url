@@ -20,7 +20,9 @@ const tests = [
     'https://www.voidu.com/en/battlefield-4-vehicle-shortcut-bundle?utm_campaign=isthereanydeal&utm_content=Battlefield+4:+Vehicle+Shortcut+Bundle&utm_source=isthereanydeal&utm_medium=pricecomp&utm_term=EA&affiliate=isthereanydeal',
     'https://www.wingamestore.com/product/6236/Shadow-Warrior-2/?ars=itad',
     'https://www.gamebillet.com/shadow-warrior-2-n?affiliate=1c8adfeb-78f3-4d89-9a91-5b697ec73e37',
-    'https://www.gamesload.com/product.html?REF=817181&affil=33615'
+    'https://www.gamesload.com/product.html?REF=817181&affil=33615',
+    'https://music.apple.com/nz/search?at=11lEW&ct=4kg73k%7Cyoutube.com&ls=1&term=Poets%20of%20the%20fall&uo=4',
+    'https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us&referrer=utm_source%3Dsoundcloud%26utm_medium%3Dweb%26utm_campaign%3Dweb_xsell_listen_page'
 ];
 
 TidyURL.debug = true;

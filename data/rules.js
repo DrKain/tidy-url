@@ -80,13 +80,13 @@ const $kurlc_rules = [
     {
         name: 'greenmangaming.com',
         match: /www.greenmangaming.com/i,
-        rules: ['CJEVENT'],
+        rules: ['CJEVENT', 'cjevent'],
         replace: []
     },
     {
         name: 'fanatical.com',
         match: /www.fanatical.com/i,
-        rules: ['cj_pid', 'cj_aid', 'aff_track', 'CJEVENT'],
+        rules: ['cj_pid', 'cj_aid', 'aff_track', 'CJEVENT', 'cjevent'],
         replace: []
     },
     {
@@ -213,6 +213,18 @@ const $kurlc_rules = [
         name: 'mightyape',
         match: /mightyape.co.(nz|au)/i,
         rules: ['m'],
+        replace: []
+    },
+    {
+        name: 'music.apple.com',
+        match: /music.apple.com/i,
+        rules: ['uo', 'app', 'at', 'ct', 'ls'],
+        replace: []
+    },
+    {
+        name: 'play.google.com',
+        match: /play.google.com/i,
+        rules: ['referrer'],
         replace: []
     }
 ];

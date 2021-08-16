@@ -1,4 +1,4 @@
-Total unique rules: 138
+Total unique rules: 146
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -9,14 +9,14 @@ Total unique rules: 138
 | blog.twitch.tv         | 1     |
 | discord.com            | 1     |
 | facebook.com           | 3     |
-| fanatical.com          | 4     |
+| fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
 | gamebillet.com         | 1     |
 | gamebillet.com         | 1     |
 | gamesload.com          | 1     |
 | gog.com                | 1     |
 | google.com             | 16    |
-| greenmangaming.com     | 1     |
+| greenmangaming.com     | 2     |
 | humblebundle.com       | 5     |
 | imdb.com               | 1     |
 | imgur.com              | 1     |
@@ -24,8 +24,10 @@ Total unique rules: 138
 | linkedin.com           | 11    |
 | medium.com             | 1     |
 | mightyape              | 1     |
+| music.apple.com        | 5     |
 | newsweek.com           | 1     |
 | pixiv.net              | 3     |
+| play.google.com        | 1     |
 | plex.tv                | 4     |
 | reddit.com             | 2     |
 | spotify.com            | 3     |
