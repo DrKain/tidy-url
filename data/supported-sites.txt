@@ -1,4 +1,4 @@
-Total unique rules: 146
+Total unique rules: 152
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -18,7 +18,7 @@ Total unique rules: 146
 | google.com             | 16    |
 | greenmangaming.com     | 2     |
 | humblebundle.com       | 5     |
-| imdb.com               | 1     |
+| imdb.com               | 7     |
 | imgur.com              | 1     |
 | indeed.com             | 2     |
 | linkedin.com           | 11    |
