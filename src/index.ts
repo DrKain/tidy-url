@@ -1,8 +1,8 @@
-import { IRule } from './interface';
+import { IRule, IData } from './interface';
 
 class TidyCleaner {
     public rules: IRule[] = [];
-    public debug = false;
+    public silent = false;
 
     constructor() {
         // Load the rules
@@ -19,7 +19,7 @@ class TidyCleaner {
      * @param str Message
      */
     private log(str: string) {
-        if (this.debug) console.log(str);
+        if (!this.silent) console.log(str);
     }
 
     /**
@@ -39,61 +39,66 @@ class TidyCleaner {
     /**
      * Clean a URL
      * @param url Any URL
-     * @returns String
+     * @returns IData
      */
-    public clean(url: string): string {
-        let queue: any[] = [];
-        let replace: any[] = [];
-        let modified = 0;
-        let deleted = [];
+    public clean(url: string): IData {
+        let data: IData = {
+            url,
+            info: {
+                original: url,
+                reduction: 0,
+                replace: [],
+                remove: [],
+                match: [],
+                custom: false
+            }
+        };
 
         // Make sure the URL is valid before we try to clean it
         if (!this.validate(url)) {
             this.log('An invalid URL was supplied');
-            return url;
+            return data;
         }
 
         const original = new URL(url);
         const cleaner = original.searchParams;
         let pathname = original.pathname;
 
-        this.log(`Target: ${url}\nOrigin: ${original.origin}`);
-
         // Loop through the rules and match them to the host name
         for (let rule of this.rules) {
             if (rule.match.exec(original.host) !== null) {
-                this.log(`Matched ${rule.name} (${rule.match})`);
-                queue = [...queue, ...rule.rules];
-                replace = [...replace, ...rule.replace];
+                data.info.remove = [...data.info.remove, ...rule.rules];
+                data.info.replace = [...data.info.replace, ...rule.replace];
+                data.info.match.push(rule);
             }
         }
 
-        // Delete any matches in the queue
-        for (let key of queue) {
-            if (cleaner.has(key)) {
-                deleted.push(key);
-                cleaner.delete(key);
-                modified++;
-            }
+        // Delete any matching parameters
+        for (let key of data.info.remove) {
+            if (cleaner.has(key)) cleaner.delete(key);
         }
-
-        this.log(`Deleted ${deleted.length} items: ${deleted.join(' ')}`);
 
         // Update the pathname if needed
-        for (let key of replace) {
+        for (let key of data.info.replace) {
             const changed = pathname.replace(key, '');
-            if (changed !== pathname) {
-                this.log(`Pathname changed: ${pathname} -> ${changed}`);
-                pathname = changed;
+            if (changed !== pathname) pathname = changed;
+        }
+
+        // Rebuild URL
+        const params = cleaner.toString().length ? '?' + cleaner.toString() : '';
+        data.url = original.origin + pathname + params;
+
+        // Run custom function if needed (special case)
+        for (let rule of data.info.match) {
+            if (rule.custom) {
+                data.url = rule.custom(data.url);
+                data.info.custom = true;
             }
         }
 
-        // Build final URL
-        const params = cleaner.toString().length ? '?' + cleaner.toString() : '';
-        const final = original.origin + pathname + params;
+        data.info.reduction = +(100 - (data.url.length / url.length) * 100).toFixed(2);
 
-        this.log(`Final: ${final}`);
-        return final;
+        return data;
     }
 }
 

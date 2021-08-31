@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tidy URL
 // @namespace    https://ksir.pw
-// @version      1.0.18
+// @version      1.1.0
 // @description  Cleans/removes garbage or tracking parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
@@ -13,50 +13,113 @@
 // @run-at       document-start
 // ==/UserScript==
 
-const cleaner = new URLSearchParams(window.location.search);
-const host = window.location.hostname;
-let pathname = window.location.pathname;
-let modified = 0;
-let replace = [];
-let deleted = [];
-let queue = [];
-let kurlc = [];
+// S:AG
 
-if (typeof $kurlc_rules === 'udefined') console.error('[TidyURL] Failed to load rules.js - Script will not work');
-else kurlc = $kurlc_rules;
-
-console.log(`Target: ${window.location.href}\nOrigin: ${window.location.origin}`);
-
-for (let rule of kurlc) {
-    if (rule.match.exec(host) !== null) {
-        console.log(`Matched ${rule.name} (${rule.match})`);
-        queue = [...queue, ...rule.rules];
-        replace = [...replace, ...rule.replace];
+var TidyCleaner = /** @class */ (function () {
+    function TidyCleaner() {
+        this.rules = [];
+        this.silent = false;
+        // Load the rules
+        try {
+            if (typeof $kurlc_rules === 'udefined') console.error('[TidyURL] Failed to load rules.js - Script will not work');
+            else this.rules = $kurlc_rules;
+        } catch (error) {
+            this.log('' + error);
+            this.rules = [];
+        }
     }
-}
+    /**
+     * Only log to the console if debug is enabled
+     * @param str Message
+     */
+    TidyCleaner.prototype.log = function (str) {
+        if (!this.silent) console.log(str);
+    };
+    /**
+     * Determine if the input is a valid URL or not
+     * @param url Any URL
+     * @returns true/false
+     */
+    TidyCleaner.prototype.validate = function (url) {
+        try {
+            new URL(url);
+            return true;
+        } catch (error) {
+            return false;
+        }
+    };
+    /**
+     * Clean a URL
+     * @param url Any URL
+     * @returns IData
+     */
+    TidyCleaner.prototype.clean = function (url) {
+        var data = {
+            url: url,
+            info: {
+                original: url,
+                reduction: 0,
+                replace: [],
+                remove: [],
+                match: [],
+                custom: false
+            }
+        };
 
-for (let key of queue) {
-    if (cleaner.has(key)) {
-        deleted.push(key);
-        cleaner.delete(key);
-        modified++;
-    }
-}
+        // Make sure the URL is valid before we try to clean it
+        if (!this.validate(url)) {
+            this.log('An invalid URL was supplied');
+            return data;
+        }
 
-console.log(`Deleted ${deleted.length} items: ${deleted.join(' ')}`);
+        var original = new URL(url);
+        var cleaner = original.searchParams;
+        var pathname = original.pathname;
 
-for (let key of replace) {
-    const changed = pathname.replace(key, '');
-    if (changed !== pathname) {
-        console.log(`Pathname changed: ${pathname} -> ${changed}`);
-        modified++;
-        pathname = changed;
-    }
-}
+        // Loop through the rules and match them to the host name
+        for (var _i = 0, _a = this.rules; _i < _a.length; _i++) {
+            var rule = _a[_i];
+            if (rule.match.exec(original.host) !== null) {
+                data.info.remove = [...data.info.remove, ...rule.rules];
+                data.info.replace = [...data.info.replace, ...rule.replace];
+                data.info.match.push(rule);
+            }
+        }
 
-const params = cleaner.toString().length ? '?' + cleaner.toString() : '';
-const final = window.location.origin + pathname + params;
+        // Delete any matching parameters
+        for (var _b = 0, _c = data.info.remove; _b < _c.length; _b++) {
+            var key = _c[_b];
+            if (cleaner.has(key)) cleaner.delete(key);
+        }
 
-console.log(`Final: ${final}`);
+        // Update the pathname if needed
+        for (var _d = 0, _e = data.info.replace; _d < _e.length; _d++) {
+            var keyB = _e[_d];
+            var changed = pathname.replace(keyB, '');
+            if (changed !== pathname) pathname = changed;
+        }
 
-if (modified > 0) window.location = final;
+        // Rebuild URL
+        var params = cleaner.toString().length ? '?' + cleaner.toString() : '';
+        data.url = original.origin + pathname + params;
+
+        // Run custom function if needed (special case)
+        for (var _f = 0, _g = data.info.match; _f < _g.length; _f++) {
+            var ruleB = _g[_f];
+            if (rule.custom) {
+                data.url = ruleB.custom(data.url);
+                data.info.custom = true;
+            }
+        }
+        data.info.reduction = +(100 - (data.url.length / url.length) * 100).toFixed(2);
+        return data;
+    };
+    return TidyCleaner;
+})();
+
+// E:AG
+
+var tidy = new TidyCleaner();
+var link = tidy.clean(window.location.href);
+
+if (link.url !== link.info.original) window.location.href = link.url;

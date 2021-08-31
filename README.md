@@ -28,8 +28,8 @@ const { TidyURL } = require('tidy-url');
 Then pass it a URL and let the magic happen:
 
 ```js
-const cleaned = TidyURL.clean('https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link');
-console.log(cleaned); // https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih
+const link = TidyURL.clean('https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link');
+console.log(link.url); // https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih
 ```
 
 ### Validating
@@ -43,29 +43,46 @@ TidyURL.validate('cat'); // false
 
 ### Note
 
-The `clean` funtion will always return a URL even if nothing was cleaned or modified.  
-You can view all supported sites [here](https://github.com/DrKain/tidy-url/wiki/Supported-Sites).  
-Even if a website is not on that list the global rules will still work, this means TidyURL will work for thousands of different websites around the internet.  
+You will always receive a valid response, even if nothing was modified. For example:  
+```js
+const link = TidyURL.clean('https://duckduckgo.com/this-is-fine');
+
+link.url; // https://duckduckgo.com/this-is-fine
+link.info.reduction; // 0 (percent)
+```
+
+### Supported Sites
+
+You can view all custom supported sites [here](https://github.com/DrKain/tidy-url/wiki/Supported-Sites).  
+However, the global rules will be enough to work with thousands of sites around the internet. You should be able to pass any URL for cleaning.  
 Request direct support for a website [here](https://github.com/DrKain/tidy-url/issues/new?assignees=&labels=&template=add-website.md&title=Website%3A+example.com)
 
-### Debug
+### Response
 
-Turning on debug will print information to the console as the cleaner works.
-
-```js
-TidyURL.debug = true;
-TidyURL.clean('https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link');
-```
-
-Output:
+The response will always be an object with details of what was cleaned or modified in the URL.  
+This can be used for debugging, testing or a simple way of letting users know they could have sent a shorter link.
 
 ```
-Target: https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link
-Origin: https://open.spotify.com
-Matched Global (/.*/)
-Matched spotify (/open.spotify.com/i)
-Deleted 2 items: si utm_source
-Final: https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih
+{
+  url: 'https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih',
+  info: {
+    original: 'https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link',
+    reduction: 47,
+    replace: [],
+    remove: [
+      'ga_source',    'ga_medium',
+      'ga_term',      'ga_content',
+      'ga_campaign',  'ga_place',
+      'utm_campaign', 'utm_source',
+      'utm_medium',   'utm_content',
+      'utm_term',     'gclid',
+      'gclsrc',       'si',
+      'utm_source',   'context'
+    ],
+    match: [ [Object], [Object] ],
+    custom: false
+  }
+}
 ```
 
 ### Example
