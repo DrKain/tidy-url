@@ -1,9 +1,10 @@
-Total unique rules: 152
+Total unique rules: 155
 
 | Match                  | Rules |
 | :--------------------- | :---- |
+| adtraction.com         | 0     |
 | aliexpress.com         | 17    |
-| amazon.com             | 21    |
+| amazon.com             | 24    |
 | audible.com            | 6     |
 | bandcamp.com           | 8     |
 | blog.twitch.tv         | 1     |

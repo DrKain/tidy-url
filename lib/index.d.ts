@@ -1,7 +1,7 @@
-import { IRule } from './interface';
+import { IRule, IData } from './interface';
 declare class TidyCleaner {
     rules: IRule[];
-    debug: boolean;
+    silent: boolean;
     constructor();
     /**
      * Only log to the console if debug is enabled
@@ -17,9 +17,9 @@ declare class TidyCleaner {
     /**
      * Clean a URL
      * @param url Any URL
-     * @returns String
+     * @returns IData
      */
-    clean(url: string): string;
+    clean(url: string): IData;
 }
 export declare const TidyURL: TidyCleaner;
 export {};

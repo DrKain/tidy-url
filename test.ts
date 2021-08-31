@@ -1,6 +1,7 @@
 import { TidyURL } from './src';
 
 const tests = [
+    'https://duckduckgo.com/this-is-fine',
     'https://poetsroad.bandcamp.com/?from=search&search_item_id=1141951669&search_item_type=b&search_match_part=%3F&search_page_id=1748155363&search_page_no=1&search_rank=1&search_sig=a9a9cbdfc454df7c2999f097dc8a216b',
     'https://www.audible.com/pd/Project-Hail-Mary-Audiobook/B08G9PRS1K?plink=GZIIiCHG0Uo5V8ND&ref=a_hp_c9_adblp13nmpxxp13n-mpl-dt-c_1_2&pf_rd_p=164101a8-2aab-4c5e-91ee-1f39e10719e6&pf_rd_r=2Q5R6VH8HJAD48PSQRS4',
     'https://www.amazon.com/Alexander-Theatre-Sessions-Poets-Fall/dp/B08NT852YT/ref=sr_1_1?dchild=1&keywords=Poets+of+the+fall&qid=1621684985&sr=8-1',
@@ -23,12 +24,16 @@ const tests = [
     'https://www.gamesload.com/product.html?REF=817181&affil=33615',
     'https://music.apple.com/nz/search?at=11lEW&ct=4kg73k%7Cyoutube.com&ls=1&term=Poets%20of%20the%20fall&uo=4',
     'https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us&referrer=utm_source%3Dsoundcloud%26utm_medium%3Dweb%26utm_campaign%3Dweb_xsell_listen_page',
-    'https://www.imdb.com/title/tt0111161/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=e31d89dd-322d-4646-8962-327b42fe94b1&pf_rd_r=7VNM3EBA521CRZ4JNT86&pf_rd_s=center-1&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_tt_1'
+    'https://www.imdb.com/title/tt0111161/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=e31d89dd-322d-4646-8962-327b42fe94b1&pf_rd_r=7VNM3EBA521CRZ4JNT86&pf_rd_s=center-1&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_tt_1',
+    'https://www.amazon.com/dp/B01JA49DI6/?coliid=I1HVWIICNZWQTZ&colid=107BE3PYAUBOA&psc=1',
+    // TODO: Possibly a redirect based on parameter instead?
+    'https://track.adtraction.com/t/t?a=1578845458&as=1605593256&t=2&tk=1&url=http%3A%2F%2Fwww.gog.com%2Fgame%2Fcyberpunk_2077',
+    'http://www.dpbolvw.net/click-6305441-10912384?URL=https%3A%2F%2Fwww.greenmangaming.com%2Fgames%2Fbattle-brothers%2F'
 ];
 
-TidyURL.debug = true;
-
 for (let test of tests) {
-    TidyURL.clean(test);
-    console.log('\n\n');
+    const link = TidyURL.clean(test);
+    console.log('Input: ' + link.info.original);
+    console.log('Clean: ' + link.url);
+    console.log(link.info.reduction + '% smaller\n\n');
 }
