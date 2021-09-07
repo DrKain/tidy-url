@@ -28,7 +28,9 @@ const tests = [
     'https://www.amazon.com/dp/B01JA49DI6/?coliid=I1HVWIICNZWQTZ&colid=107BE3PYAUBOA&psc=1',
     // TODO: Possibly a redirect based on parameter instead?
     'https://track.adtraction.com/t/t?a=1578845458&as=1605593256&t=2&tk=1&url=http%3A%2F%2Fwww.gog.com%2Fgame%2Fcyberpunk_2077',
-    'http://www.dpbolvw.net/click-6305441-10912384?URL=https%3A%2F%2Fwww.greenmangaming.com%2Fgames%2Fbattle-brothers%2F'
+    'http://www.dpbolvw.net/click-6305441-10912384?URL=https%3A%2F%2Fwww.greenmangaming.com%2Fgames%2Fbattle-brothers%2F',
+    // Bench that for now, back to regular tests
+    'https://not-a-real.itch.io/just-a-test-link?fbclid=IwAR2mlVUJ9y8WB92ubp9088bogz6eboZaBhXKhh0n1hIveHXMyif5dQmtS1s'
 ];
 
 for (let test of tests) {

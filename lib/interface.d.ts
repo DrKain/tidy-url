@@ -3,7 +3,7 @@ export interface IRule {
     match: RegExp;
     rules: string[];
     replace: any[];
-    custom?: (url: string) => string;
+    redirect: string;
 }
 export interface IData {
     /** Cleaned URL */
@@ -19,7 +19,7 @@ export interface IData {
         remove: any[];
         /** Rules matched */
         match: any[];
-        /** If custom function was run */
-        custom: boolean;
+        /** If a query parameter exists, redirect to the value */
+        redirect: string;
     };
 }

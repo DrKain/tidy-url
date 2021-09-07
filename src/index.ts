@@ -4,6 +4,12 @@ class TidyCleaner {
     public rules: IRule[] = [];
     public silent = false;
 
+    get expandedRules() {
+        return this.rules.map((rule) => {
+            return Object.assign({ rules: [], replace: [], redirect: '' }, rule) as IRule;
+        });
+    }
+
     constructor() {
         // Load the rules
         try {
@@ -50,7 +56,7 @@ class TidyCleaner {
                 replace: [],
                 remove: [],
                 match: [],
-                custom: false
+                redirect: ''
             }
         };
 
@@ -65,7 +71,7 @@ class TidyCleaner {
         let pathname = original.pathname;
 
         // Loop through the rules and match them to the host name
-        for (let rule of this.rules) {
+        for (let rule of this.expandedRules) {
             if (rule.match.exec(original.host) !== null) {
                 data.info.remove = [...data.info.remove, ...rule.rules];
                 data.info.replace = [...data.info.replace, ...rule.replace];
@@ -88,11 +94,10 @@ class TidyCleaner {
         const params = cleaner.toString().length ? '?' + cleaner.toString() : '';
         data.url = original.origin + pathname + params;
 
-        // Run custom function if needed (special case)
+        // Redirect if needed
         for (let rule of data.info.match) {
-            if (rule.custom) {
-                data.url = rule.custom(data.url);
-                data.info.custom = true;
+            if (rule.redirect.length && cleaner.has(rule.redirect)) {
+                data.url = `${cleaner.get(rule.redirect)}`;
             }
         }
 
