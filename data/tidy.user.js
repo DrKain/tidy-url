@@ -21,7 +21,8 @@ var TidyCleaner = /** @class */ (function () {
         this.silent = false;
         // Load the rules
         try {
-            this.rules = require('../data/rules.js');
+            if (typeof $kurlc_rules === 'udefined') console.error('[TidyURL] Failed to load rules.js - Script will not work');
+            else this.rules = $kurlc_rules;
         } catch (error) {
             this.log('' + error);
             this.rules = [];
