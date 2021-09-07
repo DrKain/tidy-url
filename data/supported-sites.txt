@@ -1,14 +1,15 @@
-Total unique rules: 155
+Total unique rules: 158
 
 | Match                  | Rules |
 | :--------------------- | :---- |
-| adtraction.com         | 0     |
+| adtraction.com         | 1     |
 | aliexpress.com         | 17    |
 | amazon.com             | 24    |
 | audible.com            | 6     |
 | bandcamp.com           | 8     |
 | blog.twitch.tv         | 1     |
 | discord.com            | 1     |
+| dpbolvw.net            | 1     |
 | facebook.com           | 3     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
@@ -22,6 +23,7 @@ Total unique rules: 155
 | imdb.com               | 7     |
 | imgur.com              | 1     |
 | indeed.com             | 2     |
+| itch.io                | 1     |
 | linkedin.com           | 11    |
 | medium.com             | 1     |
 | mightyape              | 1     |

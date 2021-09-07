@@ -29,23 +29,22 @@ const generateSupported = () => {
         let lines = rules
             .filter((rule) => rule.name !== 'Global')
             .sort((a, b) => a.name.localeCompare(b.name))
-            .map(rule => {
+            .map((rule) => {
                 if (rule.name.length > p) p = rule.name.length;
                 return rule;
             });
 
         // Create table header
-        body += [
-            '| Match'.padEnd(p + 2, ' ') + ' | Rules |',
-            '| :'.padEnd(p + 2, '-') + ' | :---- |'
-        ].join('\n') + '\n'
+        body += ['| Match'.padEnd(p + 2, ' ') + ' | Rules |', '| :'.padEnd(p + 2, '-') + ' | :---- |'].join('\n') + '\n';
 
         // Append rules to table
-        body += lines.map((rule) => {
-            const n = rule.rules.length;
-            count += n;
-            return `| ${rule.name.padEnd(p, ' ')} | ${`${n}`.padEnd(5, ' ')} |`;
-        }).join('\n');
+        body += lines
+            .map((rule) => {
+                const n = rule.rules ? rule.rules.length : 1;
+                count += n;
+                return `| ${rule.name.padEnd(p, ' ')} | ${`${n}`.padEnd(5, ' ')} |`;
+            })
+            .join('\n');
 
         // Update the rule count
         body = body.replace('%RULE_COUNT%', count);

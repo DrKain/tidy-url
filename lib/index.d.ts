@@ -2,6 +2,7 @@ import { IRule, IData } from './interface';
 declare class TidyCleaner {
     rules: IRule[];
     silent: boolean;
+    get expandedRules(): IRule[];
     constructor();
     /**
      * Only log to the console if debug is enabled
