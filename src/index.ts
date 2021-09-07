@@ -92,7 +92,7 @@ class TidyCleaner {
 
         // Rebuild URL
         const params = cleaner.toString().length ? '?' + cleaner.toString() : '';
-        data.url = original.origin + pathname + params;
+        data.url = original.origin + pathname + params + original.hash;
 
         // Redirect if needed
         for (let rule of data.info.match) {
