@@ -6,18 +6,15 @@ labels: bug
 assignees: DrKain
 ---
 
-**Full Website URL**
-This is the raw URL before cleaning:
+**URL before cleaning:**
 
 -   https://example.com/example-page?query=example
 
-**Current outcome**  
-This is the current result when cleaning the URL:
+**Current result when cleaning:**
 
 -   https://example.com/example-page?query=example
 
-**Expected outcome**  
-This is your desired URL after cleaning:
+**Expected outcome:**
 
 -   https://example.com/example-page
 
