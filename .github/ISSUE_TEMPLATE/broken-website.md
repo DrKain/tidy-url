@@ -20,8 +20,8 @@ assignees: DrKain
 
 **Extra Information:**
 
--   Browser:
--   Script Version:
+-   Browser or OS:
+-   Version:
 
 **Additional context**
 Add any other context about the problem here (optional)
