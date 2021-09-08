@@ -91,17 +91,23 @@ class TidyCleaner {
         }
 
         // Rebuild URL
-        const params = cleaner.toString().length ? '?' + cleaner.toString() : '';
+        const params = cleaner.toString().length ? '?' + decodeURIComponent(cleaner.toString()) : '';
         data.url = original.origin + pathname + params + original.hash;
 
-        // Redirect if needed
+        // Redirect if the redirect parameter exists
         for (let rule of data.info.match) {
             if (rule.redirect.length && cleaner.has(rule.redirect)) {
-                data.url = `${cleaner.get(rule.redirect)}`;
+                data.url = `${cleaner.get(rule.redirect)}` + original.hash;
             }
         }
 
         data.info.reduction = +(100 - (data.url.length / url.length) * 100).toFixed(2);
+
+        // If the link is longer then we have an issue
+        if (data.info.reduction < 0) {
+            this.log(`Reduction is ${data.info.reduction}. Please report this link on GitHub`);
+            data.url = data.info.original;
+        }
 
         return data;
     }

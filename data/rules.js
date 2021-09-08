@@ -205,6 +205,11 @@ const $kurlc_rules = [
         name: 'itch.io',
         match: /itch.io/i,
         rules: ['fbclid']
+    },
+    {
+        name: 'steamcommunity.com',
+        match: /steamcommunity.com/i,
+        redirect: 'url'
     }
 ];
 

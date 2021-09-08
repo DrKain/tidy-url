@@ -1,4 +1,4 @@
-Total unique rules: 158
+Total unique rules: 159
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -34,6 +34,7 @@ Total unique rules: 158
 | plex.tv                | 4     |
 | reddit.com             | 2     |
 | spotify.com            | 3     |
+| steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |
 | tiktok.com             | 4     |
 | twitch.tv              | 3     |

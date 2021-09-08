@@ -29,7 +29,9 @@ const tests = [
     'https://track.adtraction.com/t/t?a=1578845458&as=1605593256&t=2&tk=1&url=http%3A%2F%2Fwww.gog.com%2Fgame%2Fcyberpunk_2077',
     'http://www.dpbolvw.net/click-6305441-10912384?URL=https%3A%2F%2Fwww.greenmangaming.com%2Fgames%2Fbattle-brothers%2F',
     'https://not-a-real.itch.io/just-a-test-link?fbclid=IwAR2mlVUJ9y8WB92ubp9088bogz6eboZaBhXKhh0n1hIveHXMyif5dQmtS1s',
-    'https://www.google.com/search?q=cat&tbm=isch#imgrc=yLEFuCVfjYdk0M'
+    'https://www.google.com/search?q=cat&tbm=isch#imgrc=yLEFuCVfjYdk0M',
+    'https://steamcommunity.com/linkfilter/?url=https://github.com/d0sboots/PerfectTower#factory-management-scripts',
+    'https://steamcommunity.com/sharedfiles/filedetails/?id=2553845625'
 ];
 
 for (let test of tests) {
