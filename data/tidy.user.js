@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tidy URL
 // @namespace    https://ksir.pw
-// @version      1.1.3
+// @version      1.1.4
 // @description  Cleans/removes garbage or tracking parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
@@ -103,7 +103,7 @@ var TidyCleaner = /** @class */ (function () {
             if (changed !== pathname) pathname = changed;
         }
         // Rebuild URL
-        var params = cleaner.toString().length ? '?' + decodeURIComponent(cleaner.toString()) : '';
+        var params = cleaner.toString().length ? '?' + cleaner.toString() : '';
         data.url = original.origin + pathname + params + original.hash;
         // Redirect if needed
         for (var _f = 0, _g = data.info.match; _f < _g.length; _f++) {

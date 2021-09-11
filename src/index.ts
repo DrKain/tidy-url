@@ -91,7 +91,7 @@ class TidyCleaner {
         }
 
         // Rebuild URL
-        const params = cleaner.toString().length ? '?' + decodeURIComponent(cleaner.toString()) : '';
+        const params = cleaner.toString().length ? '?' + cleaner.toString() : '';
         data.url = original.origin + pathname + params + original.hash;
 
         // Redirect if the redirect parameter exists

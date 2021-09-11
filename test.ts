@@ -31,7 +31,8 @@ const tests = [
     'https://not-a-real.itch.io/just-a-test-link?fbclid=IwAR2mlVUJ9y8WB92ubp9088bogz6eboZaBhXKhh0n1hIveHXMyif5dQmtS1s',
     'https://www.google.com/search?q=cat&tbm=isch#imgrc=yLEFuCVfjYdk0M',
     'https://steamcommunity.com/linkfilter/?url=https://github.com/d0sboots/PerfectTower#factory-management-scripts',
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2553845625'
+    'https://steamcommunity.com/sharedfiles/filedetails/?id=2553845625',
+    'https://duckduckgo.com/?q=%F0%9F%94%A5&t=newext&atb=v250-1&ia=answer'
 ];
 
 for (let test of tests) {
