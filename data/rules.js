@@ -48,7 +48,7 @@ const $kurlc_rules = [
     {
         name: 'aliexpress.com',
         match: /.*.aliexpress.com/i,
-        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid']
+        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid', 'algo_exp_id', 'pdp_ext_f']
     },
     {
         name: 'google.com',
@@ -210,6 +210,11 @@ const $kurlc_rules = [
         name: 'steamcommunity.com',
         match: /steamcommunity.com/i,
         redirect: 'url'
+    },
+    {
+        name: 'microsoft.com',
+        match: /microsoft.com/i,
+        rules: ['refd']
     }
 ];
 

@@ -1,9 +1,9 @@
-Total unique rules: 159
+Total unique rules: 162
 
 | Match                  | Rules |
 | :--------------------- | :---- |
 | adtraction.com         | 1     |
-| aliexpress.com         | 17    |
+| aliexpress.com         | 19    |
 | amazon.com             | 24    |
 | audible.com            | 6     |
 | bandcamp.com           | 8     |
@@ -26,6 +26,7 @@ Total unique rules: 159
 | itch.io                | 1     |
 | linkedin.com           | 11    |
 | medium.com             | 1     |
+| microsoft.com          | 1     |
 | mightyape              | 1     |
 | music.apple.com        | 5     |
 | newsweek.com           | 1     |

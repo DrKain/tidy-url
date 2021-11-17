@@ -32,11 +32,19 @@ const tests = [
     'https://www.google.com/search?q=cat&tbm=isch#imgrc=yLEFuCVfjYdk0M',
     'https://steamcommunity.com/linkfilter/?url=https://github.com/d0sboots/PerfectTower#factory-management-scripts',
     'https://steamcommunity.com/sharedfiles/filedetails/?id=2553845625',
-    'https://duckduckgo.com/?q=%F0%9F%94%A5&t=newext&atb=v250-1&ia=answer'
+    'https://duckduckgo.com/?q=%F0%9F%94%A5&t=newext&atb=v250-1&ia=answer',
+    'https://www.mgm.com/results/view%20to%20a%20kill#/our-titles/2101/A-View-to-a-Kill',
+    'https://account.microsoft.com/?refd=www.minecraft.net',
+    'https://www.aliexpress.com/item/32964243189.html?algo_exp_id=f37c6199-8083-4ecd-a312-801da89e5b1e-19&pdp_ext_f=%7B%22sku_id%22%3A%2210000001822380708%22%7D'
 ];
 
 for (let test of tests) {
     const link = TidyURL.clean(test);
+
+    if (link.info.reduction < 0) {
+        throw Error('Reduction less than 0');
+    }
+
     console.log('Input: ' + link.info.original);
     console.log('Clean: ' + link.url);
     console.log(link.info.reduction + '% smaller\n\n');
