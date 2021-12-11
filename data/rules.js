@@ -215,6 +215,11 @@ const $kurlc_rules = [
         name: 'microsoft.com',
         match: /microsoft.com/i,
         rules: ['refd']
+    },
+    {
+        name: 'berrybase.de',
+        match: /berrybase.de/i,
+        rules: ['sPartner']
     }
 ];
 
