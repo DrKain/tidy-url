@@ -1,4 +1,4 @@
-Total unique rules: 162
+Total unique rules: 166
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -7,6 +7,7 @@ Total unique rules: 162
 | amazon.com             | 24    |
 | audible.com            | 6     |
 | bandcamp.com           | 8     |
+| berrybase.de           | 1     |
 | blog.twitch.tv         | 1     |
 | discord.com            | 1     |
 | dpbolvw.net            | 1     |
@@ -19,10 +20,12 @@ Total unique rules: 162
 | gog.com                | 1     |
 | google.com             | 16    |
 | greenmangaming.com     | 2     |
+| hubspot.com            | 2     |
 | humblebundle.com       | 5     |
 | imdb.com               | 7     |
 | imgur.com              | 1     |
 | indeed.com             | 2     |
+| instagram.com          | 1     |
 | itch.io                | 1     |
 | linkedin.com           | 11    |
 | medium.com             | 1     |

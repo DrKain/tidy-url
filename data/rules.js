@@ -2,7 +2,7 @@ const $kurlc_rules = [
     {
         name: 'Global',
         match: /.*/,
-        rules: ['ga_source', 'ga_medium', 'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'utm_campaign', 'utm_source', 'utm_medium', 'utm_content', 'utm_term', 'gclid', 'gclsrc']
+        rules: ['ncid', 'utm_source', 'utm_medium', 'utm_term', 'utm_campaign', 'utm_content', 'utm_name', 'utm_cid', 'utm_reader', 'utm_viz_id', 'utm_pubreferrer', 'utm_swu', 'gclid', 'ga_source', 'ga_medium', 'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'gclid', 'gclsrc']
     },
     {
         name: 'audible.com',
@@ -220,6 +220,16 @@ const $kurlc_rules = [
         name: 'berrybase.de',
         match: /berrybase.de/i,
         rules: ['sPartner']
+    },
+    {
+        name: 'instagram.com',
+        match: /instagram.com/i,
+        rules: ['igshid']
+    },
+    {
+        name: 'hubspot.com',
+        match: /hubspot.com/i,
+        rules: ['hubs_content-cta', 'hubs_content']
     }
 ];
 
