@@ -47,8 +47,8 @@ const $kurlc_rules = [
     },
     {
         name: 'aliexpress.com',
-        match: /.*.aliexpress.com/i,
-        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid', 'algo_exp_id', 'pdp_ext_f']
+        match: /^(?:https?:\/\/)?(?:[^.]+\.)?aliexpress\.[a-z0-9]{0,3}/i,
+        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid', 'algo_exp_id', 'pdp_ext_f', 'pdp_pi', 'fromRankId', 'sourceType', 'utparam', 'gatewayAdapt', '_evo_buckets']
     },
     {
         name: 'google.com',
