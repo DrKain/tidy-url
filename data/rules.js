@@ -233,5 +233,4 @@ const $kurlc_rules = [
     }
 ];
 
-var module = module ?? { exports: null };
 module.exports = $kurlc_rules;
