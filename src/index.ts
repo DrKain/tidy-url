@@ -73,8 +73,8 @@ class TidyCleaner {
         // Loop through the rules and match them to the host name
         for (let rule of this.expandedRules) {
             if (rule.match.exec(original.host) !== null) {
-                data.info.remove = [...data.info.remove, ...rule.rules];
-                data.info.replace = [...data.info.replace, ...rule.replace];
+                data.info.remove = [...data.info.remove, ...(rule.rules || [])];
+                data.info.replace = [...data.info.replace, ...(rule.replace || [])];
                 data.info.match.push(rule);
             }
         }
