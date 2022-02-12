@@ -8,7 +8,7 @@
 // @icon         data:image/gif;base64,R0lGODlhEAAQAMIDAAAAAIAAAP8AAP///////////////////yH5BAEKAAQALAAAAAAQABAAAAMuSLrc/jA+QBUFM2iqA2ZAMAiCNpafFZAs64Fr66aqjGbtC4WkHoU+SUVCLBohCQA7
 // @updateURL    https://github.com/DrKain/tidy-url/raw/main/data/tidy.user.js
 // @downloadURL  https://github.com/DrKain/tidy-url/raw/main/data/tidy.user.js
-// @require      https://github.com/DrKain/tidy-url/raw/main/data/rules.js
+// @require      https://github.com/DrKain/tidy-url/raw/main/data/rules-web.js
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
@@ -86,8 +86,8 @@ var TidyCleaner = /** @class */ (function () {
         for (var _i = 0, _a = this.expandedRules; _i < _a.length; _i++) {
             var rule = _a[_i];
             if (rule.match.exec(original.host) !== null) {
-                data.info.remove = [...data.info.remove, ...rule.rules];
-                data.info.replace = [...data.info.replace, ...rule.replace];
+                data.info.remove = [...data.info.remove, ...(rule.rules || [])];
+                data.info.replace = [...data.info.replace, ...(rule.replace || [])];
                 data.info.match.push(rule);
             }
         }
