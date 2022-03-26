@@ -119,6 +119,17 @@ https://www.aliexpress.com/item/1005001913861188.html
 https://www.google.com/search?q=cat
 ```
 
-### Contributing
+## 🤝 Contributing
 
-Want to help? Feel free to create a PR adding a new website or parameter to remove.
+Contributions, issues and feature requests are welcome!
+Feel free to check [issues page](https://github.com/DrKain/tidy-url/issues).
+
+## 👤 Author
+
+This project was made by **Kain (ksir.pw)**
+Feel free to contact me if you have any trouble with this package.
+
+-   Website: [ksir.pw](https://ksir.pw)
+-   Github: [@DrKain](https://github.com/DrKain)
+-   Discord: Kain#6880
+
