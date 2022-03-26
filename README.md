@@ -121,12 +121,12 @@ https://www.google.com/search?q=cat
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues and feature requests are welcome!  
 Feel free to check [issues page](https://github.com/DrKain/tidy-url/issues).
 
 ## 👤 Author
 
-This project was made by **Kain (ksir.pw)**
+This project was made by **Kain (ksir.pw)**  
 Feel free to contact me if you have any trouble with this package.
 
 -   Website: [ksir.pw](https://ksir.pw)
