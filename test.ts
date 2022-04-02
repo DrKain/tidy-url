@@ -39,7 +39,8 @@ const tests = [
     'https://www.aliexpress.com/item/4000030496731.html?sourceType=fd&utparam=%257B%2522process_id%2522%253A%2522110%2522%252C%2522x_object_type%2522%253A%2522product%2522%252C%2522pvid%2522%253A%25227a9d1c0b-cb2a-4128-820c-64f170a14f1d%2522%252C%2522belongs%2522%253A%255B%257B%2522id%2522%253A%25224001%2522%252C%2522type%2522%253A%2522dataset%2522%257D%255D%252C%2522scm%2522%253A%25221007.28480.226530.0%2522%252C%2522tpp_buckets%2522%253A%252221669%25230%2523186385%252383_21669%25234190%252319162%2523431_15324%25230%2523132599%25234%2522%252C%2522x_object_id%2522%253A%25224000030496731%2522%257D',
     // sku_id is automatically added even when purged
     'https://aliexpress.ru/item/1005003170671440.html?gatewayAdapt=glo2rus&spm=a2g2w.home.15002.76.5a50501dwThjGw&_evo_buckets=165609,165598,188873,224373,176818,194275&sku_id=12000024476377327&gps-id=pcJustForYou&scm=1007.13562.265877.0&scm_id=1007.13562.265877.0&scm-url=1007.13562.265877.0&pvid=ed2b99b7-359e-4c84-8a13-761e16c1d360&_t=gps-id:pcJustForYou,scm-url:1007.13562.265877.0,pvid:ed2b99b7-359e-4c84-8a13-761e16c1d360,tpp_buckets:21387%230%23250274%230#/',
-    'https://www.tiktok.com/@1234/video/1234?language=en&sec_user_id=1111&share_app_id=1111&share_item_id=1111&share_link_id=1111&social_sharing=v4&_r=1'
+    'https://www.tiktok.com/@1234/video/1234?language=en&sec_user_id=1111&share_app_id=1111&share_item_id=1111&share_link_id=1111&social_sharing=v4&_r=1',
+    'https://www.amazon.es/Lacoste-Anal%C3%B3gico-Hombre-Cuarzo-2011016/dp/B07ND9N75K/?_encoding=UTF8&pd_rd_w=WtRtx&pf_rd_p=79b177d9-dec3-4902-8a80-f2ea2453e768&pf_rd_r=MDD53XXF52Q1F8PNPC3K&pd_rd_r=be654e33-0438-4811-930e-79191be4bab7&pd_rd_wg=tX5gT&ref_=pd_gw_unk&tag=atrapazon-21'
 ];
 
 for (let test of tests) {

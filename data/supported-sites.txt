@@ -1,4 +1,4 @@
-Total unique rules: 180
+Total unique rules: 181
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -46,4 +46,4 @@ Total unique rules: 180
 | voidu.com              | 1     |
 | wingamestore.com       | 1     |
 | yandex.com             | 5     |
-| youtube.com            | 1     |
+| youtube.com            | 2     |
