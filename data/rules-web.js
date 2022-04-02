@@ -232,5 +232,3 @@ const $kurlc_rules = [
         rules: ['hubs_content-cta', 'hubs_content']
     }
 ];
-
-module.exports = $kurlc_rules;
