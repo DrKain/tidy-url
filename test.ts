@@ -46,7 +46,8 @@ const tests = [
     'https://www.ebay.es/itm/373960634437?ff3=4&pub=5575101662&toolid=10001&campid=5338578859&customid=&mkevt=1&mkcid=1&mkrid=1185-53479-19255-0&ufes_redirect=true',
     'https://www.ebay.com/itm/143955818593?epid=21050187227&amdata=enc%3AAQAGAAAA8OtasjTDufIfupkvLtPPuyz8D02cY4ovHl%2FDR%2B7nYteaFlCcFu4Fwf8KSCn%2FdIUiMuhu28fyi9uewenJBLBg4FsBtuk83Jcgs2aNcYz4wUevAXhdxFJmLJZfS3fuQokHREG6eM4JebxpeN%2BNjiEFF9%2FXEboUJSM%2FljocvBpt1psFd1FKxLVm6XyUrUr8MtOGHY%2BCXiHFGCpte%2BXtooTMfqA3kXOtuUaMAoJBvMutTE6HuJFre4RBvGu%2Fs80Px%2BSn%2FS3tvgOxyLh4etB2UXxDAAaqEmh9yJbLigy2SFb62b5d1nZ17BgYdPNzwpuOWraYGg%3D%3D%7Ctkp%3ABFBM1LKyvv1f',
     // This should not be modified, all parameters here are valid
-    'https://www.ebay.com/sch/i.html?_nkw=%28%22paint%22%2C%22paints%22%29+-cotman+watercolor+-oil&_sacat=28113&LH_TitleDesc=1&LH_TitleDesc=1&_fsrp=1&LH_TitleDesc=1&Brand=Winsor%2520%2526%2520Newton&Color=Multicolor&_dcat=28113&rt=nc&LH_ItemCondition=1000'
+    'https://www.ebay.com/sch/i.html?_nkw=%28%22paint%22%2C%22paints%22%29+-cotman+watercolor+-oil&_sacat=28113&LH_TitleDesc=1&LH_TitleDesc=1&_fsrp=1&LH_TitleDesc=1&Brand=Winsor%2520%2526%2520Newton&Color=Multicolor&_dcat=28113&rt=nc&LH_ItemCondition=1000',
+    'https://shopee.es/Tap%C3%B3n-De-Boca-De-Aceite-De-Oliva-Vino-Tinto-A-Prueba-De-Polvo-2-Piezas-Boquilla-i.569147984.12741241980?utm_source=an_22220520000&utm_medium=affiliates&utm_campaign=0hag3wq44j-&utm_content=583003-d4e5229598d31e1281f14414b6b1802b---&af_siteid=an_22220520000&pid=affiliates&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&af_sub_siteid=583003-d4e5229598d31e1281f14414b6b1802b---&c=0hag3wq44j-'
 ];
 
 for (let test of tests) {

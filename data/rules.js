@@ -237,6 +237,11 @@ const $kurlc_rules = [
         match: /^(?:https?:\/\/)?(?:[^.]+\.)?ebay\.[a-z0-9]{0,3}/i,
         rules: ['amdata', 'var', 'hash', '_trkparms', '_trksid', '_from', 'mkcid', 'mkrid', 'campid', 'toolid', 'mkevt', 'customid', 'siteid', 'ufes_redirect', 'ff3', 'pub'],
         exclude: ['epid', '_nkw']
+    },
+    {
+        name: 'shopee.com',
+        match: /^(?:https?:\/\/)?(?:[^.]+\.)?shopee\.[a-z0-9]{0,3}/i,
+        rules: ['af_siteid', 'pid', 'af_click_lookback', 'af_viewthrough_lookback', 'is_retargeting', 'af_reengagement_window', 'af_sub_siteid', 'c']
     }
 ];
 
