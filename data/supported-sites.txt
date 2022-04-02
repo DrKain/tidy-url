@@ -1,4 +1,4 @@
-Total unique rules: 181
+Total unique rules: 208
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -11,6 +11,7 @@ Total unique rules: 181
 | blog.twitch.tv         | 1     |
 | discord.com            | 1     |
 | dpbolvw.net            | 1     |
+| ebay.com               | 16    |
 | facebook.com           | 3     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
@@ -31,12 +32,14 @@ Total unique rules: 181
 | medium.com             | 1     |
 | microsoft.com          | 1     |
 | mightyape              | 1     |
+| msn.com                | 3     |
 | music.apple.com        | 5     |
 | newsweek.com           | 1     |
 | pixiv.net              | 3     |
 | play.google.com        | 1     |
 | plex.tv                | 4     |
 | reddit.com             | 2     |
+| shopee.com             | 8     |
 | spotify.com            | 3     |
 | steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |

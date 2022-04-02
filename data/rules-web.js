@@ -242,5 +242,10 @@ const $kurlc_rules = [
         name: 'shopee.com',
         match: /^(?:https?:\/\/)?(?:[^.]+\.)?shopee\.[a-z0-9]{0,3}/i,
         rules: ['af_siteid', 'pid', 'af_click_lookback', 'af_viewthrough_lookback', 'is_retargeting', 'af_reengagement_window', 'af_sub_siteid', 'c']
+    },
+    {
+        name: 'msn.com',
+        match: /www.msn.com/i,
+        rules: ['ocid', 'cvid', 'pc']
     }
 ];
