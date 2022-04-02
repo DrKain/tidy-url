@@ -40,7 +40,13 @@ const tests = [
     // sku_id is automatically added even when purged
     'https://aliexpress.ru/item/1005003170671440.html?gatewayAdapt=glo2rus&spm=a2g2w.home.15002.76.5a50501dwThjGw&_evo_buckets=165609,165598,188873,224373,176818,194275&sku_id=12000024476377327&gps-id=pcJustForYou&scm=1007.13562.265877.0&scm_id=1007.13562.265877.0&scm-url=1007.13562.265877.0&pvid=ed2b99b7-359e-4c84-8a13-761e16c1d360&_t=gps-id:pcJustForYou,scm-url:1007.13562.265877.0,pvid:ed2b99b7-359e-4c84-8a13-761e16c1d360,tpp_buckets:21387%230%23250274%230#/',
     'https://www.tiktok.com/@1234/video/1234?language=en&sec_user_id=1111&share_app_id=1111&share_item_id=1111&share_link_id=1111&social_sharing=v4&_r=1',
-    'https://www.amazon.es/Lacoste-Anal%C3%B3gico-Hombre-Cuarzo-2011016/dp/B07ND9N75K/?_encoding=UTF8&pd_rd_w=WtRtx&pf_rd_p=79b177d9-dec3-4902-8a80-f2ea2453e768&pf_rd_r=MDD53XXF52Q1F8PNPC3K&pd_rd_r=be654e33-0438-4811-930e-79191be4bab7&pd_rd_wg=tX5gT&ref_=pd_gw_unk&tag=atrapazon-21'
+    'https://www.amazon.es/Lacoste-Anal%C3%B3gico-Hombre-Cuarzo-2011016/dp/B07ND9N75K/?_encoding=UTF8&pd_rd_w=WtRtx&pf_rd_p=79b177d9-dec3-4902-8a80-f2ea2453e768&pf_rd_r=MDD53XXF52Q1F8PNPC3K&pd_rd_r=be654e33-0438-4811-930e-79191be4bab7&pd_rd_wg=tX5gT&ref_=pd_gw_unk&tag=atrapazon-21',
+    'https://www.ebay.es/itm/284730185104?mkevt=1&mkcid=1&mkrid=1185-53479-19255-0&campid=5338467301&toolid=20012',
+    'https://pages.ebay.es/cupon/2022/DECORA22/index.html?mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5338628502&customid=&toolid=10001&mkevt=1',
+    'https://www.ebay.es/itm/373960634437?ff3=4&pub=5575101662&toolid=10001&campid=5338578859&customid=&mkevt=1&mkcid=1&mkrid=1185-53479-19255-0&ufes_redirect=true',
+    'https://www.ebay.com/itm/143955818593?epid=21050187227&amdata=enc%3AAQAGAAAA8OtasjTDufIfupkvLtPPuyz8D02cY4ovHl%2FDR%2B7nYteaFlCcFu4Fwf8KSCn%2FdIUiMuhu28fyi9uewenJBLBg4FsBtuk83Jcgs2aNcYz4wUevAXhdxFJmLJZfS3fuQokHREG6eM4JebxpeN%2BNjiEFF9%2FXEboUJSM%2FljocvBpt1psFd1FKxLVm6XyUrUr8MtOGHY%2BCXiHFGCpte%2BXtooTMfqA3kXOtuUaMAoJBvMutTE6HuJFre4RBvGu%2Fs80Px%2BSn%2FS3tvgOxyLh4etB2UXxDAAaqEmh9yJbLigy2SFb62b5d1nZ17BgYdPNzwpuOWraYGg%3D%3D%7Ctkp%3ABFBM1LKyvv1f',
+    // This should not be modified, all parameters here are valid
+    'https://www.ebay.com/sch/i.html?_nkw=%28%22paint%22%2C%22paints%22%29+-cotman+watercolor+-oil&_sacat=28113&LH_TitleDesc=1&LH_TitleDesc=1&_fsrp=1&LH_TitleDesc=1&Brand=Winsor%2520%2526%2520Newton&Color=Multicolor&_dcat=28113&rt=nc&LH_ItemCondition=1000'
 ];
 
 for (let test of tests) {

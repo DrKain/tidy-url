@@ -48,7 +48,8 @@ const $kurlc_rules = [
     {
         name: 'aliexpress.com',
         match: /^(?:https?:\/\/)?(?:[^.]+\.)?aliexpress\.[a-z0-9]{0,3}/i,
-        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid', 'algo_exp_id', 'pdp_ext_f', 'pdp_pi', 'fromRankId', 'sourceType', 'utparam', 'gatewayAdapt', '_evo_buckets', 'tpp_rcmd_bucket_id', 'scenario']
+        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid', 'algo_exp_id', 'pdp_ext_f', 'pdp_pi', 'fromRankId', 'sourceType', 'utparam', 'gatewayAdapt', '_evo_buckets', 'tpp_rcmd_bucket_id', 'scenario'],
+        exclude: ['sku_id']
     },
     {
         name: 'google.com',
@@ -230,6 +231,12 @@ const $kurlc_rules = [
         name: 'hubspot.com',
         match: /hubspot.com/i,
         rules: ['hubs_content-cta', 'hubs_content']
+    },
+    {
+        name: 'ebay.com',
+        match: /^(?:https?:\/\/)?(?:[^.]+\.)?ebay\.[a-z0-9]{0,3}/i,
+        rules: ['amdata', 'var', 'hash', '_trkparms', '_trksid', '_from', 'mkcid', 'mkrid', 'campid', 'toolid', 'mkevt', 'customid', 'siteid', 'ufes_redirect', 'ff3', 'pub'],
+        exclude: ['epid', '_nkw']
     }
 ];
 
