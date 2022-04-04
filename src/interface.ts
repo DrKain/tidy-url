@@ -13,12 +13,14 @@ export interface IData {
     info: {
         /** Original URL before cleaning */
         original: string;
-        /** Number of characters removed */
+        /** URL reduction as a percentage */
         reduction: number;
+        /** Number of characters removed */
+        difference: number;
         /** RegEx Replacements */
         replace: any[];
         /** Parameters that were removed */
-        remove: any[];
+        removed: { key: string; value: string }[];
         /** Rules matched */
         match: any[];
         /** If a query parameter exists, redirect to the value */

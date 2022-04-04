@@ -1,6 +1,8 @@
 import { IRule, IData } from './interface';
 
-class TidyCleaner {
+const $github = 'https://github.com/DrKain/tidy-url';
+
+export class TidyCleaner {
     public rules: IRule[] = [];
     public silent = false;
 
@@ -42,19 +44,32 @@ class TidyCleaner {
         }
     }
 
+    public rebuild(url: string) {
+        const original = new URL(url);
+        const params = original.searchParams;
+        const param_str = params.toString().length ? '?' + params.toString() : '';
+        return original.origin + original.pathname + param_str + original.hash;
+    }
+
     /**
      * Clean a URL
-     * @param url Any URL
+     * @param _url Any URL
      * @returns IData
      */
-    public clean(url: string): IData {
+    public clean(_url: string): IData {
+        // Rebuild to ensure trailing slashes or encoded characters match
+        const url = this.rebuild(_url);
+        // List of parmeters that will be deleted if found
+        let to_remove: any[] = [];
+
         let data: IData = {
             url,
             info: {
                 original: url,
                 reduction: 0,
+                difference: 0,
                 replace: [],
-                remove: [],
+                removed: [],
                 match: [],
                 redirect: ''
             }
@@ -73,15 +88,19 @@ class TidyCleaner {
         // Loop through the rules and match them to the host name
         for (let rule of this.expandedRules) {
             if (rule.match.exec(original.host) !== null) {
-                data.info.remove = [...data.info.remove, ...(rule.rules || [])];
+                // Loop through the rules and add to to_remove
+                to_remove = [...to_remove, ...(rule.rules || [])];
                 data.info.replace = [...data.info.replace, ...(rule.replace || [])];
                 data.info.match.push(rule);
             }
         }
 
         // Delete any matching parameters
-        for (let key of data.info.remove) {
-            if (cleaner.has(key)) cleaner.delete(key);
+        for (let key of to_remove) {
+            if (cleaner.has(key)) {
+                data.info.removed.push({ key, value: cleaner.get(key) as string });
+                cleaner.delete(key);
+            }
         }
 
         // Update the pathname if needed
@@ -101,11 +120,12 @@ class TidyCleaner {
             }
         }
 
+        data.info.difference = url.length - data.url.length;
         data.info.reduction = +(100 - (data.url.length / url.length) * 100).toFixed(2);
 
         // If the link is longer then we have an issue
         if (data.info.reduction < 0) {
-            this.log(`Reduction is ${data.info.reduction}. Please report this link on GitHub`);
+            this.log(`Reduction is ${data.info.reduction}. Please report this link on GitHub: ${$github}/issues`);
             data.url = data.info.original;
         }
 
@@ -114,3 +134,4 @@ class TidyCleaner {
 }
 
 export const TidyURL = new TidyCleaner();
+export const clean = (url: string) => TidyURL.clean(url);
