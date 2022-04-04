@@ -1,6 +1,6 @@
 import { IRule, IData } from './interface';
 
-class TidyCleaner {
+export class TidyCleaner {
     public rules: IRule[] = [];
     public silent = false;
 
@@ -42,19 +42,31 @@ class TidyCleaner {
         }
     }
 
+    public rebuild(url: string) {
+        const original = new URL(url);
+        const params = original.searchParams;
+        const param_str = params.toString().length ? '?' + params.toString() : '';
+        return original.origin + original.pathname + param_str + original.hash;
+    }
+
     /**
      * Clean a URL
-     * @param url Any URL
+     * @param _url Any URL
      * @returns IData
      */
-    public clean(url: string): IData {
+    public clean(_url: string): IData {
+        // Rebuild to ensure trailing slashes or encoded characters match
+        const url = this.rebuild(_url);
+
         let data: IData = {
             url,
             info: {
                 original: url,
                 reduction: 0,
+                difference: 0,
                 replace: [],
                 remove: [],
+                removed: [],
                 match: [],
                 redirect: ''
             }
@@ -81,7 +93,10 @@ class TidyCleaner {
 
         // Delete any matching parameters
         for (let key of data.info.remove) {
-            if (cleaner.has(key)) cleaner.delete(key);
+            if (cleaner.has(key)) {
+                data.info.removed.push({ key, value: cleaner.get(key) as string });
+                cleaner.delete(key);
+            }
         }
 
         // Update the pathname if needed
@@ -101,6 +116,7 @@ class TidyCleaner {
             }
         }
 
+        data.info.difference = url.length - data.url.length;
         data.info.reduction = +(100 - (data.url.length / url.length) * 100).toFixed(2);
 
         // If the link is longer then we have an issue
@@ -114,3 +130,4 @@ class TidyCleaner {
 }
 
 export const TidyURL = new TidyCleaner();
+export const clean = (url: string) => TidyURL.clean(url);
