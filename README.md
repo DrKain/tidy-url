@@ -6,18 +6,15 @@ A Node Package & Userscript that removes tracking or garbage parameters from URL
 [![NPM](https://img.shields.io/npm/dt/tidy-url)](https://www.npmjs.com/package/tidy-url)
 [![NPM](https://img.shields.io/npm/types/tidy-url)](https://www.npmjs.com/package/tidy-url)
 
-## Browser
+## Install:
 
-This package can work in the browser through sevear
+You can use this automatically in the browser with the [userscript](https://github.com/DrKain/tidy-url/wiki/Userscript).
 
-### Userscript
-
-Click [here](https://github.com/DrKain/tidy-url/wiki/Userscript) to see how!
+-   [Node Package Manager](https://github.com/DrKain/tidy-url/wiki/Node-Package) (NPM)
+-   [Browser](https://github.com/DrKain/tidy-url/wiki/Userscript) (userscript)
+-   [jsDelivr](https://github.com/DrKain/tidy-url/wiki/jsDelivr)
 
 ## NodeJS
-
-Want this to automatically work in the browser?  
-If not, the NodeJS guide is below. More information in the [wiki](https://github.com/DrKain/tidy-url/wiki).
 
 ```
 npm install tidy-url
