@@ -179,7 +179,7 @@ const $kurlc_rules = [
     },
     {
         name: 'mightyape',
-        match: /mightyape.co.(nz|au)/i,
+        match: /mightyape.(co.nz|com.au)/i,
         rules: ['m']
     },
     {
