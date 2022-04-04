@@ -27,9 +27,9 @@ const generateSupported = () => {
 
         // Sort rules and set padding width
         let lines = rules
-            .filter((rule) => rule.name !== 'Global')
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map((rule) => {
+            .filter((rule: any) => rule.name !== 'Global')
+            .sort((a: any, b: any) => a.name.localeCompare(b.name))
+            .map((rule: any) => {
                 if (rule.name.length > p) p = rule.name.length;
                 return rule;
             });
@@ -39,7 +39,7 @@ const generateSupported = () => {
 
         // Append rules to table
         body += lines
-            .map((rule) => {
+            .map((rule: any) => {
                 const n = rule.rules ? rule.rules.length : 1;
                 count += n;
                 return `| ${rule.name.padEnd(p, ' ')} | ${`${n}`.padEnd(5, ' ')} |`;
@@ -47,7 +47,7 @@ const generateSupported = () => {
             .join('\n');
 
         // Update the rule count
-        body = body.replace('%RULE_COUNT%', count);
+        body = body.replace('%RULE_COUNT%', count as any);
 
         // Write
         writeFileSync('./data/supported-sites.txt', body);

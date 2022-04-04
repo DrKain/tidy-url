@@ -6,9 +6,17 @@ A Node Package & Userscript that removes tracking or garbage parameters from URL
 [![NPM](https://img.shields.io/npm/dt/tidy-url)](https://www.npmjs.com/package/tidy-url)
 [![NPM](https://img.shields.io/npm/types/tidy-url)](https://www.npmjs.com/package/tidy-url)
 
-## Install
+## Browser
 
-Want this to automatically work in the browser? Click [here](https://github.com/DrKain/tidy-url/wiki/Userscript) to see how!  
+This package can work in the browser through sevear
+
+### Userscript
+
+Click [here](https://github.com/DrKain/tidy-url/wiki/Userscript) to see how!
+
+## NodeJS
+
+Want this to automatically work in the browser?  
 If not, the NodeJS guide is below. More information in the [wiki](https://github.com/DrKain/tidy-url/wiki).
 
 ```
@@ -43,7 +51,8 @@ TidyURL.validate('cat'); // false
 
 ### Note
 
-You will always receive a valid response, even if nothing was modified. For example:  
+You will always receive a valid response, even if nothing was modified. For example:
+
 ```js
 const link = TidyURL.clean('https://duckduckgo.com/this-is-fine');
 
@@ -62,26 +71,35 @@ Request direct support for a website [here](https://github.com/DrKain/tidy-url/i
 The response will always be an object with details of what was cleaned or modified in the URL.  
 This can be used for debugging, testing or a simple way of letting users know they could have sent a shorter link.
 
-```
+```json
 {
-  url: 'https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih',
-  info: {
-    original: 'https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link',
-    reduction: 47,
-    replace: [],
-    remove: [
-      'ga_source',    'ga_medium',
-      'ga_term',      'ga_content',
-      'ga_campaign',  'ga_place',
-      'utm_campaign', 'utm_source',
-      'utm_medium',   'utm_content',
-      'utm_term',     'gclid',
-      'gclsrc',       'si',
-      'utm_source',   'context'
-    ],
-    match: [ [Object], [Object] ],
-    custom: false
-  }
+    "url": "https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih",
+    "info": {
+        "original": "https://open.spotify.com/track/1hhZQVLXpg10ySFQFxGbih?si=-k8RwDQwTCK923jxZuy07w&utm_source=copy-link",
+        "reduction": 47,
+        "difference": 47,
+        "replace": [],
+        "removed": [
+            {
+                "key": "utm_source",
+                "value": "copy-link"
+            },
+            {
+                "key": "si",
+                "value": "-k8RwDQwTCK923jxZuy07w"
+            }
+        ],
+        "match": [
+            {
+                "rules": ["si", "utm_source", "context"],
+                "replace": [],
+                "redirect": "",
+                "name": "spotify.com",
+                "match": "/open.spotify.com/i"
+            }
+        ],
+        "redirect": ""
+    }
 }
 ```
 
@@ -132,4 +150,3 @@ Feel free to contact me if you have any trouble with this package.
 -   Website: [ksir.pw](https://ksir.pw)
 -   Github: [@DrKain](https://github.com/DrKain)
 -   Discord: Kain#6880
-

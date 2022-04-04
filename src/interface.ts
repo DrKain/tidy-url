@@ -21,8 +21,6 @@ export interface IData {
         replace: any[];
         /** Parameters that were removed */
         removed: { key: string; value: string }[];
-        /** All parameters that will be removed from the URL if found */
-        remove: any[];
         /** Rules matched */
         match: any[];
         /** If a query parameter exists, redirect to the value */

@@ -1,6 +1,7 @@
 import { TidyURL } from './src';
 
 const tests = [
+    'https://google.com',
     'https://duckduckgo.com/this-is-fine',
     'https://poetsroad.bandcamp.com/?from=search&search_item_id=1141951669&search_item_type=b&search_match_part=%3F&search_page_id=1748155363&search_page_no=1&search_rank=1&search_sig=a9a9cbdfc454df7c2999f097dc8a216b',
     'https://www.audible.com/pd/Project-Hail-Mary-Audiobook/B08G9PRS1K?plink=GZIIiCHG0Uo5V8ND&ref=a_hp_c9_adblp13nmpxxp13n-mpl-dt-c_1_2&pf_rd_p=164101a8-2aab-4c5e-91ee-1f39e10719e6&pf_rd_r=2Q5R6VH8HJAD48PSQRS4',
@@ -55,6 +56,7 @@ const tests = [
 for (let test of tests) {
     const link = TidyURL.clean(test);
 
+    // All tests should pass before publishing
     if (link.info.reduction < 0) {
         console.log(link.url);
         throw Error('Reduction less than 0');
@@ -62,5 +64,5 @@ for (let test of tests) {
 
     console.log('Input: ' + link.info.original);
     console.log('Clean: ' + link.url);
-    console.log(link.info.reduction + '% smaller\n\n');
+    console.log(`${link.info.reduction}% smaller (${link.info.difference} characters)\n\n`);
 }

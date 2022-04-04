@@ -1,12 +1,12 @@
 {
     "name": "tidy-url",
-    "version": "1.1.12",
+    "version": "1.2.0",
     "description": "Cleans/removes tracking or garbage parameters from URLs",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "scripts": {
         "test": "ts-node test.ts",
-        "build": "tsc && node scripts/postbuild.js",
+        "build": "tsc && webpack && ts-node src/postbuild.ts",
         "prepare": "npm run build",
         "version": "git add -A src",
         "postversion": "git push && git push --tags"
@@ -34,6 +34,9 @@
     "devDependencies": {
         "@types/node": "^14.17.0",
         "prettier": "^2.3.0",
-        "typescript": "^4.2.4"
-    }
+        "typescript": "^4.2.4",
+        "webpack-cli": "^4.9.2",
+        "ts-loader": "^9.2.8"
+    },
+    "dependencies": {}
 }

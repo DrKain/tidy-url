@@ -1,5 +1,5 @@
 import { IRule, IData } from './interface';
-declare class TidyCleaner {
+export declare class TidyCleaner {
     rules: IRule[];
     silent: boolean;
     get expandedRules(): IRule[];
@@ -15,12 +15,13 @@ declare class TidyCleaner {
      * @returns true/false
      */
     validate(url: string): boolean;
+    rebuild(url: string): string;
     /**
      * Clean a URL
-     * @param url Any URL
+     * @param _url Any URL
      * @returns IData
      */
-    clean(url: string): IData;
+    clean(_url: string): IData;
 }
 export declare const TidyURL: TidyCleaner;
-export {};
+export declare const clean: (url: string) => IData;
