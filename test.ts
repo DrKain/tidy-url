@@ -50,10 +50,11 @@ const tests = [
     'https://www.ebay.com/sch/i.html?_nkw=%28%22paint%22%2C%22paints%22%29+-cotman+watercolor+-oil&_sacat=28113&LH_TitleDesc=1&LH_TitleDesc=1&_fsrp=1&LH_TitleDesc=1&Brand=Winsor%2520%2526%2520Newton&Color=Multicolor&_dcat=28113&rt=nc&LH_ItemCondition=1000',
     'https://shopee.es/Tap%C3%B3n-De-Boca-De-Aceite-De-Oliva-Vino-Tinto-A-Prueba-De-Polvo-2-Piezas-Boquilla-i.569147984.12741241980?utm_source=an_22220520000&utm_medium=affiliates&utm_campaign=0hag3wq44j-&utm_content=583003-d4e5229598d31e1281f14414b6b1802b---&af_siteid=an_22220520000&pid=affiliates&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&af_sub_siteid=583003-d4e5229598d31e1281f14414b6b1802b---&c=0hag3wq44j-',
     'https://www.msn.com/en-nz/news/national/gower-reveals-the-question-david-seymour-needs-to-answer-on-m%C4%81ori-co-governance/ar-AAVLTsD?ocid=msedgdhp&pc=U531&cvid=4121aaf9026f43309f3d08aa98e26abd',
-    'https://www.msn.com/en-nz/feed?ocid=msedgdhp&pc=U531&cvid=4121aaf9026f43309f3d08aa98e26abd&locale=en-nz'
+    'https://www.msn.com/en-nz/feed?ocid=msedgdhp&pc=U531&cvid=4121aaf9026f43309f3d08aa98e26abd&locale=en-nz',
+    'https://www.nuuvem.com/item/hidden-deep?ranMID=46796&ranEAID=cVR20kC0FGg&ranSiteID=cVR20kC0FGg-bG2DHfJcgX0enio2bPB5VQ'
 ];
 
-for (let test of tests) {
+for (const test of tests) {
     const link = TidyURL.clean(test);
 
     // All tests should pass before publishing

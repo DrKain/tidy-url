@@ -60,9 +60,9 @@ export class TidyCleaner {
         // Rebuild to ensure trailing slashes or encoded characters match
         const url = this.rebuild(_url);
         // List of parmeters that will be deleted if found
-        let to_remove: any[] = [];
+        let to_remove: string[] = [];
 
-        let data: IData = {
+        const data: IData = {
             url,
             info: {
                 original: url,
@@ -86,7 +86,7 @@ export class TidyCleaner {
         let pathname = original.pathname;
 
         // Loop through the rules and match them to the host name
-        for (let rule of this.expandedRules) {
+        for (const rule of this.expandedRules) {
             if (rule.match.exec(original.host) !== null) {
                 // Loop through the rules and add to to_remove
                 to_remove = [...to_remove, ...(rule.rules || [])];
@@ -96,7 +96,7 @@ export class TidyCleaner {
         }
 
         // Delete any matching parameters
-        for (let key of to_remove) {
+        for (const key of to_remove) {
             if (cleaner.has(key)) {
                 data.info.removed.push({ key, value: cleaner.get(key) as string });
                 cleaner.delete(key);
@@ -104,7 +104,7 @@ export class TidyCleaner {
         }
 
         // Update the pathname if needed
-        for (let key of data.info.replace) {
+        for (const key of data.info.replace) {
             const changed = pathname.replace(key, '');
             if (changed !== pathname) pathname = changed;
         }
@@ -114,7 +114,7 @@ export class TidyCleaner {
         data.url = original.origin + pathname + params + original.hash;
 
         // Redirect if the redirect parameter exists
-        for (let rule of data.info.match) {
+        for (const rule of data.info.match) {
             if (rule.redirect.length && cleaner.has(rule.redirect)) {
                 data.url = `${cleaner.get(rule.redirect)}` + original.hash;
             }

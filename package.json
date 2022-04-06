@@ -33,10 +33,12 @@
     "homepage": "https://github.com/DrKain/tidy-url#readme",
     "devDependencies": {
         "@types/node": "^14.17.0",
+        "@typescript-eslint/eslint-plugin": "^5.17.0",
+        "@typescript-eslint/parser": "^5.17.0",
+        "eslint": "^8.12.0",
         "prettier": "^2.3.0",
+        "ts-loader": "^9.2.8",
         "typescript": "^4.2.4",
-        "webpack-cli": "^4.9.2",
-        "ts-loader": "^9.2.8"
-    },
-    "dependencies": {}
+        "webpack-cli": "^4.9.2"
+    }
 }
