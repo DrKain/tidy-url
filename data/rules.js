@@ -253,6 +253,11 @@ const $kurlc_rules = [
         name: 'nuuvem.com',
         match: /www.nuuvem.com/i,
         rules: ['ranMID', 'ranEAID', 'ranSiteID']
+    },
+    {
+        name: 'sjv.io',
+        match: /.*.sjv.io/i,
+        redirect: 'u'
     }
 ];
 

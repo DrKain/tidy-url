@@ -51,7 +51,8 @@ const tests = [
     'https://shopee.es/Tap%C3%B3n-De-Boca-De-Aceite-De-Oliva-Vino-Tinto-A-Prueba-De-Polvo-2-Piezas-Boquilla-i.569147984.12741241980?utm_source=an_22220520000&utm_medium=affiliates&utm_campaign=0hag3wq44j-&utm_content=583003-d4e5229598d31e1281f14414b6b1802b---&af_siteid=an_22220520000&pid=affiliates&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&af_sub_siteid=583003-d4e5229598d31e1281f14414b6b1802b---&c=0hag3wq44j-',
     'https://www.msn.com/en-nz/news/national/gower-reveals-the-question-david-seymour-needs-to-answer-on-m%C4%81ori-co-governance/ar-AAVLTsD?ocid=msedgdhp&pc=U531&cvid=4121aaf9026f43309f3d08aa98e26abd',
     'https://www.msn.com/en-nz/feed?ocid=msedgdhp&pc=U531&cvid=4121aaf9026f43309f3d08aa98e26abd&locale=en-nz',
-    'https://www.nuuvem.com/item/hidden-deep?ranMID=46796&ranEAID=cVR20kC0FGg&ranSiteID=cVR20kC0FGg-bG2DHfJcgX0enio2bPB5VQ'
+    'https://www.nuuvem.com/item/hidden-deep?ranMID=46796&ranEAID=cVR20kC0FGg&ranSiteID=cVR20kC0FGg-bG2DHfJcgX0enio2bPB5VQ',
+    'https://greenmangaming.sjv.io/c/2545989/1281797/15105?u=https%3A%2F%2Fwww.greenmangaming.com%2Fgames%2Fhidden-deep-pc%2F'
 ];
 
 for (const test of tests) {
