@@ -64,7 +64,8 @@ const $kurlc_rules = [
     {
         name: 'humblebundle.com',
         match: /www.humblebundle.com/i,
-        rules: ['hmb_source', 'hmb_medium', 'hmb_campaign', 'mcID', 'linkID']
+        rules: ['hmb_source', 'hmb_medium', 'hmb_campaign', 'mcID', 'linkID'],
+        exclude: ['partner']
     },
     {
         name: 'greenmangaming.com',
@@ -247,6 +248,11 @@ const $kurlc_rules = [
         name: 'msn.com',
         match: /www.msn.com/i,
         rules: ['ocid', 'cvid', 'pc']
+    },
+    {
+        name: 'nuuvem.com',
+        match: /www.nuuvem.com/i,
+        rules: ['ranMID', 'ranEAID', 'ranSiteID']
     }
 ];
 
