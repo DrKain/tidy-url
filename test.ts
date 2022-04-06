@@ -52,7 +52,8 @@ const tests = [
     'https://www.msn.com/en-nz/news/national/gower-reveals-the-question-david-seymour-needs-to-answer-on-m%C4%81ori-co-governance/ar-AAVLTsD?ocid=msedgdhp&pc=U531&cvid=4121aaf9026f43309f3d08aa98e26abd',
     'https://www.msn.com/en-nz/feed?ocid=msedgdhp&pc=U531&cvid=4121aaf9026f43309f3d08aa98e26abd&locale=en-nz',
     'https://www.nuuvem.com/item/hidden-deep?ranMID=46796&ranEAID=cVR20kC0FGg&ranSiteID=cVR20kC0FGg-bG2DHfJcgX0enio2bPB5VQ',
-    'https://greenmangaming.sjv.io/c/2545989/1281797/15105?u=https%3A%2F%2Fwww.greenmangaming.com%2Fgames%2Fhidden-deep-pc%2F'
+    'https://greenmangaming.sjv.io/c/2545989/1281797/15105?u=https%3A%2F%2Fwww.greenmangaming.com%2Fgames%2Fhidden-deep-pc%2F',
+    'https://click.linksynergy.com/deeplink?id=cVR20kC0FGg&mid=46796&murl=https%3A%2F%2Fwww.nuuvem.com%2Fitem%2Fhidden-deep'
 ];
 
 for (const test of tests) {

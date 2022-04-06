@@ -258,6 +258,12 @@ const $kurlc_rules = [
         name: 'sjv.io',
         match: /.*.sjv.io/i,
         redirect: 'u'
+    },
+    {
+        name: 'linksynergy.com',
+        match: /.*.linksynergy.com/i,
+        rules: ['id', 'mid'],
+        redirect: 'murl'
     }
 ];
 

@@ -1,4 +1,4 @@
-Total unique rules: 208
+Total unique rules: 214
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -29,17 +29,20 @@ Total unique rules: 208
 | instagram.com          | 1     |
 | itch.io                | 1     |
 | linkedin.com           | 11    |
+| linksynergy.com        | 2     |
 | medium.com             | 1     |
 | microsoft.com          | 1     |
 | mightyape              | 1     |
 | msn.com                | 3     |
 | music.apple.com        | 5     |
 | newsweek.com           | 1     |
+| nuuvem.com             | 3     |
 | pixiv.net              | 3     |
 | play.google.com        | 1     |
 | plex.tv                | 4     |
 | reddit.com             | 2     |
 | shopee.com             | 8     |
+| sjv.io                 | 1     |
 | spotify.com            | 3     |
 | steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |
