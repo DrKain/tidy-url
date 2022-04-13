@@ -1,5 +1,12 @@
 import { TidyURL } from './src';
 
+/*
+TODO: Automated tests for all domains in rules.js
+
+Each url should have an expected ouput, if the cleaned URL does not match the expected output, the test fails.
+This would help to ensure that the rules are correct and new rules do not break existing tests.
+*/
+
 const tests = [
     'https://google.com',
     'https://duckduckgo.com/this-is-fine',
@@ -53,7 +60,10 @@ const tests = [
     'https://www.msn.com/en-nz/feed?ocid=msedgdhp&pc=U531&cvid=4121aaf9026f43309f3d08aa98e26abd&locale=en-nz',
     'https://www.nuuvem.com/item/hidden-deep?ranMID=46796&ranEAID=cVR20kC0FGg&ranSiteID=cVR20kC0FGg-bG2DHfJcgX0enio2bPB5VQ',
     'https://greenmangaming.sjv.io/c/2545989/1281797/15105?u=https%3A%2F%2Fwww.greenmangaming.com%2Fgames%2Fhidden-deep-pc%2F',
-    'https://click.linksynergy.com/deeplink?id=cVR20kC0FGg&mid=46796&murl=https%3A%2F%2Fwww.nuuvem.com%2Fitem%2Fhidden-deep'
+    'https://click.linksynergy.com/deeplink?id=cVR20kC0FGg&mid=46796&murl=https%3A%2F%2Fwww.nuuvem.com%2Fitem%2Fhidden-deep',
+    // Test where two parameters of the same name are present
+    'https://anilist.co/search/manga?genres=Battle%20Royale&genres=Gore&utm_source=tidy-url',
+    'https://es.aliexpress.com/item/1005002575990898.html?**pdp_ext_f=%7B%22ship_from%22:%22PL%22,%22sku_id%22:%2212000027510692600%22%7D**&&scm=1007.25281.272687.0&scm_id=1007.25281.272687.0&scm-url=1007.25281.272687.0&pvid=e2673f2f-0aac-499f-b348-194a89547a3d&utparam=%257B%2522process_id%2522%253A%25221%2522%252C%2522x_object_type%2522%253A%2522product%2522%252C%2522pvid%2522%253A%2522e2673f2f-0aac-499f-b348-194a89547a3d%2522%252C%2522belongs%2522%253A%255B%257B%2522floor_id%2522%253A%252223811812%2522%252C%2522id%2522%253A%2522968188%2522%252C%2522type%2522%253A%2522dataset%2522%257D%252C%257B%2522id_list%2522%253A%255B%25221000072031%2522%255D%252C%2522type%2522%253A%2522gbrain%2522%257D%255D%252C%2522pageSize%2522%253A%252212%2522%252C%2522language%2522%253A%2522es%2522%252C%2522scm%2522%253A%25221007.25281.272687.0%2522%252C%2522countryId%2522%253A%2522ES%2522%252C%2522scene%2522%253A%2522TopSelection-Waterfall%2522%252C%2522tpp_buckets%2522%253A%252221669%25230%2523265320%25235_21669%25234190%252319159%2523181_15281%25230%2523272687%25236%2522%252C%2522x_object_id%2522%253A%25221005002575990898%2522%257D'
 ];
 
 for (const test of tests) {
