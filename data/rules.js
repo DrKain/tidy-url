@@ -70,7 +70,7 @@ const $kurlc_rules = [
     {
         name: 'greenmangaming.com',
         match: /www.greenmangaming.com/i,
-        rules: ['CJEVENT', 'cjevent']
+        rules: ['CJEVENT', 'cjevent', 'irclickid', 'irgwc']
     },
     {
         name: 'fanatical.com',

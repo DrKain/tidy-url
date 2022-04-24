@@ -1,4 +1,4 @@
-Total unique rules: 213
+Total unique rules: 215
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -20,7 +20,7 @@ Total unique rules: 213
 | gamesload.com          | 1     |
 | gog.com                | 1     |
 | google.com             | 16    |
-| greenmangaming.com     | 2     |
+| greenmangaming.com     | 4     |
 | hubspot.com            | 2     |
 | humblebundle.com       | 5     |
 | imdb.com               | 7     |
