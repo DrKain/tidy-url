@@ -17,5 +17,15 @@
 
 (() => {
     const link = tidyurl.clean(window.location.href);
-    if (link.url !== link.info.original) window.history.pushState('', '', link.url);
+
+    // If the modified URL is different from the original
+    if (link.url !== link.info.original) {
+        // Compare hosts as the redirect rules often lead to a new website
+        // TODO: Add host to the info
+        if (new URL(link.info.original).host !== new URL(link.url).host) {
+            window.location.href = link.url;
+        } else {
+            window.history.pushState('', '', link.url);
+        }
+    }
 })();
