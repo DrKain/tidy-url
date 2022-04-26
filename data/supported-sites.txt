@@ -1,4 +1,4 @@
-Total unique rules: 215
+Total unique rules: 216
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -9,6 +9,7 @@ Total unique rules: 215
 | bandcamp.com           | 8     |
 | berrybase.de           | 1     |
 | blog.twitch.tv         | 1     |
+| cnbc.com               | 1     |
 | discord.com            | 1     |
 | dpbolvw.net            | 1     |
 | ebay.com               | 16    |
