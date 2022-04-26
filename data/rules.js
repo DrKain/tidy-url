@@ -264,6 +264,11 @@ const $kurlc_rules = [
         match: /.*.linksynergy.com/i,
         rules: ['id', 'mid'],
         redirect: 'murl'
+    },
+    {
+        name: 'cnbc.com',
+        match: /www.cnbc.com/i,
+        rules: ['__source']
     }
 ];
 
