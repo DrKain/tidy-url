@@ -269,6 +269,11 @@ const $kurlc_rules = [
         name: 'cnbc.com',
         match: /www.cnbc.com/i,
         rules: ['__source']
+    },
+    {
+        name: 'finance.yahoo.com',
+        match: /finance.yahoo.com/i,
+        rules: ['guce_referrer', 'guce_referrer_sig', 'guccounter']
     }
 ];
 
