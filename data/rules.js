@@ -271,8 +271,8 @@ const $kurlc_rules = [
         rules: ['__source']
     },
     {
-        name: 'finance.yahoo.com',
-        match: /finance.yahoo.com/i,
+        name: 'yahoo.com',
+        match: /yahoo.com/i,
         rules: ['guce_referrer', 'guce_referrer_sig', 'guccounter']
     },
     {
