@@ -110,7 +110,8 @@ const $kurlc_rules = [
     {
         name: 'tiktok.com',
         match: /www.tiktok.com/i,
-        rules: ['is_copy_url', 'is_from_webapp', 'sender_device', 'sender_web_id', 'sec_user_id', 'share_app_id', 'share_item_id', 'share_link_id', 'social_sharing', '_r']
+        rules: ['is_copy_url', 'is_from_webapp', 'sender_device', 'sender_web_id', 'sec_user_id', 'share_app_id', 'share_item_id', 'share_link_id', 'social_sharing', '_r'],
+        exclude: ['lang']
     },
     {
         name: 'facebook.com',
@@ -175,8 +176,7 @@ const $kurlc_rules = [
     {
         name: 'gamesload.com',
         match: /gamesload.com/i,
-        rules: ['affil'],
-        replace: []
+        rules: ['affil']
     },
     {
         name: 'mightyape',

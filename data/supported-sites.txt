@@ -1,4 +1,4 @@
-Total unique rules: 216
+Total unique rules: 225
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -13,7 +13,7 @@ Total unique rules: 216
 | discord.com            | 1     |
 | dpbolvw.net            | 1     |
 | ebay.com               | 16    |
-| facebook.com           | 3     |
+| facebook.com           | 6     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
 | gamebillet.com         | 1     |
@@ -47,10 +47,12 @@ Total unique rules: 216
 | spotify.com            | 3     |
 | steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |
+| techcrunch.com         | 3     |
 | tiktok.com             | 10    |
 | twitch.tv              | 3     |
 | twitter.com            | 4     |
 | voidu.com              | 1     |
 | wingamestore.com       | 1     |
+| yahoo.com              | 3     |
 | yandex.com             | 5     |
 | youtube.com            | 2     |
