@@ -1,9 +1,9 @@
-Total unique rules: 225
+Total unique rules: 231
 
 | Match                  | Rules |
 | :--------------------- | :---- |
 | adtraction.com         | 1     |
-| aliexpress.com         | 26    |
+| aliexpress.com         | 27    |
 | amazon.com             | 24    |
 | audible.com            | 6     |
 | bandcamp.com           | 8     |
@@ -16,7 +16,6 @@ Total unique rules: 225
 | facebook.com           | 6     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
-| gamebillet.com         | 1     |
 | gamebillet.com         | 1     |
 | gamesload.com          | 1     |
 | gog.com                | 1     |
@@ -32,12 +31,13 @@ Total unique rules: 225
 | linkedin.com           | 11    |
 | linksynergy.com        | 2     |
 | medium.com             | 1     |
-| microsoft.com          | 1     |
+| microsoft.com          | 2     |
 | mightyape              | 1     |
 | msn.com                | 3     |
 | music.apple.com        | 5     |
 | newsweek.com           | 1     |
 | nuuvem.com             | 3     |
+| office.com             | 1     |
 | pixiv.net              | 3     |
 | play.google.com        | 1     |
 | plex.tv                | 4     |
@@ -48,6 +48,7 @@ Total unique rules: 225
 | steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |
 | techcrunch.com         | 3     |
+| ticketmaster.co.nz     | 4     |
 | tiktok.com             | 10    |
 | twitch.tv              | 3     |
 | twitter.com            | 4     |

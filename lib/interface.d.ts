@@ -1,8 +1,19 @@
 export interface IRule {
+    /** Name of the website */
     name: string;
+    /** Regex to test against the host */
     match: RegExp;
+    /** All parameters that match these rules will be removed */
     rules: string[];
+    /**
+     * Used in special cases where parts of the URL needs to be modified.
+     * See the amazon.com rule for an example.
+     */
     replace: any[];
+    /**
+     * Used to auto-redirect to a different URL based on the parameter.
+     * This is used to skip websites that track external links.
+     */
     redirect: string;
 }
 export interface IData {

@@ -48,7 +48,7 @@ const $kurlc_rules = [
     {
         name: 'aliexpress.com',
         match: /^(?:https?:\/\/)?(?:[^.]+\.)?aliexpress\.[a-z0-9]{0,3}/i,
-        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid', 'algo_exp_id', 'pdp_pi', 'fromRankId', 'sourceType', 'utparam', 'gatewayAdapt', '_evo_buckets', 'tpp_rcmd_bucket_id', 'scenario'],
+        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid', 'algo_exp_id', 'pdp_pi', 'fromRankId', 'sourceType', 'utparam', 'gatewayAdapt', '_evo_buckets', 'tpp_rcmd_bucket_id', 'scenario', 'pdp_npi'],
         exclude: ['sku_id', 'pdp_ext_f']
     },
     {
@@ -76,11 +76,6 @@ const $kurlc_rules = [
         name: 'fanatical.com',
         match: /www.fanatical.com/i,
         rules: ['cj_pid', 'cj_aid', 'aff_track', 'CJEVENT', 'cjevent']
-    },
-    {
-        name: 'gamebillet.com',
-        match: /www.gamebillet.com/i,
-        rules: ['affiliate']
     },
     {
         name: 'newsweek.com',
