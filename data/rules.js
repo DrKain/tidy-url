@@ -284,6 +284,11 @@ const $kurlc_rules = [
         name: 'office.com',
         match: /office.com/i,
         rules: ['from']
+    },
+    {
+        name: 'ticketmaster.co.nz',
+        match: /ticketmaster.co.nz/i,
+        rules: ['int_cmp_name', 'int_cmp_id', 'int_cmp_creative', 'tm_link']
     }
 ];
 
