@@ -279,6 +279,11 @@ const $kurlc_rules = [
         name: 'techcrunch.com',
         match: /techcrunch.com/i,
         rules: ['guce_referrer', 'guce_referrer_sig', 'guccounter']
+    },
+    {
+        name: 'office.com',
+        match: /office.com/i,
+        rules: ['from']
     }
 ];
 
