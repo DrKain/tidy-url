@@ -216,7 +216,7 @@ const $kurlc_rules = [
     {
         name: 'microsoft.com',
         match: /microsoft.com/i,
-        rules: ['refd']
+        rules: ['refd', 'icid']
     },
     {
         name: 'berrybase.de',
