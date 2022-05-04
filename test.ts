@@ -66,17 +66,24 @@ const tests = [
     'https://es.aliexpress.com/item/1005002575990898.html?**pdp_ext_f=%7B%22ship_from%22:%22PL%22,%22sku_id%22:%2212000027510692600%22%7D**&&scm=1007.25281.272687.0&scm_id=1007.25281.272687.0&scm-url=1007.25281.272687.0&pvid=e2673f2f-0aac-499f-b348-194a89547a3d&utparam=%257B%2522process_id%2522%253A%25221%2522%252C%2522x_object_type%2522%253A%2522product%2522%252C%2522pvid%2522%253A%2522e2673f2f-0aac-499f-b348-194a89547a3d%2522%252C%2522belongs%2522%253A%255B%257B%2522floor_id%2522%253A%252223811812%2522%252C%2522id%2522%253A%2522968188%2522%252C%2522type%2522%253A%2522dataset%2522%257D%252C%257B%2522id_list%2522%253A%255B%25221000072031%2522%255D%252C%2522type%2522%253A%2522gbrain%2522%257D%255D%252C%2522pageSize%2522%253A%252212%2522%252C%2522language%2522%253A%2522es%2522%252C%2522scm%2522%253A%25221007.25281.272687.0%2522%252C%2522countryId%2522%253A%2522ES%2522%252C%2522scene%2522%253A%2522TopSelection-Waterfall%2522%252C%2522tpp_buckets%2522%253A%252221669%25230%2523265320%25235_21669%25234190%252319159%2523181_15281%25230%2523272687%25236%2522%252C%2522x_object_id%2522%253A%25221005002575990898%2522%257D',
     'https://www.greenmangaming.com/games/watch-dogs-2/?irclickid=2j0WETQXbxyITJW0fEwxs2ifUkGXIJ02HUbKxg0&irgwc=1',
     'https://www.cnbc.com/2022/04/25/twitter-accepts-elon-musks-buyout-deal.html?__source=iosappshare%7Ccom.apple.UIKit.activity.Message',
+    // Unfortunately, this abomination seems to be valid
     'https://finance.yahoo.com/quote/NFLX/chart/?guccounter=1&guce_referrer=aHR0cHM6Ly9kdWNrZHVja2dvLmNvbS8&guce_referrer_sig=AQAAAF9FfW3JNh4lJE6j-fHCy6UW5RLpAtmQpHz7QBLr_fysH92XxXu9wfexiOdFdo7Ggm-XW5HTTKQEkVhS_Xf5wTxPpD33vZR5I_YbId299c9DHy9h8w-EBlXKbr08a_0cnBkObTl1NUt2N7CphtSwMTQQQRIjL6Sh1_CHQcWzOOBZ#eyJpbnRlcnZhbCI6ImRheSIsInBlcmlvZGljaXR5IjoxLCJ0aW1lVW5pdCI6bnVsbCwiY2FuZGxlV2lkdGgiOjEsImZsaXBwZWQiOmZhbHNlLCJ2b2x1bWVVbmRlcmxheSI6dHJ1ZSwiYWRqIjp0cnVlLCJjcm9zc2hhaXIiOnRydWUsImNoYXJ0VHlwZSI6ImxpbmUiLCJleHRlbmRlZCI6ZmFsc2UsIm1hcmtldFNlc3Npb25zIjp7fSwiYWdncmVnYXRpb25UeXBlIjoib2hsYyIsImNoYXJ0U2NhbGUiOiJsaW5lYXIiLCJzdHVkaWVzIjp7IuKAjHZvbCB1bmRy4oCMIjp7InR5cGUiOiJ2b2wgdW5kciIsImlucHV0cyI6eyJpZCI6IuKAjHZvbCB1bmRy4oCMIiwiZGlzcGxheSI6IuKAjHZvbCB1bmRy4oCMIn0sIm91dHB1dHMiOnsiVXAgVm9sdW1lIjoiIzAwYjA2MSIsIkRvd24gVm9sdW1lIjoiI2ZmMzMzYSJ9LCJwYW5lbCI6ImNoYXJ0IiwicGFyYW1ldGVycyI6eyJ3aWR0aEZhY3RvciI6MC40NSwiY2hhcnROYW1lIjoiY2hhcnQifX19LCJwYW5lbHMiOnsiY2hhcnQiOnsicGVyY2VudCI6MSwiZGlzcGxheSI6Ik5GTFgiLCJjaGFydE5hbWUiOiJjaGFydCIsImluZGV4IjowLCJ5QXhpcyI6eyJuYW1lIjoiY2hhcnQiLCJwb3NpdGlvbiI6bnVsbH0sInlheGlzTEhTIjpbXSwieWF4aXNSSFMiOlsiY2hhcnQiLCLigIx2b2wgdW5kcuKAjCJdfX0sInNldFNwYW4iOm51bGwsImxpbmVXaWR0aCI6Miwic3RyaXBlZEJhY2tncm91bmQiOnRydWUsImV2ZW50cyI6dHJ1ZSwiY29sb3IiOiIjMDA4MWYyIiwic3RyaXBlZEJhY2tncm91ZCI6dHJ1ZSwiZXZlbnRNYXAiOnsiY29ycG9yYXRlIjp7ImRpdnMiOnRydWUsInNwbGl0cyI6dHJ1ZX0sInNpZ0RldiI6e319LCJyYW5nZSI6bnVsbCwic3ltYm9scyI6W3sic3ltYm9sIjoiTkZMWCIsInN5bWJvbE9iamVjdCI6eyJzeW1ib2wiOiJORkxYIiwicXVvdGVUeXBlIjoiRVFVSVRZIiwiZXhjaGFuZ2VUaW1lWm9uZSI6IkFtZXJpY2EvTmV3X1lvcmsifSwicGVyaW9kaWNpdHkiOjEsImludGVydmFsIjoiZGF5IiwidGltZVVuaXQiOm51bGwsInNldFNwYW4iOm51bGx9XX0-',
     'https://techcrunch.com/2021/09/06/protonmail-logged-ip-address-of-french-activist-after-order-by-swiss-authorities/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cudGhldmVyZ2UuY29tLw&guce_referrer_sig=AQAAACslNIKX-0gBqFYP-1Hxyu1dg80OojvZLtLOB_INlDDOKr329PlngC2kl47UPRUIQUJc3UuI2QKDYWO0hMtQf9FlbwYVQYL7QeduG-MFnR5ZDxj-slnW77Q0K8dcJw0RKeL_uNDu13IavEaNk07JCQdt1OJYPAH6sjCnYkbb-8rt',
     'https://www.facebook.com/marketplace/item/1030767454337102/?referral_code=marketplace_top_picks&referral_story_type=top_picks&tracking=%7B%22qid%22%3A%22-7798517114374619577%22%2C%22mf_story_key%22%3A%22532089594268198849%22%2C%22commerce_rank_obj%22%3A%22%7B%5C%22target_id%5C%22%3A532089594268198849%2C%5C%22target_type%5C%22%3A6%2C%5C%22primary_position%5C%22%3A0%2C%5C%22ranking_signature%5C%22%3A1966095020037505024%2C%5C%22commerce_channel%5C%22%3A501%2C%5C%22value%5C%22%3A0%2C%5C%22upsell_type%5C%22%3A21%2C%5C%22grouping_info%5C%22%3Anull%7D%22%7D',
     'https://www.office.com/?from=OfficeKey',
     'https://www.microsoft.com/en-nz/d/surface-laptop-studio/8SRDF62SWKPF?icid=MSCOM_Hero_2_Surface_Laptop_Studio_270422_en_NZ&activetab=pivot:overviewtab',
     'https://help.ticketmaster.co.nz/hc/en-nz/articles/360019056077-Rescheduled-Cancelled-Events?int_cmp_name=Cancelled-and-Altered-Events&int_cmp_id=NZ-Home-750&int_cmp_creative=Home-featured-1&tm_link=tm_ccp_Home_featured_Cancelled-and-Altered-Events',
-    'https://www.bostonglobe.com/2022/05/03/opinion/supreme-court-abortion-opinion-could-strip-other-rights/?p1=Article_Recirc_Most_Popular'
+    'https://www.bostonglobe.com/2022/05/03/opinion/supreme-court-abortion-opinion-could-strip-other-rights/?p1=Article_Recirc_Most_Popular',
+    // Very basic AMP support. You can disable this with allow_amp = true
+    'https://www.google.com/amp/s/www.bostonglobe.com/lifestyle/style/2014/01/11/the-ice-rink-becomes-runway-for-female-figure-skaters/ZfSFpCEEKGGPrwzAcvnGRN/story.html'
 ];
 
 for (const test of tests) {
     const link = TidyURL.clean(test);
+
+    // New options added in 1.2.8
+    TidyURL.allow_amp = false;
+    TidyURL.allow_redirects = true;
 
     // All tests should pass before publishing
     if (link.info.reduction < 0) {
@@ -91,5 +98,6 @@ for (const test of tests) {
 
     console.log('Input: ' + link.info.original);
     console.log('Clean: ' + link.url);
+    console.log('New Host: ' + link.info.is_new_host);
     console.log(`${link.info.reduction}% smaller (${link.info.difference} characters)\n\n`);
 }

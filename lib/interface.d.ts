@@ -15,6 +15,12 @@ export interface IRule {
      * This is used to skip websites that track external links.
      */
     redirect: string;
+    /**
+     * There's a whole number of reasons why you don't want AMP links,
+     * too many to fit in this description.
+     * See this link for more info: https://redd.it/ehrq3z
+     */
+    amp: RegExp | null;
 }
 export interface IData {
     /** Cleaned URL */
@@ -35,7 +41,7 @@ export interface IData {
         }[];
         /** Rules matched */
         match: any[];
-        /** If a query parameter exists, redirect to the value */
-        redirect: string;
+        /** If the cleaned URL is a different host */
+        is_new_host: boolean;
     };
 }

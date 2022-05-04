@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tidy URL
 // @namespace    https://ksir.pw
-// @version      1.2.7
+// @version      1.2.8
 // @description  Cleans/removes garbage or tracking parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
@@ -20,12 +20,7 @@
 
     // If the modified URL is different from the original
     if (link.url !== link.info.original) {
-        // Compare hosts as the redirect rules often lead to a new website
-        // TODO: Add host to the info
-        if (new URL(link.info.original).host !== new URL(link.url).host) {
-            window.location.href = link.url;
-        } else {
-            window.history.pushState('', '', link.url);
-        }
+        if (link.info.is_new_host) window.location.href = link.url;
+        else window.history.pushState('', '', link.url);
     }
 })();

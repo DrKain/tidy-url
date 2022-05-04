@@ -2,6 +2,17 @@ import { IRule, IData } from './interface';
 export declare class TidyCleaner {
     rules: IRule[];
     silent: boolean;
+    /**
+     * There's a whole number of reasons why you don't want AMP links,
+     * too many to fit in this description.
+     * See this link for more info: https://redd.it/ehrq3z
+     */
+    allow_amp: boolean;
+    /**
+     * Used to auto-redirect to a different URL based on the parameter.
+     * This is used to skip websites that track external links.
+     */
+    allow_redirects: boolean;
     get expandedRules(): IRule[];
     constructor();
     /**

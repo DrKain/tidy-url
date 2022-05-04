@@ -6,9 +6,29 @@ export class TidyCleaner {
     public rules: IRule[] = [];
     public silent = false;
 
+    /**
+     * There's a whole number of reasons why you don't want AMP links,
+     * too many to fit in this description.
+     * See this link for more info: https://redd.it/ehrq3z
+     */
+    public allow_amp = false;
+    /**
+     * Used to auto-redirect to a different URL based on the parameter.
+     * This is used to skip websites that track external links.
+     */
+    public allow_redirects = true;
+
     get expandedRules() {
         return this.rules.map((rule) => {
-            return Object.assign({ rules: [], replace: [], redirect: '' }, rule) as IRule;
+            return Object.assign(
+                {
+                    rules: [],
+                    replace: [],
+                    redirect: '',
+                    amp: null
+                },
+                rule
+            ) as IRule;
         });
     }
 
@@ -71,7 +91,7 @@ export class TidyCleaner {
                 replace: [],
                 removed: [],
                 match: [],
-                redirect: ''
+                is_new_host: false
             }
         };
 
@@ -114,14 +134,34 @@ export class TidyCleaner {
         data.url = original.origin + pathname + params + original.hash;
 
         // Redirect if the redirect parameter exists
-        for (const rule of data.info.match) {
-            if (rule.redirect.length && cleaner.has(rule.redirect)) {
-                data.url = `${cleaner.get(rule.redirect)}` + original.hash;
+        if (this.allow_redirects) {
+            for (const rule of data.info.match) {
+                if (rule.redirect.length && cleaner.has(rule.redirect)) {
+                    data.url = `${cleaner.get(rule.redirect)}` + original.hash;
+                }
+            }
+        }
+
+        // De-amp the URL
+        if (this.allow_amp === false) {
+            for (const rule of data.info.match) {
+                // Ensure the amp rule matches
+                if (rule.amp && rule.amp.test(data.url)) {
+                    // Reset the lastIndex
+                    rule.amp.lastIndex = 0;
+                    const result = rule.amp.exec(data.url);
+                    // If there is a result, replace the URL
+                    if (result && result[1]) data.url = 'https://' + result[1];
+                }
             }
         }
 
         data.info.difference = url.length - data.url.length;
         data.info.reduction = +(100 - (data.url.length / url.length) * 100).toFixed(2);
+
+        if (new URL(url).host !== new URL(data.url).host) {
+            data.info.is_new_host = true;
+        }
 
         // If the link is longer then we have an issue
         if (data.info.reduction < 0) {
