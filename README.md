@@ -44,6 +44,24 @@ You can validate a URL using the `validate` function.
 ```js
 TidyURL.validate('https://example.com'); // true
 TidyURL.validate('cat'); // false
+TidyURL.validate('google.com'); // false (protocol is required!)
+```
+
+### AMP & Redirects
+
+By default, tidy-url will remove redirect parameters and AMP links if the rule supports it.  
+You can disable this feature with `allow_redirects` and `allow_amp`. 
+Examples:  
+
+```ts
+// These are the defaults.
+TidyURL.allow_redirects = true;
+TidyURL.allow_amp = false;
+
+TidyURL.clean('https://www.google.com/amp/s/github.com');
+TidyURL.clean('https://steamcommunity.com/linkfilter/?url=https://github.com');
+// Result for both: https://github.com
+
 ```
 
 ### Note
@@ -95,7 +113,7 @@ This can be used for debugging, testing or a simple way of letting users know th
                 "match": "/open.spotify.com/i"
             }
         ],
-        "redirect": ""
+        "is_new_host": false
     }
 }
 ```
