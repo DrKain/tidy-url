@@ -16,6 +16,10 @@
 // ==/UserScript==
 
 (() => {
+    // Enable/disable redirect and amp rules
+    tidyurl.TidyURL.allow_redirects = true;
+    tidyurl.TidyURL.allow_amp = false;
+
     const link = tidyurl.clean(window.location.href);
 
     // If the modified URL is different from the original
