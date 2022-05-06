@@ -146,12 +146,16 @@ export class TidyCleaner {
         if (this.allow_amp === false) {
             for (const rule of data.info.match) {
                 // Ensure the amp rule matches
-                if (rule.amp && rule.amp.test(data.url)) {
+                if (rule.amp && data.url.match(rule.amp)) {
                     // Reset the lastIndex
                     rule.amp.lastIndex = 0;
                     const result = rule.amp.exec(data.url);
                     // If there is a result, replace the URL
-                    if (result && result[1]) data.url = 'https://' + result[1];
+                    if (result && result[1]) {
+                        data.url = 'https://' + result[1];
+                        if (data.url.endsWith('%3Famp')) data.url = data.url.slice(0, -6);
+                        if (data.url.endsWith('amp/')) data.url = data.url.slice(0, -4);
+                    }
                 }
             }
         }
