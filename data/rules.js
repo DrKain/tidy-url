@@ -294,8 +294,8 @@ const $kurlc_rules = [
     {
         name: 'ampproject.org',
         match: /cdn.ampproject.org/i,
-        rules: ['amp_gsa', 'amp_js_v', 'usqp'],
-        amp: /cdn\.ampproject\.org\/v\/s\/(.*)\#amp/gim
+        rules: ['amp_gsa', 'amp_js_v', 'usqp', 'outputType'],
+        amp: /cdn\.ampproject\.org\/v\/s\/(.*)\#(aoh|csi|referrer|amp)/gim
     }
 ];
 

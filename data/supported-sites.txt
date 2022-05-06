@@ -1,10 +1,11 @@
-Total unique rules: 232
+Total unique rules: 237
 
 | Match                  | Rules |
 | :--------------------- | :---- |
 | adtraction.com         | 1     |
 | aliexpress.com         | 27    |
 | amazon.com             | 24    |
+| ampproject.org         | 4     |
 | audible.com            | 6     |
 | bandcamp.com           | 8     |
 | berrybase.de           | 1     |
@@ -36,7 +37,7 @@ Total unique rules: 232
 | mightyape              | 1     |
 | msn.com                | 3     |
 | music.apple.com        | 5     |
-| newsweek.com           | 1     |
+| newsweek.com           | 2     |
 | nuuvem.com             | 3     |
 | office.com             | 1     |
 | pixiv.net              | 3     |
