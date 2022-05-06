@@ -75,7 +75,12 @@ const tests = [
     'https://help.ticketmaster.co.nz/hc/en-nz/articles/360019056077-Rescheduled-Cancelled-Events?int_cmp_name=Cancelled-and-Altered-Events&int_cmp_id=NZ-Home-750&int_cmp_creative=Home-featured-1&tm_link=tm_ccp_Home_featured_Cancelled-and-Altered-Events',
     'https://www.bostonglobe.com/2022/05/03/opinion/supreme-court-abortion-opinion-could-strip-other-rights/?p1=Article_Recirc_Most_Popular',
     // Very basic AMP support. You can disable this with allow_amp = true
-    'https://www.google.com/amp/s/www.bostonglobe.com/lifestyle/style/2014/01/11/the-ice-rink-becomes-runway-for-female-figure-skaters/ZfSFpCEEKGGPrwzAcvnGRN/story.html'
+    'https://www.google.com/amp/s/www.bostonglobe.com/lifestyle/style/2014/01/11/the-ice-rink-becomes-runway-for-female-figure-skaters/ZfSFpCEEKGGPrwzAcvnGRN/story.html',
+    'https://www.google.com/amp/s/www.hitc.com/en-gb/2022/04/28/how-much-did-amber-heard-get-paid-for-aquaman/%3Famp',
+    'https://www.newsweek.com/mexican-drug-cartels-asked-russia-arms-dealers-help-shooting-down-us-1234167?amp=1',
+    'https://www.google.com/amp/s/amp.abc.net.au/article/100344174',
+    'https://www.google.com/amp/s/www.the-sun.com/news/uk-news/1105742/johnny-depp-dog-window-amber-heard-laughed/amp/',
+    'https://www-express-co-uk.cdn.ampproject.org/v/s/www.express.co.uk/entertainment/gaming/1605383/Best-co-op-games-Tiny-Tina-Wonderlands-It-Takes-Two-Overcooked-Streets-of-Rage-4/amp?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIKAGwASCAAgM%3D#amp_tf=From%20%251%24s&aoh=16518029234618&csi=0&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.express.co.uk%2Fentertainment%2Fgaming%2F1605383%2FBest-co-op-games-Tiny-Tina-Wonderlands-It-Takes-Two-Overcooked-Streets-of-Rage-4'
 ];
 
 for (const test of tests) {

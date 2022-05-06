@@ -290,6 +290,12 @@ const $kurlc_rules = [
         name: 'bostonglobe.com',
         match: /www.bostonglobe.com/i,
         rules: ['p1']
+    },
+    {
+        name: 'ampproject.org',
+        match: /cdn.ampproject.org/i,
+        rules: ['amp_gsa', 'amp_js_v', 'usqp'],
+        amp: /cdn\.ampproject\.org\/v\/s\/(.*)\#amp/gim
     }
 ];
 
