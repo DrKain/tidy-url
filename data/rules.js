@@ -55,7 +55,7 @@ const $kurlc_rules = [
         name: 'google.com',
         match: /www.google\..*/i,
         rules: ['sourceid', 'client', 'aqs', 'sxsrf', 'uact', 'ved', 'iflsig', 'source', 'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr'],
-        amp: /www\.google\.com\/amp\/s\/(.*)$/gim
+        amp: /www\.google\.com\/amp\/s\/(.*)/gim
     },
     {
         name: 'youtube.com',
@@ -81,7 +81,7 @@ const $kurlc_rules = [
     {
         name: 'newsweek.com',
         match: /www.newsweek.com/i,
-        rules: ['subref']
+        rules: ['subref', 'amp']
     },
     {
         name: 'imgur.com',
