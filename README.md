@@ -64,6 +64,8 @@ TidyURL.clean('https://steamcommunity.com/linkfilter/?url=https://github.com');
 
 ```
 
+*More info about AMP on [the wiki](https://github.com/DrKain/tidy-url/wiki/AMP-Links)*.
+
 ### Note
 
 You will always receive a valid response, even if nothing was modified. For example:
