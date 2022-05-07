@@ -96,7 +96,7 @@ const $kurlc_rules = [
     {
         name: 'imdb.com',
         match: /www.imdb.com/i,
-        rules: ['ref_', 'pf_rd_m', 'pf_rd_r', 'pf_rd_p', 'pf_rd_s', 'pf_rd_t', 'pf_rd_i']
+        rules: ['ref_', 'pf_rd_m', 'pf_rd_r', 'pf_rd_p', 'pf_rd_s', 'pf_rd_t', 'pf_rd_i', 'ref_hp_hp_e_2']
     },
     {
         name: 'gog.com',
