@@ -232,7 +232,7 @@ const $kurlc_rules = [
     {
         name: 'ebay.com',
         match: /^(?:https?:\/\/)?(?:[^.]+\.)?ebay\.[a-z0-9]{0,3}/i,
-        rules: ['amdata', 'var', 'hash', '_trkparms', '_trksid', '_from', 'mkcid', 'mkrid', 'campid', 'toolid', 'mkevt', 'customid', 'siteid', 'ufes_redirect', 'ff3', 'pub'],
+        rules: ['amdata', 'var', 'hash', '_trkparms', '_trksid', '_from', 'mkcid', 'mkrid', 'campid', 'toolid', 'mkevt', 'customid', 'siteid', 'ufes_redirect', 'ff3', 'pub', 'media', 'widget_ver', 'ssspo', 'sssrc', 'ssuid'],
         exclude: ['epid', '_nkw']
     },
     {
