@@ -1,4 +1,4 @@
-Total unique rules: 237
+Total unique rules: 244
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -14,7 +14,7 @@ Total unique rules: 237
 | cnbc.com               | 1     |
 | discord.com            | 1     |
 | dpbolvw.net            | 1     |
-| ebay.com               | 16    |
+| ebay.com               | 21    |
 | facebook.com           | 6     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
@@ -25,7 +25,7 @@ Total unique rules: 237
 | greenmangaming.com     | 4     |
 | hubspot.com            | 2     |
 | humblebundle.com       | 5     |
-| imdb.com               | 7     |
+| imdb.com               | 8     |
 | imgur.com              | 1     |
 | indeed.com             | 2     |
 | instagram.com          | 1     |
@@ -37,6 +37,7 @@ Total unique rules: 237
 | mightyape              | 1     |
 | msn.com                | 3     |
 | music.apple.com        | 5     |
+| nbcnews.com            | 1     |
 | newsweek.com           | 2     |
 | nuuvem.com             | 3     |
 | office.com             | 1     |

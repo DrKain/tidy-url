@@ -296,6 +296,11 @@ const $kurlc_rules = [
         match: /cdn.ampproject.org/i,
         rules: ['amp_gsa', 'amp_js_v', 'usqp', 'outputType'],
         amp: /cdn\.ampproject\.org\/v\/s\/(.*)\#(aoh|csi|referrer|amp)/gim
+    },
+    {
+        name: 'nbcnews.com',
+        match: /nbcnews.com/i,
+        rules: ['fbclid']
     }
 ];
 

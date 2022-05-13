@@ -88,7 +88,8 @@ const tests = [
     'https://www-aljazeera-com.cdn.ampproject.org/v/s/www.aljazeera.com/amp/news/2022/5/3/myanmar-regime-condemns-malaysia-call-for-asean-to-work-with-nug?amp_js_v=a6&amp_gsa=1&usqp=mq331AQIKAGwASCAAgM%3D#aoh=16516490670287&csi=0&referrer=https%3A%2F%2Fwww.google.com&amp_tf=From%20%251%24s&ampshare=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2F2022%2F5%2F3%2Fmyanmar-regime-condemns-malaysia-call-for-asean-to-work-with-nug',
     'https://www-inquirer-com.cdn.ampproject.org/v/s/www.inquirer.com/news/edsaul-mendoza-philly-police-charged-murder-thomas-tj-siderio-20220502.html?amp_js_v=a6&amp_gsa=1&outputType=amp&usqp=mq331AQKKAFQArABIIACAw%3D%3D#aoh=16515090761779&referrer=https%3A%2F%2Fwww.google.com&amp_tf=From%20%251%24s&ampshare=https%3A%2F%2Fwww.inquirer.com%2Fnews%2Fedsaul-mendoza-philly-police-charged-murder-thomas-tj-siderio-20220502.html',
     // Back to other tests
-    'https://www.ebay.com/itm/264921790801?ssspo=l-u9Sc6sTHC&sssrc=2349624&ssuid=&widget_ver=artemis&media=COPY'
+    'https://www.ebay.com/itm/264921790801?ssspo=l-u9Sc6sTHC&sssrc=2349624&ssuid=&widget_ver=artemis&media=COPY',
+    'https://www.nbcnews.com/tech/tech-news/library-apps-book-ban-schools-conservative-parents-rcna26103?fbclid=IwAR3grwjabekSPvO1hM7akI8O5ouUxtTNtKMta3hOfFGTJ1eJYo5DXYeX_qM'
 ];
 
 for (const test of tests) {
