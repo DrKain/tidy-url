@@ -301,6 +301,11 @@ const $kurlc_rules = [
         name: 'nbcnews.com',
         match: /nbcnews.com/i,
         rules: ['fbclid']
+    },
+    {
+        name: 'countdown.co.nz',
+        match: /www.countdown.co.nz/i,
+        rules: ['promo_name', 'promo_creative', 'promo_position', 'itemID']
     }
 ];
 

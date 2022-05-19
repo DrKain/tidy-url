@@ -89,7 +89,8 @@ const tests = [
     'https://www-inquirer-com.cdn.ampproject.org/v/s/www.inquirer.com/news/edsaul-mendoza-philly-police-charged-murder-thomas-tj-siderio-20220502.html?amp_js_v=a6&amp_gsa=1&outputType=amp&usqp=mq331AQKKAFQArABIIACAw%3D%3D#aoh=16515090761779&referrer=https%3A%2F%2Fwww.google.com&amp_tf=From%20%251%24s&ampshare=https%3A%2F%2Fwww.inquirer.com%2Fnews%2Fedsaul-mendoza-philly-police-charged-murder-thomas-tj-siderio-20220502.html',
     // Back to other tests
     'https://www.ebay.com/itm/264921790801?ssspo=l-u9Sc6sTHC&sssrc=2349624&ssuid=&widget_ver=artemis&media=COPY',
-    'https://www.nbcnews.com/tech/tech-news/library-apps-book-ban-schools-conservative-parents-rcna26103?fbclid=IwAR3grwjabekSPvO1hM7akI8O5ouUxtTNtKMta3hOfFGTJ1eJYo5DXYeX_qM'
+    'https://www.nbcnews.com/tech/tech-news/library-apps-book-ban-schools-conservative-parents-rcna26103?fbclid=IwAR3grwjabekSPvO1hM7akI8O5ouUxtTNtKMta3hOfFGTJ1eJYo5DXYeX_qM',
+    'https://www.countdown.co.nz/shop/specials/frozen?promo_position=Special%20Hub%20Tiles&promo_creative=Tile&promo_name=FY2247%20-%20Freezer%20Specials&itemID=Freezer%20Specials'
 ];
 
 for (const test of tests) {

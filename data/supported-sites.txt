@@ -1,4 +1,4 @@
-Total unique rules: 244
+Total unique rules: 248
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -12,6 +12,7 @@ Total unique rules: 244
 | blog.twitch.tv         | 1     |
 | bostonglobe.com        | 1     |
 | cnbc.com               | 1     |
+| countdown.co.nz        | 4     |
 | discord.com            | 1     |
 | dpbolvw.net            | 1     |
 | ebay.com               | 21    |
