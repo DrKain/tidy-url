@@ -90,7 +90,10 @@ const tests = [
     // Back to other tests
     'https://www.ebay.com/itm/264921790801?ssspo=l-u9Sc6sTHC&sssrc=2349624&ssuid=&widget_ver=artemis&media=COPY',
     'https://www.nbcnews.com/tech/tech-news/library-apps-book-ban-schools-conservative-parents-rcna26103?fbclid=IwAR3grwjabekSPvO1hM7akI8O5ouUxtTNtKMta3hOfFGTJ1eJYo5DXYeX_qM',
-    'https://www.countdown.co.nz/shop/specials/frozen?promo_position=Special%20Hub%20Tiles&promo_creative=Tile&promo_name=FY2247%20-%20Freezer%20Specials&itemID=Freezer%20Specials'
+    'https://www.countdown.co.nz/shop/specials/frozen?promo_position=Special%20Hub%20Tiles&promo_creative=Tile&promo_name=FY2247%20-%20Freezer%20Specials&itemID=Freezer%20Specials',
+    'https://www.etsy.com/uk/listing/1078941499/chenille-mickey-mouse-patch-mickey-iron?click_key=812793a47507e4a7a2b6610f371b4372e8d3c558%3A1078941499&click_sum=206f27bf&rec_type=ss&ref=landingpage_similar_listing_top-1&frs=1',
+    'https://www.etsy.com/uk/listing/105955524/tiger-screen-print-limited-edition-print?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery-1-11&sts=1',
+    'https://www.etsy.com/c/home-and-living?explicit=1&attr_1=2&ship_to=GB&price_bucket=1&min=100&category_landing_page=true'
 ];
 
 for (const test of tests) {

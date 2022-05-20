@@ -306,6 +306,11 @@ const $kurlc_rules = [
         name: 'countdown.co.nz',
         match: /www.countdown.co.nz/i,
         rules: ['promo_name', 'promo_creative', 'promo_position', 'itemID']
+    },
+    {
+        name: 'etsy.com',
+        match: /www.etsy.com/i,
+        rules: ['click_key', 'click_sum', 'rec_type', 'ref', 'frs', 'sts']
     }
 ];
 
