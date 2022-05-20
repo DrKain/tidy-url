@@ -311,6 +311,11 @@ const $kurlc_rules = [
         name: 'etsy.com',
         match: /www.etsy.com/i,
         rules: ['click_key', 'click_sum', 'rec_type', 'ref', 'frs', 'sts']
+    },
+    {
+        name: 'wattpad.com',
+        match: /www.wattpad.com/i,
+        rules: ['wp_page', 'wp_uname', 'wp_originator']
     }
 ];
 

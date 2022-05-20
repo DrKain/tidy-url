@@ -1,4 +1,4 @@
-Total unique rules: 248
+Total unique rules: 257
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -16,6 +16,7 @@ Total unique rules: 248
 | discord.com            | 1     |
 | dpbolvw.net            | 1     |
 | ebay.com               | 21    |
+| etsy.com               | 6     |
 | facebook.com           | 6     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
@@ -57,6 +58,7 @@ Total unique rules: 248
 | twitch.tv              | 3     |
 | twitter.com            | 4     |
 | voidu.com              | 1     |
+| wattpad.com            | 3     |
 | wingamestore.com       | 1     |
 | yahoo.com              | 3     |
 | yandex.com             | 5     |

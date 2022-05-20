@@ -1,12 +1,12 @@
 import { TidyURL } from './src';
 
 const tests = [
-    'https://google.com',
     // Delete test URLs before commit
     ''
 ];
 
 for (const test of tests) {
+    if (test.length === 0) continue;
     const link = TidyURL.clean(test);
 
     // New options added in 1.2.8
