@@ -107,6 +107,7 @@ export class TidyCleaner {
 
         // Loop through the rules and match them to the host name
         for (const rule of this.expandedRules) {
+            rule.match.lastIndex = 0;
             if (rule.match.exec(original.host) !== null) {
                 // Loop through the rules and add to to_remove
                 to_remove = [...to_remove, ...(rule.rules || [])];
