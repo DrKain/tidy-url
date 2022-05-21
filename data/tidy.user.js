@@ -15,10 +15,10 @@
 // @run-at       document-start
 // ==/UserScript==
 
-// Set to true if you want page links to be cleaned
-// This may break some sites, if this happens please report it
-// https://github.com/DrKain/tidy-url/issues
-const clean_pages = false;
+// Set to false if you don't want page links to be cleaned
+// If you encounter any problems please report the link on GitHub
+// ---> https://github.com/DrKain/tidy-url/issues
+const clean_pages = true;
 // Time between each cleanup (in milliseconds)
 const clean_interval = 3000;
 
