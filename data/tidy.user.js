@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tidy URL
 // @namespace    https://ksir.pw
-// @version      1.3.0
+// @version      1.3.1
 // @description  Cleans/removes garbage or tracking parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
@@ -14,6 +14,13 @@
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
+
+// Set to true if you want page links to be cleaned
+// This may break some sites, if this happens please report it
+// https://github.com/DrKain/tidy-url/issues
+const clean_pages = false;
+// Time between each cleanup (in milliseconds)
+const clean_interval = 3000;
 
 (() => {
     // Enable/disable redirect and amp rules
@@ -28,3 +35,38 @@
         else window.history.pushState('', '', link.url);
     }
 })();
+
+// Call when page has finished loading
+window.addEventListener('load', () => {
+    let ready = true;
+    if (!clean_pages) return;
+
+    const do_clean = () => {
+        if (ready) {
+            ready = false;
+            const links = document.querySelectorAll('a');
+            console.log('[tidy-url] Links: ', links.length);
+            for (const link of links) {
+                try {
+                    // Make sure it's a valid URL
+                    new URL(link.href);
+                    // Run the cleaner
+                    const cleaned = tidyurl.clean(link.href);
+                    // If the new URL is shorter, apply it
+                    if (cleaned.info.reduction > 0) {
+                        console.log('[Tidy URL] Cleaned:', link.href);
+                        link.setAttribute('href', cleaned.url);
+                    }
+                } catch (error) {
+                    // Ignore invalid URLs
+                }
+            }
+            setTimeout(() => (ready = true), clean_interval);
+        }
+    };
+
+    const MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+    const observer = new MutationObserver(do_clean);
+    observer.observe(document, { childList: true, subtree: true });
+    do_clean();
+});
