@@ -316,6 +316,11 @@ const $kurlc_rules = [
         name: 'wattpad.com',
         match: /www.wattpad.com/i,
         rules: ['wp_page', 'wp_uname', 'wp_originator']
+    },
+    {
+        name: 'redirect.viglink.com',
+        match: /redirect.viglink.com/i,
+        redirect: 'u'
     }
 ];
 
