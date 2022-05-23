@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tidy URL
 // @namespace    https://ksir.pw
-// @version      1.3.2
+// @version      1.3.3
 // @description  Cleans/removes garbage or tracking parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
                 // Don't clean links that have already been cleaned
                 // This is to prevent slowing down pages when there are a lot of links
                 // For example, endless scroll on reddit
-                if (use_optimization) {
+                if (use_optimization && selector !== 'a') {
                     link.setAttribute(`data-${opti_dataname}`, '1');
                 }
                 try {
