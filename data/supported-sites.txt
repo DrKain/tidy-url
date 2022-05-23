@@ -1,4 +1,4 @@
-Total unique rules: 257
+Total unique rules: 258
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -47,6 +47,7 @@ Total unique rules: 257
 | play.google.com        | 1     |
 | plex.tv                | 4     |
 | reddit.com             | 2     |
+| redirect.viglink.com   | 1     |
 | shopee.com             | 8     |
 | sjv.io                 | 1     |
 | spotify.com            | 3     |

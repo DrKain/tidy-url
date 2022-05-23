@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tidy URL
 // @namespace    https://ksir.pw
-// @version      1.3.1
+// @version      1.3.2
 // @description  Cleans/removes garbage or tracking parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
@@ -15,19 +15,31 @@
 // @run-at       document-start
 // ==/UserScript==
 
+// Use a fresh instance of TidyURL
+const _tidy = new tidyurl.TidyCleaner();
+
+// Enable/disable redirect and amp rules
+_tidy.allow_redirects = true;
+_tidy.allow_amp = false;
+// Don't log invalid links
+_tidy.silent = true;
+
 // Set to false if you don't want page links to be cleaned
 // If you encounter any problems please report the link on GitHub
 // ---> https://github.com/DrKain/tidy-url/issues
 const clean_pages = true;
+// Used for optimization when there's too many links on a page
+const use_optimization = true;
+// Number of links on the page before using optimization
+const opti_threshold = 1000;
+const opti_dataname = 'tidyurl';
 // Time between each cleanup (in milliseconds)
 const clean_interval = 3000;
 
-(() => {
-    // Enable/disable redirect and amp rules
-    tidyurl.TidyURL.allow_redirects = true;
-    tidyurl.TidyURL.allow_amp = false;
+const log = (msg) => console.log(`[tidy-url] ${msg}`);
 
-    const link = tidyurl.clean(window.location.href);
+(() => {
+    const link = _tidy.clean(window.location.href);
 
     // If the modified URL is different from the original
     if (link.url !== link.info.original) {
@@ -39,22 +51,38 @@ const clean_interval = 3000;
 // Call when page has finished loading
 window.addEventListener('load', () => {
     let ready = true;
+    let last_count = 0;
+    let selector = 'a';
+
     if (!clean_pages) return;
 
     const do_clean = () => {
         if (ready) {
             ready = false;
-            const links = document.querySelectorAll('a');
-            console.log('[tidy-url] Links: ', links.length);
+
+            if (use_optimization && last_count >= opti_threshold) {
+                selector = `a:not([data-${opti_dataname}])`;
+            }
+
+            const links = document.querySelectorAll(selector);
+            last_count = links.length;
+
+            if (links.length > 0) log('Processing ' + links.length + ' links');
             for (const link of links) {
+                // Don't clean links that have already been cleaned
+                // This is to prevent slowing down pages when there are a lot of links
+                // For example, endless scroll on reddit
+                if (use_optimization) {
+                    link.setAttribute(`data-${opti_dataname}`, '1');
+                }
                 try {
                     // Make sure it's a valid URL
                     new URL(link.href);
                     // Run the cleaner
-                    const cleaned = tidyurl.clean(link.href);
+                    const cleaned = _tidy.clean(link.href);
                     // If the new URL is shorter, apply it
                     if (cleaned.info.reduction > 0) {
-                        console.log('[Tidy URL] Cleaned:', link.href);
+                        log('Cleaned: ' + link.href);
                         link.setAttribute('href', cleaned.url);
                     }
                 } catch (error) {
