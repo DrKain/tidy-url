@@ -1,8 +1,15 @@
+// Prettier refuses to format the array in an acceptable way, so we have to do it manually.
+// prettier-ignore
 const $kurlc_rules = [
     {
         name: 'Global',
         match: /.*/,
-        rules: ['ncid', 'utm_source', 'utm_medium', 'utm_term', 'utm_campaign', 'utm_content', 'utm_name', 'utm_cid', 'utm_reader', 'utm_viz_id', 'utm_pubreferrer', 'utm_swu', 'gclid', 'ga_source', 'ga_medium', 'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'gclid', 'gclsrc']
+        rules: [
+            'ncid', 'utm_source', 'utm_medium', 'utm_term', 'utm_campaign',
+            'utm_content', 'utm_name', 'utm_cid', 'utm_reader', 'utm_viz_id',
+            'utm_pubreferrer', 'utm_swu', 'gclid', 'ga_source', 'ga_medium',
+            'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'gclid', 'gclsrc'
+        ]
     },
     {
         name: 'audible.com',
@@ -12,12 +19,20 @@ const $kurlc_rules = [
     {
         name: 'bandcamp.com',
         match: /.*.bandcamp.com/gi,
-        rules: ['from', 'search_item_id', 'search_item_type', 'search_match_part', 'search_page_id', 'search_page_no', 'search_rank', 'search_sig']
+        rules: [
+            'from', 'search_item_id', 'search_item_type', 'search_match_part', 'search_page_id',
+            'search_page_no', 'search_rank', 'search_sig'
+        ]
     },
     {
         name: 'amazon.com',
         match: /^(?:https?:\/\/)?(?:[^.]+\.)?amazon\.[a-z0-9]{0,3}/i,
-        rules: ['psc', 'colid', 'coliid', 'linkId', 'tag', 'linkCode', 'ms3_c', 'pf_rd_s', 'pf_rd_t', ' pf_rd_i', 'pf_rd_m', 'pd_rd_w', 'qid', 'sr', 'keywords', 'dchild', 'ref', 'ref_', 'rnid', 'pf_rd_r', 'pf_rd_p', 'pd_rd_r', 'smid', 'pd_rd_wg'],
+        rules: [
+            'psc', 'colid', 'coliid', 'linkId', 'tag', 'linkCode', 'ms3_c',
+            'pf_rd_s', 'pf_rd_t', ' pf_rd_i', 'pf_rd_m', 'pd_rd_w', 'qid', 'sr',
+            'keywords', 'dchild', 'ref', 'ref_', 'rnid', 'pf_rd_r', 'pf_rd_p', 'pd_rd_r',
+            'smid', 'pd_rd_wg'
+        ],
         replace: [/(\/ref|&ref_)=[^\/?]*/i]
     },
     {
@@ -48,13 +63,25 @@ const $kurlc_rules = [
     {
         name: 'aliexpress.com',
         match: /^(?:https?:\/\/)?(?:[^.]+\.)?aliexpress\.[a-z0-9]{0,3}/i,
-        rules: ['_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test', 'initiative_id', 'origin', 'widgetId', 'tabType', 'productId', 'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid', 'algo_exp_id', 'pdp_pi', 'fromRankId', 'sourceType', 'utparam', 'gatewayAdapt', '_evo_buckets', 'tpp_rcmd_bucket_id', 'scenario', 'pdp_npi'],
+        rules: [
+            '_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test',
+            'initiative_id', 'origin', 'widgetId', 'tabType', 'productId',
+            'productIds', 'gps-id', 'scm', 'scm_id', 'scm-url', 'pvid',
+            'algo_exp_id', 'pdp_pi', 'fromRankId', 'sourceType', 'utparam',
+            'gatewayAdapt', '_evo_buckets', 'tpp_rcmd_bucket_id', 'scenario',
+            'pdp_npi', 'tt', 'spreadType', 'srcSns', 'bizType', 'social_params',
+            'aff_fcid', 'aff_fsk', 'aff_platform', 'aff_trace_key', 'shareId',
+            'platform', 'businessType', 'terminal_id', 'afSmartRedirect', 'sk'
+        ],
         exclude: ['sku_id', 'pdp_ext_f']
     },
     {
         name: 'google.com',
         match: /www.google\..*/i,
-        rules: ['sourceid', 'client', 'aqs', 'sxsrf', 'uact', 'ved', 'iflsig', 'source', 'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr'],
+        rules: [
+            'sourceid', 'client', 'aqs', 'sxsrf', 'uact', 'ved', 'iflsig', 'source',
+            'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr'
+        ],
         amp: /www\.google\.com\/amp\/s\/(.*)/gim
     },
     {
@@ -96,7 +123,10 @@ const $kurlc_rules = [
     {
         name: 'imdb.com',
         match: /www.imdb.com/i,
-        rules: ['ref_', 'pf_rd_m', 'pf_rd_r', 'pf_rd_p', 'pf_rd_s', 'pf_rd_t', 'pf_rd_i', 'ref_hp_hp_e_2']
+        rules: [
+            'ref_', 'pf_rd_m', 'pf_rd_r', 'pf_rd_p', 'pf_rd_s',
+            'pf_rd_t', 'pf_rd_i', 'ref_hp_hp_e_2'
+        ]
     },
     {
         name: 'gog.com',
@@ -106,7 +136,11 @@ const $kurlc_rules = [
     {
         name: 'tiktok.com',
         match: /www.tiktok.com/i,
-        rules: ['is_copy_url', 'is_from_webapp', 'sender_device', 'sender_web_id', 'sec_user_id', 'share_app_id', 'share_item_id', 'share_link_id', 'social_sharing', '_r'],
+        rules: [
+            'is_copy_url', 'is_from_webapp', 'sender_device', 'sender_web_id',
+            'sec_user_id', 'share_app_id', 'share_item_id', 'share_link_id',
+            'social_sharing', '_r'
+        ],
         exclude: ['lang']
     },
     {
@@ -132,7 +166,10 @@ const $kurlc_rules = [
     {
         name: 'linkedin.com',
         match: /.*.linkedin.com/i,
-        rules: ['contextUrn', 'destRedirectURL', 'lipi', 'licu', 'trk', 'trkInfo', 'originalReferer', 'upsellOrderOrigin', 'upsellTrk', 'upsellTrackingId', 'src']
+        rules: [
+            'contextUrn', 'destRedirectURL', 'lipi', 'licu', 'trk', 'trkInfo', 'originalReferer',
+            'upsellOrderOrigin', 'upsellTrk', 'upsellTrackingId', 'src'
+        ]
     },
     {
         name: 'indeed.com',
@@ -232,13 +269,20 @@ const $kurlc_rules = [
     {
         name: 'ebay.com',
         match: /^(?:https?:\/\/)?(?:[^.]+\.)?ebay\.[a-z0-9]{0,3}/i,
-        rules: ['amdata', 'var', 'hash', '_trkparms', '_trksid', '_from', 'mkcid', 'mkrid', 'campid', 'toolid', 'mkevt', 'customid', 'siteid', 'ufes_redirect', 'ff3', 'pub', 'media', 'widget_ver', 'ssspo', 'sssrc', 'ssuid'],
+        rules: [
+            'amdata', 'var', 'hash', '_trkparms', '_trksid', '_from', 'mkcid',
+            'mkrid', 'campid', 'toolid', 'mkevt', 'customid', 'siteid', 'ufes_redirect',
+            'ff3', 'pub', 'media', 'widget_ver', 'ssspo', 'sssrc', 'ssuid'
+        ],
         exclude: ['epid', '_nkw']
     },
     {
         name: 'shopee.com',
         match: /^(?:https?:\/\/)?(?:[^.]+\.)?shopee\.[a-z0-9]{0,3}/i,
-        rules: ['af_siteid', 'pid', 'af_click_lookback', 'af_viewthrough_lookback', 'is_retargeting', 'af_reengagement_window', 'af_sub_siteid', 'c']
+        rules: [
+            'af_siteid', 'pid', 'af_click_lookback', 'af_viewthrough_lookback',
+            'is_retargeting', 'af_reengagement_window', 'af_sub_siteid', 'c'
+        ]
     },
     {
         name: 'msn.com',
