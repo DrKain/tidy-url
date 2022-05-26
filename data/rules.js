@@ -87,7 +87,8 @@ const $kurlc_rules = [
     {
         name: 'youtube.com',
         match: /.*.youtube.com/i,
-        rules: ['gclid', 'feature']
+        rules: ['gclid', 'feature'],
+        redirect: 'q'
     },
     {
         name: 'humblebundle.com',
