@@ -31,7 +31,7 @@ const $kurlc_rules = [
             'psc', 'colid', 'coliid', 'linkId', 'tag', 'linkCode', 'ms3_c',
             'pf_rd_s', 'pf_rd_t', ' pf_rd_i', 'pf_rd_m', 'pd_rd_w', 'qid', 'sr',
             'keywords', 'dchild', 'ref', 'ref_', 'rnid', 'pf_rd_r', 'pf_rd_p', 'pd_rd_r',
-            'smid', 'pd_rd_wg'
+            'smid', 'pd_rd_wg', 'content-id'
         ],
         replace: [/(\/ref|&ref_)=[^\/?]*/i]
     },
