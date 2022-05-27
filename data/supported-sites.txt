@@ -1,11 +1,13 @@
-Total unique rules: 273
+Total unique rules: 285
 
 | Match                  | Rules |
 | :--------------------- | :---- |
+| 2game.com              | 1     |
 | adtraction.com         | 1     |
 | aliexpress.com         | 42    |
-| amazon.com             | 24    |
+| amazon.com             | 25    |
 | ampproject.org         | 4     |
+| apple.com              | 9     |
 | audible.com            | 6     |
 | bandcamp.com           | 8     |
 | berrybase.de           | 1     |
@@ -15,13 +17,16 @@ Total unique rules: 273
 | countdown.co.nz        | 4     |
 | discord.com            | 1     |
 | dpbolvw.net            | 1     |
+| dreamgame.com          | 1     |
 | ebay.com               | 21    |
 | etsy.com               | 6     |
 | facebook.com           | 6     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
 | gamebillet.com         | 1     |
+| gamersgate.com         | 1     |
 | gamesload.com          | 1     |
+| gamesplanet.com        | 1     |
 | gog.com                | 1     |
 | google.com             | 16    |
 | greenmangaming.com     | 4     |
@@ -32,15 +37,16 @@ Total unique rules: 273
 | indeed.com             | 2     |
 | instagram.com          | 1     |
 | itch.io                | 1     |
+| jdoqocy.com            | 1     |
 | linkedin.com           | 11    |
 | linksynergy.com        | 2     |
 | medium.com             | 1     |
 | microsoft.com          | 2     |
 | mightyape              | 1     |
 | msn.com                | 3     |
-| music.apple.com        | 5     |
 | nbcnews.com            | 1     |
 | newsweek.com           | 2     |
+| noctre.com             | 1     |
 | nuuvem.com             | 3     |
 | office.com             | 1     |
 | pixiv.net              | 3     |
@@ -51,6 +57,7 @@ Total unique rules: 273
 | shopee.com             | 8     |
 | sjv.io                 | 1     |
 | spotify.com            | 3     |
+| startpage.com          | 1     |
 | steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |
 | techcrunch.com         | 3     |

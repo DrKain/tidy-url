@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tidy URL
 // @namespace    https://ksir.pw
-// @version      1.3.3
+// @version      1.3.4
 // @description  Cleans/removes garbage or tracking parameters from URLs
 // @author       Kain (ksir.pw)
 // @include      *
@@ -34,7 +34,7 @@ const use_optimization = true;
 const opti_threshold = 1000;
 const opti_dataname = 'tidyurl';
 // Time between each cleanup (in milliseconds)
-const clean_interval = 3000;
+const clean_interval = 1000;
 
 const log = (msg) => console.log(`[tidy-url] ${msg}`);
 
@@ -48,8 +48,7 @@ const log = (msg) => console.log(`[tidy-url] ${msg}`);
     }
 })();
 
-// Call when page has finished loading
-window.addEventListener('load', () => {
+(() => {
     let ready = true;
     let last_count = 0;
     let selector = 'a';
@@ -96,5 +95,6 @@ window.addEventListener('load', () => {
     const MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
     const observer = new MutationObserver(do_clean);
     observer.observe(document, { childList: true, subtree: true });
+    window.addEventListener('load', () => setTimeout(do_clean, clean_interval));
     do_clean();
-});
+})();
