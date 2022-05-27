@@ -388,6 +388,11 @@ const $kurlc_rules = [
         name: '2game.com',
         match: /^2game.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'jdoqocy.com',
+        match: /www.jdoqocy.com/i,
+        redirect: 'URL'
     }
 ];
 
