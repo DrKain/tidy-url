@@ -146,8 +146,9 @@ const $kurlc_rules = [
     },
     {
         name: 'facebook.com',
-        match: /www.facebook.com/i,
-        rules: ['fbclid', 'fb_ref', 'fb_source', 'referral_code', 'referral_story_type', 'tracking']
+        match: /.*.facebook.com/i,
+        rules: ['fbclid', 'fb_ref', 'fb_source', 'referral_code', 'referral_story_type', 'tracking'],
+        redirect: 'u'
     },
     {
         name: 'yandex.com',
