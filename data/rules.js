@@ -368,6 +368,11 @@ const $kurlc_rules = [
         name: 'redirect.viglink.com',
         match: /redirect.viglink.com/i,
         redirect: 'u'
+    },
+    {
+        name: 'noctre.com',
+        match: /noctre.com/i,
+        rules: ['aff']
     }
 ];
 
