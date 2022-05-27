@@ -398,6 +398,11 @@ const $kurlc_rules = [
         name: 'gamesplanet.com',
         match: /.*.gamesplanet.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'gamersgate.com',
+        match: /www.gamersgate.com/i,
+        rules: ['aff']
     }
 ];
 
