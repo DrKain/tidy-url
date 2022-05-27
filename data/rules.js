@@ -393,6 +393,11 @@ const $kurlc_rules = [
         name: 'jdoqocy.com',
         match: /www.jdoqocy.com/i,
         redirect: 'URL'
+    },
+    {
+        name: 'gamesplanet.com',
+        match: /.*.gamesplanet.com/i,
+        rules: ['ref']
     }
 ];
 
