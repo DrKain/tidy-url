@@ -371,8 +371,13 @@ const $kurlc_rules = [
     },
     {
         name: 'noctre.com',
-        match: /noctre.com/i,
+        match: /www.noctre.com/i,
         rules: ['aff']
+    },
+    {
+        name: 'dreamgame.com',
+        match: /www.dreamgame.com/i,
+        rules: ['affiliate']
     }
 ];
 
