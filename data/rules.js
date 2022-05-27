@@ -219,9 +219,9 @@ const $kurlc_rules = [
         rules: ['m']
     },
     {
-        name: 'music.apple.com',
-        match: /music.apple.com/i,
-        rules: ['uo', 'app', 'at', 'ct', 'ls']
+        name: 'apple.com',
+        match: /.*.apple.com/i,
+        rules: ['uo', 'app', 'at', 'ct', 'ls', 'pt', 'mt']
     },
     {
         name: 'play.google.com',
