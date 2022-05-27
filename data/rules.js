@@ -378,6 +378,11 @@ const $kurlc_rules = [
         name: 'dreamgame.com',
         match: /www.dreamgame.com/i,
         rules: ['affiliate']
+    },
+    {
+        name: 'startpage.com',
+        match: /.*.startpage.com/i,
+        rules: ['source']
     }
 ];
 
