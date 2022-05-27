@@ -221,7 +221,7 @@ const $kurlc_rules = [
     {
         name: 'apple.com',
         match: /.*.apple.com/i,
-        rules: ['uo', 'app', 'at', 'ct', 'ls', 'pt', 'mt']
+        rules: ['uo', 'app', 'at', 'ct', 'ls', 'pt', 'mt', 'itsct', 'itscg']
     },
     {
         name: 'play.google.com',
