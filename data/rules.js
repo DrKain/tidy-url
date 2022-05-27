@@ -383,6 +383,11 @@ const $kurlc_rules = [
         name: 'startpage.com',
         match: /.*.startpage.com/i,
         rules: ['source']
+    },
+    {
+        name: '2game.com',
+        match: /^2game.com/i,
+        rules: ['ref']
     }
 ];
 
