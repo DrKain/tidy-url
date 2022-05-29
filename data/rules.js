@@ -224,6 +224,11 @@ const $kurlc_rules = [
         rules: ['uo', 'app', 'at', 'ct', 'ls', 'pt', 'mt', 'itsct', 'itscg']
     },
     {
+        name: 'music.apple.com',
+        match: /music.apple.com/i,
+        rules: ['i', 'lId', 'cId', 'sr', 'src']
+    },
+    {
         name: 'play.google.com',
         match: /play.google.com/i,
         rules: ['referrer']
