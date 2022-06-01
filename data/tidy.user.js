@@ -66,7 +66,7 @@ const log = (msg) => console.log(`[tidy-url] ${msg}`);
             const links = document.querySelectorAll(selector);
             last_count = links.length;
 
-            if (links.length > 0) log('Processing ' + links.length + ' links');
+            // if (links.length > 0) log('Processing ' + links.length + ' links');
             for (const link of links) {
                 // Don't clean links that have already been cleaned
                 // This is to prevent slowing down pages when there are a lot of links
@@ -95,6 +95,6 @@ const log = (msg) => console.log(`[tidy-url] ${msg}`);
     const MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
     const observer = new MutationObserver(do_clean);
     observer.observe(document, { childList: true, subtree: true });
-    window.addEventListener('load', () => setTimeout(do_clean, clean_interval));
+    window.addEventListener('load', () => setInterval(do_clean, clean_interval));
     do_clean();
 })();
