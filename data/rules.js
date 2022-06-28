@@ -420,6 +420,11 @@ const $kurlc_rules = [
         name: 'getmusicbee.com',
         match: /^getmusicbee.com/i,
         redirect: 'r'
+    },
+    {
+        name: 'imp.i305175.net',
+        match: /^imp.i305175.net/i,
+        redirect: 'u'
     }
 ];
 
