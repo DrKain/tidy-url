@@ -415,6 +415,11 @@ const $kurlc_rules = [
         name: 'gate.sc',
         match: /gate.sc/i,
         redirect: 'url'
+    },
+    {
+        name: 'getmusicbee.com',
+        match: /^getmusicbee.com/i,
+        redirect: 'r'
     }
 ];
 
