@@ -153,7 +153,8 @@ export class TidyCleaner {
                     const result = rule.amp.exec(data.url);
                     // If there is a result, replace the URL
                     if (result && result[1]) {
-                        data.url = 'https://' + result[1];
+                        data.url = result[1];
+                        if (!data.url.startsWith('https')) data.url = 'https://' + data.url;
                         if (data.url.endsWith('%3Famp')) data.url = data.url.slice(0, -6);
                         if (data.url.endsWith('amp/')) data.url = data.url.slice(0, -4);
                     }
