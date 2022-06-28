@@ -425,6 +425,16 @@ const $kurlc_rules = [
         name: 'imp.i305175.net',
         match: /^imp.i305175.net/i,
         redirect: 'u'
+    },
+    {
+        name: 'imp.i305175.net',
+        match: /^imp.i305175.net/i,
+        redirect: 'u'
+    },
+    {
+        name: 'qflm.net',
+        match: /.*.qflm.net/i,
+        redirect: 'u'
     }
 ];
 
