@@ -435,6 +435,11 @@ const $kurlc_rules = [
         name: 'qflm.net',
         match: /.*.qflm.net/i,
         redirect: 'u'
+    },
+    {
+        name: 'anrdoezrs.net',
+        match: /anrdoezrs.net/i,
+        amp: /(?:.*)\/links\/(?:.*)\/type\/dlg\/sid\/\[subid_value\]\/(.*)/gi
     }
 ];
 
