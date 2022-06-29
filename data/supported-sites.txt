@@ -1,4 +1,4 @@
-Total unique rules: 310
+Total unique rules: 321
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -13,6 +13,7 @@ Total unique rules: 310
 | bandcamp.com           | 8     |
 | berrybase.de           | 1     |
 | blog.twitch.tv         | 1     |
+| bn5x.net               | 1     |
 | bostonglobe.com        | 1     |
 | cnbc.com               | 1     |
 | countdown.co.nz        | 4     |
@@ -25,20 +26,22 @@ Total unique rules: 310
 | facebook.com           | 6     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
+| flexlinkspro.com       | 1     |
 | gamebillet.com         | 1     |
 | gamersgate.com         | 1     |
 | gamesload.com          | 1     |
 | gamesplanet.com        | 1     |
 | gate.sc                | 1     |
 | getmusicbee.com        | 1     |
+| go2cloud.org           | 1     |
 | gog.com                | 1     |
 | google.com             | 16    |
 | greenmangaming.com     | 4     |
+| hbomax.com             | 1     |
 | hubspot.com            | 2     |
 | humblebundle.com       | 5     |
 | imdb.com               | 8     |
 | imgur.com              | 1     |
-| imp.i305175.net        | 1     |
 | imp.i305175.net        | 1     |
 | indeed.com             | 2     |
 | instagram.com          | 1     |
@@ -60,6 +63,7 @@ Total unique rules: 310
 | play.google.com        | 1     |
 | plex.tv                | 4     |
 | qflm.net               | 1     |
+| ranker.com             | 5     |
 | reddit.com             | 2     |
 | redirect.viglink.com   | 1     |
 | shopee.com             | 8     |
@@ -71,9 +75,12 @@ Total unique rules: 310
 | techcrunch.com         | 3     |
 | ticketmaster.co.nz     | 4     |
 | tiktok.com             | 18    |
+| tkqlhce.com            | 1     |
+| tvguide.com            | 1     |
 | twitch.tv              | 3     |
 | twitter.com            | 4     |
 | voidu.com              | 1     |
+| watchworthy.app        | 1     |
 | wattpad.com            | 3     |
 | wingamestore.com       | 1     |
 | yahoo.com              | 3     |

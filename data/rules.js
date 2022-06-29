@@ -478,6 +478,11 @@ const $kurlc_rules = [
         name: 'watchworthy.app',
         match: /^watchworthy.app/i,
         rules: ['ref']
+    },
+    {
+        name: 'hbomax.com',
+        match: /^trk.hbomax.com/i,
+        redirect: 'url'
     }
 ];
 
