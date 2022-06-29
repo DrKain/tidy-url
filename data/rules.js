@@ -468,6 +468,11 @@ const $kurlc_rules = [
         name: 'tkqlhce.com',
         match: /^www.tkqlhce.com/i,
         redirect: 'url'
+    },
+    {
+        name: 'flexlinkspro.com',
+        match: /^track.flexlinkspro.com/i,
+        redirect: 'url'
     }
 ];
 
