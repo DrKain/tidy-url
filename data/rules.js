@@ -458,6 +458,11 @@ const $kurlc_rules = [
         name: 'tvguide.com',
         match: /^www.tvguide.com/i,
         amp: /(.*)\#link=/i
+    },
+    {
+        name: 'ranker.com',
+        match: /^(www|blog).ranker.com/i,
+        rules: ['ref', 'rlf', 'l', 'li_source', 'li_medium']
     }
 ];
 
