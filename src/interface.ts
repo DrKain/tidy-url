@@ -21,6 +21,14 @@ export interface IRule {
      * See this link for more info: https://redd.it/ehrq3z
      */
     amp: RegExp | null;
+    /**
+     * @experimental
+     * Used to decode a base64 parameter, then redirect based on the returned object
+     */
+    decode: {
+        param: string;
+        lookFor: string;
+    };
 }
 
 export interface IData {
@@ -39,6 +47,8 @@ export interface IData {
         removed: { key: string; value: string }[];
         /** Rules matched */
         match: any[];
+        /** The decoded object from the decode parameter (if it exists) */
+        decoded: { [key: string]: any } | null;
         /** If the cleaned URL is a different host */
         is_new_host: boolean;
     };

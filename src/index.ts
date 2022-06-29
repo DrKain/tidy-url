@@ -25,7 +25,8 @@ export class TidyCleaner {
                     rules: [],
                     replace: [],
                     redirect: '',
-                    amp: null
+                    amp: null,
+                    decode: null
                 },
                 rule
             ) as IRule;
@@ -91,6 +92,7 @@ export class TidyCleaner {
                 replace: [],
                 removed: [],
                 match: [],
+                decoded: null,
                 is_new_host: false
             }
         };
@@ -159,6 +161,27 @@ export class TidyCleaner {
                         if (data.url.endsWith('amp/')) data.url = data.url.slice(0, -4);
                     }
                 }
+            }
+        }
+
+        // Decode handler
+        for (const rule of this.expandedRules) {
+            try {
+                if (!rule.decode) continue;
+                if (!cleaner.has(rule.decode.param)) continue;
+                // These will always be clickjacking links, so use the allow_redirects rule
+                if (!this.allow_redirects) continue;
+                // Decode the base64 string and parse it as JSON
+                const json = JSON.parse(atob(cleaner.get(rule.decode.param) as string));
+                const target = json[rule.decode.lookFor];
+                // If the key we want exists and is a valid url then update the data url
+                if (target && this.validate(target)) {
+                    data.url = `${target}` + original.hash;
+                }
+                // Add to the info response
+                data.info.decoded = json;
+            } catch (error) {
+                this.log(`${error}`);
             }
         }
 
