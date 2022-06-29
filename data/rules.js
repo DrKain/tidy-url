@@ -473,6 +473,11 @@ const $kurlc_rules = [
         name: 'flexlinkspro.com',
         match: /^track.flexlinkspro.com/i,
         redirect: 'url'
+    },
+    {
+        name: 'watchworthy.app',
+        match: /^watchworthy.app/i,
+        rules: ['ref']
     }
 ];
 
