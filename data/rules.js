@@ -440,6 +440,14 @@ const $kurlc_rules = [
         name: 'anrdoezrs.net',
         match: /anrdoezrs.net/i,
         amp: /(?:.*)\/links\/(?:.*)\/type\/dlg\/sid\/\[subid_value\]\/(.*)/gi
+    },
+    {
+        name: 'emjcd.com',
+        match: /^www.emjcd.com/i,
+        decode: {
+            param: 'd',
+            lookFor: 'destinationUrl'
+        }
     }
 ];
 
