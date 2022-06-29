@@ -443,6 +443,11 @@ const $kurlc_rules = [
             param: 'd',
             lookFor: 'destinationUrl'
         }
+    },
+    {
+        name: 'go2cloud.org',
+        match: /^.*.go2cloud.org/i,
+        redirect: 'aff_unique1'
     }
 ];
 
