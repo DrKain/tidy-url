@@ -1,4 +1,4 @@
-Total unique rules: 295
+Total unique rules: 310
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -7,6 +7,7 @@ Total unique rules: 295
 | aliexpress.com         | 42    |
 | amazon.com             | 25    |
 | ampproject.org         | 4     |
+| anrdoezrs.net          | 1     |
 | apple.com              | 9     |
 | audible.com            | 6     |
 | bandcamp.com           | 8     |
@@ -19,6 +20,7 @@ Total unique rules: 295
 | dpbolvw.net            | 1     |
 | dreamgame.com          | 1     |
 | ebay.com               | 21    |
+| emjcd.com              | 1     |
 | etsy.com               | 6     |
 | facebook.com           | 6     |
 | fanatical.com          | 5     |
@@ -28,6 +30,7 @@ Total unique rules: 295
 | gamesload.com          | 1     |
 | gamesplanet.com        | 1     |
 | gate.sc                | 1     |
+| getmusicbee.com        | 1     |
 | gog.com                | 1     |
 | google.com             | 16    |
 | greenmangaming.com     | 4     |
@@ -35,6 +38,8 @@ Total unique rules: 295
 | humblebundle.com       | 5     |
 | imdb.com               | 8     |
 | imgur.com              | 1     |
+| imp.i305175.net        | 1     |
+| imp.i305175.net        | 1     |
 | indeed.com             | 2     |
 | instagram.com          | 1     |
 | itch.io                | 1     |
@@ -54,17 +59,18 @@ Total unique rules: 295
 | pixiv.net              | 3     |
 | play.google.com        | 1     |
 | plex.tv                | 4     |
+| qflm.net               | 1     |
 | reddit.com             | 2     |
 | redirect.viglink.com   | 1     |
 | shopee.com             | 8     |
 | sjv.io                 | 1     |
-| spotify.com            | 3     |
+| spotify.com            | 4     |
 | startpage.com          | 1     |
 | steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |
 | techcrunch.com         | 3     |
 | ticketmaster.co.nz     | 4     |
-| tiktok.com             | 10    |
+| tiktok.com             | 18    |
 | twitch.tv              | 3     |
 | twitter.com            | 4     |
 | voidu.com              | 1     |
