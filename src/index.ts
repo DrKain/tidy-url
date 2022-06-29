@@ -110,7 +110,6 @@ export class TidyCleaner {
 
         // Case insensitive cleaner for the redirect rule
         cleaner.forEach((v, k) => cleaner_ci.append(k.toLowerCase(), v));
-        console.log(cleaner_ci);
 
         // Loop through the rules and match them to the host name
         for (const rule of this.expandedRules) {
