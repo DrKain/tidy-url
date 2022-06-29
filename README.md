@@ -115,6 +115,7 @@ This can be used for debugging, testing or a simple way of letting users know th
                 "match": "/open.spotify.com/i"
             }
         ],
+        "decode": null,
         "is_new_host": false
     }
 }
