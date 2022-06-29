@@ -105,7 +105,12 @@ export class TidyCleaner {
 
         const original = new URL(url);
         const cleaner = original.searchParams;
+        const cleaner_ci = new URLSearchParams();
         let pathname = original.pathname;
+
+        // Case insensitive cleaner for the redirect rule
+        cleaner.forEach((v, k) => cleaner_ci.append(k.toLowerCase(), v));
+        console.log(cleaner_ci);
 
         // Loop through the rules and match them to the host name
         for (const rule of this.expandedRules) {
@@ -139,8 +144,8 @@ export class TidyCleaner {
         // Redirect if the redirect parameter exists
         if (this.allow_redirects) {
             for (const rule of data.info.match) {
-                if (rule.redirect.length && cleaner.has(rule.redirect)) {
-                    data.url = `${cleaner.get(rule.redirect)}` + original.hash;
+                if (rule.redirect.length && cleaner_ci.has(rule.redirect)) {
+                    data.url = `${cleaner_ci.get(rule.redirect)}` + original.hash;
                 }
             }
         }
