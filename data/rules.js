@@ -448,6 +448,11 @@ const $kurlc_rules = [
         name: 'go2cloud.org',
         match: /^.*.go2cloud.org/i,
         redirect: 'aff_unique1'
+    },
+    {
+        name: 'bn5x.net',
+        match: /^.*.bn5x.net/i,
+        redirect: 'u'
     }
 ];
 
