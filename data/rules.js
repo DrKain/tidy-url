@@ -463,6 +463,11 @@ const $kurlc_rules = [
         name: 'ranker.com',
         match: /^(www|blog).ranker.com/i,
         rules: ['ref', 'rlf', 'l', 'li_source', 'li_medium']
+    },
+    {
+        name: 'tkqlhce.com',
+        match: /^www.tkqlhce.com/i,
+        redirect: 'url'
     }
 ];
 
