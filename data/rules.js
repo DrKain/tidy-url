@@ -453,6 +453,11 @@ const $kurlc_rules = [
         name: 'bn5x.net',
         match: /^.*.bn5x.net/i,
         redirect: 'u'
+    },
+    {
+        name: 'tvguide.com',
+        match: /^www.tvguide.com/i,
+        amp: /(.*)\#link=/i
     }
 ];
 
