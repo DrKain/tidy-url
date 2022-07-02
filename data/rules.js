@@ -483,6 +483,11 @@ const $kurlc_rules = [
         name: 'hbomax.com',
         match: /^trk.hbomax.com/i,
         redirect: 'url'
+    },
+    {
+        name: 'squarespace.com',
+        match: /^.*.squarespace.com/i,
+        rules: ['subchannel', 'source', 'subcampaign', 'campaign', 'channel', '_ga']
     }
 ];
 
