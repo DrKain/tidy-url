@@ -501,6 +501,12 @@ const $kurlc_rules = [
             'p_sign', 'p_timestamp', 'p_tk', 'oq'
         ],
         exclude: ['wd', 'ie']
+    },
+    {
+        name: 'primevideo.com',
+        match: /^www.primevideo.com/i,
+        rules: ['dclid'],
+        replace: [/\/ref=[^\/?]*/i]
     }
 ];
 
