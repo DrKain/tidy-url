@@ -1,12 +1,12 @@
-Total unique rules: 357
+Total unique rules: 366
 
 | Match                  | Rules |
 | :--------------------- | :---- |
 | 2game.com              | 1     |
 | adtraction.com         | 1     |
 | aliexpress.com         | 42    |
-| amazon.com             | 25    |
-| ampproject.org         | 4     |
+| amazon.com             | 26    |
+| ampproject.org         | 5     |
 | anrdoezrs.net          | 1     |
 | apple.com              | 9     |
 | audible.com            | 6     |
@@ -24,7 +24,7 @@ Total unique rules: 357
 | ebay.com               | 21    |
 | emjcd.com              | 1     |
 | etsy.com               | 6     |
-| facebook.com           | 6     |
+| facebook.com           | 7     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
 | flexlinkspro.com       | 1     |
@@ -36,7 +36,7 @@ Total unique rules: 357
 | getmusicbee.com        | 1     |
 | go2cloud.org           | 1     |
 | gog.com                | 1     |
-| google.com             | 16    |
+| google.com             | 17    |
 | greenmangaming.com     | 4     |
 | hbomax.com             | 1     |
 | hubspot.com            | 2     |
@@ -45,11 +45,11 @@ Total unique rules: 357
 | imgur.com              | 1     |
 | imp.i305175.net        | 1     |
 | indeed.com             | 2     |
-| instagram.com          | 1     |
+| instagram.com          | 2     |
 | itch.io                | 1     |
 | jdoqocy.com            | 1     |
 | linkedin.com           | 11    |
-| linksynergy.com        | 2     |
+| linksynergy.com        | 3     |
 | medium.com             | 1     |
 | microsoft.com          | 2     |
 | mightyape              | 1     |
@@ -63,6 +63,7 @@ Total unique rules: 357
 | pixiv.net              | 3     |
 | play.google.com        | 1     |
 | plex.tv                | 4     |
+| primevideo.com         | 2     |
 | qflm.net               | 1     |
 | ranker.com             | 5     |
 | reddit.com             | 2     |
@@ -87,4 +88,4 @@ Total unique rules: 357
 | wingamestore.com       | 1     |
 | yahoo.com              | 3     |
 | yandex.com             | 5     |
-| youtube.com            | 6     |
+| youtube.com            | 7     |

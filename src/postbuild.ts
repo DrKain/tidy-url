@@ -40,7 +40,12 @@ const generateSupported = () => {
         // Append rules to table
         body += lines
             .map((rule: any) => {
-                const n = rule.rules ? rule.rules.length : 1;
+                // prettier-ignore
+                const n = (rule.rules ? rule.rules.length : 0) + 
+                    (rule.replace ? rule.replace.length : 0) +
+                    (rule.decode ? 1: 0) +
+                    (rule.redirect ? 1 : 0) + 
+                    (rule.amp ? 1 : 0);
                 count += n;
                 return `| ${rule.name.padEnd(p, ' ')} | ${`${n}`.padEnd(5, ' ')} |`;
             })
