@@ -488,6 +488,16 @@ const $kurlc_rules = [
         name: 'squarespace.com',
         match: /^.*.squarespace.com/i,
         rules: ['subchannel', 'source', 'subcampaign', 'campaign', 'channel', '_ga']
+    },
+    {
+        name: 'baidu.com',
+        match: /^www.baidu.com/i,
+        rules: [
+            'rsv_spt', 'rsv_idx', 'rsv_pq', 'rsv_t', 'rsv_bp', 'rsv_dl',
+            'tn', 'sa', 'rsf', 'rqid', 'usm', '__pc2ps_ab', 'p_signature',
+            'p_sign', 'p_timestamp', 'p_tk', 'oq'
+        ],
+        exclude: ['wd', 'ie']
     }
 ];
 

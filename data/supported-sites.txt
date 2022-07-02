@@ -1,4 +1,4 @@
-Total unique rules: 321
+Total unique rules: 344
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -10,6 +10,7 @@ Total unique rules: 321
 | anrdoezrs.net          | 1     |
 | apple.com              | 9     |
 | audible.com            | 6     |
+| baidu.com              | 17    |
 | bandcamp.com           | 8     |
 | berrybase.de           | 1     |
 | blog.twitch.tv         | 1     |
@@ -69,6 +70,7 @@ Total unique rules: 321
 | shopee.com             | 8     |
 | sjv.io                 | 1     |
 | spotify.com            | 4     |
+| squarespace.com        | 6     |
 | startpage.com          | 1     |
 | steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |
