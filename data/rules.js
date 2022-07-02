@@ -494,6 +494,9 @@ const $kurlc_rules = [
         match: /^www.baidu.com/i,
         rules: [
             'rsv_spt', 'rsv_idx', 'rsv_pq', 'rsv_t', 'rsv_bp', 'rsv_dl',
+            'rsv_iqid', 'rsv_enter', 'rsv_sug1', 'rsv_sug2', 'rsv_sug3',
+            'rsv_sug4', 'rsv_sug5', 'rsv_sug6', 'rsv_sug7', 'rsv_sug8',
+            'rsv_sug9', 'rsv_sug7', 'rsv_btype',
             'tn', 'sa', 'rsf', 'rqid', 'usm', '__pc2ps_ab', 'p_signature',
             'p_sign', 'p_timestamp', 'p_tk', 'oq'
         ],

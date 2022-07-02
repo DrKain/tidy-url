@@ -1,4 +1,4 @@
-Total unique rules: 344
+Total unique rules: 357
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -10,7 +10,7 @@ Total unique rules: 344
 | anrdoezrs.net          | 1     |
 | apple.com              | 9     |
 | audible.com            | 6     |
-| baidu.com              | 17    |
+| baidu.com              | 30    |
 | bandcamp.com           | 8     |
 | berrybase.de           | 1     |
 | blog.twitch.tv         | 1     |
