@@ -8,7 +8,9 @@ const $kurlc_rules = [
             'ncid', 'utm_source', 'utm_medium', 'utm_term', 'utm_campaign',
             'utm_content', 'utm_name', 'utm_cid', 'utm_reader', 'utm_viz_id',
             'utm_pubreferrer', 'utm_swu', 'gclid', 'ga_source', 'ga_medium',
-            'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'gclid', 'gclsrc'
+            'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'gclid', 'gclsrc',
+            'itm_source', 'itm_medium', 'itm_term', 'itm_campaign', 'itm_content',
+            'itm_channel'
         ]
     },
     {
