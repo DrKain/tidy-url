@@ -10,7 +10,7 @@ const $kurlc_rules = [
             'utm_pubreferrer', 'utm_swu', 'gclid', 'ga_source', 'ga_medium',
             'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'gclid', 'gclsrc',
             'itm_source', 'itm_medium', 'itm_term', 'itm_campaign', 'itm_content',
-            'itm_channel'
+            'itm_channel', 'itm_source_s', 'itm_medium_s', 'itm_campaign_s'
         ]
     },
     {
