@@ -509,6 +509,11 @@ const $kurlc_rules = [
         match: /^www.primevideo.com/i,
         rules: ['dclid'],
         replace: [/\/ref=[^\/?]*/i]
+    },
+    {
+        name: 'threadless.com',
+        match: /^www.threadless.com/i,
+        rules: ['itm_source_s', 'itm_medium_s', 'itm_campaign_s'],
     }
 ];
 
