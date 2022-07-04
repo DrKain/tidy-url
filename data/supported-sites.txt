@@ -1,4 +1,4 @@
-Total unique rules: 366
+Total unique rules: 370
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -76,6 +76,7 @@ Total unique rules: 366
 | steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |
 | techcrunch.com         | 3     |
+| threadless.com         | 3     |
 | ticketmaster.co.nz     | 4     |
 | tiktok.com             | 18    |
 | tkqlhce.com            | 1     |
@@ -86,6 +87,7 @@ Total unique rules: 366
 | watchworthy.app        | 1     |
 | wattpad.com            | 3     |
 | wingamestore.com       | 1     |
+| wsj.com                | 1     |
 | yahoo.com              | 3     |
 | yandex.com             | 5     |
 | youtube.com            | 7     |
