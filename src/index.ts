@@ -106,6 +106,7 @@ export class TidyCleaner {
         const original = new URL(url);
         const cleaner = original.searchParams;
         const cleaner_ci = new URLSearchParams();
+
         let pathname = original.pathname;
 
         // Case insensitive cleaner for the redirect rule
@@ -169,7 +170,7 @@ export class TidyCleaner {
         }
 
         // Decode handler
-        for (const rule of this.expandedRules) {
+        for (const rule of data.info.match) {
             try {
                 if (!rule.decode) continue;
                 if (!cleaner.has(rule.decode.param)) continue;
