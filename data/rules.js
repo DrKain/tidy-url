@@ -11,8 +11,8 @@ const $kurlc_rules = [
             'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'gclid', 'gclsrc',
             'itm_source', 'itm_medium', 'itm_term', 'itm_campaign', 'itm_content',
             'itm_channel', 'itm_source_s', 'itm_medium_s', 'itm_campaign_s',
-            'fbclid', 'dclid', 'oly_enc_id', 'oly_anon_id', 'vero_id', '_hsenc',
-            'mkt_tok', 'mc_eid', 'utm_social-type', 'utm_brand'
+            'fbclid', 'oly_enc_id', 'oly_anon_id', 'vero_id', '_hsenc', 'mkt_tok',
+            'mc_eid', 'utm_social-type', 'utm_brand'
         ]
     },
     {
