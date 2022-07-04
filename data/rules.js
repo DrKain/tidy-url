@@ -514,6 +514,11 @@ const $kurlc_rules = [
         name: 'threadless.com',
         match: /^www.threadless.com/i,
         rules: ['itm_source_s', 'itm_medium_s', 'itm_campaign_s'],
+    },
+    {
+        name: 'wsj.com',
+        match: /^www.wsj.com/i,
+        rules: ['mod'],
     }
 ];
 
