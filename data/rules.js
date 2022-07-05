@@ -531,6 +531,11 @@ const $kurlc_rules = [
         name: 'awstrack.me',
         match: /^.*awstrack.me/i,
         amp: /awstrack.me\/L0\/(.*)/
+    },
+    {
+        name: 'express.co.uk',
+        match: /^www.express.co.uk/i,
+        replace: [/\/amp$/i]
     }
 ];
 
