@@ -104,7 +104,7 @@ const $kurlc_rules = [
     {
         name: 'greenmangaming.com',
         match: /www.greenmangaming.com/i,
-        rules: ['CJEVENT', 'cjevent', 'irclickid', 'irgwc']
+        rules: ['CJEVENT', 'cjevent', 'irclickid', 'irgwc', 'pdpgatetoken']
     },
     {
         name: 'fanatical.com',
