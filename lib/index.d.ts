@@ -32,7 +32,7 @@ export declare class TidyCleaner {
      * @param _url Any URL
      * @returns IData
      */
-    clean(_url: string): IData;
+    clean(_url: string, allow_reclean?: boolean): IData;
 }
 export declare const TidyURL: TidyCleaner;
 export declare const clean: (url: string) => IData;
