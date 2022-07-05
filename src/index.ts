@@ -77,7 +77,7 @@ export class TidyCleaner {
      * @param _url Any URL
      * @returns IData
      */
-    public clean(_url: string): IData {
+    public clean(_url: string, allow_reclean = true): IData {
         // Rebuild to ensure trailing slashes or encoded characters match
         const url = this.rebuild(_url);
         // List of parmeters that will be deleted if found
@@ -153,18 +153,25 @@ export class TidyCleaner {
         // De-amp the URL
         if (this.allow_amp === false) {
             for (const rule of data.info.match) {
-                // Ensure the amp rule matches
-                if (rule.amp && data.url.match(rule.amp)) {
-                    // Reset the lastIndex
-                    rule.amp.lastIndex = 0;
-                    const result = rule.amp.exec(data.url);
-                    // If there is a result, replace the URL
-                    if (result && result[1]) {
-                        data.url = result[1];
-                        if (!data.url.startsWith('https')) data.url = 'https://' + data.url;
-                        if (data.url.endsWith('%3Famp')) data.url = data.url.slice(0, -6);
-                        if (data.url.endsWith('amp/')) data.url = data.url.slice(0, -4);
+                try {
+                    // Ensure the amp rule matches
+                    if (rule.amp && data.url.match(rule.amp)) {
+                        // Reset the lastIndex
+                        rule.amp.lastIndex = 0;
+                        const result = rule.amp.exec(data.url);
+                        if (result && result[1]) {
+                            // If there is a result, replace the URL
+                            let target = decodeURIComponent(result[1]);
+                            if (!target.startsWith('https')) target = 'https://' + target;
+                            if (this.validate(target)) {
+                                data.url = allow_reclean ? this.clean(target, false).url : target;
+                                if (data.url.endsWith('%3Famp')) data.url = data.url.slice(0, -6);
+                                if (data.url.endsWith('amp/')) data.url = data.url.slice(0, -4);
+                            }
+                        }
                     }
+                } catch (error) {
+                    this.log(`${error}`);
                 }
             }
         }
