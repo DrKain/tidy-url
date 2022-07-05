@@ -521,6 +521,11 @@ const $kurlc_rules = [
         name: 'wsj.com',
         match: /^www.wsj.com/i,
         rules: ['mod'],
+    },
+    {
+        name: 'thewarehouse.co.nz',
+        match: /^www.thewarehouse.co.nz/i,
+        rules: ['sfmc_j', 'sfmc_id', 'sfmc_mid', 'sfmc_uid', 'sfmc_id', 'sfmc_activityid'],
     }
 ];
 
