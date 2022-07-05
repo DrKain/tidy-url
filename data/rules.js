@@ -526,6 +526,11 @@ const $kurlc_rules = [
         name: 'thewarehouse.co.nz',
         match: /^www.thewarehouse.co.nz/i,
         rules: ['sfmc_j', 'sfmc_id', 'sfmc_mid', 'sfmc_uid', 'sfmc_id', 'sfmc_activityid'],
+    },
+    {
+        name: 'awstrack.me',
+        match: /^.*awstrack.me/i,
+        amp: /awstrack.me\/L0\/(.*)/
     }
 ];
 
