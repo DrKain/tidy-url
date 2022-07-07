@@ -556,6 +556,11 @@ const $kurlc_rules = [
         name: 'transparency.fb.com',
         match: /^transparency.fb.com/i,
         rules: ['source']
+    },
+    {
+        name: 'manymorestores.com',
+        match: /^www.manymorestores.com/i,
+        rules: ['ref']
     }
 ];
 
