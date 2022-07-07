@@ -247,7 +247,7 @@ const $kurlc_rules = [
     {
         name: 'dpbolvw.net',
         match: /dpbolvw.net/i,
-        redirect: 'URL'
+        redirect: 'url'
     },
     {
         name: 'itch.io',
