@@ -541,6 +541,11 @@ const $kurlc_rules = [
         name: 'ko-fi.com',
         match: /^ko-fi.com/i,
         rules: ['ref', 'src']
+    },
+    {
+        name: 'indiegala.com',
+        match: /^www.indiegala.com/i,
+        rules: ['ref']
     }
 ];
 
