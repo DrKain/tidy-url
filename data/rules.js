@@ -402,8 +402,8 @@ const $kurlc_rules = [
     },
     {
         name: 'jdoqocy.com',
-        match: /www.jdoqocy.com/i,
-        redirect: 'URL'
+        match: /^www.jdoqocy.com/i,
+        redirect: 'url'
     },
     {
         name: 'gamesplanet.com',
