@@ -1,4 +1,4 @@
-Total unique rules: 379
+Total unique rules: 388
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -14,6 +14,7 @@ Total unique rules: 379
 | baidu.com              | 30    |
 | bandcamp.com           | 8     |
 | berrybase.de           | 1     |
+| blizzardgearstore.com  | 1     |
 | blog.twitch.tv         | 1     |
 | bn5x.net               | 1     |
 | bostonglobe.com        | 1     |
@@ -26,7 +27,7 @@ Total unique rules: 379
 | emjcd.com              | 1     |
 | etsy.com               | 6     |
 | express.co.uk          | 1     |
-| facebook.com           | 7     |
+| facebook.com           | 8     |
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
 | flexlinkspro.com       | 1     |
@@ -47,11 +48,16 @@ Total unique rules: 379
 | imgur.com              | 1     |
 | imp.i305175.net        | 1     |
 | indeed.com             | 2     |
+| indiegala.com          | 1     |
 | instagram.com          | 2     |
 | itch.io                | 1     |
 | jdoqocy.com            | 1     |
+| ko-fi.com              | 2     |
+| l.messenger.com        | 1     |
 | linkedin.com           | 11    |
 | linksynergy.com        | 3     |
+| macgamestore.com       | 1     |
+| manymorestores.com     | 1     |
 | medium.com             | 1     |
 | microsoft.com          | 2     |
 | mightyape              | 1     |
@@ -83,6 +89,7 @@ Total unique rules: 379
 | ticketmaster.co.nz     | 4     |
 | tiktok.com             | 18    |
 | tkqlhce.com            | 1     |
+| transparency.fb.com    | 1     |
 | tvguide.com            | 1     |
 | twitch.tv              | 3     |
 | twitter.com            | 4     |
