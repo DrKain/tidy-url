@@ -561,6 +561,11 @@ const $kurlc_rules = [
         name: 'manymorestores.com',
         match: /^www.manymorestores.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'macgamestore.com',
+        match: /^www.macgamestore.com/i,
+        rules: ['ars']
     }
 ];
 
