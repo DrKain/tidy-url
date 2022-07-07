@@ -568,6 +568,11 @@ const $kurlc_rules = [
         name: 'macgamestore.com',
         match: /^www.macgamestore.com/i,
         rules: ['ars']
+    },
+    {
+        name: 'blizzardgearstore.com',
+        match: /^www.blizzardgearstore.com/i,
+        rules: ['_s']
     }
 ];
 
