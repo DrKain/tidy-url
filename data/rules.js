@@ -546,6 +546,11 @@ const $kurlc_rules = [
         name: 'indiegala.com',
         match: /^www.indiegala.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'l.messenger.com',
+        match: /^l.messenger.com/i,
+        redirect: 'u'
     }
 ];
 
