@@ -217,8 +217,9 @@ const $kurlc_rules = [
     },
     {
         name: 'gamesload.com',
-        match: /gamesload.com/i,
-        rules: ['affil']
+        match: /^www.gamesload.com/i,
+        rules: ['affil'],
+        exclude: ['REF']
     },
     {
         name: 'mightyape',
