@@ -551,6 +551,11 @@ const $kurlc_rules = [
         name: 'l.messenger.com',
         match: /^l.messenger.com/i,
         redirect: 'u'
+    },
+    {
+        name: 'transparency.fb.com',
+        match: /^transparency.fb.com/i,
+        rules: ['source']
     }
 ];
 
