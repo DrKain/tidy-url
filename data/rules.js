@@ -12,7 +12,7 @@ const $kurlc_rules = [
             'itm_source', 'itm_medium', 'itm_term', 'itm_campaign', 'itm_content',
             'itm_channel', 'itm_source_s', 'itm_medium_s', 'itm_campaign_s',
             'fbclid', 'oly_enc_id', 'oly_anon_id', 'vero_id', '_hsenc', 'mkt_tok',
-            'mc_eid', 'utm_social-type', 'utm_brand', '__s',
+            'mc_eid', 'utm_social-type', 'utm_brand', '__s', 'elqTrackId',
             '_hsmi', 'hsCtaTracking',  '_hsenc', '__hssc', '__hstc', '__hsfp'
         ]
     },
