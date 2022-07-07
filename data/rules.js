@@ -536,6 +536,11 @@ const $kurlc_rules = [
         name: 'express.co.uk',
         match: /^www.express.co.uk/i,
         replace: [/\/amp$/i]
+    },
+    {
+        name: 'ko-fi.com',
+        match: /^ko-fi.com/i,
+        rules: ['ref', 'src']
     }
 ];
 
