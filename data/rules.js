@@ -217,7 +217,7 @@ const $kurlc_rules = [
     {
         name: 'gamesload.com',
         match: /gamesload.com/i,
-        rules: ['affil']
+        rules: ['affil', 'REF']
     },
     {
         name: 'mightyape',
