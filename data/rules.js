@@ -583,6 +583,11 @@ const $kurlc_rules = [
         name: 'cookiepro.com',
         match: /^.*.cookiepro.com/i,
         rules: ['source', 'referral']
+    },
+    {
+        name: 'pinterest.com',
+        match: /^www\.pinterest\..*/i,
+        rules: ['rs']
     }
 ];
 
