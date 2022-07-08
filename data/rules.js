@@ -578,6 +578,11 @@ const $kurlc_rules = [
         name: 'playbook.com',
         match: /^www.playbook.com/i,
         rules: ['p']
+    },
+    {
+        name: 'cookiepro.com',
+        match: /^.*.cookiepro.com/i,
+        rules: ['source', 'referral']
     }
 ];
 
