@@ -573,6 +573,11 @@ const $kurlc_rules = [
         name: 'blizzardgearstore.com',
         match: /^www.blizzardgearstore.com/i,
         rules: ['_s']
+    },
+    {
+        name: 'playbook.com',
+        match: /^www.playbook.com/i,
+        rules: ['p']
     }
 ];
 
