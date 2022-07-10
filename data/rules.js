@@ -410,7 +410,7 @@ const $kurlc_rules = [
     },
     {
         name: 'gamesplanet.com',
-        match: /.*.gamesplanet.com/i,
+        match: /^(?:.*\.|)gamesplanet\.com/i,
         rules: ['ref']
     },
     {
