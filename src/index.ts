@@ -69,7 +69,7 @@ export class TidyCleaner {
         const original = new URL(url);
         const params = original.searchParams;
         const param_str = params.toString().length ? '?' + params.toString() : '';
-        return original.origin + original.pathname + param_str + original.hash;
+        return original.protocol + '//' + original.host + original.pathname + param_str + original.hash;
     }
 
     /**
@@ -139,7 +139,7 @@ export class TidyCleaner {
 
         // Rebuild URL
         const params = cleaner.toString().length ? '?' + cleaner.toString() : '';
-        data.url = original.origin + pathname + params + original.hash;
+        data.url = original.protocol + '//' + original.host + pathname + params + original.hash;
 
         // Redirect if the redirect parameter exists
         if (this.allow_redirects) {
