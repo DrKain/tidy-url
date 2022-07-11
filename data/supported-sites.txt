@@ -1,4 +1,4 @@
-Total unique rules: 388
+Total unique rules: 394
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -19,6 +19,7 @@ Total unique rules: 388
 | bn5x.net               | 1     |
 | bostonglobe.com        | 1     |
 | cnbc.com               | 1     |
+| cookiepro.com          | 2     |
 | countdown.co.nz        | 4     |
 | discord.com            | 1     |
 | dpbolvw.net            | 1     |
@@ -44,7 +45,7 @@ Total unique rules: 388
 | hbomax.com             | 1     |
 | hubspot.com            | 2     |
 | humblebundle.com       | 5     |
-| imdb.com               | 8     |
+| imdb.com               | 10    |
 | imgur.com              | 1     |
 | imp.i305175.net        | 1     |
 | indeed.com             | 2     |
@@ -68,8 +69,10 @@ Total unique rules: 388
 | noctre.com             | 1     |
 | nuuvem.com             | 3     |
 | office.com             | 1     |
+| pinterest.com          | 1     |
 | pixiv.net              | 3     |
 | play.google.com        | 1     |
+| playbook.com           | 1     |
 | plex.tv                | 4     |
 | primevideo.com         | 2     |
 | qflm.net               | 1     |
