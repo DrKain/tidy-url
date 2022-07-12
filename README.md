@@ -161,8 +161,9 @@ https://www.vudu.com/content/movies/details/Moonlight-Season-1/133120
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!  
+Contributions, issues and feature requests are welcome and greatly appreciated!  
 Feel free to check [issues page](https://github.com/DrKain/tidy-url/issues).
+If you find a website that is not supported, please create an issue and I'll be more than happy to add it.
 
 ## 👤 Author
 
