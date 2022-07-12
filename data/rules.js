@@ -589,6 +589,17 @@ const $kurlc_rules = [
         name: 'pinterest.com',
         match: /^www\.pinterest\..*/i,
         rules: ['rs']
+    },
+    {
+        name: 'bing.com',
+        match: /^www\.bing\.com/i,
+        rules: [
+            'qs', 'form', 'sp', 'pq', 'sc', 'sk', 'cvid', 'FORM',
+            'ck', 'simid', 'thid', 'cdnurl', 'pivotparams', 'ghsh', 'ghacc',
+            'ccid', '', 'ru'
+        ],
+        readded: ['sim','exph', 'expw', 'vt', 'mediaurl', 'first'],
+        exclude: ['q', 'tsc', 'iss', 'id', 'view', 'setlang'],
     }
 ];
 
