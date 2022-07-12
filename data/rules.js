@@ -605,6 +605,11 @@ const $kurlc_rules = [
         name: 'jf79.net',
         match: /^jf79\.net/i,
         rules: ['li', 'wi', 'ws', 'ws2']
+    },
+    {
+        name: 'frankenergie.nl',
+        match: /^www\.frankenergie\.nl/i,
+        rules: ['aff_id']
     }
 ];
 
