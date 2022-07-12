@@ -26,6 +26,10 @@ export declare class TidyCleaner {
      * @returns true/false
      */
     validate(url: string): boolean;
+    /**
+     * Rebuild to ensure trailing slashes or encoded characters match.
+     * @param url Any URL
+     */
     rebuild(url: string): string;
     /**
      * Clean a URL
