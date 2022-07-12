@@ -5,16 +5,24 @@ const $kurlc_rules = [
         name: 'Global',
         match: /.*/,
         rules: [
-            'ncid', 'utm_source', 'utm_medium', 'utm_term', 'utm_campaign',
+            // https://en.wikipedia.org/wiki/UTM_parameters
+            'utm_source', 'utm_medium', 'utm_term', 'utm_campaign',
             'utm_content', 'utm_name', 'utm_cid', 'utm_reader', 'utm_viz_id',
-            'utm_pubreferrer', 'utm_swu', 'gclid', 'ga_source', 'ga_medium',
-            'ga_term', 'ga_content', 'ga_campaign', 'ga_place', 'gclid', 'gclsrc',
+            'utm_pubreferrer', 'utm_swu', 'utm_social-type', 'utm_brand',
+            'utm_team', 'utm_feeditemid',
+            // ITM parameters, a variant of UTM parameters
             'itm_source', 'itm_medium', 'itm_term', 'itm_campaign', 'itm_content',
             'itm_channel', 'itm_source_s', 'itm_medium_s', 'itm_campaign_s',
+            // Google Ads
+            'gclid', 'ga_source', 'ga_medium', 'ga_term', 'ga_content', 'ga_campaign',
+            'ga_place', 'gclid', 'gclsrc',
+            // https://github.com/DrKain/tidy-url/issues/21
+            'hsa_cam', 'hsa_grp', 'hsa_mt', 'hsa_src', 'hsa_ad', 'hsa_acc',
+            'hsa_net', 'hsa_kw', 'hsa_tgt', 'hsa_ver', 'hsa_la', 'hsa_ol',
+            // -- 
             'fbclid', 'oly_enc_id', 'oly_anon_id', 'vero_id', '_hsenc', 'mkt_tok',
-            'mc_eid', 'utm_social-type', 'utm_brand', '__s', 'elqTrackId',
-            '_hsmi', 'hsCtaTracking',  '_hsenc', '__hssc', '__hstc', '__hsfp',
-            'utm_team'
+            'mc_eid', '__s', 'elqTrackId', 'ncid', '_hsmi', 'hsCtaTracking',  '_hsenc',
+            '__hssc', '__hstc', '__hsfp'
         ]
     },
     {

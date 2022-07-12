@@ -1,4 +1,4 @@
-Total unique rules: 418
+Total unique rules: 479
 
 | Match                  | Rules |
 | :--------------------- | :---- |

@@ -27,7 +27,10 @@ const generateSupported = () => {
 
         // Sort rules and set padding width
         let lines = rules
-            .filter((rule: any) => rule.name !== 'Global')
+            .filter((rule: any) => {
+                if (rule.name === 'Global') count = rule.rules.length;
+                return rule.name !== 'Global';
+            })
             .sort((a: any, b: any) => a.name.localeCompare(b.name))
             .map((rule: any) => {
                 if (rule.name.length > p) p = rule.name.length;
