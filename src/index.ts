@@ -65,7 +65,11 @@ export class TidyCleaner {
         }
     }
 
-    public rebuild(url: string) {
+    /**
+     * Rebuild to ensure trailing slashes or encoded characters match.
+     * @param url Any URL
+     */
+    public rebuild(url: string): string {
         const original = new URL(url);
         const params = original.searchParams;
         const param_str = params.toString().length ? '?' + params.toString() : '';
@@ -78,15 +82,11 @@ export class TidyCleaner {
      * @returns IData
      */
     public clean(_url: string, allow_reclean = true): IData {
-        // Rebuild to ensure trailing slashes or encoded characters match
-        const url = this.rebuild(_url);
-        // List of parmeters that will be deleted if found
-        let to_remove: string[] = [];
-
+        // Default values
         const data: IData = {
-            url,
+            url: _url,
             info: {
-                original: url,
+                original: _url,
                 reduction: 0,
                 difference: 0,
                 replace: [],
@@ -98,10 +98,17 @@ export class TidyCleaner {
         };
 
         // Make sure the URL is valid before we try to clean it
-        if (!this.validate(url)) {
+        if (!this.validate(_url)) {
             this.log('An invalid URL was supplied');
             return data;
         }
+
+        // Rebuild to ensure trailing slashes or encoded characters match
+        const url = this.rebuild(_url);
+        data.url = url;
+
+        // List of parmeters that will be deleted if found
+        let to_remove: string[] = [];
 
         const original = new URL(url);
         const cleaner = original.searchParams;
