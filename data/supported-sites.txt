@@ -1,4 +1,4 @@
-Total unique rules: 394
+Total unique rules: 418
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -14,6 +14,7 @@ Total unique rules: 394
 | baidu.com              | 30    |
 | bandcamp.com           | 8     |
 | berrybase.de           | 1     |
+| bing.com               | 18    |
 | blizzardgearstore.com  | 1     |
 | blog.twitch.tv         | 1     |
 | bn5x.net               | 1     |
@@ -32,6 +33,7 @@ Total unique rules: 394
 | fanatical.com          | 5     |
 | findojobs.co.nz        | 1     |
 | flexlinkspro.com       | 1     |
+| frankenergie.nl        | 1     |
 | gamebillet.com         | 1     |
 | gamersgate.com         | 1     |
 | gamesload.com          | 1     |
@@ -53,6 +55,7 @@ Total unique rules: 394
 | instagram.com          | 2     |
 | itch.io                | 1     |
 | jdoqocy.com            | 1     |
+| jf79.net               | 4     |
 | ko-fi.com              | 2     |
 | l.messenger.com        | 1     |
 | linkedin.com           | 11    |
@@ -67,6 +70,7 @@ Total unique rules: 394
 | nbcnews.com            | 1     |
 | newsweek.com           | 2     |
 | noctre.com             | 1     |
+| nova.cz                | 1     |
 | nuuvem.com             | 3     |
 | office.com             | 1     |
 | pinterest.com          | 1     |
