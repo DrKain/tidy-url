@@ -21,6 +21,7 @@ for (const test of tests) {
 
     // If last, log params
     if (test === tests[tests.length - 1]) {
+        console.log(link.info.removed);
         console.log(new URL(link.url).searchParams);
     }
 
