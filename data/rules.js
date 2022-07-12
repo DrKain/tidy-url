@@ -600,6 +600,11 @@ const $kurlc_rules = [
         ],
         readded: ['sim','exph', 'expw', 'vt', 'mediaurl', 'first'],
         exclude: ['q', 'tsc', 'iss', 'id', 'view', 'setlang'],
+    },
+    {
+        name: 'jf79.net',
+        match: /^jf79\.net/i,
+        rules: ['li', 'wi', 'ws', 'ws2']
     }
 ];
 
