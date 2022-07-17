@@ -1,4 +1,4 @@
-Total unique rules: 479
+Total unique rules: 480
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -20,6 +20,7 @@ Total unique rules: 479
 | bn5x.net               | 1     |
 | bostonglobe.com        | 1     |
 | cnbc.com               | 1     |
+| cnn.com                | 1     |
 | cookiepro.com          | 2     |
 | countdown.co.nz        | 4     |
 | discord.com            | 1     |

@@ -623,6 +623,14 @@ const $kurlc_rules = [
         name: 'nova.cz',
         match: /^.*\.nova\.cz/i,
         rules: ['sznclid'],
+    },
+    {
+        name: 'cnn.com',
+        match: /.*.cnn.com/i,
+        rules: ['hpt'],
+        exclude: [
+            /e.newsletters.cnn.com/gi,
+        ]
     }
 ];
 

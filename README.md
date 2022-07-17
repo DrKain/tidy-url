@@ -116,7 +116,8 @@ This can be used for debugging, testing or a simple way of letting users know th
             }
         ],
         "decoded": null,
-        "is_new_host": false
+        "is_new_host": false,
+        "full_clean": true
     }
 }
 ```
