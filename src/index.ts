@@ -4,7 +4,7 @@ const $github = 'https://github.com/DrKain/tidy-url';
 
 export class TidyCleaner {
     public rules: IRule[] = [];
-    public silent = false;
+    public silent = true;
 
     /**
      * There's a whole number of reasons why you don't want AMP links,
@@ -71,9 +71,11 @@ export class TidyCleaner {
      */
     public rebuild(url: string): string {
         const original = new URL(url);
-        const params = original.searchParams;
-        const param_str = params.toString().length ? '?' + params.toString() : '';
-        return original.protocol + '//' + original.host + original.pathname + param_str + original.hash;
+        return original.protocol + '//' + original.host + original.pathname + original.search + original.hash;
+    }
+
+    public hasParams(url: string): boolean {
+        return new URL(url).searchParams.toString().length > 0;
     }
 
     /**
@@ -102,6 +104,9 @@ export class TidyCleaner {
             this.log('An invalid URL was supplied');
             return data;
         }
+
+        // If there's no params, we can skip the rest of the process
+        if (!this.hasParams(_url)) return data;
 
         // Rebuild to ensure trailing slashes or encoded characters match
         const url = this.rebuild(_url);
@@ -145,8 +150,7 @@ export class TidyCleaner {
         }
 
         // Rebuild URL
-        const params = cleaner.toString().length ? '?' + cleaner.toString() : '';
-        data.url = original.protocol + '//' + original.host + pathname + params + original.hash;
+        data.url = original.protocol + '//' + original.host + pathname + original.search + original.hash;
 
         // Redirect if the redirect parameter exists
         if (this.allow_redirects) {
@@ -204,8 +208,8 @@ export class TidyCleaner {
             }
         }
 
-        data.info.difference = url.length - data.url.length;
-        data.info.reduction = +(100 - (data.url.length / url.length) * 100).toFixed(2);
+        data.info.difference = _url.length - data.url.length;
+        data.info.reduction = +(100 - (data.url.length / _url.length) * 100).toFixed(2);
 
         if (new URL(url).host !== new URL(data.url).host) {
             data.info.is_new_host = true;

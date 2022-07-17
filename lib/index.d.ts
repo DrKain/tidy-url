@@ -31,6 +31,7 @@ export declare class TidyCleaner {
      * @param url Any URL
      */
     rebuild(url: string): string;
+    hasParams(url: string): boolean;
     /**
      * Clean a URL
      * @param _url Any URL
