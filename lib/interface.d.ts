@@ -55,5 +55,6 @@ export interface IData {
         } | null;
         /** If the cleaned URL is a different host */
         is_new_host: boolean;
+        full_clean: boolean;
     };
 }

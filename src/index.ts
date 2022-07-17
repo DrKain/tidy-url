@@ -24,6 +24,7 @@ export class TidyCleaner {
                 {
                     rules: [],
                     replace: [],
+                    exclude: [],
                     redirect: '',
                     amp: null,
                     decode: null
@@ -95,7 +96,8 @@ export class TidyCleaner {
                 removed: [],
                 match: [],
                 decoded: null,
-                is_new_host: false
+                is_new_host: false,
+                full_clean: false
             }
         };
 
@@ -133,6 +135,20 @@ export class TidyCleaner {
                 data.info.replace = [...data.info.replace, ...(rule.replace || [])];
                 data.info.match.push(rule);
             }
+        }
+
+        // Stop cleaninng if any exclude rule matches
+        let ex_pass = true;
+        for (const rule of data.info.match) {
+            for (const reg of rule.exclude) {
+                reg.lastIndex = 0;
+                if (reg.exec(url) !== null) ex_pass = false;
+            }
+        }
+
+        if (!ex_pass) {
+            data.url = data.info.original;
+            return data;
         }
 
         // Delete any matching parameters
@@ -221,6 +237,7 @@ export class TidyCleaner {
             data.url = data.info.original;
         }
 
+        data.info.full_clean = true;
         return data;
     }
 }

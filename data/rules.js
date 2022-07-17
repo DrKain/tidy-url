@@ -73,7 +73,7 @@ const $kurlc_rules = [
         name: 'spotify.com',
         match: /open.spotify.com/i,
         rules: ['si', 'utm_source', 'context', 'sp_cid'],
-        exclude: ['go', 'nd']
+        allow: ['go', 'nd']
     },
     {
         name: 'aliexpress.com',
@@ -88,7 +88,7 @@ const $kurlc_rules = [
             'aff_fcid', 'aff_fsk', 'aff_platform', 'aff_trace_key', 'shareId',
             'platform', 'businessType', 'terminal_id', 'afSmartRedirect', 'sk'
         ],
-        exclude: ['sku_id', 'pdp_ext_f']
+        allow: ['sku_id', 'pdp_ext_f']
     },
     {
         name: 'google.com',
@@ -109,7 +109,7 @@ const $kurlc_rules = [
         name: 'humblebundle.com',
         match: /www.humblebundle.com/i,
         rules: ['hmb_source', 'hmb_medium', 'hmb_campaign', 'mcID', 'linkID'],
-        exclude: ['partner']
+        allow: ['partner']
     },
     {
         name: 'greenmangaming.com',
@@ -158,7 +158,7 @@ const $kurlc_rules = [
             'social_sharing', '_r', 'source', 'user_id', 'u_code', 'tt_from', 
             'share_author_id', 'sec_uid', 'checksum', '_d'
         ],
-        exclude: ['lang']
+        allow: ['lang']
     },
     {
         name: 'facebook.com',
@@ -228,7 +228,7 @@ const $kurlc_rules = [
         name: 'gamesload.com',
         match: /^www.gamesload.com/i,
         rules: ['affil'],
-        exclude: ['REF']
+        allow: ['REF']
     },
     {
         name: 'mightyape',
@@ -299,7 +299,7 @@ const $kurlc_rules = [
             'mkrid', 'campid', 'toolid', 'mkevt', 'customid', 'siteid', 'ufes_redirect',
             'ff3', 'pub', 'media', 'widget_ver', 'ssspo', 'sssrc', 'ssuid'
         ],
-        exclude: ['epid', '_nkw']
+        allow: ['epid', '_nkw']
     },
     {
         name: 'shopee.com',
@@ -515,7 +515,7 @@ const $kurlc_rules = [
             'tn', 'sa', 'rsf', 'rqid', 'usm', '__pc2ps_ab', 'p_signature',
             'p_sign', 'p_timestamp', 'p_tk', 'oq'
         ],
-        exclude: ['wd', 'ie']
+        allow: ['wd', 'ie']
     },
     {
         name: 'primevideo.com',
@@ -607,7 +607,7 @@ const $kurlc_rules = [
             'ccid', '', 'ru'
         ],
         readded: ['sim','exph', 'expw', 'vt', 'mediaurl', 'first'],
-        exclude: ['q', 'tsc', 'iss', 'id', 'view', 'setlang'],
+        allow: ['q', 'tsc', 'iss', 'id', 'view', 'setlang'],
     },
     {
         name: 'jf79.net',
