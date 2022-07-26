@@ -172,7 +172,9 @@ export class TidyCleaner {
         if (this.allow_redirects) {
             for (const rule of data.info.match) {
                 if (rule.redirect.length && cleaner_ci.has(rule.redirect)) {
-                    data.url = `${cleaner_ci.get(rule.redirect)}` + original.hash;
+                    if (this.validate(cleaner_ci.get(rule.redirect) as string)) {
+                        data.url = `${cleaner_ci.get(rule.redirect)}` + original.hash;
+                    }
                 }
             }
         }
