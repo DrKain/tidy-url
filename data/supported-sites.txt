@@ -1,4 +1,4 @@
-Total unique rules: 480
+Total unique rules: 481
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -48,7 +48,7 @@ Total unique rules: 480
 | hbomax.com             | 1     |
 | hubspot.com            | 2     |
 | humblebundle.com       | 5     |
-| imdb.com               | 10    |
+| imdb.com               | 11    |
 | imgur.com              | 1     |
 | imp.i305175.net        | 1     |
 | indeed.com             | 2     |
