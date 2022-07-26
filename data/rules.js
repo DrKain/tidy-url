@@ -164,7 +164,10 @@ const $kurlc_rules = [
         name: 'facebook.com',
         match: /.*.facebook.com/i,
         rules: ['fbclid', 'fb_ref', 'fb_source', 'referral_code', 'referral_story_type', 'tracking', 'ref'],
-        redirect: 'u'
+        redirect: 'u',
+        exclude: [
+            /www\.facebook\.com\/sharer/gi
+        ]
     },
     {
         name: 'yandex.com',
