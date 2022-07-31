@@ -634,6 +634,11 @@ const $kurlc_rules = [
         exclude: [
             /e.newsletters.cnn.com/gi,
         ]
+    },
+    {
+        name: 'amp.scmp.com',
+        match: /amp\.scmp\.com/i,
+        amp: /amp\.(.*)/i
     }
 ];
 
