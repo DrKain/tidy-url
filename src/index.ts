@@ -108,7 +108,9 @@ export class TidyCleaner {
         }
 
         // If there's no params, we can skip the rest of the process
-        if (!this.hasParams(_url)) return data;
+        if (this.allow_amp && !this.hasParams(_url)) {
+            return data;
+        }
 
         // Rebuild to ensure trailing slashes or encoded characters match
         const url = this.rebuild(_url);
