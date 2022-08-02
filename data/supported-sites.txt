@@ -1,4 +1,4 @@
-Total unique rules: 481
+Total unique rules: 482
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -6,6 +6,7 @@ Total unique rules: 481
 | adtraction.com         | 1     |
 | aliexpress.com         | 42    |
 | amazon.com             | 26    |
+| amp.scmp.com           | 1     |
 | ampproject.org         | 5     |
 | anrdoezrs.net          | 1     |
 | apple.com              | 9     |
