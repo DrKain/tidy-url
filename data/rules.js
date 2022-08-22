@@ -639,6 +639,12 @@ const $kurlc_rules = [
         name: 'amp.scmp.com',
         match: /amp\.scmp\.com/i,
         amp: /amp\.(.*)/i
+    },
+    {
+        name: 'justwatch.com',
+        match: /click\.justwatch\.com/i,
+        rules: ['cx','uct_country', 'uct_buybox', 'sid'],
+        redirect: 'r'
     }
 ];
 

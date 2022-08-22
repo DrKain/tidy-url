@@ -1,4 +1,4 @@
-Total unique rules: 482
+Total unique rules: 487
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -58,6 +58,7 @@ Total unique rules: 482
 | itch.io                | 1     |
 | jdoqocy.com            | 1     |
 | jf79.net               | 4     |
+| justwatch.com          | 5     |
 | ko-fi.com              | 2     |
 | l.messenger.com        | 1     |
 | linkedin.com           | 11    |
