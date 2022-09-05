@@ -666,6 +666,11 @@ const $kurlc_rules = [
         name: 'syteapi.com',
         match: /syteapi\.com/i,
         decode: { param: 'url' }
+    },
+    {
+        name: 'castorama.fr',
+        match: /www\.castorama\.fr/i,
+        rules: ['syte_ref']
     }
 ];
 
