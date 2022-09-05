@@ -655,6 +655,12 @@ const $kurlc_rules = [
         name: 'mouser.com',
         match: /www\.mouser\.com/i,
         rules: ['qs']
+    },
+    {
+        name: 'awin1.com',
+        match: /www\.awin1\.com/i,
+        redirect: 'ued',
+        rules: ['awinmid', 'awinaffid', 'clickref']
     }
 ];
 
