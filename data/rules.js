@@ -645,6 +645,11 @@ const $kurlc_rules = [
         match: /click\.justwatch\.com/i,
         rules: ['cx','uct_country', 'uct_buybox', 'sid'],
         redirect: 'r'
+    },
+    {
+        name: 'psychologytoday.com',
+        match: /www\.psychologytoday\.com/i,
+        rules: ['amp']
     }
 ];
 
