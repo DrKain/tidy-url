@@ -18,6 +18,15 @@ export class TidyCleaner {
      */
     public allow_redirects = true;
 
+    private atob(data: string): string {
+        if (typeof atob === 'undefined') {
+            this.log('atob not supported, using Buffer');
+            return Buffer.from(data, 'base64').toString('binary');
+        } else {
+            return atob(data);
+        }
+    }
+
     get expandedRules() {
         return this.rules.map((rule) => {
             return Object.assign(
@@ -77,6 +86,15 @@ export class TidyCleaner {
 
     public hasParams(url: string): boolean {
         return new URL(url).searchParams.toString().length > 0;
+    }
+
+    private isJSON(data: string) {
+        try {
+            JSON.parse(data);
+            return true;
+        } catch (error) {
+            return false;
+        }
     }
 
     /**
@@ -214,16 +232,27 @@ export class TidyCleaner {
                 if (!cleaner.has(rule.decode.param)) continue;
                 // These will always be clickjacking links, so use the allow_redirects rule
                 if (!this.allow_redirects) continue;
-                // Decode the base64 string and parse it as JSON
-                const json = JSON.parse(atob(cleaner.get(rule.decode.param) as string));
-                const target = json[rule.decode.lookFor];
+                // Decode the base64 string
+                const decoded = this.atob(cleaner.get(rule.decode.param) as string);
+                let target = '';
+
+                // If the response is JSON, decode and look for a key
+                if (this.isJSON(decoded)) {
+                    const json = JSON.parse(decoded);
+                    target = json[rule.decode.lookFor];
+                    // Add to the info response
+                    data.info.decoded = json;
+                } else {
+                    // If the response is a string we can continue
+                    target = decoded;
+                }
+
                 // If the key we want exists and is a valid url then update the data url
                 if (target && this.validate(target)) {
                     data.url = `${target}` + original.hash;
                 }
-                // Add to the info response
-                data.info.decoded = json;
             } catch (error) {
+                console.log(error);
                 this.log(`${error}`);
             }
         }

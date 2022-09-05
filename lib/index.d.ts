@@ -13,6 +13,7 @@ export declare class TidyCleaner {
      * This is used to skip websites that track external links.
      */
     allow_redirects: boolean;
+    private atob;
     get expandedRules(): IRule[];
     constructor();
     /**
@@ -32,6 +33,7 @@ export declare class TidyCleaner {
      */
     rebuild(url: string): string;
     hasParams(url: string): boolean;
+    private isJSON;
     /**
      * Clean a URL
      * @param _url Any URL
