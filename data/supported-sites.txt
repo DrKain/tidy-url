@@ -1,4 +1,4 @@
-Total unique rules: 487
+Total unique rules: 496
 
 | Match                  | Rules |
 | :--------------------- | :---- |
@@ -9,8 +9,9 @@ Total unique rules: 487
 | amp.scmp.com           | 1     |
 | ampproject.org         | 5     |
 | anrdoezrs.net          | 1     |
-| apple.com              | 9     |
+| apple.com              | 10    |
 | audible.com            | 6     |
+| awin1.com              | 4     |
 | awstrack.me            | 1     |
 | baidu.com              | 30    |
 | bandcamp.com           | 8     |
@@ -20,6 +21,7 @@ Total unique rules: 487
 | blog.twitch.tv         | 1     |
 | bn5x.net               | 1     |
 | bostonglobe.com        | 1     |
+| castorama.fr           | 1     |
 | cnbc.com               | 1     |
 | cnn.com                | 1     |
 | cookiepro.com          | 2     |
@@ -68,6 +70,7 @@ Total unique rules: 487
 | medium.com             | 1     |
 | microsoft.com          | 2     |
 | mightyape              | 1     |
+| mouser.com             | 1     |
 | msn.com                | 3     |
 | music.apple.com        | 5     |
 | nbcnews.com            | 1     |
@@ -82,6 +85,7 @@ Total unique rules: 487
 | playbook.com           | 1     |
 | plex.tv                | 4     |
 | primevideo.com         | 2     |
+| psychologytoday.com    | 1     |
 | qflm.net               | 1     |
 | ranker.com             | 5     |
 | reddit.com             | 2     |
@@ -93,6 +97,7 @@ Total unique rules: 487
 | startpage.com          | 1     |
 | steamcommunity.com     | 1     |
 | store.steampowered.com | 1     |
+| syteapi.com            | 1     |
 | techcrunch.com         | 3     |
 | thewarehouse.co.nz     | 6     |
 | threadless.com         | 3     |
