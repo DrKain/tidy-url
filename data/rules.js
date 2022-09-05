@@ -671,6 +671,11 @@ const $kurlc_rules = [
         name: 'castorama.fr',
         match: /www\.castorama\.fr/i,
         rules: ['syte_ref']
+    },
+    {
+        name: 'quizlet.com',
+        match: /quizlet\.com/i,
+        rules: ['funnelUUID', 'source']
     }
 ];
 
