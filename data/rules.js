@@ -650,6 +650,11 @@ const $kurlc_rules = [
         name: 'psychologytoday.com',
         match: /www\.psychologytoday\.com/i,
         rules: ['amp']
+    },
+    {
+        name: 'mouser.com',
+        match: /www\.mouser\.com/i,
+        rules: ['qs']
     }
 ];
 
