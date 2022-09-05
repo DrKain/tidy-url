@@ -1,11 +1,11 @@
-Total unique rules: 496
+Total unique rules: 502
 
 | Match                  | Rules |
 | :--------------------- | :---- |
 | 2game.com              | 1     |
 | adtraction.com         | 1     |
 | aliexpress.com         | 42    |
-| amazon.com             | 26    |
+| amazon.com             | 29    |
 | amp.scmp.com           | 1     |
 | ampproject.org         | 5     |
 | anrdoezrs.net          | 1     |
@@ -63,7 +63,7 @@ Total unique rules: 496
 | justwatch.com          | 5     |
 | ko-fi.com              | 2     |
 | l.messenger.com        | 1     |
-| linkedin.com           | 11    |
+| linkedin.com           | 12    |
 | linksynergy.com        | 3     |
 | macgamestore.com       | 1     |
 | manymorestores.com     | 1     |
@@ -87,6 +87,7 @@ Total unique rules: 496
 | primevideo.com         | 2     |
 | psychologytoday.com    | 1     |
 | qflm.net               | 1     |
+| quizlet.com            | 2     |
 | ranker.com             | 5     |
 | reddit.com             | 2     |
 | redirect.viglink.com   | 1     |
