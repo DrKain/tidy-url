@@ -252,7 +252,6 @@ export class TidyCleaner {
                     data.url = `${target}` + original.hash;
                 }
             } catch (error) {
-                console.log(error);
                 this.log(`${error}`);
             }
         }
