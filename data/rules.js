@@ -661,6 +661,11 @@ const $kurlc_rules = [
         match: /www\.awin1\.com/i,
         redirect: 'ued',
         rules: ['awinmid', 'awinaffid', 'clickref']
+    },
+    {
+        name: 'syteapi.com',
+        match: /syteapi\.com/i,
+        decode: { param: 'url' }
     }
 ];
 
