@@ -676,6 +676,11 @@ const $kurlc_rules = [
         name: 'quizlet.com',
         match: /quizlet\.com/i,
         rules: ['funnelUUID', 'source']
+    },
+    {
+        name: 'pbtech.co.nz',
+        match: /www\.pbtech\.co\.nz/i,
+        rules: ['qr']
     }
 ];
 
