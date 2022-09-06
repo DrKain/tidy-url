@@ -681,6 +681,16 @@ const $kurlc_rules = [
         name: 'pbtech.co.nz',
         match: /www\.pbtech\.co\.nz/i,
         rules: ['qr']
+    },
+    {
+        name: 'matomo.org',
+        match: /matomo\.org/i,
+        rules: [
+            'menu', 'footer', 'header', 'hp-reasons-learn', 'hp-top',
+            'above-fold', 'step1-hp', 'mid-hp', 'take-back-control-hp',
+            'hp-reasons-icon', 'hp-reasons-heading', 'hp-reasons-p',
+            'hp-bottom', 'footer', 'menu'
+        ]
     }
 ];
 
