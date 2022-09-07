@@ -691,6 +691,11 @@ const $kurlc_rules = [
             'hp-reasons-icon', 'hp-reasons-heading', 'hp-reasons-p',
             'hp-bottom', 'footer', 'menu'
         ]
+    },
+    {
+        name: 'eufy.com',
+        match: /eufy\.com/i,
+        rules: ['ref']
     }
 ];
 
