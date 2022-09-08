@@ -701,6 +701,11 @@ const $kurlc_rules = [
         name: 'newsflare.com',
         match: /www\.newsflare\.com/i,
         rules: ['jwsource']
+    },
+    {
+        name: 'wish.com',
+        match: /www\.wish\.com/i,
+        rules: ['share']
     }
 ];
 
