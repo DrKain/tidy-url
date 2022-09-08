@@ -706,6 +706,11 @@ const $kurlc_rules = [
         name: 'wish.com',
         match: /www\.wish\.com/i,
         rules: ['share']
+    },
+    {
+        name: 'change.org',
+        match: /www\.change\.org/i,
+        rules: ['source_location']
     }
 ];
 
