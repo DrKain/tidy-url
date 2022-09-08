@@ -696,6 +696,11 @@ const $kurlc_rules = [
         name: 'eufy.com',
         match: /eufy\.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'newsflare.com',
+        match: /www\.newsflare\.com/i,
+        rules: ['jwsource']
     }
 ];
 
