@@ -97,7 +97,8 @@ const $kurlc_rules = [
             'sourceid', 'client', 'aqs', 'sxsrf', 'uact', 'ved', 'iflsig', 'source',
             'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr'
         ],
-        amp: /www\.google\.(?:.*)\/amp\/s\/(.*)/gim
+        amp: /www\.google\.(?:.*)\/amp\/s\/(.*)/gim,
+        redirect: 'url'
     },
     {
         name: 'youtube.com',
