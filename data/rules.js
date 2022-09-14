@@ -717,6 +717,11 @@ const $kurlc_rules = [
         name: 'washingtonpost.com',
         match: /.*\.washingtonpost\.com/i,
         rules: ['itid', 's_l']
+    },
+    {
+        name: 'lowes.com',
+        match: /www\.lowes\.com/i,
+        rules: ['cm_mmc', 'ds_rl', 'gbraid']
     }
 ];
 
