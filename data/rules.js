@@ -712,6 +712,11 @@ const $kurlc_rules = [
         name: 'change.org',
         match: /www\.change\.org/i,
         rules: ['source_location']
+    },
+    {
+        name: 'washingtonpost.com',
+        match: /.*\.washingtonpost\.com/i,
+        rules: ['itid', 's_l']
     }
 ];
 
