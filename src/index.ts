@@ -256,6 +256,9 @@ export class TidyCleaner {
             }
         }
 
+        // Handle empty hash / anchors
+        if (_url.endsWith('#')) data.url += '#';
+
         data.info.difference = _url.length - data.url.length;
         data.info.reduction = +(100 - (data.url.length / _url.length) * 100).toFixed(2);
 
