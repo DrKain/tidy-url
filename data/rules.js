@@ -44,12 +44,15 @@ const $kurlc_rules = [
     },
     {
         name: 'amazon.com',
-        match: /^(?:https?:\/\/)?(?:[^.]+\.)?amazon\.[a-z0-9]{0,3}/i,
+        match: /amazon\.[a-z0-9]{0,3}/i,
         rules: [
             'psc', 'colid', 'coliid', 'linkId', 'tag', 'linkCode', 'ms3_c',
             'pf_rd_s', 'pf_rd_t', ' pf_rd_i', 'pf_rd_m', 'pd_rd_w', 'qid', 'sr',
             'keywords', 'dchild', 'ref', 'ref_', 'rnid', 'pf_rd_r', 'pf_rd_p', 'pd_rd_r',
-            'smid', 'pd_rd_wg', 'content-id', 'spLa', 'crid', 'sprefix'
+            'smid', 'pd_rd_wg', 'content-id', 'spLa', 'crid', 'sprefix',
+            'qu', 'pd_rd_i', 'nc2', 'nc1', 'trk', 'sc_icampaign', 'trkCampaign',
+            'ufe', 'sc_icontent', 'sc_ichannel', 'sc_iplace', 'sc_country',
+            'sc_outcome', 'sc_geo', 'sc_campaign', 'sc_channel'
         ],
         replace: [/(\/ref|&ref_)=[^\/?]*/i]
     },

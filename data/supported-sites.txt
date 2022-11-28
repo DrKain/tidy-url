@@ -1,11 +1,11 @@
-Total unique rules: 529
+Total unique rules: 545
 
 | Match                  | Rules |
 | :--------------------- | :---- |
 | 2game.com              | 1     |
 | adtraction.com         | 1     |
 | aliexpress.com         | 42    |
-| amazon.com             | 29    |
+| amazon.com             | 45    |
 | amp.scmp.com           | 1     |
 | ampproject.org         | 5     |
 | anrdoezrs.net          | 1     |
