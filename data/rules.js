@@ -19,10 +19,14 @@ const $kurlc_rules = [
             // https://github.com/DrKain/tidy-url/issues/21
             'hsa_cam', 'hsa_grp', 'hsa_mt', 'hsa_src', 'hsa_ad', 'hsa_acc',
             'hsa_net', 'hsa_kw', 'hsa_tgt', 'hsa_ver', 'hsa_la', 'hsa_ol',
-            // -- 
-            'fbclid', 'oly_enc_id', 'oly_anon_id', 'vero_id', '_hsenc', 'mkt_tok',
+            // Facebook
+			'fbclid',
+			// Other
+            'oly_enc_id', 'oly_anon_id', 'vero_id', '_hsenc', 'mkt_tok',
             'mc_eid', '__s', 'elqTrackId', 'ncid', '_hsmi', 'hsCtaTracking',  '_hsenc',
-            '__hssc', '__hstc', '__hsfp'
+            '__hssc', '__hstc', '__hsfp',
+			// Reddit Ads (https://github.com/DrKain/tidy-url/issues/31)
+			'rdt_cid'
         ]
     },
     {
