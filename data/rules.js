@@ -734,6 +734,11 @@ const $kurlc_rules = [
         name: 'stacks.wellcomecollection.org',
         match: /stacks\.wellcomecollection\.org/i,
         rules: ['source']
+    },
+    {
+        name: 'redbubble.com',
+        match: /.*\.redbubble\.com/i,
+        rules: ['ref']
     }
 ];
 
