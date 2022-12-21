@@ -729,6 +729,11 @@ const $kurlc_rules = [
         name: 'lowes.com',
         match: /www\.lowes\.com/i,
         rules: ['cm_mmc', 'ds_rl', 'gbraid']
+    },
+    {
+        name: 'stacks.wellcomecollection.org',
+        match: /stacks\.wellcomecollection\.org/i,
+        rules: ['source']
     }
 ];
 
