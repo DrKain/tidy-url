@@ -7,16 +7,18 @@ assignees: ''
 
 ---
 
-**Website you would like added. Include multiple URLs if needed**
+**Example URLs:**
 
-- https://example.com/page?utm_source=tracking&blah=label
-- https://example.com/example?bad=param
+```
+https://example.com/page?utm_source=tracking&blah=label
+https://example.com/example?bad=param
+```
 
-**Bad parameters. Leave blank if you don't know.**
+**Bad params:**
 
 - utm_source
-- blah
 - bad
+- 
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Additional context:**  
+Add any other information about the website here that might be useful to know.  
