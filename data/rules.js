@@ -739,6 +739,11 @@ const $kurlc_rules = [
         name: 'redbubble.com',
         match: /.*\.redbubble\.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'inyourarea.co.uk',
+        match: /inyourarea.co.uk/i,
+        rules: ['from_reach_primary_nav', 'from_reach_footer_nav', 'branding']
     }
 ];
 
