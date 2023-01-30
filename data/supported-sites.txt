@@ -1,4 +1,4 @@
-Total unique rules: 551
+Total unique rules: 556
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -38,7 +38,7 @@ Total unique rules: 551
 | facebook.com                  | 8     |
 | fanatical.com                 | 5     |
 | findojobs.co.nz               | 1     |
-| fiverr.com                    | 1     |
+| fiverr.com                    | 6     |
 | flexlinkspro.com              | 1     |
 | frankenergie.nl               | 1     |
 | gamebillet.com                | 1     |
