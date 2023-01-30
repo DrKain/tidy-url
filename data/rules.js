@@ -21,10 +21,22 @@ const $kurlc_rules = [
             'hsa_net', 'hsa_kw', 'hsa_tgt', 'hsa_ver', 'hsa_la', 'hsa_ol',
             // Facebook
             'fbclid',
-            // Other
-            'oly_enc_id', 'oly_anon_id', 'vero_id', '_hsenc', 'mkt_tok',
-            'mc_eid', '__s', 'elqTrackId', 'ncid', '_hsmi', 'hsCtaTracking',  '_hsenc',
-            '__hssc', '__hstc', '__hsfp',
+            // Olytics
+            'oly_enc_id', 'oly_anon_id',
+            // Vero
+            'vero_id', 'vero_conv',
+            // Drip
+            '__s', 
+            // HubSpot
+            '_hsenc', '_hsmi', '__hssc', '__hstc', '__hsfp', 'hsCtaTracking',
+            // Marketo
+            'mkt_tok',
+            // Oracle Eloqua
+            'elqTrackId', 'elq', 'elqaid', 'elqat', 'elqCampaignId', 'elqTrack',
+            // MailChimp
+            'mc_cid', 'mc_eid'
+            // Other              
+            'ncid', 'cmpid', 'mbid',
             // Reddit Ads (https://github.com/DrKain/tidy-url/issues/31)
             'rdt_cid'
         ]
