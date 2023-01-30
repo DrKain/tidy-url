@@ -34,7 +34,7 @@ const $kurlc_rules = [
             // Oracle Eloqua
             'elqTrackId', 'elq', 'elqaid', 'elqat', 'elqCampaignId', 'elqTrack',
             // MailChimp
-            'mc_cid', 'mc_eid'
+            'mc_cid', 'mc_eid',
             // Other              
             'ncid', 'cmpid', 'mbid',
             // Reddit Ads (https://github.com/DrKain/tidy-url/issues/31)
