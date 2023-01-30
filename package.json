@@ -1,6 +1,6 @@
 {
     "name": "tidy-url",
-    "version": "1.6.6",
+    "version": "1.6.7",
     "description": "Cleans/removes tracking or garbage parameters from URLs",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
