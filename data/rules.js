@@ -761,6 +761,11 @@ const $kurlc_rules = [
         name: 'fiverr.com',
         match: /.*\.fiverr\.com/i,
         rules: ['source', 'context_referrer', 'referrer_gig_slug', 'ref_ctx_id', 'funnel', 'imp_id']
+    },
+    {
+        name: 'mylondon.news',
+        match: /.*\.mylondon\.news/i,
+        rules: ['int_source', 'int_medium', 'int_campaign']
     }
 ];
 
