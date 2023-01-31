@@ -1,4 +1,4 @@
-Total unique rules: 567
+Total unique rules: 570
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -66,6 +66,7 @@ Total unique rules: 567
 | jf79.net                      | 4     |
 | justwatch.com                 | 5     |
 | ko-fi.com                     | 2     |
+| kqzyfj.com                    | 3     |
 | l.messenger.com               | 1     |
 | linkedin.com                  | 12    |
 | linksynergy.com               | 3     |
