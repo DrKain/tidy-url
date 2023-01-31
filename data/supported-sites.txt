@@ -1,4 +1,4 @@
-Total unique rules: 564
+Total unique rules: 567
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -79,6 +79,7 @@ Total unique rules: 564
 | mouser.com                    | 1     |
 | msn.com                       | 3     |
 | music.apple.com               | 5     |
+| mylondon.news                 | 3     |
 | nbcnews.com                   | 1     |
 | newsflare.com                 | 1     |
 | newsweek.com                  | 2     |
