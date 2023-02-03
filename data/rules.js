@@ -9,7 +9,8 @@ const $kurlc_rules = [
             'utm_source', 'utm_medium', 'utm_term', 'utm_campaign',
             'utm_content', 'utm_name', 'utm_cid', 'utm_reader', 'utm_viz_id',
             'utm_pubreferrer', 'utm_swu', 'utm_social-type', 'utm_brand',
-            'utm_team', 'utm_feeditemid',
+            'utm_team', 'utm_feeditemid', 'utm_id', 'utm_marketing_tactic', 
+            'utm_creative_format', 'utm_campaign_id', 'utm_source_platform', 
             // ITM parameters, a variant of UTM parameters
             'itm_source', 'itm_medium', 'itm_term', 'itm_campaign', 'itm_content',
             'itm_channel', 'itm_source_s', 'itm_medium_s', 'itm_campaign_s',
