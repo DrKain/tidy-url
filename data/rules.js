@@ -362,7 +362,7 @@ const $kurlc_rules = [
     {
         name: 'yahoo.com',
         match: /yahoo.com/i,
-        rules: ['guce_referrer', 'guce_referrer_sig', 'guccounter']
+        rules: ['guce_referrer', 'guce_referrer_sig', 'guccounter', 'soc_src', 'soc_trk', 'tsrc']
     },
     {
         name: 'techcrunch.com',
