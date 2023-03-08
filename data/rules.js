@@ -783,6 +783,15 @@ const $kurlc_rules = [
         name: 'marcaentradas.com',
         match: /.*\.marcaentradas\.com/i,
         rules: ['intcmp', 's_kw']
+    },
+    {
+        name: 'honeycode.aws',
+        match: /.*\.honeycode\.aws/i,
+        rules: [
+            'trackingId', 'sc_icampaign', 'sc_icontent', 'sc_ichannel',
+            'sc_iplace', 'sc_country', 'sc_outcome', 'sc_geo',
+            'sc_campaign', 'sc_channel', 'trkCampaign', 'trk'
+        ]
     }
 ];
 
