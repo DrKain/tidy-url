@@ -768,11 +768,16 @@ const $kurlc_rules = [
         match: /.*\.mylondon\.news/i,
         rules: ['int_source', 'int_medium', 'int_campaign']
     },
-	{
-		name: 'kqzyfj.com',
-		match: /www\.kqzyfj\.com/i,
-		redirect: 'url',
-		rules: ['cjsku', 'pubdata']
+    {
+        name: 'kqzyfj.com',
+        match: /www\.kqzyfj\.com/i,
+        redirect: 'url',
+        rules: ['cjsku', 'pubdata']
+    },
+    {
+		name: 'marca.com',
+		match: /.*\.marca\.com/i,
+		rules: ['intcmp', 's_kw', 'emk']
 	}
 ];
 
