@@ -1,4 +1,4 @@
-Total unique rules: 578
+Total unique rules: 595
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -52,6 +52,7 @@ Total unique rules: 578
 | google.com                    | 18    |
 | greenmangaming.com            | 5     |
 | hbomax.com                    | 1     |
+| honeycode.aws                 | 12    |
 | hubspot.com                   | 2     |
 | humblebundle.com              | 5     |
 | imdb.com                      | 11    |
@@ -74,6 +75,7 @@ Total unique rules: 578
 | macgamestore.com              | 1     |
 | manymorestores.com            | 1     |
 | marca.com                     | 3     |
+| marcaentradas.com             | 2     |
 | matomo.org                    | 15    |
 | medium.com                    | 1     |
 | microsoft.com                 | 2     |
@@ -129,6 +131,6 @@ Total unique rules: 578
 | wingamestore.com              | 1     |
 | wish.com                      | 1     |
 | wsj.com                       | 1     |
-| yahoo.com                     | 3     |
+| yahoo.com                     | 6     |
 | yandex.com                    | 5     |
 | youtube.com                   | 7     |
