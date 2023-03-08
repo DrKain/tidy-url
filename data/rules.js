@@ -775,10 +775,15 @@ const $kurlc_rules = [
         rules: ['cjsku', 'pubdata']
     },
     {
-		name: 'marca.com',
-		match: /.*\.marca\.com/i,
-		rules: ['intcmp', 's_kw', 'emk']
-	}
+        name: 'marca.com',
+        match: /.*\.marca\.com/i,
+        rules: ['intcmp', 's_kw', 'emk']
+    },
+    {
+        name: 'marcaentradas.com',
+        match: /.*\.marcaentradas\.com/i,
+        rules: ['intcmp', 's_kw']
+    }
 ];
 
 module.exports = $kurlc_rules;
