@@ -115,7 +115,7 @@ const $kurlc_rules = [
         match: /www.google\..*/i,
         rules: [
             'sourceid', 'client', 'aqs', 'sxsrf', 'uact', 'ved', 'iflsig', 'source',
-            'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr'
+            'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr', 'rlz'
         ],
         amp: /www\.google\.(?:.*)\/amp\/s\/(.*)/gim,
         redirect: 'url'
