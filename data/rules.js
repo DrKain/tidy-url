@@ -32,6 +32,9 @@ const $kurlc_rules = [
             '_hsenc', '_hsmi', '__hssc', '__hstc', '__hsfp', 'hsCtaTracking',
             // Marketo
             'mkt_tok',
+            // Matomo (https://github.com/DrKain/tidy-url/issues/47)
+            'mtm_campaign', 'mtm_keyword', 'mtm_kwd', 'mtm_source', 'mtm_medium',
+            'mtm_content', 'mtm_cid', 'mtm_group', 'mtm_placement', 
             // Oracle Eloqua
             'elqTrackId', 'elq', 'elqaid', 'elqat', 'elqCampaignId', 'elqTrack',
             // MailChimp
