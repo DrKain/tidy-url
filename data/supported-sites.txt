@@ -1,4 +1,4 @@
-Total unique rules: 595
+Total unique rules: 606
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -49,7 +49,7 @@ Total unique rules: 595
 | getmusicbee.com               | 1     |
 | go2cloud.org                  | 1     |
 | gog.com                       | 1     |
-| google.com                    | 18    |
+| google.com                    | 19    |
 | greenmangaming.com            | 5     |
 | hbomax.com                    | 1     |
 | honeycode.aws                 | 12    |
@@ -123,7 +123,7 @@ Total unique rules: 595
 | transparency.fb.com           | 1     |
 | tvguide.com                   | 1     |
 | twitch.tv                     | 3     |
-| twitter.com                   | 4     |
+| twitter.com                   | 5     |
 | voidu.com                     | 1     |
 | washingtonpost.com            | 2     |
 | watchworthy.app               | 1     |
