@@ -112,6 +112,7 @@ Total unique rules: 606
 | stacks.wellcomecollection.org | 1     |
 | startpage.com                 | 1     |
 | steamcommunity.com            | 1     |
+| studentbeans.com              | 1     |
 | store.steampowered.com        | 1     |
 | syteapi.com                   | 1     |
 | techcrunch.com                | 3     |

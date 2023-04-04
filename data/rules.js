@@ -795,6 +795,11 @@ const $kurlc_rules = [
             'sc_iplace', 'sc_country', 'sc_outcome', 'sc_geo',
             'sc_campaign', 'sc_channel', 'trkCampaign', 'trk'
         ]
+    },
+    {
+        name: 'studentbeans.com',
+        match: /.*\.studentbeans\.com/i,
+        rules: ['source', 'offer']
     }
 ];
 
