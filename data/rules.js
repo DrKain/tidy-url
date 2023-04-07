@@ -479,6 +479,12 @@ const $kurlc_rules = [
         amp: /(?:.*)\/links\/(?:.*)\/type\/dlg\/sid\/\[subid_value\]\/(.*)/gi
     },
     {
+        name: 'artnet.com',
+        match: /^.*artnet.com/i,
+        amp: /\/amp-page$/i,
+        replace: ''
+    },
+    {
         name: 'emjcd.com',
         match: /^www.emjcd.com/i,
         decode: {
