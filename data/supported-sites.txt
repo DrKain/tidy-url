@@ -1,4 +1,4 @@
-Total unique rules: 606
+Total unique rules: 607
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -10,6 +10,7 @@ Total unique rules: 606
 | ampproject.org                | 5     |
 | anrdoezrs.net                 | 1     |
 | apple.com                     | 10    |
+| artnet.com                    | 1     |
 | audible.com                   | 6     |
 | awin1.com                     | 4     |
 | awstrack.me                   | 1     |

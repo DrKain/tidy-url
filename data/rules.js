@@ -45,11 +45,8 @@ const $kurlc_rules = [
             'rdt_cid'
         ]
     },
-    {
-        name: 'audible.com',
-        match: /www.audible.com/i,
-        rules: ['qid', 'sr', 'pf_rd_p', 'pf_rd_r', 'plink', 'ref']
-    },
+
+
     {
         name: 'bandcamp.com',
         match: /.*.bandcamp.com/gi,
@@ -388,11 +385,11 @@ const $kurlc_rules = [
         rules: ['p1']
     },
     {
-        name: 'ampproject.org',
-        match: /cdn.ampproject.org/i,
-        rules: ['amp_gsa', 'amp_js_v', 'usqp', 'outputType'],
-        amp: /cdn\.ampproject\.org\/v\/s\/(.*)\#(aoh|csi|referrer|amp)/gim
+        name: 'news.artnet.com',
+        match: /news\.artnet\.com/i,
+        replace: [/\/amp-page$/i]
     },
+
     {
         name: 'nbcnews.com',
         match: /nbcnews.com/i,
@@ -478,12 +475,9 @@ const $kurlc_rules = [
         match: /anrdoezrs.net/i,
         amp: /(?:.*)\/links\/(?:.*)\/type\/dlg\/sid\/\[subid_value\]\/(.*)/gi
     },
-    {
-        name: 'artnet.com',
-        match: /^.*artnet.com/i,
-        amp: /\/amp-page$/i,
-        replace: ''
-    },
+
+
+
     {
         name: 'emjcd.com',
         match: /^www.emjcd.com/i,
