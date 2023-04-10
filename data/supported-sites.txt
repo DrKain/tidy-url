@@ -1,4 +1,4 @@
-Total unique rules: 606
+Total unique rules: 608
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -85,6 +85,7 @@ Total unique rules: 606
 | music.apple.com               | 5     |
 | mylondon.news                 | 3     |
 | nbcnews.com                   | 1     |
+| news.artnet.com               | 1     |
 | newsflare.com                 | 1     |
 | newsweek.com                  | 2     |
 | noctre.com                    | 1     |
@@ -113,6 +114,7 @@ Total unique rules: 606
 | startpage.com                 | 1     |
 | steamcommunity.com            | 1     |
 | store.steampowered.com        | 1     |
+| studentbeans.com              | 1     |
 | syteapi.com                   | 1     |
 | techcrunch.com                | 3     |
 | thewarehouse.co.nz            | 6     |
