@@ -800,6 +800,11 @@ const $kurlc_rules = [
         name: 'news.artnet.com',
         match: /news\.artnet\.com/i,
         replace: [/\/amp-page$/i]
+    },
+    {
+        name: 'studentbeans.com',
+        match: /www\.studentbeans\.com/i,
+        rules: ['source']
     }
 ];
 
