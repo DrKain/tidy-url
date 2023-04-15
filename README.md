@@ -50,8 +50,8 @@ TidyURL.validate('google.com'); // false (protocol is required!)
 ### AMP & Redirects
 
 By default, tidy-url will remove redirect parameters and AMP links if the rule supports it.  
-You can disable this feature with `allow_redirects` and `allow_amp`. 
-Examples:  
+You can disable this feature with `allow_redirects` and `allow_amp`.
+Examples:
 
 ```ts
 // These are the defaults.
@@ -61,10 +61,9 @@ TidyURL.allow_amp = false;
 TidyURL.clean('https://www.google.com/amp/s/github.com');
 TidyURL.clean('https://steamcommunity.com/linkfilter/?url=https://github.com');
 // Result for both: https://github.com
-
 ```
 
-*More info about AMP on [the wiki](https://github.com/DrKain/tidy-url/wiki/AMP-Links)*.
+_More info about AMP on [the wiki](https://github.com/DrKain/tidy-url/wiki/AMP-Links)_.
 
 ### Note
 
@@ -140,6 +139,8 @@ https://www.aliexpress.com/item/1005001913861188.html?spm=a2g0o.productlist.0.0.
 https://www.google.com/search?q=cat&source=hp&ei=AwGpYKzyE7uW4-EPy_CnSA&iflsig=AINFCbYAAAAAYKkPE4rmSi0Im0sHgmOVb3DYosyq2B0B&oq=cat&gs_lcp=Cgdnd3Mtd2l6EAMyBQguEJMCMgIILjICCAAyAggAMgIILjICCAAyAggAMgIILjICCC4yAgguOggIABDqAhCPAToLCC4QxwEQowIQkwI6CAguEMcBEKMCUNgEWIQHYMwIaAFwAHgAgAHIAYgB2ASSAQMyLTOYAQCgAQGqAQdnd3Mtd2l6sAEK&sclient=gws-wiz&ved=0ahUKEwjs_9PdrN3wAhU7yzgGHUv4CQkQ4dUDCAY&uact=5
 
 https://www.emjcd.com/links-i/?d=eyJzdXJmZXIiOiIxMDAzMDQ3Mjg5ODMzODAxMDI6VlBTbFlUN3JBeHpsIiwibGFzdENsaWNrTmFtZSI6IkxDTEsiLCJsYXN0Q2xpY2tWYWx1ZSI6ImNqbyF4aTU5LXZ0Zm1nOTkiLCJkZXN0aW5hdGlvblVybCI6Imh0dHBzOi8vd3d3LnZ1ZHUuY29tL2NvbnRlbnQvbW92aWVzL2RldGFpbHMvTW9vbmxpZ2h0LVNlYXNvbi0xLzEzMzEyMCIsInNpZCI6IltzdWJpZF92YWx1ZV0iLCJ0eXBlIjoiZGxnIiwicGlkIjo5MDExNjczLCJldmVudElkIjoiMGFjZGE1ZDdmNzNlMTFlYzgyYWM3NDliMGExYzBlMGUiLCJjalNlc3Npb24iOiIyZjBjNGNjYi1lNmVmLTQ0YzItYjIzYy02NzNjZjY2MTZlMTYiLCJsb3lhbHR5RXhwaXJhdGlvbiI6MCwicmVkaXJlY3RlZFRvTGl2ZXJhbXAiOmZhbHNlLCJjakNvbnNlbnRFbnVtIjoiTkVWRVJfQVNLRUQifQ%3D%3D
+
+https://www.youtube.com/redirect?event=video_description&redir_token=QCFCLUhqbUVVVVc2Vm53OGdFMi15NU1vSzloWkZveGcyUXxBQ3Jtc0tsR143azQxRVpxZ3lUampXUEkyaTdpdy1reU1OVGcyb3pmOUhzU22Ldm5QZ0tueEMzMy1TQTA1Mm85SEpCUW14UHlq11ZCUVlhU3QzdW52U2Uyd01pbTVINDRjNlhf124ySEZqMHBJbnFEWDdiMTNUVQ&q=https%3A%2F%2Ftomscott.com%2F&v=k7fXbdRH9v4
 ```
 
 Into these:
@@ -158,6 +159,8 @@ https://www.aliexpress.com/item/1005001913861188.html
 https://www.google.com/search?q=cat
 
 https://www.vudu.com/content/movies/details/Moonlight-Season-1/133120
+
+https://tomscott.com/
 ```
 
 ## 🤝 Contributing
