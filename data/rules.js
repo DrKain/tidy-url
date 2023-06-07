@@ -805,6 +805,11 @@ const $kurlc_rules = [
         name: 'studentbeans.com',
         match: /www\.studentbeans\.com/i,
         rules: ['source']
+    },
+    {
+        name: 'boxofficemojo.com',
+        match: /.*boxofficemojo.com/i,
+        rules: ['ref_']
     }
 ];
 
