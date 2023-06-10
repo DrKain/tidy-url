@@ -808,13 +808,13 @@ const $kurlc_rules = [
     },
     {
         name: 'boxofficemojo.com',
-        match: /.*boxofficemojo.com/i,
+        match: /boxofficemojo.com/i,
         rules: ['ref_']
     },
     {
         name: 'solodeportes.com.ar',
         match: /www.solodeportes.com.ar/i,
-        rules: ['nosto','refSrc']
+        rules: ['nosto', 'refSrc']
     }
 ];
 
