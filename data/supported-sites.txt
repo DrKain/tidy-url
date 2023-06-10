@@ -1,4 +1,4 @@
-Total unique rules: 608
+Total unique rules: 611
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -21,6 +21,7 @@ Total unique rules: 608
 | blog.twitch.tv                | 1     |
 | bn5x.net                      | 1     |
 | bostonglobe.com               | 1     |
+| boxofficemojo.com             | 1     |
 | castorama.fr                  | 1     |
 | change.org                    | 1     |
 | cnbc.com                      | 1     |
@@ -108,6 +109,7 @@ Total unique rules: 608
 | redirect.viglink.com          | 1     |
 | shopee.com                    | 8     |
 | sjv.io                        | 1     |
+| solodeportes.com.ar           | 2     |
 | spotify.com                   | 4     |
 | squarespace.com               | 6     |
 | stacks.wellcomecollection.org | 1     |
