@@ -266,7 +266,7 @@ const $kurlc_rules = [
     {
         name: 'apple.com',
         match: /.*.apple.com/i,
-        rules: ['uo', 'app', 'at', 'ct', 'ls', 'pt', 'mt', 'itsct', 'itscg', 'referrer']
+        rules: ['uo', 'app', 'at', 'ct', 'ls', 'pt', 'mt', 'itsct', 'itscg', 'referrer', 'src', 'cid']
     },
     {
         name: 'music.apple.com',
