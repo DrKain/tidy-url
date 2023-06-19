@@ -263,9 +263,14 @@ const $kurlc_rules = [
         rules: ['m']
     },
     {
+        name: 'support.apple.com',
+        match: /support.apple.com/i,
+        rules: ['src', 'cid']
+    },
+    {
         name: 'apple.com',
         match: /.*.apple.com/i,
-        rules: ['uo', 'app', 'at', 'ct', 'ls', 'pt', 'mt', 'itsct', 'itscg', 'referrer', 'cid']
+        rules: ['uo', 'app', 'at', 'ct', 'ls', 'pt', 'mt', 'itsct', 'itscg', 'referrer', 'src', 'cid']
     },
     {
         name: 'music.apple.com',
