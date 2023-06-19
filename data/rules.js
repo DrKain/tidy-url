@@ -237,7 +237,7 @@ const $kurlc_rules = [
     {
         name: 'twitter.com',
         match: /twitter.com/i,
-        rules: ['t', 's', 'src', 'ref_url', 'ref_src']
+        rules: ['s', 'src', 'ref_url', 'ref_src']
     },
     {
         name: 'voidu.com',
