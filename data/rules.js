@@ -213,7 +213,7 @@ const $kurlc_rules = [
         match: /.*.linkedin.com/i,
         rules: [
             'contextUrn', 'destRedirectURL', 'lipi', 'licu', 'trk', 'trkInfo', 'originalReferer',
-            'upsellOrderOrigin', 'upsellTrk', 'upsellTrackingId', 'src', 'trackingId'
+            'upsellOrderOrigin', 'upsellTrk', 'upsellTrackingId', 'src', 'trackingId', 'midToken', 'midSig', 'trkEmail', 'eid',
         ]
     },
     {
