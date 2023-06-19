@@ -289,6 +289,11 @@ const $kurlc_rules = [
         redirect: 'url'
     },
     {
+        name: 'lenovo.com',
+        match: /.*.lenovo.com/i,
+        rules: ['PID', 'clickid', 'irgwc', 'cid', 'acid', 'linkTrack']
+    },
+    {
         name: 'itch.io',
         match: /itch.io/i,
         rules: ['fbclid']
