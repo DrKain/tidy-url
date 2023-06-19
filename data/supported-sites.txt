@@ -1,15 +1,15 @@
-Total unique rules: 611
+Total unique rules: 627
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
 | 2game.com                     | 1     |
 | adtraction.com                | 1     |
 | aliexpress.com                | 42    |
-| amazon.com                    | 45    |
+| amazon.com                    | 50    |
 | amp.scmp.com                  | 1     |
 | ampproject.org                | 5     |
 | anrdoezrs.net                 | 1     |
-| apple.com                     | 10    |
+| apple.com                     | 12    |
 | audible.com                   | 6     |
 | awin1.com                     | 4     |
 | awstrack.me                   | 1     |
@@ -70,7 +70,8 @@ Total unique rules: 611
 | ko-fi.com                     | 2     |
 | kqzyfj.com                    | 3     |
 | l.messenger.com               | 1     |
-| linkedin.com                  | 12    |
+| lenovo.com                    | 6     |
+| linkedin.com                  | 16    |
 | linksynergy.com               | 3     |
 | lowes.com                     | 3     |
 | macgamestore.com              | 1     |
@@ -127,7 +128,7 @@ Total unique rules: 611
 | transparency.fb.com           | 1     |
 | tvguide.com                   | 1     |
 | twitch.tv                     | 3     |
-| twitter.com                   | 5     |
+| twitter.com                   | 4     |
 | voidu.com                     | 1     |
 | washingtonpost.com            | 2     |
 | watchworthy.app               | 1     |
