@@ -213,8 +213,10 @@ const $kurlc_rules = [
         name: 'linkedin.com',
         match: /.*.linkedin.com/i,
         rules: [
-            'contextUrn', 'destRedirectURL', 'lipi', 'licu', 'trk', 'trkInfo', 'originalReferer',
-            'upsellOrderOrigin', 'upsellTrk', 'upsellTrackingId', 'src', 'trackingId', 'midToken', 'midSig', 'trkEmail', 'eid',
+            'contextUrn', 'destRedirectURL', 'lipi', 'licu', 'trk',
+            'trkInfo', 'originalReferer', 'upsellOrderOrigin',
+            'upsellTrk', 'upsellTrackingId', 'src', 'trackingId',
+            'midToken', 'midSig', 'trkEmail', 'eid'
         ]
     },
     {
@@ -371,7 +373,10 @@ const $kurlc_rules = [
     {
         name: 'yahoo.com',
         match: /yahoo.com/i,
-        rules: ['guce_referrer', 'guce_referrer_sig', 'guccounter', 'soc_src', 'soc_trk', 'tsrc']
+        rules: [
+            'guce_referrer', 'guce_referrer_sig', 'guccounter',
+            'soc_src', 'soc_trk', 'tsrc'
+        ]
     },
     {
         name: 'techcrunch.com',
@@ -770,7 +775,10 @@ const $kurlc_rules = [
     {
         name: 'fiverr.com',
         match: /.*\.fiverr\.com/i,
-        rules: ['source', 'context_referrer', 'referrer_gig_slug', 'ref_ctx_id', 'funnel', 'imp_id']
+        rules: [
+            'source', 'context_referrer', 'referrer_gig_slug',
+            'ref_ctx_id', 'funnel', 'imp_id'
+        ]
     },
     {
         name: 'mylondon.news',
