@@ -1,4 +1,4 @@
-Total unique rules: 627
+Total unique rules: 630
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -6,6 +6,7 @@ Total unique rules: 627
 | adtraction.com                | 1     |
 | aliexpress.com                | 42    |
 | amazon.com                    | 50    |
+| amp.dw.com                    | 1     |
 | amp.scmp.com                  | 1     |
 | ampproject.org                | 5     |
 | anrdoezrs.net                 | 1     |
@@ -33,6 +34,7 @@ Total unique rules: 627
 | dreamgame.com                 | 1     |
 | ebay.com                      | 21    |
 | emjcd.com                     | 1     |
+| etail.market                  | 1     |
 | etsy.com                      | 6     |
 | eufy.com                      | 1     |
 | express.co.uk                 | 1     |
@@ -66,6 +68,7 @@ Total unique rules: 627
 | itch.io                       | 1     |
 | jdoqocy.com                   | 1     |
 | jf79.net                      | 4     |
+| joybuggy.com                  | 1     |
 | justwatch.com                 | 5     |
 | ko-fi.com                     | 2     |
 | kqzyfj.com                    | 3     |
@@ -85,7 +88,6 @@ Total unique rules: 627
 | mouser.com                    | 1     |
 | msn.com                       | 3     |
 | music.apple.com               | 5     |
-| mylondon.news                 | 3     |
 | nbcnews.com                   | 1     |
 | news.artnet.com               | 1     |
 | newsflare.com                 | 1     |
@@ -122,7 +124,7 @@ Total unique rules: 627
 | techcrunch.com                | 3     |
 | thewarehouse.co.nz            | 6     |
 | threadless.com                | 3     |
-| ticketmaster.co.nz            | 4     |
+| ticketmaster.co.nz            | 1     |
 | tiktok.com                    | 18    |
 | tkqlhce.com                   | 1     |
 | transparency.fb.com           | 1     |
