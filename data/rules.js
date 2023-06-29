@@ -79,7 +79,22 @@ const $kurlc_rules = [
     {
         name: 'reddit.com',
         match: /.*.reddit.com/i,
-        rules: ['ref_campaign', 'ref_source']
+        rules: [
+            'ref_campaign', 'ref_source', 'tags', 'keyword', 'channel', 'campaign',
+            'user_agent', 'domain', 'base_url', '$android_deeplink_path',
+            '$deeplink_path', '$og_redirect'
+        ]
+    },
+    {
+        name: 'app.link',
+        match: /.*\.app\.link/i,
+        rules: [
+            'tags', 'keyword', 'channel', 'campaign',
+            'user_agent', 'domain', 'base_url', '$android_deeplink_path',
+            '$deeplink_path', '$og_redirect', 'compact_view', 'dnt',
+            'adblock', 'geoip_country', 'referrer_domain',
+            'referrer_url'
+        ]
     },
     {
         name: 'twitch.tv',
