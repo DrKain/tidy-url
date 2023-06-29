@@ -834,6 +834,11 @@ const $kurlc_rules = [
         name: 'amp.dw.com',
         match: /amp.dw.com/i,
         amp: /amp\.(.*)/i
+    },
+    {
+        name: 'joybuggy.com',
+        match: /joybuggy.com/i,
+        rules: ['ref']
     }
 ];
 
