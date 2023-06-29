@@ -1,4 +1,4 @@
-Total unique rules: 630
+Total unique rules: 656
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -10,6 +10,7 @@ Total unique rules: 630
 | amp.scmp.com                  | 1     |
 | ampproject.org                | 5     |
 | anrdoezrs.net                 | 1     |
+| app.link                      | 16    |
 | apple.com                     | 12    |
 | audible.com                   | 6     |
 | awin1.com                     | 4     |
@@ -108,7 +109,7 @@ Total unique rules: 630
 | quizlet.com                   | 2     |
 | ranker.com                    | 5     |
 | redbubble.com                 | 1     |
-| reddit.com                    | 2     |
+| reddit.com                    | 12    |
 | redirect.viglink.com          | 1     |
 | shopee.com                    | 8     |
 | sjv.io                        | 1     |
