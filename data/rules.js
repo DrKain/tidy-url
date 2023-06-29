@@ -829,6 +829,11 @@ const $kurlc_rules = [
         name: 'solodeportes.com.ar',
         match: /www.solodeportes.com.ar/i,
         rules: ['nosto', 'refSrc']
+    },
+    {
+        name: 'amp.dw.com',
+        match: /amp.dw.com/i,
+        amp: /amp\.(.*)/i
     }
 ];
 
