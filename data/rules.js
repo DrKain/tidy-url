@@ -839,6 +839,11 @@ const $kurlc_rules = [
         name: 'joybuggy.com',
         match: /joybuggy.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'etail.market',
+        match: /etail.market/i,
+        rules: ['tracking']
     }
 ];
 
