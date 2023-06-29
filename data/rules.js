@@ -394,7 +394,7 @@ const $kurlc_rules = [
     {
         name: 'ticketmaster.co.nz',
         match: /ticketmaster.co.nz/i,
-        rules: ['int_cmp_name', 'int_cmp_id', 'int_cmp_creative', 'tm_link']
+        rules: ['tm_link']
     },
     {
         name: 'bostonglobe.com',
