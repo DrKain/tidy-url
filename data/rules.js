@@ -294,7 +294,7 @@ const $kurlc_rules = [
     {
         name: 'play.google.com',
         match: /play.google.com/i,
-        rules: ['referrer']
+        rules: ['referrer', 'pcampaignid']
     },
     {
         name: 'adtraction.com',
