@@ -855,6 +855,11 @@ const $kurlc_rules = [
         name: 'etail.market',
         match: /etail.market/i,
         rules: ['tracking']
+    },
+    {
+        name: 'myanimelist.net',
+        match: /myanimelist.net/i,
+        rules: ['_location', 'click_type', 'click_param']
     }
 ];
 
