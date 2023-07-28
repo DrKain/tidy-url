@@ -148,8 +148,12 @@ export class TidyCleaner {
 
         // Loop through the rules and match them to the host name
         for (const rule of this.expandedRules) {
+            // Match the host or the full URL
+            let match_s = original.host;
+            if (rule.match_href === true) match_s = original.href;
+            // Reset lastIndex
             rule.match.lastIndex = 0;
-            if (rule.match.exec(original.host) !== null) {
+            if (rule.match.exec(match_s) !== null) {
                 // Loop through the rules and add to to_remove
                 to_remove = [...to_remove, ...(rule.rules || [])];
                 data.info.replace = [...data.info.replace, ...(rule.replace || [])];

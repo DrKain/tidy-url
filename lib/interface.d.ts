@@ -3,6 +3,8 @@ export interface IRule {
     name: string;
     /** Regex to test against the host */
     match: RegExp;
+    /** Regex to test against the full URL */
+    match_href: boolean;
     /** All parameters that match these rules will be removed */
     rules: string[];
     /**
