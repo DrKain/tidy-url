@@ -1,5 +1,3 @@
-// Prettier refuses to format the array in an acceptable way, so we have to do it manually.
-// prettier-ignore
 const $kurlc_rules = [
     {
         name: 'Global',
