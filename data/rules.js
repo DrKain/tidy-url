@@ -202,6 +202,12 @@ const $kurlc_rules = [
         allow: ['lang']
     },
     {
+        name: 'tiktok.com/link',
+        match: /tiktok\.com\/link\/v2/i,
+        match_href: true,
+        redirect: 'target'
+    },
+    {
         name: 'facebook.com',
         match: /.*.facebook.com/i,
         rules: ['fbclid', 'fb_ref', 'fb_source', 'referral_code', 'referral_story_type', 'tracking', 'ref'],
