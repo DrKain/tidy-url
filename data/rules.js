@@ -860,6 +860,11 @@ const $kurlc_rules = [
         name: 'myanimelist.net',
         match: /myanimelist.net/i,
         rules: ['_location', 'click_type', 'click_param']
+    },
+    {
+        name: 'support-dev.discord.com',
+        match: /support-dev.discord.com/i,
+        rules: ['ref']
     }
 ];
 
