@@ -871,6 +871,11 @@ const $kurlc_rules = [
         name: 'support-dev.discord.com',
         match: /support-dev.discord.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'dlgamer.com',
+        match: /dlgamer.com/i,
+        rules: ['affil']
     }
 ];
 
