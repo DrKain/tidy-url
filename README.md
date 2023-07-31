@@ -176,4 +176,4 @@ Feel free to contact me if you have any trouble with this package.
 
 -   Website: [ksir.pw](https://ksir.pw)
 -   Github: [@DrKain](https://github.com/DrKain)
--   Discord: kainsir
+-   Discord: drkain
