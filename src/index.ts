@@ -263,6 +263,11 @@ export class TidyCleaner {
         // Handle empty hash / anchors
         if (_url.endsWith('#')) data.url += '#';
 
+        // Remove empty values when requested
+        for (const rule of data.info.match) {
+            if (rule.rev) data.url = data.url.replace(/=(?=&|$)/gm, '');
+        }
+
         data.info.difference = _url.length - data.url.length;
         data.info.reduction = +(100 - (data.url.length / _url.length) * 100).toFixed(2);
 

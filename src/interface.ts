@@ -31,6 +31,8 @@ export interface IRule {
         param: string;
         lookFor: string;
     };
+    /** Remove empty values */
+    rev: boolean;
 }
 
 export interface IData {
