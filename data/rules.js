@@ -876,6 +876,12 @@ const $kurlc_rules = [
         name: 'dlgamer.com',
         match: /dlgamer.com/i,
         rules: ['affil']
+    },
+    {
+        name: 'newsletter.manor.ch',
+        match: /newsletter.manor.ch/i,
+        rules: ['utm_timestamp', 'user_id_1'],
+        rev: true
     }
 ];
 

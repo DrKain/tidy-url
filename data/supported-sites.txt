@@ -1,4 +1,4 @@
-Total unique rules: 664
+Total unique rules: 666
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -94,6 +94,7 @@ Total unique rules: 664
 | nbcnews.com                   | 1     |
 | news.artnet.com               | 1     |
 | newsflare.com                 | 1     |
+| newsletter.manor.ch           | 2     |
 | newsweek.com                  | 2     |
 | noctre.com                    | 1     |
 | nova.cz                       | 1     |
