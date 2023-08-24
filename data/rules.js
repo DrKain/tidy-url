@@ -16,6 +16,11 @@ const $kurlc_rules = [
             // INT parameters, another variant of UTM
             'int_source', 'int_cmp_name', 'int_cmp_id', 'int_cmp_creative',
             'int_medium', 'int_campaign',
+            // piwik (https://github.com/DrKain/tidy-url/issues/49)
+            'pk_campaign', 'pk_cpn', 'pk_source', 'pk_medium',
+            'pk_keyword', 'pk_kwd', 'pk_content', 'pk_cid',
+            'piwik_campaign', 'piwik_cpn', 'piwik_source', 'piwik_medium',
+            'piwik_keyword', 'piwik_kwd', 'piwik_content', 'piwik_cid',
             // Google Ads
             'gclid', 'ga_source', 'ga_medium', 'ga_term', 'ga_content', 'ga_campaign',
             'ga_place', 'gclid', 'gclsrc',
