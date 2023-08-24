@@ -881,7 +881,7 @@ const $kurlc_rules = [
     {
         name: 'newsletter.manor.ch',
         match: /newsletter.manor.ch/i,
-        rules: ['utm_timestamp', 'user_id_1'],
+        rules: ['user_id_1'],
         rev: true
     }
 ];
