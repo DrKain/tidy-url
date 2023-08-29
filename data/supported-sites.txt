@@ -1,4 +1,4 @@
-Total unique rules: 682
+Total unique rules: 694
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -26,6 +26,7 @@ Total unique rules: 682
 | boxofficemojo.com             | 1     |
 | castorama.fr                  | 1     |
 | change.org                    | 1     |
+| click.pstmrk.it               | 1     |
 | cnbc.com                      | 1     |
 | cnn.com                       | 1     |
 | cookiepro.com                 | 2     |
@@ -72,6 +73,7 @@ Total unique rules: 682
 | jf79.net                      | 4     |
 | joybuggy.com                  | 1     |
 | justwatch.com                 | 5     |
+| knowyourmeme.com              | 1     |
 | ko-fi.com                     | 2     |
 | kqzyfj.com                    | 3     |
 | l.messenger.com               | 1     |
@@ -100,6 +102,7 @@ Total unique rules: 682
 | nova.cz                       | 1     |
 | nuuvem.com                    | 3     |
 | office.com                    | 1     |
+| ojrq.net                      | 1     |
 | pbtech.co.nz                  | 1     |
 | pinterest.com                 | 1     |
 | pixiv.net                     | 3     |
@@ -107,6 +110,7 @@ Total unique rules: 682
 | playbook.com                  | 1     |
 | plex.tv                       | 4     |
 | primevideo.com                | 2     |
+| producthunt.com               | 1     |
 | psychologytoday.com           | 1     |
 | qflm.net                      | 1     |
 | quizlet.com                   | 2     |
@@ -130,9 +134,10 @@ Total unique rules: 682
 | thewarehouse.co.nz            | 6     |
 | threadless.com                | 3     |
 | ticketmaster.co.nz            | 1     |
-| tiktok.com                    | 18    |
+| tiktok.com                    | 23    |
 | tiktok.com/link               | 1     |
 | tkqlhce.com                   | 1     |
+| track.roeye.co.nz             | 1     |
 | transparency.fb.com           | 1     |
 | tvguide.com                   | 1     |
 | twitch.tv                     | 3     |
@@ -146,4 +151,4 @@ Total unique rules: 682
 | wsj.com                       | 1     |
 | yahoo.com                     | 6     |
 | yandex.com                    | 5     |
-| youtube.com                   | 7     |
+| youtube.com                   | 8     |
