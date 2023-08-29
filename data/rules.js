@@ -203,7 +203,8 @@ const $kurlc_rules = [
             'is_copy_url', 'is_from_webapp', 'sender_device', 'sender_web_id',
             'sec_user_id', 'share_app_id', 'share_item_id', 'share_link_id',
             'social_sharing', '_r', 'source', 'user_id', 'u_code', 'tt_from', 
-            'share_author_id', 'sec_uid', 'checksum', '_d'
+            'share_author_id', 'sec_uid', 'checksum', '_d', 'refer', 'enter_from',
+            'enter_method', 'attr_medium', 'attr_source'
         ],
         allow: ['lang']
     },
