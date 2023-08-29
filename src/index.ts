@@ -198,6 +198,7 @@ export class TidyCleaner {
                 if (rule.redirect.length && cleaner_ci.has(rule.redirect)) {
                     if (this.validate(cleaner_ci.get(rule.redirect) as string)) {
                         data.url = `${cleaner_ci.get(rule.redirect)}` + original.hash;
+                        if (allow_reclean) data.url = this.clean(data.url, false).url;
                     }
                 }
             }
