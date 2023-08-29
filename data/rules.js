@@ -899,6 +899,11 @@ const $kurlc_rules = [
         name: 'ojrq.net',
         match: /ojrq.net/i,
         redirect: 'return'
+    },
+    {
+        name: 'click.pstmrk.it',
+        match: /click.pstmrk.it/i,
+        amp: /click\.pstmrk\.it\/(?:[a-zA-Z0-9]){1,2}\/(.*?)\//gim,
     }
 ];
 
