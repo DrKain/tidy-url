@@ -888,6 +888,11 @@ const $kurlc_rules = [
         match: /newsletter.manor.ch/i,
         rules: ['user_id_1'],
         rev: true
+    },
+    {
+        name: 'knowyourmeme.com',
+        match: /amp.knowyourmeme.com/i,
+        amp: /(?:\/\/|^)amp\.(.*)$/gim
     }
 ];
 
