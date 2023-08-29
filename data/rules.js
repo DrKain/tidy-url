@@ -893,6 +893,11 @@ const $kurlc_rules = [
         name: 'knowyourmeme.com',
         match: /amp.knowyourmeme.com/i,
         amp: /(?:\/\/|^)amp\.(.*)$/gim
+    },
+    {
+        name: 'ojrq.net',
+        match: /ojrq.net/i,
+        redirect: 'return'
     }
 ];
 
