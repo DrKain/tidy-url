@@ -909,6 +909,11 @@ const $kurlc_rules = [
         name: 'track.roeye.co.nz',
         match: /track.roeye.co.nz/i,
         redirect: 'path'
+    },
+    {
+        name: 'producthunt.com',
+        match: /producthunt.com/i,
+        rules: ['ref']
     }
 ];
 
