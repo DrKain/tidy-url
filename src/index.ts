@@ -68,9 +68,17 @@ export class TidyCleaner {
      */
     public validate(url: string): boolean {
         try {
-            new URL(url);
+            const pass = ['http:', 'https:'];
+            const test = new URL(url);
+            const prot = test.protocol.toLowerCase();
+
+            if (pass.includes(prot) === false) {
+                throw Error('Not acceptable protocol: ' + prot);
+            }
+
             return true;
         } catch (error) {
+            this.log(`${error}`);
             return false;
         }
     }
@@ -269,8 +277,8 @@ export class TidyCleaner {
             if (rule.rev) data.url = data.url.replace(/=(?=&|$)/gm, '');
         }
 
-        data.info.difference = _url.length - data.url.length;
-        data.info.reduction = +(100 - (data.url.length / _url.length) * 100).toFixed(2);
+        data.info.difference = url.length - data.url.length;
+        data.info.reduction = +(100 - (data.url.length / url.length) * 100).toFixed(2);
 
         if (new URL(url).host !== new URL(data.url).host) {
             data.info.is_new_host = true;
