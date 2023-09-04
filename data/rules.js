@@ -424,7 +424,7 @@ const $kurlc_rules = [
     },
     {
         name: 'bostonglobe.com',
-        match: /www.bostonglobe.com/i,
+        match: /bostonglobe.com/i,
         rules: ['p1']
     },
     {
