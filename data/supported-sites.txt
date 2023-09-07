@@ -1,4 +1,4 @@
-Total unique rules: 694
+Total unique rules: 696
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -25,6 +25,7 @@ Total unique rules: 694
 | bostonglobe.com               | 1     |
 | boxofficemojo.com             | 1     |
 | castorama.fr                  | 1     |
+| cbsnews.com                   | 2     |
 | change.org                    | 1     |
 | click.pstmrk.it               | 1     |
 | cnbc.com                      | 1     |
