@@ -914,6 +914,11 @@ const $kurlc_rules = [
         name: 'producthunt.com',
         match: /producthunt.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'cbsnews.com',
+        match: /www.cbsnews.com/i,
+        rules: ['ftag', 'intcid']
     }
 ];
 
