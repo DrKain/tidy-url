@@ -89,7 +89,13 @@ export class TidyCleaner {
      */
     public rebuild(url: string): string {
         const original = new URL(url);
-        return original.protocol + '//' + original.host + original.pathname + original.search + original.hash;
+        let pathname = original.pathname;
+
+        // if (original.href === original.origin + pathname) {
+        //     pathname = '';
+        // }
+
+        return original.protocol + '//' + original.host + pathname + original.search + original.hash;
     }
 
     public hasParams(url: string): boolean {
@@ -135,6 +141,7 @@ export class TidyCleaner {
 
         // If there's no params, we can skip the rest of the process
         if (this.allow_amp && !this.hasParams(_url)) {
+            data.url = data.info.original;
             return data;
         }
 
@@ -179,6 +186,13 @@ export class TidyCleaner {
         }
 
         if (!ex_pass) {
+            data.url = data.info.original;
+            return data;
+        }
+
+        // Check if the match has any amp rules, if not we can redirect
+        const hasAmpRule = data.info.match.find((item) => item.amp);
+        if (this.allow_amp && hasAmpRule === undefined) {
             data.url = data.info.original;
             return data;
         }
@@ -291,6 +305,12 @@ export class TidyCleaner {
         }
 
         data.info.full_clean = true;
+
+        // Reset the original URL if there is no change, just to be safe
+        if (data.info.difference === 0 && data.info.reduction === 0) {
+            data.url = data.info.original;
+        }
+
         return data;
     }
 }
