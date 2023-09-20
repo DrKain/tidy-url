@@ -1,4 +1,4 @@
-Total unique rules: 696
+Total unique rules: 699
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -10,6 +10,7 @@ Total unique rules: 696
 | amp.scmp.com                  | 1     |
 | ampproject.org                | 5     |
 | anrdoezrs.net                 | 1     |
+| api.ffm.to                    | 1     |
 | app.link                      | 16    |
 | apple.com                     | 12    |
 | audible.com                   | 6     |
@@ -72,6 +73,7 @@ Total unique rules: 696
 | itch.io                       | 1     |
 | jdoqocy.com                   | 1     |
 | jf79.net                      | 4     |
+| jobs.venturebeat.com          | 1     |
 | joybuggy.com                  | 1     |
 | justwatch.com                 | 5     |
 | knowyourmeme.com              | 1     |
@@ -147,6 +149,7 @@ Total unique rules: 696
 | washingtonpost.com            | 2     |
 | watchworthy.app               | 1     |
 | wattpad.com                   | 3     |
+| wfaa.com                      | 1     |
 | wingamestore.com              | 1     |
 | wish.com                      | 1     |
 | wsj.com                       | 1     |
