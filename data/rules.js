@@ -932,6 +932,11 @@ const $kurlc_rules = [
             param: 'cd',
             lookFor: 'destUrl'
         }
+    },
+    {
+        name: 'wfaa.com',
+        match: /www.wfaa.com/i,
+        rules: ['ref']
     }
 ];
 
