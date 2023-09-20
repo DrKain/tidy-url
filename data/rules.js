@@ -924,6 +924,14 @@ const $kurlc_rules = [
         name: 'jobs.venturebeat.com',
         match: /jobs.venturebeat.com/i,
         rules: ['source']
+    },
+    {
+        name: 'api.ffm.to',
+        match: /api.ffm.to/i,
+        decode: {
+            param: 'cd',
+            lookFor: 'destUrl'
+        }
     }
 ];
 
