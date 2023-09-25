@@ -937,6 +937,11 @@ const $kurlc_rules = [
         name: 'wfaa.com',
         match: /www.wfaa.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'buyatoyota.com',
+        match: /www.buyatoyota.com/i,
+        rules: ['siteid']
     }
 ];
 
