@@ -184,7 +184,7 @@ export class TidyCleaner {
             }
         }
 
-        // Stop cleaninng if any exclude rule matches
+        // Stop cleaning if any exclude rule matches
         let ex_pass = true;
         for (const rule of data.info.match) {
             for (const reg of rule.exclude) {
