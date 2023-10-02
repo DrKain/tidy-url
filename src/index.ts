@@ -146,7 +146,7 @@ export class TidyCleaner {
         }
 
         // Rebuild to ensure trailing slashes or encoded characters match
-        const url = this.rebuild(_url);
+        let url = this.rebuild(_url);
         data.url = url;
 
         // List of parmeters that will be deleted if found
@@ -284,7 +284,10 @@ export class TidyCleaner {
         }
 
         // Handle empty hash / anchors
-        if (_url.endsWith('#')) data.url += '#';
+        if (_url.endsWith('#')) {
+            data.url += '#';
+            url += '#';
+        }
 
         // Remove empty values when requested
         for (const rule of data.info.match) {
