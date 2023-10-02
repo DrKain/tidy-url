@@ -1,4 +1,4 @@
-Total unique rules: 699
+Total unique rules: 704
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -25,6 +25,7 @@ Total unique rules: 699
 | bn5x.net                      | 1     |
 | bostonglobe.com               | 1     |
 | boxofficemojo.com             | 1     |
+| buyatoyota.com                | 1     |
 | castorama.fr                  | 1     |
 | cbsnews.com                   | 2     |
 | change.org                    | 1     |
@@ -57,7 +58,7 @@ Total unique rules: 699
 | getmusicbee.com               | 1     |
 | go2cloud.org                  | 1     |
 | gog.com                       | 1     |
-| google.com                    | 19    |
+| google.com                    | 23    |
 | greenmangaming.com            | 5     |
 | hbomax.com                    | 1     |
 | honeycode.aws                 | 12    |
