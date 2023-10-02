@@ -111,6 +111,14 @@ export class TidyCleaner {
         }
     }
 
+    private getDiff(data: IData, url: string) {
+        return {
+            is_new_host: new URL(url).host !== new URL(data.url).host,
+            difference: url.length - data.url.length,
+            reduction: +(100 - (data.url.length / url.length) * 100).toFixed(2)
+        };
+    }
+
     /**
      * Clean a URL
      * @param _url Any URL
@@ -294,12 +302,8 @@ export class TidyCleaner {
             if (rule.rev) data.url = data.url.replace(/=(?=&|$)/gm, '');
         }
 
-        data.info.difference = url.length - data.url.length;
-        data.info.reduction = +(100 - (data.url.length / url.length) * 100).toFixed(2);
-
-        if (new URL(url).host !== new URL(data.url).host) {
-            data.info.is_new_host = true;
-        }
+        const diff = this.getDiff(data, url);
+        data.info = Object.assign(data.info, diff);
 
         // If the link is longer then we have an issue
         if (data.info.reduction < 0) {
