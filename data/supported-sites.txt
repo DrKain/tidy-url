@@ -1,4 +1,4 @@
-Total unique rules: 704
+Total unique rules: 724
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -33,6 +33,7 @@ Total unique rules: 704
 | cnbc.com                      | 1     |
 | cnn.com                       | 1     |
 | cookiepro.com                 | 2     |
+| cooking.nytimes.com           | 10    |
 | countdown.co.nz               | 4     |
 | discord.com                   | 1     |
 | dlgamer.com                   | 1     |
@@ -68,6 +69,7 @@ Total unique rules: 704
 | imgur.com                     | 1     |
 | imp.i305175.net               | 1     |
 | indeed.com                    | 2     |
+| independent.co.uk             | 2     |
 | indiegala.com                 | 1     |
 | instagram.com                 | 3     |
 | inyourarea.co.uk              | 3     |
@@ -82,6 +84,7 @@ Total unique rules: 704
 | kqzyfj.com                    | 3     |
 | l.messenger.com               | 1     |
 | lenovo.com                    | 6     |
+| lenovo.vzew.net               | 1     |
 | linkedin.com                  | 16    |
 | linksynergy.com               | 3     |
 | lowes.com                     | 3     |
@@ -107,6 +110,8 @@ Total unique rules: 704
 | nuuvem.com                    | 3     |
 | office.com                    | 1     |
 | ojrq.net                      | 1     |
+| optigruen.com                 | 3     |
+| osi.rosenberger.com           | 2     |
 | pbtech.co.nz                  | 1     |
 | pinterest.com                 | 1     |
 | pixiv.net                     | 3     |
@@ -129,6 +134,7 @@ Total unique rules: 704
 | squarespace.com               | 6     |
 | stacks.wellcomecollection.org | 1     |
 | startpage.com                 | 1     |
+| stats.newswire.com            | 1     |
 | steamcommunity.com            | 1     |
 | store.steampowered.com        | 1     |
 | studentbeans.com              | 1     |
