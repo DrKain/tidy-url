@@ -972,6 +972,11 @@ const $kurlc_rules = [
         name: 'optigruen.com',
         match: /www\.optigruen\.[a-z0-9]{0,3}/i,
         rules: ['cHash', 'chash', 'mdrv']
+    },
+    {
+        name: 'osi.rosenberger.com',
+        match: /osi.rosenberger.com/i,
+        rules: ['cHash', 'chash']
     }
 ];
 
