@@ -949,6 +949,11 @@ const $kurlc_rules = [
         name: 'independent.co.uk',
         match: /www.independent.co.uk/i,
         rules: ['amp', 'regSourceMethod']
+    },
+    {
+        name: 'lenovo.vzew.net',
+        match: /lenovo.vzew.net/i,
+        redirect: 'u'
     }
 ];
 
