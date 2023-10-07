@@ -944,6 +944,11 @@ const $kurlc_rules = [
         name: 'buyatoyota.com',
         match: /www.buyatoyota.com/i,
         rules: ['siteid']
+    },
+    {
+        name: 'independent.co.uk',
+        match: /www.independent.co.uk/i,
+        rules: ['amp', 'regSourceMethod']
     }
 ];
 
