@@ -959,6 +959,14 @@ const $kurlc_rules = [
         name: 'stats.newswire.com',
         match: /stats.newswire.com/i,
         decode: { param: 'final' }
+    },
+    {
+        name: 'cooking.nytimes.com',
+        match: /cooking.nytimes.com/i,
+        rules: [
+            'smid', 'variant', 'algo', 'req_id', 'surface', 'imp_id',
+            'action', 'region', 'module', 'pgType'
+        ]
     }
 ];
 
