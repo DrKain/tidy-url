@@ -13,6 +13,7 @@ const $kurlc_rules = [
             // ITM parameters, a variant of UTM parameters
             'itm_source', 'itm_medium', 'itm_term', 'itm_campaign', 'itm_content',
             'itm_channel', 'itm_source_s', 'itm_medium_s', 'itm_campaign_s',
+            'itm_audience',
             // INT parameters, another variant of UTM
             'int_source', 'int_cmp_name', 'int_cmp_id', 'int_cmp_creative',
             'int_medium', 'int_campaign',
