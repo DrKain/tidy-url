@@ -954,6 +954,11 @@ const $kurlc_rules = [
         name: 'lenovo.vzew.net',
         match: /lenovo.vzew.net/i,
         redirect: 'u'
+    },
+    {
+        name: 'stats.newswire.com',
+        match: /stats.newswire.com/i,
+        decode: { param: 'final' }
     }
 ];
 
