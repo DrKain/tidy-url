@@ -967,6 +967,11 @@ const $kurlc_rules = [
             'smid', 'variant', 'algo', 'req_id', 'surface', 'imp_id',
             'action', 'region', 'module', 'pgType'
         ]
+    },
+    {
+        name: 'optigruen.com',
+        match: /www\.optigruen\.[a-z0-9]{0,3}/i,
+        rules: ['cHash', 'chash', 'mdrv']
     }
 ];
 
