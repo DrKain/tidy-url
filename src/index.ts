@@ -89,13 +89,7 @@ export class TidyCleaner {
      */
     public rebuild(url: string): string {
         const original = new URL(url);
-        let pathname = original.pathname;
-
-        // if (original.href === original.origin + pathname) {
-        //     pathname = '';
-        // }
-
-        return original.protocol + '//' + original.host + pathname + original.search + original.hash;
+        return original.protocol + '//' + original.host + original.pathname + original.search + original.hash;
     }
 
     public hasParams(url: string): boolean {
