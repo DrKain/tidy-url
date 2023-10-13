@@ -87,7 +87,7 @@ const $kurlc_rules = [
         rules: [
             'ref_campaign', 'ref_source', 'tags', 'keyword', 'channel', 'campaign',
             'user_agent', 'domain', 'base_url', '$android_deeplink_path',
-            '$deeplink_path', '$og_redirect'
+            '$deeplink_path', '$og_redirect', 'share_id'
         ]
     },
     {
