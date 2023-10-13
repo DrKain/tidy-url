@@ -977,6 +977,11 @@ const $kurlc_rules = [
         name: 'osi.rosenberger.com',
         match: /osi.rosenberger.com/i,
         rules: ['cHash', 'chash']
+    },
+    {
+        name: 'cbc.ca',
+        match: /cbc.ca/i,
+        rules: ['__vfz', 'cmp', 'referrer']
     }
 ];
 
