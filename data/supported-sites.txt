@@ -1,4 +1,4 @@
-Total unique rules: 724
+Total unique rules: 730
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -27,6 +27,7 @@ Total unique rules: 724
 | boxofficemojo.com             | 1     |
 | buyatoyota.com                | 1     |
 | castorama.fr                  | 1     |
+| cbc.ca                        | 3     |
 | cbsnews.com                   | 2     |
 | change.org                    | 1     |
 | click.pstmrk.it               | 1     |
@@ -44,6 +45,7 @@ Total unique rules: 724
 | etail.market                  | 1     |
 | etsy.com                      | 6     |
 | eufy.com                      | 1     |
+| eufylife.com                  | 1     |
 | express.co.uk                 | 1     |
 | facebook.com                  | 8     |
 | fanatical.com                 | 5     |
@@ -87,6 +89,7 @@ Total unique rules: 724
 | lenovo.vzew.net               | 1     |
 | linkedin.com                  | 16    |
 | linksynergy.com               | 3     |
+| local12.com                   | 1     |
 | lowes.com                     | 3     |
 | macgamestore.com              | 1     |
 | manymorestores.com            | 1     |
@@ -125,7 +128,7 @@ Total unique rules: 724
 | quizlet.com                   | 2     |
 | ranker.com                    | 5     |
 | redbubble.com                 | 1     |
-| reddit.com                    | 12    |
+| reddit.com                    | 13    |
 | redirect.viglink.com          | 1     |
 | shopee.com                    | 8     |
 | sjv.io                        | 1     |
