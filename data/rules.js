@@ -982,6 +982,11 @@ const $kurlc_rules = [
         name: 'cbc.ca',
         match: /cbc.ca/i,
         rules: ['__vfz', 'cmp', 'referrer']
+    },
+    {
+        name: 'local12.com',
+        match: /local12.com/i,
+        rules: ['_gl']
     }
 ];
 
