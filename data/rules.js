@@ -987,6 +987,11 @@ const $kurlc_rules = [
         name: 'local12.com',
         match: /local12.com/i,
         rules: ['_gl']
+    },
+    {
+        name: 'eufylife.com',
+        match: /eufylife.com/i,
+        rules: ['ref']
     }
 ];
 
