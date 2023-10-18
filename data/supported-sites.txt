@@ -1,4 +1,4 @@
-Total unique rules: 730
+Total unique rules: 760
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -156,6 +156,7 @@ Total unique rules: 730
 | twitch.tv                     | 3     |
 | twitter.com                   | 4     |
 | voidu.com                     | 1     |
+| walmart.com                   | 30    |
 | washingtonpost.com            | 2     |
 | watchworthy.app               | 1     |
 | wattpad.com                   | 3     |
