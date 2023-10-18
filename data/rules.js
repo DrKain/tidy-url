@@ -992,6 +992,18 @@ const $kurlc_rules = [
         name: 'eufylife.com',
         match: /eufylife.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'walmart.com',
+        match: /walmart.com/i,
+        rules: [
+            'athAsset', 'povid', 'wmlspartner', 'athcpid', 'athpgid', 'athznid',
+            'athmtid', 'athstid', 'athguid', 'athwpid', 'athtvid', 'athcgid',
+            'athieid', 'athancid', 'athbdg', 'campaign_id', 'eventST', 'bt',
+            'pos', 'rdf', 'tax', 'plmt', 'mloc', 'pltfm', 'pgId', 'pt', 'spQs',
+            'adUid', 'adsRedirect'
+        ],
+        redirect: 'rd'
     }
 ];
 
