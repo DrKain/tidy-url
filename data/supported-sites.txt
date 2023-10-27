@@ -1,8 +1,9 @@
-Total unique rules: 760
+Total unique rules: 763
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
 | 2game.com                     | 1     |
+| adclick.g.doubleclick.net     | 1     |
 | adtraction.com                | 1     |
 | aliexpress.com                | 42    |
 | amazon.com                    | 50    |
@@ -133,7 +134,7 @@ Total unique rules: 760
 | shopee.com                    | 8     |
 | sjv.io                        | 1     |
 | solodeportes.com.ar           | 2     |
-| spotify.com                   | 4     |
+| spotify.com                   | 6     |
 | squarespace.com               | 6     |
 | stacks.wellcomecollection.org | 1     |
 | startpage.com                 | 1     |
