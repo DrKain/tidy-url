@@ -1004,6 +1004,11 @@ const $kurlc_rules = [
             'adUid', 'adsRedirect'
         ],
         redirect: 'rd'
+    },
+    {
+        name: 'adclick.g.doubleclick.net',
+        match: /adclick.g.doubleclick.net/i,
+        redirect: 'adurl'
     }
 ];
 
