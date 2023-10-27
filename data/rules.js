@@ -119,7 +119,10 @@ const $kurlc_rules = [
     {
         name: 'spotify.com',
         match: /open.spotify.com/i,
-        rules: ['si', 'utm_source', 'context', 'sp_cid'],
+        rules: [
+            'si', 'utm_source', 'context', 'sp_cid',
+            '_branch_match_id', '_branch_referrer'
+        ],
         allow: ['go', 'nd']
     },
     {
