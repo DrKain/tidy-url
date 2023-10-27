@@ -142,7 +142,7 @@ export class TidyCleaner {
         }
 
         // If there's no params, we can skip the rest of the process
-        if (this.allow_amp && !this.hasParams(_url)) {
+        if (this.allow_amp && this.hasParams(_url) === false) {
             data.url = data.info.original;
             return data;
         }
@@ -194,9 +194,12 @@ export class TidyCleaner {
 
         // Check if the match has any amp rules, if not we can redirect
         const hasAmpRule = data.info.match.find((item) => item.amp);
-        if (this.allow_amp && hasAmpRule === undefined) {
-            data.url = data.info.original;
-            return data;
+        if (this.allow_amp === true && hasAmpRule === undefined) {
+            // Make sure there are no parameters before resetting
+            if (!this.hasParams(url)) {
+                data.url = data.info.original;
+                return data;
+            }
         }
 
         // Delete any matching parameters
