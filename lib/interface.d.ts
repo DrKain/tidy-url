@@ -63,9 +63,9 @@ export interface IData {
     };
 }
 export declare enum EEncoding {
-    base64 = "b64",
-    base32 = "b32",
-    base45 = "b45",
+    base64 = "base64",
+    base32 = "base32",
+    base45 = "base45",
     url = "url",
     url2 = "url2",
     binary = "binary",
