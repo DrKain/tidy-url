@@ -1027,6 +1027,11 @@ const $kurlc_rules = [
         name: 'connect.studentbeans.com',
         match: /connect.studentbeans.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'urldefense.proofpoint.com',
+        match: /urldefense.proofpoint.com/i,
+        decode: { param: 'u', encoding: 'url2' }
     }
 ];
 
