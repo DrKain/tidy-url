@@ -1017,6 +1017,11 @@ const $kurlc_rules = [
         name: 'dyno.gg',
         match: /dyno.gg/i,
         rules: ['ref']
+    },
+    {
+        name: 'eufylife.com',
+        match: /eufylife.com/i,
+        rules: ['ref']
     }
 ];
 
