@@ -1012,6 +1012,11 @@ const $kurlc_rules = [
         name: 'adclick.g.doubleclick.net',
         match: /adclick.g.doubleclick.net/i,
         redirect: 'adurl'
+    },
+    {
+        name: 'dyno.gg',
+        match: /dyno.gg/i,
+        rules: ['ref']
     }
 ];
 
