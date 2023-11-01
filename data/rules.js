@@ -1022,6 +1022,11 @@ const $kurlc_rules = [
         name: 'eufylife.com',
         match: /eufylife.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'connect.studentbeans.com',
+        match: /connect.studentbeans.com/i,
+        rules: ['ref']
     }
 ];
 
