@@ -58,3 +58,13 @@ export interface IData {
         full_clean: boolean;
     };
 }
+
+export enum EEncoding {
+    base64 = 'b64',
+    base32 = 'b32',
+    base45 = 'b45',
+    url = 'url',
+    url2 = 'url2',
+    binary = 'binary',
+    hex = 'hex'
+}

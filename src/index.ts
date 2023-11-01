@@ -1,4 +1,4 @@
-import { IRule, IData } from './interface';
+import { IRule, IData, EEncoding } from './interface';
 
 const $github = 'https://github.com/DrKain/tidy-url';
 
@@ -111,6 +111,40 @@ export class TidyCleaner {
             difference: url.length - data.url.length,
             reduction: +(100 - (data.url.length / url.length) * 100).toFixed(2)
         };
+    }
+
+    private decode(str: string, encoding: EEncoding = EEncoding.base64): string {
+        let decoded = str;
+
+        // Simple base64 decoding
+        if (encoding === EEncoding.base64) {
+            decoded = this.atob(str);
+        }
+
+        // Decode uri when used in URL parameters
+        if (encoding === EEncoding.url) {
+            decoded = decodeURI(str);
+        }
+
+        // This is more of a special case but it may help other rules. See issue #72
+        if (encoding === EEncoding.url2) {
+            decoded = decodeURIComponent(str.replace(/-/g, '%')).replace(/_/g, '/').replace(/%2F/g, '/');
+        }
+
+        // hex decode, not the best method but it works.
+        // Open a PR if you want to improve it
+        if (encoding === EEncoding.hex) {
+            let hex = str.toString();
+            let out = '';
+
+            for (var i = 0; i < hex.length; i += 2) {
+                out += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+            }
+
+            decoded = out;
+        }
+
+        return decoded;
     }
 
     /**
@@ -261,11 +295,14 @@ export class TidyCleaner {
         for (const rule of data.info.match) {
             try {
                 if (!rule.decode) continue;
+                // Make sure the target parameter exists
                 if (!cleaner.has(rule.decode.param)) continue;
                 // These will always be clickjacking links, so use the allow_redirects rule
                 if (!this.allow_redirects) continue;
-                // Decode the base64 string
-                const decoded = this.atob(cleaner.get(rule.decode.param) as string);
+                // Decode the string using selected encoding
+
+                const encoding = rule.decode.encoding || 'base64';
+                const decoded = this.decode(cleaner.get(rule.decode.param) as string, encoding);
                 let target = '';
 
                 // If the response is JSON, decode and look for a key

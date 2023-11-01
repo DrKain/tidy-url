@@ -35,6 +35,7 @@ export declare class TidyCleaner {
     hasParams(url: string): boolean;
     private isJSON;
     private getDiff;
+    private decode;
     /**
      * Clean a URL
      * @param _url Any URL
