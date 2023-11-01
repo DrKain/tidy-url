@@ -1,4 +1,4 @@
-Total unique rules: 763
+Total unique rules: 767
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -34,6 +34,7 @@ Total unique rules: 763
 | click.pstmrk.it               | 1     |
 | cnbc.com                      | 1     |
 | cnn.com                       | 1     |
+| connect.studentbeans.com      | 1     |
 | cookiepro.com                 | 2     |
 | cooking.nytimes.com           | 10    |
 | countdown.co.nz               | 4     |
@@ -41,11 +42,13 @@ Total unique rules: 763
 | dlgamer.com                   | 1     |
 | dpbolvw.net                   | 1     |
 | dreamgame.com                 | 1     |
+| dyno.gg                       | 1     |
 | ebay.com                      | 21    |
 | emjcd.com                     | 1     |
 | etail.market                  | 1     |
 | etsy.com                      | 6     |
 | eufy.com                      | 1     |
+| eufylife.com                  | 1     |
 | eufylife.com                  | 1     |
 | express.co.uk                 | 1     |
 | facebook.com                  | 8     |
@@ -156,6 +159,7 @@ Total unique rules: 763
 | tvguide.com                   | 1     |
 | twitch.tv                     | 3     |
 | twitter.com                   | 4     |
+| urldefense.proofpoint.com     | 1     |
 | voidu.com                     | 1     |
 | walmart.com                   | 30    |
 | washingtonpost.com            | 2     |
