@@ -21,10 +21,10 @@ for (const test of tests) {
         throw Error('Reduction less than 0');
     }
 
-    // If last, log params
+    // If last link, log additional information that can be used for debugging
     if (test === tests[tests.length - 1]) {
         const params = new URL(link.url).searchParams;
-        console.log('Removed keys: ' + JSON.stringify(link.info.removed));
+        console.log(link);
         params.forEach((val, key) => console.log({ [key]: val }));
     }
 
