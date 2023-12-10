@@ -23,8 +23,9 @@ for (const test of tests) {
 
     // If last, log params
     if (test === tests[tests.length - 1]) {
-        console.log(link.info.removed);
-        console.log(new URL(link.url).searchParams);
+        const params = new URL(link.url).searchParams;
+        console.log('Removed keys: ' + JSON.stringify(link.info.removed));
+        params.forEach((val, key) => console.log({ [key]: val }));
     }
 
     console.log('Input: ' + link.info.original);
