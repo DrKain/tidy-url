@@ -251,6 +251,10 @@ const $kurlc_rules = [
             'trkInfo', 'originalReferer', 'upsellOrderOrigin',
             'upsellTrk', 'upsellTrackingId', 'src', 'trackingId',
             'midToken', 'midSig', 'trkEmail', 'eid'
+        ],
+        allow: [
+            // One Time Password Token
+            'otpToken'
         ]
     },
     {
