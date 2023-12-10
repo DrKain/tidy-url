@@ -18,15 +18,6 @@ export class TidyCleaner {
      */
     public allow_redirects = true;
 
-    private atob(data: string): string {
-        if (typeof atob === 'undefined') {
-            this.log('atob not supported, using Buffer');
-            return Buffer.from(data, 'base64').toString('binary');
-        } else {
-            return atob(data);
-        }
-    }
-
     get expandedRules() {
         return this.rules.map((rule) => {
             return Object.assign(
@@ -118,7 +109,12 @@ export class TidyCleaner {
 
         // Simple base64 decoding
         if (encoding === EEncoding.base64) {
-            decoded = this.atob(str);
+            if (typeof atob === 'undefined') {
+                this.log('atob not supported, using Buffer');
+                return Buffer.from(decoded, 'base64').toString('binary');
+            } else {
+                return atob(decoded);
+            }
         }
 
         // Decode uri when used in URL parameters
@@ -146,6 +142,8 @@ export class TidyCleaner {
 
         return decoded;
     }
+
+    private getExpandedRules() {}
 
     /**
      * Clean a URL
