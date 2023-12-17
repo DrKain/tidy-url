@@ -64,6 +64,7 @@ export enum EEncoding {
     base32 = 'base32',
     base45 = 'base45',
     url = 'url',
+    urlc = 'urlc',
     url2 = 'url2',
     binary = 'binary',
     hex = 'hex'

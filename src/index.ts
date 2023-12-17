@@ -69,7 +69,7 @@ export class TidyCleaner {
 
             return true;
         } catch (error) {
-            this.log(`${error}`);
+            this.log(`Invalid URL: ` + url);
             return false;
         }
     }
@@ -122,6 +122,11 @@ export class TidyCleaner {
             decoded = decodeURI(str);
         }
 
+        // decodeURIComponent
+        if (encoding === EEncoding.urlc) {
+            decoded = decodeURIComponent(str);
+        }
+
         // This is more of a special case but it may help other rules. See issue #72
         if (encoding === EEncoding.url2) {
             decoded = decodeURIComponent(str.replace(/-/g, '%')).replace(/_/g, '/').replace(/%2F/g, '/');
@@ -142,8 +147,6 @@ export class TidyCleaner {
 
         return decoded;
     }
-
-    private getExpandedRules() {}
 
     /**
      * Clean a URL
@@ -254,12 +257,23 @@ export class TidyCleaner {
         // Redirect if the redirect parameter exists
         if (this.allow_redirects) {
             for (const rule of data.info.match) {
-                if (rule.redirect.length && cleaner_ci.has(rule.redirect)) {
-                    if (this.validate(cleaner_ci.get(rule.redirect) as string)) {
-                        data.url = `${cleaner_ci.get(rule.redirect)}` + original.hash;
+                if (!rule.redirect) continue;
+
+                const target = rule.redirect;
+                let value = cleaner_ci.get(target) as string;
+
+                // Sometimes the parameter is encoded
+                const isEncoded = this.decode(value, EEncoding.urlc);
+                if (isEncoded !== value && this.validate(isEncoded)) value = isEncoded;
+
+                if (target.length && cleaner_ci.has(target)) {
+                    if (this.validate(value)) {
+                        data.url = `${value}` + original.hash;
                         if (allow_reclean) data.url = this.clean(data.url, false).url;
+                    } else {
+                        this.log('Failed to redirect: ' + value);
                     }
-                }
+                } else this.log('Missing redirect target: ' + target);
             }
         }
 
