@@ -1,4 +1,4 @@
-Total unique rules: 767
+Total unique rules: 768
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -38,6 +38,7 @@ Total unique rules: 767
 | cookiepro.com                 | 2     |
 | cooking.nytimes.com           | 10    |
 | countdown.co.nz               | 4     |
+| curseforge.com                | 1     |
 | discord.com                   | 1     |
 | dlgamer.com                   | 1     |
 | dpbolvw.net                   | 1     |

@@ -13,7 +13,6 @@ export declare class TidyCleaner {
      * This is used to skip websites that track external links.
      */
     allow_redirects: boolean;
-    private atob;
     get expandedRules(): IRule[];
     constructor();
     /**
