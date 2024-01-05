@@ -165,7 +165,7 @@ export class TidyCleaner {
         }
     }
 
-    private handleAmpRedirectsAndDetermineReturn(url: string, data: IData) {
+    private handleAmpRedirectsAndDetermineReturn(url: string, data: IData): boolean {
         let needToReturnImmediately = false;
 
         const hasAmpRule = data.info.match.find((item) => item.amp);
@@ -196,8 +196,8 @@ export class TidyCleaner {
         }
     }
 
-    private rebuildUrl(original: URL, pathname: string): string {
-        return original.protocol + '//' + original.host + pathname + original.search + original.hash;
+    private rebuildUrl(original: URL, pathname: string, data: IData) {
+        data.url = original.protocol + '//' + original.host + pathname + original.search + original.hash;
     }
 
     private redirectIfNeeded(cleaner_ci: URLSearchParams, allow_reclean: boolean, original: URL, data: IData) {
@@ -363,7 +363,7 @@ export class TidyCleaner {
         this.updatePathNames(pathname, data);
 
         // Rebuild URL
-        data.url = this.rebuildUrl(original, pathname);
+        this.rebuildUrl(original, pathname, data);
 
         // Redirect if the redirect parameter exists
         this.redirectIfNeeded(cleaner_ci, allow_reclean, original, data);
