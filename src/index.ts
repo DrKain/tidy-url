@@ -148,6 +148,141 @@ export class TidyCleaner {
         return decoded;
     }
 
+    private fetchMatchingRules(original: URL, to_remove: string[], data: IData) {
+        for (const rule of this.expandedRules) {
+            // Match the host or the full URL
+            let match_s = original.host;
+            if (rule.match_href === true) match_s = original.href;
+
+            // Reset lastIndex
+            rule.match.lastIndex = 0;
+            if (rule.match.exec(match_s) !== null) {
+                // Loop through the rules and add to to_remove
+                to_remove = [...to_remove, ...(rule.rules || [])];
+                data.info.replace = [...data.info.replace, ...(rule.replace || [])];
+                data.info.match.push(rule);
+            }
+        }
+    }
+
+    private handleAmpRedirectsAndDetermineReturn(url: string, data: IData) {
+        let needToReturnImmediately = false;
+
+        const hasAmpRule = data.info.match.find((item) => item.amp);
+        if (this.allow_amp === true && hasAmpRule === undefined) {
+            // Make sure there are no parameters before resetting
+            if (!this.hasParams(url)) {
+                data.url = data.info.original;
+                needToReturnImmediately = true;
+            }
+        }
+
+        return needToReturnImmediately;
+    }
+
+    private deleteMatchingParams(cleaner: URLSearchParams, data: IData, to_remove: string[]) {
+        for (const key of to_remove) {
+            if (cleaner.has(key)) {
+                data.info.removed.push({ key, value: cleaner.get(key) as string });
+                cleaner.delete(key);
+            }
+        }
+    }
+
+    private updatePathNames(pathname: string, data: IData) {
+        for (const key of data.info.replace) {
+            const changed = pathname.replace(key, '');
+            if (changed !== pathname) pathname = changed;
+        }
+    }
+
+    private rebuildUrl(original: URL, pathname: string): string {
+        return original.protocol + '//' + original.host + pathname + original.search + original.hash;
+    }
+
+    private redirectIfNeeded(cleaner_ci: URLSearchParams, allow_reclean: boolean, original: URL, data: IData) {
+        if (this.allow_redirects) {
+            for (const rule of data.info.match) {
+                if (!rule.redirect) continue;
+
+                const target = rule.redirect;
+                let value = cleaner_ci.get(target) as string;
+
+                // Sometimes the parameter is encoded
+                const isEncoded = this.decode(value, EEncoding.urlc);
+                if (isEncoded !== value && this.validate(isEncoded)) value = isEncoded;
+
+                if (target.length && cleaner_ci.has(target)) {
+                    if (this.validate(value)) {
+                        data.url = `${value}` + original.hash;
+                        if (allow_reclean) data.url = this.clean(data.url, false).url;
+                    } else {
+                        this.log('Failed to redirect: ' + value);
+                    }
+                } else this.log('Missing redirect target: ' + target);
+            }
+        }
+    }
+
+    private decodeParams(cleaner: URLSearchParams, original: URL, data: IData) {
+        for (const rule of data.info.match) {
+            try {
+                if (!rule.decode) continue;
+                // Make sure the target parameter exists
+                if (!cleaner.has(rule.decode.param)) continue;
+                // These will always be clickjacking links, so use the allow_redirects rule
+                if (!this.allow_redirects) continue;
+                // Decode the string using selected encoding
+
+                const encoding = rule.decode.encoding || 'base64';
+                const decoded = this.decode(cleaner.get(rule.decode.param) as string, encoding);
+                let target = '';
+
+                // If the response is JSON, decode and look for a key
+                if (this.isJSON(decoded)) {
+                    const json = JSON.parse(decoded);
+                    target = json[rule.decode.lookFor];
+                    // Add to the info response
+                    data.info.decoded = json;
+                } else {
+                    // If the response is a string we can continue
+                    target = decoded;
+                }
+
+                // If the key we want exists and is a valid url then update the data url
+                if (target && this.validate(target)) {
+                    data.url = `${target}` + original.hash;
+                }
+            } catch (error) {
+                this.log(`${error}`);
+            }
+        }
+    }
+
+    private handleEmptyHashesAndAnchors(_url: string, url: string, data: IData) {
+        if (_url.endsWith('#')) {
+            data.url += '#';
+            url += '#';
+        }
+    }
+
+    private removeEmptyValues(data: IData) {
+        for (const rule of data.info.match) {
+            if (rule.rev) data.url = data.url.replace(/=(?=&|$)/gm, '');
+        }
+    }
+
+    private sanityCheckNewUrl(data: IData) {
+        if (data.info.reduction < 0) {
+            this.log(`Reduction is ${data.info.reduction}. Please report this link on GitHub: ${$github}/issues`);
+            data.url = data.info.original;
+        }
+
+        if (data.info.difference === 0 && data.info.reduction === 0 ) {
+            data.url = data.info.original;
+        }
+    }
+
     /**
      * Clean a URL
      * @param _url Any URL
@@ -199,19 +334,7 @@ export class TidyCleaner {
         cleaner.forEach((v, k) => cleaner_ci.append(k.toLowerCase(), v));
 
         // Loop through the rules and match them to the host name
-        for (const rule of this.expandedRules) {
-            // Match the host or the full URL
-            let match_s = original.host;
-            if (rule.match_href === true) match_s = original.href;
-            // Reset lastIndex
-            rule.match.lastIndex = 0;
-            if (rule.match.exec(match_s) !== null) {
-                // Loop through the rules and add to to_remove
-                to_remove = [...to_remove, ...(rule.rules || [])];
-                data.info.replace = [...data.info.replace, ...(rule.replace || [])];
-                data.info.match.push(rule);
-            }
-        }
+        this.fetchMatchingRules(original, to_remove, data);
 
         // Stop cleaning if any exclude rule matches
         let ex_pass = true;
@@ -228,54 +351,22 @@ export class TidyCleaner {
         }
 
         // Check if the match has any amp rules, if not we can redirect
-        const hasAmpRule = data.info.match.find((item) => item.amp);
-        if (this.allow_amp === true && hasAmpRule === undefined) {
-            // Make sure there are no parameters before resetting
-            if (!this.hasParams(url)) {
-                data.url = data.info.original;
-                return data;
-            }
+        const shouldReturn = this.handleAmpRedirectsAndDetermineReturn(url, data);
+        if (shouldReturn) {
+            return data;
         }
 
         // Delete any matching parameters
-        for (const key of to_remove) {
-            if (cleaner.has(key)) {
-                data.info.removed.push({ key, value: cleaner.get(key) as string });
-                cleaner.delete(key);
-            }
-        }
+        this.deleteMatchingParams(cleaner, data, to_remove);
 
         // Update the pathname if needed
-        for (const key of data.info.replace) {
-            const changed = pathname.replace(key, '');
-            if (changed !== pathname) pathname = changed;
-        }
+        this.updatePathNames(pathname, data);
 
         // Rebuild URL
-        data.url = original.protocol + '//' + original.host + pathname + original.search + original.hash;
+        data.url = this.rebuildUrl(original, pathname);
 
         // Redirect if the redirect parameter exists
-        if (this.allow_redirects) {
-            for (const rule of data.info.match) {
-                if (!rule.redirect) continue;
-
-                const target = rule.redirect;
-                let value = cleaner_ci.get(target) as string;
-
-                // Sometimes the parameter is encoded
-                const isEncoded = this.decode(value, EEncoding.urlc);
-                if (isEncoded !== value && this.validate(isEncoded)) value = isEncoded;
-
-                if (target.length && cleaner_ci.has(target)) {
-                    if (this.validate(value)) {
-                        data.url = `${value}` + original.hash;
-                        if (allow_reclean) data.url = this.clean(data.url, false).url;
-                    } else {
-                        this.log('Failed to redirect: ' + value);
-                    }
-                } else this.log('Missing redirect target: ' + target);
-            }
-        }
+        this.redirectIfNeeded(cleaner_ci, allow_reclean, original, data);
 
         // De-amp the URL
         if (this.allow_amp === false) {
@@ -304,65 +395,22 @@ export class TidyCleaner {
         }
 
         // Decode handler
-        for (const rule of data.info.match) {
-            try {
-                if (!rule.decode) continue;
-                // Make sure the target parameter exists
-                if (!cleaner.has(rule.decode.param)) continue;
-                // These will always be clickjacking links, so use the allow_redirects rule
-                if (!this.allow_redirects) continue;
-                // Decode the string using selected encoding
-
-                const encoding = rule.decode.encoding || 'base64';
-                const decoded = this.decode(cleaner.get(rule.decode.param) as string, encoding);
-                let target = '';
-
-                // If the response is JSON, decode and look for a key
-                if (this.isJSON(decoded)) {
-                    const json = JSON.parse(decoded);
-                    target = json[rule.decode.lookFor];
-                    // Add to the info response
-                    data.info.decoded = json;
-                } else {
-                    // If the response is a string we can continue
-                    target = decoded;
-                }
-
-                // If the key we want exists and is a valid url then update the data url
-                if (target && this.validate(target)) {
-                    data.url = `${target}` + original.hash;
-                }
-            } catch (error) {
-                this.log(`${error}`);
-            }
-        }
+        this.decodeParams(cleaner, original, data);
 
         // Handle empty hash / anchors
-        if (_url.endsWith('#')) {
-            data.url += '#';
-            url += '#';
-        }
+        this.handleEmptyHashesAndAnchors(_url, url, data);
 
         // Remove empty values when requested
-        for (const rule of data.info.match) {
-            if (rule.rev) data.url = data.url.replace(/=(?=&|$)/gm, '');
-        }
+        this.removeEmptyValues(data);
 
         const diff = this.getDiff(data, url);
         data.info = Object.assign(data.info, diff);
 
         // If the link is longer then we have an issue
-        if (data.info.reduction < 0) {
-            this.log(`Reduction is ${data.info.reduction}. Please report this link on GitHub: ${$github}/issues`);
-            data.url = data.info.original;
-        }
+        // Reset the original URL if there is no change, just to be safe
+        this.sanityCheckNewUrl(data);
 
         data.info.full_clean = true;
-
-        // Reset the original URL if there is no change, just to be safe
-        if (data.info.difference === 0 && data.info.reduction === 0) {
-            data.url = data.info.original;
-        }
 
         return data;
     }
