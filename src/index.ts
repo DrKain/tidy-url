@@ -163,6 +163,8 @@ export class TidyCleaner {
                 data.info.match.push(rule);
             }
         }
+
+        return to_remove;
     }
 
     private handleAmpRedirectsAndDetermineReturn(url: string, data: IData): boolean {
@@ -334,7 +336,7 @@ export class TidyCleaner {
         cleaner.forEach((v, k) => cleaner_ci.append(k.toLowerCase(), v));
 
         // Loop through the rules and match them to the host name
-        this.fetchMatchingRules(original, to_remove, data);
+        to_remove = this.fetchMatchingRules(original, to_remove, data);
 
         // Stop cleaning if any exclude rule matches
         let ex_pass = true;
