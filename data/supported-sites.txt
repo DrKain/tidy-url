@@ -1,4 +1,4 @@
-Total unique rules: 768
+Total unique rules: 778
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -135,6 +135,7 @@ Total unique rules: 768
 | redbubble.com                 | 1     |
 | reddit.com                    | 13    |
 | redirect.viglink.com          | 1     |
+| s.pemsrv.com                  | 10    |
 | shopee.com                    | 8     |
 | sjv.io                        | 1     |
 | solodeportes.com.ar           | 2     |

@@ -1041,6 +1041,14 @@ const $kurlc_rules = [
         name: 'curseforge.com',
         match: /www.curseforge.com/i,
         redirect: 'remoteurl'
+    },{
+        name: 's.pemsrv.com',
+        match: /s.pemsrv.com/i,
+        rules: [
+            'cat', 'idzone', 'type', 'sub', 'block',
+            'el', 'tags', 'cookieconsent', 'scr_info'
+        ],
+        redirect: 'p'
     }
 ];
 
