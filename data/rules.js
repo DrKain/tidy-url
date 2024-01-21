@@ -1041,7 +1041,8 @@ const $kurlc_rules = [
         name: 'curseforge.com',
         match: /www.curseforge.com/i,
         redirect: 'remoteurl'
-    },{
+    },
+    {
         name: 's.pemsrv.com',
         match: /s.pemsrv.com/i,
         rules: [
@@ -1049,6 +1050,11 @@ const $kurlc_rules = [
             'el', 'tags', 'cookieconsent', 'scr_info'
         ],
         redirect: 'p'
+    },
+    {
+        name: 'chess.com',
+        match: /www.chess.com/i,
+        rules: ['c']
     }
 ];
 

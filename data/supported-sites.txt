@@ -1,4 +1,4 @@
-Total unique rules: 778
+Total unique rules: 779
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -31,6 +31,7 @@ Total unique rules: 778
 | cbc.ca                        | 3     |
 | cbsnews.com                   | 2     |
 | change.org                    | 1     |
+| chess.com                     | 1     |
 | click.pstmrk.it               | 1     |
 | cnbc.com                      | 1     |
 | cnn.com                       | 1     |
