@@ -1055,6 +1055,11 @@ const $kurlc_rules = [
         name: 'chess.com',
         match: /www.chess.com/i,
         rules: ['c']
+    },
+    {
+        name: 'porndude.link',
+        match: /porndude.link/i,
+        rules: ['ref']
     }
 ];
 
