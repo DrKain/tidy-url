@@ -1060,6 +1060,11 @@ const $kurlc_rules = [
         name: 'porndude.link',
         match: /porndude.link/i,
         rules: ['ref']
+    },
+    {
+        name: 'xvideos.com',
+        match: /xvideos.com/i,
+        rules: ['sxcaf']
     }
 ];
 
