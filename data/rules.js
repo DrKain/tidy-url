@@ -1070,6 +1070,11 @@ const $kurlc_rules = [
         name: 'xvideos.red',
         match: /xvideos.red/i,
         rules: ['sxcaf', 'pmsc', 'pmln']
+    },
+    {
+        name: 'xhamster.com',
+        match: /xhamster.com/i,
+        rules: ['source']
     }
 ];
 
