@@ -29,7 +29,8 @@ export interface IRule {
      */
     decode: {
         param: string;
-        lookFor: string;
+        lookFor?: string;
+        encoding?: EEncoding;
     };
     /** Remove empty values */
     rev: boolean;
