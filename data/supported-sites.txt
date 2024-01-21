@@ -1,4 +1,4 @@
-Total unique rules: 779
+Total unique rules: 785
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -127,6 +127,7 @@ Total unique rules: 779
 | play.google.com               | 2     |
 | playbook.com                  | 1     |
 | plex.tv                       | 4     |
+| porndude.link                 | 1     |
 | primevideo.com                | 2     |
 | producthunt.com               | 1     |
 | psychologytoday.com           | 1     |
@@ -172,6 +173,9 @@ Total unique rules: 779
 | wingamestore.com              | 1     |
 | wish.com                      | 1     |
 | wsj.com                       | 1     |
+| xhamster.com                  | 1     |
+| xvideos.com                   | 1     |
+| xvideos.red                   | 3     |
 | yahoo.com                     | 6     |
 | yandex.com                    | 5     |
 | youtube.com                   | 8     |
