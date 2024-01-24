@@ -344,6 +344,12 @@ const $kurlc_rules = [
         redirect: 'url'
     },
     {
+        name: 'steamcommunity.com/linkfilter',
+        match: /steamcommunity.com\/linkfilter/i,
+        redirect: 'u',
+        match_href: true
+    },
+    {
         name: 'microsoft.com',
         match: /microsoft.com/i,
         rules: ['refd', 'icid']
