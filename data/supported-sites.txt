@@ -1,4 +1,4 @@
-Total unique rules: 785
+Total unique rules: 786
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -147,6 +147,7 @@ Total unique rules: 785
 | startpage.com                 | 1     |
 | stats.newswire.com            | 1     |
 | steamcommunity.com            | 1     |
+| steamcommunity.com/linkfilter | 1     |
 | store.steampowered.com        | 1     |
 | studentbeans.com              | 1     |
 | support-dev.discord.com       | 1     |
