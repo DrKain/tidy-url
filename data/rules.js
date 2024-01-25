@@ -933,7 +933,8 @@ const $kurlc_rules = [
     {
         name: 'cbsnews.com',
         match: /www.cbsnews.com/i,
-        rules: ['ftag', 'intcid']
+        rules: ['ftag', 'intcid'],
+        replace: ['/amp']
     },
     {
         name: 'jobs.venturebeat.com',
