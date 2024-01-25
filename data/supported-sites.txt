@@ -1,4 +1,4 @@
-Total unique rules: 786
+Total unique rules: 787
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -29,7 +29,7 @@ Total unique rules: 786
 | buyatoyota.com                | 1     |
 | castorama.fr                  | 1     |
 | cbc.ca                        | 3     |
-| cbsnews.com                   | 2     |
+| cbsnews.com                   | 3     |
 | change.org                    | 1     |
 | chess.com                     | 1     |
 | click.pstmrk.it               | 1     |
