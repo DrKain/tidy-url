@@ -25,12 +25,14 @@ export interface IRule {
     amp: RegExp | null;
     /**
      * @experimental
-     * Used to decode a base64 parameter, then redirect based on the returned object
+     * Used to decode a parameter or path, then redirect based on the returned object
      */
     decode: {
-        param: string;
+        param?: string;
         lookFor?: string;
         encoding?: EEncoding;
+        targetPath?: boolean;
+        handler?: string;
     };
     /** Remove empty values */
     rev: boolean;

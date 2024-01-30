@@ -308,13 +308,29 @@ export class TidyCleaner {
             try {
                 if (!rule.decode) continue;
                 // Make sure the target parameter exists
-                if (!cleaner.has(rule.decode.param)) continue;
+                if (!cleaner.has(rule.decode.param) && rule.decode.targetPath !== true) continue;
                 // These will always be clickjacking links, so use the allow_redirects rule
                 if (!this.allow_redirects) continue;
                 // Decode the string using selected encoding
-
                 const encoding = rule.decode.encoding || 'base64';
-                const decoded = this.decode(cleaner.get(rule.decode.param) as string, encoding);
+                // Sometimes the website path is what we need to decode
+                let lastPath = pathname.split('/').pop();
+                // This will be null if the param doesn't exist
+                const param = cleaner.get(rule.decode.param);
+                // Use a default string
+                let encodedString: string = '';
+
+                // Decide what we are decoding
+                if (param === null && lastPath !== undefined) encodedString = lastPath;
+                else if (param) encodedString = param;
+                else continue;
+
+                if (typeof encodedString !== 'string') {
+                    this.log(`Expected ${encodedString} to be a string`);
+                    continue;
+                }
+
+                const decoded = this.decode(encodedString, encoding);
                 let target = '';
 
                 // If the response is JSON, decode and look for a key
@@ -324,8 +340,13 @@ export class TidyCleaner {
                     // Add to the info response
                     data.info.decoded = json;
                 } else {
-                    // If the response is a string we can continue
-                    target = decoded;
+                    // TODO: Move to own function
+                    if (rule.decode.handler && rule.decode.handler === 'patchbot.io') {
+                        target = decodeURIComponent(decoded.split('|')[2]);
+                    } else {
+                        // If the response is a string we can continue
+                        target = decoded;
+                    }
                 }
 
                 // If the key we want exists and is a valid url then update the data url
