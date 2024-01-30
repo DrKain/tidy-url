@@ -1082,6 +1082,15 @@ const $kurlc_rules = [
         name: 'xhamster.com',
         match: /xhamster.com/i,
         rules: ['source']
+    },
+    {
+        name: 'patchbot.io',
+        match: /patchbot.io/i,
+        decode: {
+            encoding: 'base64',
+            targetPath: true,
+            handler: 'patchbot.io'
+        }
     }
 ];
 
