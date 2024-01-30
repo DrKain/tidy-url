@@ -1,4 +1,4 @@
-Total unique rules: 787
+Total unique rules: 788
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -121,6 +121,7 @@ Total unique rules: 787
 | ojrq.net                      | 1     |
 | optigruen.com                 | 3     |
 | osi.rosenberger.com           | 2     |
+| patchbot.io                   | 1     |
 | pbtech.co.nz                  | 1     |
 | pinterest.com                 | 1     |
 | pixiv.net                     | 3     |
