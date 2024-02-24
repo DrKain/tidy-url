@@ -72,3 +72,13 @@ export enum EEncoding {
     binary = 'binary',
     hex = 'hex'
 }
+
+export interface IHandler {
+    exec: (
+        str: string,
+        ...args: any[]
+    ) => {
+        url: string;
+        error?: any;
+    };
+}
