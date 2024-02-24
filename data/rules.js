@@ -1091,6 +1091,14 @@ const $kurlc_rules = [
             targetPath: true,
             handler: 'patchbot.io'
         }
+    },
+    {
+        name: 'milkrun.com',
+        match: /milkrun.com/i,
+        rules: [
+            '_branch_match_id',
+            '_branch_referrer'
+        ]
     }
 ];
 
