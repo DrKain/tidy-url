@@ -1,6 +1,9 @@
 import { IRule, IData } from './interface';
 export declare class TidyCleaner {
     rules: IRule[];
+    /**
+     * Don't log anything to the console.
+     */
     silent: boolean;
     /**
      * There's a whole number of reasons why you don't want AMP links,
@@ -13,6 +16,12 @@ export declare class TidyCleaner {
      * This is used to skip websites that track external links.
      */
     allow_redirects: boolean;
+    /**
+     * Custom handlers for specific websites that use tricky URLs
+     * that make it harder to "clean"
+     */
+    allow_custom_handlers: boolean;
+    loglines: string[];
     get expandedRules(): IRule[];
     constructor();
     /**

@@ -54,6 +54,8 @@ export interface IData {
             key: string;
             value: string;
         }[];
+        /** Handler used */
+        handler: string | null;
         /** Rules matched */
         match: any[];
         /** The decoded object from the decode parameter (if it exists) */
@@ -74,4 +76,10 @@ export declare enum EEncoding {
     url2 = "url2",
     binary = "binary",
     hex = "hex"
+}
+export interface IHandler {
+    exec: (str: string, ...args: any[]) => {
+        url: string;
+        error?: any;
+    };
 }
