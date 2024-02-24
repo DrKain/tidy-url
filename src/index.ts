@@ -1,9 +1,13 @@
 import { IRule, IData, EEncoding } from './interface';
+import { handlers } from './handlers';
 
 const $github = 'https://github.com/DrKain/tidy-url';
 
 export class TidyCleaner {
     public rules: IRule[] = [];
+    /**
+     * Don't log anything to the console.
+     */
     public silent = true;
 
     /**
@@ -17,6 +21,13 @@ export class TidyCleaner {
      * This is used to skip websites that track external links.
      */
     public allow_redirects = true;
+    /**
+     * Custom handlers for specific websites that use tricky URLs
+     * that make it harder to "clean"
+     */
+    public allow_custom_handlers = true;
+
+    public loglines: string[] = [];
 
     get expandedRules() {
         return this.rules.map((rule) => {
@@ -49,6 +60,7 @@ export class TidyCleaner {
      * @param str Message
      */
     private log(str: string) {
+        this.loglines.push(str);
         if (!this.silent) console.log(str);
     }
 
@@ -69,7 +81,9 @@ export class TidyCleaner {
 
             return true;
         } catch (error) {
-            this.log(`Invalid URL: ` + url);
+            if (url !== 'undefined' && url !== 'null' && url.length > 0) {
+                this.log(`[error] Invalid URL: ` + url);
+            }
             return false;
         }
     }
@@ -110,7 +124,6 @@ export class TidyCleaner {
         // Simple base64 decoding
         if (encoding === EEncoding.base64) {
             if (typeof atob === 'undefined') {
-                this.log('atob not supported, using Buffer');
                 return Buffer.from(decoded, 'base64').toString('binary');
             } else {
                 return atob(decoded);
@@ -154,6 +167,8 @@ export class TidyCleaner {
      * @returns IData
      */
     public clean(_url: string, allow_reclean = true): IData {
+        if (!allow_reclean) this.loglines = [];
+
         // Default values
         const data: IData = {
             url: _url,
@@ -163,6 +178,7 @@ export class TidyCleaner {
                 difference: 0,
                 replace: [],
                 removed: [],
+                handler: null,
                 match: [],
                 decoded: null,
                 is_new_host: false,
@@ -172,7 +188,7 @@ export class TidyCleaner {
 
         // Make sure the URL is valid before we try to clean it
         if (!this.validate(_url)) {
-            this.log('An invalid URL was supplied');
+            if (_url !== 'undefined') this.log('[error] An invalid URL was supplied');
             return data;
         }
 
@@ -271,9 +287,9 @@ export class TidyCleaner {
                         data.url = `${value}` + original.hash;
                         if (allow_reclean) data.url = this.clean(data.url, false).url;
                     } else {
-                        this.log('Failed to redirect: ' + value);
+                        this.log('[error] Failed to redirect: ' + value);
                     }
-                } else this.log('Missing redirect target: ' + target);
+                }
             }
         }
 
@@ -326,7 +342,7 @@ export class TidyCleaner {
                 else continue;
 
                 if (typeof encodedString !== 'string') {
-                    this.log(`Expected ${encodedString} to be a string`);
+                    this.log(`[error] Expected ${encodedString} to be a string`);
                     continue;
                 }
 
@@ -339,10 +355,21 @@ export class TidyCleaner {
                     target = json[rule.decode.lookFor];
                     // Add to the info response
                     data.info.decoded = json;
-                } else {
-                    // TODO: Move to own function
-                    if (rule.decode.handler && rule.decode.handler === 'patchbot.io') {
-                        target = decodeURIComponent(decoded.split('|')[2]);
+                } else if (this.allow_custom_handlers === true && rule.decode.handler) {
+                    // Run custom URL handlers for websites
+                    const handler = handlers[rule.decode.handler];
+
+                    if (typeof handler === 'undefined') {
+                        this.log('[error] Handler was not found for ' + rule.decode.handler);
+                    }
+
+                    if (rule.decode.handler && handler) {
+                        data.info.handler = rule.decode.handler;
+                        const result = handler.exec(target, [decoded]);
+                        // If the handler threw an error
+                        if (result.error) this.log('[error] ' + result.error);
+                        // Re-clean the URL after handler result
+                        target = this.clean(result.url).url;
                     } else {
                         // If the response is a string we can continue
                         target = decoded;
@@ -354,7 +381,7 @@ export class TidyCleaner {
                     data.url = `${target}` + original.hash;
                 }
             } catch (error) {
-                this.log(`${error}`);
+                this.log(`[error] ${error}`);
             }
         }
 
@@ -374,7 +401,7 @@ export class TidyCleaner {
 
         // If the link is longer then we have an issue
         if (data.info.reduction < 0) {
-            this.log(`Reduction is ${data.info.reduction}. Please report this link on GitHub: ${$github}/issues`);
+            this.log(`[error] Reduction is ${data.info.reduction}. Please report this link on GitHub: ${$github}/issues`);
             data.url = data.info.original;
         }
 
