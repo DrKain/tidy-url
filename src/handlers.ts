@@ -10,7 +10,7 @@ export const handlers: { [key: string]: IHandler } = {};
 handlers['patchbot.io'] = {
     exec: (str, args) => {
         try {
-            str = decodeURIComponent(str);
+            str = str.replace(/%3D/g, '=');
             return { url: decodeURIComponent(args[0].split('|')[2]) };
         } catch (error) {
             if (`${error}`.startsWith('URIError')) error = 'Unable to decode URI component. The URL may be invalid';
