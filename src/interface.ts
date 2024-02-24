@@ -52,6 +52,8 @@ export interface IData {
         replace: any[];
         /** Parameters that were removed */
         removed: { key: string; value: string }[];
+        /** Handler used */
+        handler: string | null;
         /** Rules matched */
         match: any[];
         /** The decoded object from the decode parameter (if it exists) */
