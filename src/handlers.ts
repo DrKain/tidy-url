@@ -12,6 +12,7 @@ handlers['patchbot.io'] = {
         try {
             return { url: decodeURIComponent(args[0].split('|')[2]) };
         } catch (error) {
+            if (`${error}`.startsWith('URIError')) error = 'Unable to decode URI component. The URL may be invalid';
             return { url: str, error };
         }
     }
