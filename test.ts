@@ -1,6 +1,7 @@
 import { TidyURL } from './src';
 
 TidyURL.silent = false;
+TidyURL.allow_custom_handlers = true;
 
 const tests = [
     // Delete test URLs before commit
