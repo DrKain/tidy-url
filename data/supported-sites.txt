@@ -1,7 +1,8 @@
-Total unique rules: 800
+Total unique rules: 808
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
+| 0yxjo.mjt.lu                  | 1     |
 | 2game.com                     | 1     |
 | adclick.g.doubleclick.net     | 1     |
 | adtraction.com                | 1     |
@@ -33,6 +34,7 @@ Total unique rules: 800
 | change.org                    | 1     |
 | chess.com                     | 1     |
 | click.pstmrk.it               | 1     |
+| click.redditmail.com          | 1     |
 | cnbc.com                      | 1     |
 | cnn.com                       | 1     |
 | connect.studentbeans.com      | 1     |
@@ -40,6 +42,7 @@ Total unique rules: 800
 | cooking.nytimes.com           | 10    |
 | countdown.co.nz               | 4     |
 | curseforge.com                | 1     |
+| dailymail.co.uk               | 2     |
 | discord.com                   | 1     |
 | dlgamer.com                   | 1     |
 | dpbolvw.net                   | 1     |
@@ -66,7 +69,7 @@ Total unique rules: 800
 | gate.sc                       | 1     |
 | getmusicbee.com               | 1     |
 | go2cloud.org                  | 1     |
-| gog.com                       | 6     |
+| gog.com                       | 7     |
 | gog.salesmanago.com           | 4     |
 | google.com                    | 23    |
 | greenmangaming.com            | 5     |
@@ -138,7 +141,7 @@ Total unique rules: 800
 | quizlet.com                   | 2     |
 | ranker.com                    | 5     |
 | redbubble.com                 | 1     |
-| reddit.com                    | 13    |
+| reddit.com                    | 15    |
 | redirect.viglink.com          | 1     |
 | s.pemsrv.com                  | 10    |
 | shopee.com                    | 8     |
@@ -147,6 +150,7 @@ Total unique rules: 800
 | spotify.com                   | 6     |
 | squarespace.com               | 6     |
 | stacks.wellcomecollection.org | 1     |
+| stardockentertainment.info    | 1     |
 | startpage.com                 | 1     |
 | stats.newswire.com            | 1     |
 | steamcommunity.com            | 1     |
