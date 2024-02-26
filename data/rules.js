@@ -1091,7 +1091,6 @@ const $kurlc_rules = [
         name: 'patchbot.io',
         match: /patchbot.io/i,
         decode: {
-            encoding: 'base64',
             targetPath: true,
             handler: 'patchbot.io'
         }
@@ -1116,6 +1115,14 @@ const $kurlc_rules = [
         name: 'dailymail.co.uk',
         match: /dailymail.co.uk/i,
         rules: ['reg_source', 'ito']
+    },
+    {
+        name: 'stardockentertainment.info',
+        match: /www.stardockentertainment.info/i,
+        decode: {
+            targetPath: true,
+            handler: 'stardockentertainment.info',
+        }
     }
 ];
 
