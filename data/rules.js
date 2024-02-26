@@ -1111,6 +1111,11 @@ const $kurlc_rules = [
             'smclient', 'smconv', 'smlid'
         ],
         redirect: 'url'
+    },
+    {
+        name: 'dailymail.co.uk',
+        match: /dailymail.co.uk/i,
+        rules: ['reg_source', 'ito']
     }
 ];
 
