@@ -39,3 +39,24 @@ handlers['stardockentertainment.info'] = {
         }
     }
 };
+
+handlers['0yxjo.mjt.lu'] = {
+    exec: (str) => {
+        try {
+            const target = str.split('/').pop();
+            let url = '';
+
+            if (typeof target == 'undefined') throw Error('Undefined target');
+
+            if (typeof atob === 'undefined') {
+                url = Buffer.from(target, 'base64').toString('binary');
+            } else {
+                url = atob(target);
+            }
+
+            return { url: url };
+        } catch (error) {
+            return { url: str, error };
+        }
+    }
+};

@@ -1123,6 +1123,14 @@ const $kurlc_rules = [
             targetPath: true,
             handler: 'stardockentertainment.info',
         }
+    },
+    {
+        name: '0yxjo.mjt.lu',
+        match: /0yxjo.mjt.lu/i,
+        decode: {
+            targetPath: true,
+            handler: '0yxjo.mjt.lu',
+        }
     }
 ];
 
