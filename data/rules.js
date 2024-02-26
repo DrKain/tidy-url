@@ -127,7 +127,7 @@ const $kurlc_rules = [
     },
     {
         name: 'aliexpress.com',
-        match: /^(?:https?:\/\/)?(?:[^.]+\.)?aliexpress\.[a-z0-9]{0,3}/i,
+        match: /^(?:https?:\/\/)?(?:[^.]+\.)?aliexpress\.(?:[a-z]{2,}){1,}/i,
         rules: [
             '_t', 'spm', 'algo_pvid', 'algo_expid', 'btsid', 'ws_ab_test',
             'initiative_id', 'origin', 'widgetId', 'tabType', 'productId',
@@ -136,7 +136,8 @@ const $kurlc_rules = [
             'gatewayAdapt', '_evo_buckets', 'tpp_rcmd_bucket_id', 'scenario',
             'pdp_npi', 'tt', 'spreadType', 'srcSns', 'bizType', 'social_params',
             'aff_fcid', 'aff_fsk', 'aff_platform', 'aff_trace_key', 'shareId',
-            'platform', 'businessType', 'terminal_id', 'afSmartRedirect', 'sk'
+            'platform', 'businessType', 'terminal_id', 'afSmartRedirect', 'sk',
+            'gbraid'
         ],
         allow: ['sku_id', 'pdp_ext_f']
     },
