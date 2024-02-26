@@ -1,11 +1,11 @@
-Total unique rules: 788
+Total unique rules: 800
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
 | 2game.com                     | 1     |
 | adclick.g.doubleclick.net     | 1     |
 | adtraction.com                | 1     |
-| aliexpress.com                | 42    |
+| aliexpress.com                | 43    |
 | amazon.com                    | 50    |
 | amp.dw.com                    | 1     |
 | amp.scmp.com                  | 1     |
@@ -66,7 +66,8 @@ Total unique rules: 788
 | gate.sc                       | 1     |
 | getmusicbee.com               | 1     |
 | go2cloud.org                  | 1     |
-| gog.com                       | 1     |
+| gog.com                       | 6     |
+| gog.salesmanago.com           | 4     |
 | google.com                    | 23    |
 | greenmangaming.com            | 5     |
 | hbomax.com                    | 1     |
@@ -105,6 +106,7 @@ Total unique rules: 788
 | medium.com                    | 1     |
 | microsoft.com                 | 2     |
 | mightyape                     | 1     |
+| milkrun.com                   | 2     |
 | mouser.com                    | 1     |
 | msn.com                       | 3     |
 | music.apple.com               | 5     |
