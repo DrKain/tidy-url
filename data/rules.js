@@ -202,7 +202,7 @@ const $kurlc_rules = [
         match: /www.gog.com/i,
         rules: [
             'at_gd', 'rec_scenario_id', 'rec_sub_source_id', 'rec_item_id',
-            'vds_id', 'prod_id'
+            'vds_id', 'prod_id', 'rec_source'
         ]
     },
     {
