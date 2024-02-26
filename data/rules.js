@@ -200,7 +200,10 @@ const $kurlc_rules = [
     {
         name: 'gog.com',
         match: /www.gog.com/i,
-        rules: ['at_gd']
+        rules: [
+            'at_gd', 'rec_scenario_id', 'rec_sub_source_id', 'rec_item_id',
+            'vds_id', 'prod_id'
+        ]
     },
     {
         name: 'tiktok.com',
