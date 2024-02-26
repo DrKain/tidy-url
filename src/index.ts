@@ -346,8 +346,9 @@ export class TidyCleaner {
                     continue;
                 }
 
-                const decoded = this.decode(encodedString, encoding);
+                let decoded = this.decode(encodedString, encoding);
                 let target = '';
+                let recleanData = null;
 
                 // If the response is JSON, decode and look for a key
                 if (this.isJSON(decoded)) {
@@ -366,20 +367,24 @@ export class TidyCleaner {
                     if (rule.decode.handler && handler) {
                         data.info.handler = rule.decode.handler;
                         const result = handler.exec(data.url, [decoded]);
+
                         // If the handler threw an error or the URL is invalid
                         if (result.error || this.validate(result.url) === false) {
                             if (result.url !== 'undefined') this.log('[error] ' + result.error);
                         }
-                        // Re-clean the URL after handler result
-                        target = this.clean(result.url, false).url;
+
+                        recleanData = result.url;
                     } else {
                         // If the response is a string we can continue
                         target = decoded;
                     }
                 }
 
+                // Re-clean the URL after handler result
+                if (allow_reclean) target = this.clean(recleanData ?? target, false).url;
+
                 // If the key we want exists and is a valid url then update the data url
-                if (target && this.validate(target)) {
+                if (target && target !== '' && this.validate(target)) {
                     data.url = `${target}` + original.hash;
                 }
             } catch (error) {
