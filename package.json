@@ -1,6 +1,6 @@
 {
     "name": "tidy-url",
-    "version": "1.12.3",
+    "version": "1.12.4",
     "description": "Cleans/removes tracking or garbage parameters from URLs",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
@@ -39,6 +39,7 @@
         "prettier": "^2.3.0",
         "ts-loader": "^9.2.8",
         "typescript": "^4.2.4",
+        "webpack": "^5.90.3",
         "webpack-cli": "^4.9.2"
     }
 }
