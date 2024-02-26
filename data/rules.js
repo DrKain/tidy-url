@@ -1103,6 +1103,14 @@ const $kurlc_rules = [
             '_branch_match_id',
             '_branch_referrer'
         ]
+    },
+    {
+        name: 'gog.salesmanago.com',
+        match: /gog.salesmanago.com/i,
+        rules: [
+            'smclient', 'smconv', 'smlid'
+        ],
+        redirect: 'url'
     }
 ];
 
