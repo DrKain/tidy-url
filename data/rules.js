@@ -1131,6 +1131,14 @@ const $kurlc_rules = [
             targetPath: true,
             handler: '0yxjo.mjt.lu',
         }
+    },
+    {
+        name: 'click.redditmail.com',
+        match: /click.redditmail.com/i,
+        decode: {
+            targetPath: true,
+            handler: 'click.redditmail.com',
+        }
     }
 ];
 

@@ -60,3 +60,18 @@ handlers['0yxjo.mjt.lu'] = {
         }
     }
 };
+
+handlers['click.redditmail.com'] = {
+    exec: (str) => {
+        try {
+            const reg = /https:\/\/click\.redditmail\.com\/CL0\//gi;
+            const url = decodeURIComponent(str.replace(reg, ''));
+
+            new URL(url);
+
+            return { url: url };
+        } catch (error) {
+            return { url: str, error };
+        }
+    }
+};
