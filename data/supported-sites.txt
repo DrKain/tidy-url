@@ -1,4 +1,4 @@
-Total unique rules: 808
+Total unique rules: 809
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -43,6 +43,7 @@ Total unique rules: 808
 | countdown.co.nz               | 4     |
 | curseforge.com                | 1     |
 | dailymail.co.uk               | 2     |
+| deals.dominos.co.nz           | 1     |
 | discord.com                   | 1     |
 | dlgamer.com                   | 1     |
 | dpbolvw.net                   | 1     |
