@@ -1,4 +1,5 @@
 import { IHandler } from './interface';
+import { decodeBase64 } from './utils';
 
 /**
  * This is currently experimental while I decide on how I want to restructure the main code to make it easier to follow.
@@ -48,11 +49,7 @@ handlers['0yxjo.mjt.lu'] = {
 
             if (typeof target == 'undefined') throw Error('Undefined target');
 
-            if (typeof atob === 'undefined') {
-                url = Buffer.from(target, 'base64').toString('binary');
-            } else {
-                url = atob(target);
-            }
+            url = decodeBase64(target);
 
             return { url: url };
         } catch (error) {
@@ -69,7 +66,23 @@ handlers['click.redditmail.com'] = {
 
             new URL(url);
 
-            return { url: url };
+            return { url };
+        } catch (error) {
+            return { url: str, error };
+        }
+    }
+};
+
+handlers['deals.dominos.co.nz'] = {
+    exec: (str) => {
+        try {
+            const target = str.split('/').pop();
+            let url = '';
+
+            if (!target) throw Error('Missing target');
+            url = decodeBase64(target);
+
+            return { url };
         } catch (error) {
             return { url: str, error };
         }

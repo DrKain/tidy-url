@@ -1139,6 +1139,14 @@ const $kurlc_rules = [
             targetPath: true,
             handler: 'click.redditmail.com',
         }
+    },
+    {
+        name: 'deals.dominos.co.nz',
+        match: /deals.dominos.co.nz/i,
+        decode:{
+            targetPath: true,
+            handler: 'deals.dominos.co.nz'
+        }
     }
 ];
 
