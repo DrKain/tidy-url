@@ -1,5 +1,6 @@
 import { IRule, IData, EEncoding } from './interface';
 import { handlers } from './handlers';
+import { decodeBase64 } from './utils';
 
 const $github = 'https://github.com/DrKain/tidy-url';
 
@@ -123,11 +124,7 @@ export class TidyCleaner {
 
         // Simple base64 decoding
         if (encoding === EEncoding.base64) {
-            if (typeof atob === 'undefined') {
-                return Buffer.from(decoded, 'base64').toString('binary');
-            } else {
-                return atob(decoded);
-            }
+            return decodeBase64(decoded);
         }
 
         // Decode uri when used in URL parameters
