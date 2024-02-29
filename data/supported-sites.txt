@@ -1,4 +1,4 @@
-Total unique rules: 809
+Total unique rules: 811
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -44,7 +44,7 @@ Total unique rules: 809
 | curseforge.com                | 1     |
 | dailymail.co.uk               | 2     |
 | deals.dominos.co.nz           | 1     |
-| discord.com                   | 1     |
+| discord.com                   | 2     |
 | dlgamer.com                   | 1     |
 | dpbolvw.net                   | 1     |
 | dreamgame.com                 | 1     |
@@ -74,6 +74,7 @@ Total unique rules: 809
 | gog.salesmanago.com           | 4     |
 | google.com                    | 23    |
 | greenmangaming.com            | 5     |
+| hashnode.com                  | 1     |
 | hbomax.com                    | 1     |
 | honeycode.aws                 | 12    |
 | hubspot.com                   | 2     |
