@@ -1147,6 +1147,11 @@ const $kurlc_rules = [
             targetPath: true,
             handler: 'deals.dominos.co.nz'
         }
+    },
+    {
+        name: 'hashnode.com',
+        match: /(?:.*\.)?hashnode\.com/i,
+        rules: ['source']
     }
 ];
 
