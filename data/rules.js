@@ -268,8 +268,8 @@ const $kurlc_rules = [
     },
     {
         name: 'discord.com',
-        match: /.*.discord.com/i,
-        rules: ['source']
+        match: /(?:.*\.)?discord\.com/i,
+        rules: ['source' , 'ref']
     },
     {
         name: 'medium.com',
