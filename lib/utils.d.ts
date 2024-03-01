@@ -34,3 +34,4 @@ export declare const validateURL: (url: string) => boolean;
  * @returns The difference between two links
  */
 export declare const getLinkDiff: (firstURL: string, secondURL: string) => ILinkDiff;
+export declare const regexExtract: (regex: RegExp, str: string) => string[];
