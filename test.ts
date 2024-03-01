@@ -1,7 +1,11 @@
 import { TidyURL } from './src';
 
-TidyURL.silent = false;
-TidyURL.allow_custom_handlers = true;
+TidyURL.config.setMany({
+    silent: false,
+    allowAMP: false,
+    allowCustomHandlers: true,
+    allowRedirects: true
+});
 
 const tests = [
     // Delete test URLs before commit
@@ -11,10 +15,6 @@ const tests = [
 for (const test of tests) {
     if (test.length === 0) continue;
     const link = TidyURL.clean(test);
-
-    // New options added in 1.2.8
-    TidyURL.allow_amp = false;
-    TidyURL.allow_redirects = true;
 
     // All tests should pass before publishing
     if (link.info.reduction < 0) {
@@ -29,8 +29,9 @@ for (const test of tests) {
         params.forEach((val, key) => console.log({ [key]: val }));
     }
 
+    console.log(TidyURL.loglines);
     console.log('Input: ' + link.info.original);
     console.log('Clean: ' + link.url);
-    console.log('New Host: ' + link.info.is_new_host);
+    console.log('New Host: ' + link.info.isNewHost);
     console.log(`${link.info.reduction}% smaller (${link.info.difference} characters)\n\n`);
 }
