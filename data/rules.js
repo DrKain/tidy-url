@@ -1155,6 +1155,12 @@ const $kurlc_rules = [
         name: 'hashnode.com',
         match: /(?:.*\.)?hashnode\.com/i,
         rules: ['source']
+    },
+    {
+        name: 's.amazon-adsystem.com',
+        match: /s.amazon-adsystem.com/i,
+        rules: ['dsig', 'd', 'ex-fch', 'ex-fargs', 'cb'],
+        redirect: 'rd'
     }
 ];
 
