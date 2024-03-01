@@ -88,7 +88,7 @@ handlers['deals.dominos.co.nz'] = {
             const target = str.split('/').pop();
             let url = '';
 
-            if (!target) throw Error('Missing target');
+            if (!target) throw new Error('Missing target');
             url = decodeBase64(target);
 
             return { url };
