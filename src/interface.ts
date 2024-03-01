@@ -79,6 +79,27 @@ export enum EEncoding {
     hex = 'hex'
 }
 
+export interface IConfig {
+    /**
+     * There's a whole number of reasons why you don't want AMP links,
+     * too many to fit in this description.
+     * See this link for more info: https://redd.it/ehrq3z
+     */
+    allowAMP: boolean;
+    /**
+     * Custom handlers for specific websites that use tricky URLs
+     * that make it harder to "clean"
+     */
+    allowCustomHandlers: boolean;
+    /**
+     * Used to auto-redirect to a different URL based on the parameter.
+     * This is used to skip websites that track external links.
+     */
+    allowRedirects: boolean;
+    /** Nothing logged to console */
+    silent: boolean;
+}
+
 export interface IHandlerArgs {
     /** The attemp made at decoding the string, may be invalid */
     decoded: string;
