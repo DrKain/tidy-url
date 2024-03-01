@@ -1,5 +1,5 @@
 import { IHandler } from './interface';
-import { decodeBase64 } from './utils';
+import { decodeBase64, regexExtract } from './utils';
 
 /**
  * This is currently experimental while I decide on how I want to restructure the main code to make it easier to follow.
@@ -70,12 +70,13 @@ handlers['0yxjo.mjt.lu'] = {
 handlers['click.redditmail.com'] = {
     exec: (str, args) => {
         try {
-            const reg = /https:\/\/click\.redditmail\.com\/CL0\//gi;
-            const url = decodeURIComponent(str.replace(reg, ''));
+            const reg = /https:\/\/click\.redditmail\.com\/CL0\/(.*?)\//gi;
+            const matches = regexExtract(reg, str);
 
-            new URL(url);
+            if (typeof matches[1] === 'undefined') throw Error('regexExtract failed to find a URL');
+            const url = decodeURIComponent(matches[1]);
 
-            return { url };
+            return { url: url };
         } catch (error) {
             return { url: args.originalURL, error };
         }
