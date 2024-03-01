@@ -75,10 +75,22 @@ export enum EEncoding {
     hex = 'hex'
 }
 
+export interface IHandlerArgs {
+    /** The attemp made at decoding the string, may be invalid */
+    decoded: string;
+    /** The last part of the URL path, split by a forward slash */
+    lastPath: string;
+    /** The full URL path exclduing the host */
+    fullPath: string;
+    /** A fresh copy of URLSearchParams */
+    urlParams: URLSearchParams;
+}
+
 export interface IHandler {
+    note?: string;
     exec: (
         str: string,
-        ...args: any[]
+        args: IHandlerArgs
     ) => {
         url: string;
         error?: any;

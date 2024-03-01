@@ -137,11 +137,6 @@ export class TidyCleaner {
             decoded = decodeURIComponent(str);
         }
 
-        // This is more of a special case but it may help other rules. See issue #72
-        if (encoding === EEncoding.url2) {
-            decoded = decodeURIComponent(str.replace(/-/g, '%')).replace(/_/g, '/').replace(/%2F/g, '/');
-        }
-
         // hex decode, not the best method but it works.
         // Open a PR if you want to improve it
         if (encoding === EEncoding.hex) {
@@ -333,8 +328,10 @@ export class TidyCleaner {
                 // Use a default string
                 let encodedString: string = '';
 
+                if (lastPath === undefined) lastPath = '';
+
                 // Decide what we are decoding
-                if (param === null && lastPath !== undefined) encodedString = lastPath;
+                if (param === null) encodedString = lastPath;
                 else if (param) encodedString = param;
                 else continue;
 
@@ -363,13 +360,20 @@ export class TidyCleaner {
 
                     if (rule.decode.handler && handler) {
                         data.info.handler = rule.decode.handler;
-                        const result = handler.exec(data.url, [decoded]);
+
+                        const result = handler.exec(data.url, {
+                            decoded,
+                            lastPath,
+                            urlParams: new URL(data.url).searchParams,
+                            fullPath: pathname
+                        });
 
                         // If the handler threw an error or the URL is invalid
                         if (result.error || this.validate(result.url) === false) {
                             if (result.url !== 'undefined') this.log('[error] ' + result.error);
                         }
 
+                        // result.url will always by the original URL when an error is thrown
                         recleanData = result.url;
                     } else {
                         // If the response is a string we can continue

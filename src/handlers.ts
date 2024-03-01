@@ -11,10 +11,23 @@ export const handlers: { [key: string]: IHandler } = {};
 handlers['patchbot.io'] = {
     exec: (str, args) => {
         try {
-            const dec = args[0].replace(/%3D/g, '=');
+            const dec = args.decoded.replace(/%3D/g, '=');
             return { url: decodeURIComponent(dec.split('|')[2]) };
         } catch (error) {
             if (`${error}`.startsWith('URIError')) error = 'Unable to decode URI component. The URL may be invalid';
+            return { url: str, error };
+        }
+    }
+};
+
+handlers['urldefense.proofpoint.com'] = {
+    exec: (str, args) => {
+        try {
+            const arg = args.urlParams.get('u');
+            if (arg === null) throw new Error('Target parameter (u) was null');
+            const url = decodeURIComponent(arg.replace(/-/g, '%')).replace(/_/g, '/').replace(/%2F/g, '/');
+            return { url };
+        } catch (error) {
             return { url: str, error };
         }
     }
@@ -26,7 +39,7 @@ handlers['stardockentertainment.info'] = {
             const target = str.split('/').pop();
             let url = '';
 
-            if (typeof target == 'undefined') throw Error('Undefined target');
+            if (typeof target == 'undefined') throw new Error('Undefined target');
 
             if (typeof atob === 'undefined') {
                 url = Buffer.from(target, 'base64').toString('binary');
@@ -47,7 +60,7 @@ handlers['0yxjo.mjt.lu'] = {
             const target = str.split('/').pop();
             let url = '';
 
-            if (typeof target == 'undefined') throw Error('Undefined target');
+            if (typeof target == 'undefined') throw new Error('Undefined target');
 
             url = decodeBase64(target);
 
