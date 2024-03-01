@@ -89,3 +89,15 @@ export const getLinkDiff = (firstURL: string, secondURL: string): ILinkDiff => {
         reduction: +(100 - (firstURL.length / secondURL.length) * 100).toFixed(2)
     };
 };
+
+export const regexExtract = (regex: RegExp, str: string): string[] => {
+    let matches = null;
+    let result: string[] = [];
+
+    while ((matches = regex.exec(str)) !== null) {
+        if (matches.index === regex.lastIndex) regex.lastIndex++;
+        matches.forEach((v) => result.push(v));
+    }
+
+    return result;
+};
