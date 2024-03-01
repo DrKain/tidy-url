@@ -50,13 +50,15 @@ TidyURL.validate('google.com'); // false (protocol is required!)
 ### AMP & Redirects
 
 By default, tidy-url will remove redirect parameters and AMP links if the rule supports it.  
-You can disable this feature with `allow_redirects` and `allow_amp`.
+You can disable this feature with `allowRedirects` and `allowAMP`.
 Examples:
 
 ```ts
 // These are the defaults.
-TidyURL.allow_redirects = true;
-TidyURL.allow_amp = false;
+TidyURL.config.setMany({
+    allowAMP: false,
+    allowRedirects: true
+});
 
 TidyURL.clean('https://www.google.com/amp/s/github.com');
 TidyURL.clean('https://steamcommunity.com/linkfilter/?url=https://github.com');
@@ -115,8 +117,8 @@ This can be used for debugging, testing or a simple way of letting users know th
             }
         ],
         "decoded": null,
-        "is_new_host": false,
-        "full_clean": true
+        "isNewHost": false,
+        "fullClean": true
     }
 }
 ```
