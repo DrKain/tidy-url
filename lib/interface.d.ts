@@ -62,9 +62,14 @@ export interface IData {
         decoded: {
             [key: string]: any;
         } | null;
-        /** If the cleaned URL is a different host */
+        /** @deprecated Please use `isNewHost` */
         is_new_host: boolean;
+        /** If the compared links have different hosts */
+        isNewHost: boolean;
+        /** @deprecated Please use `fullClean` */
         full_clean: boolean;
+        /** If the code reached the end of the clean without error */
+        fullClean: boolean;
     };
 }
 export declare enum EEncoding {
@@ -73,13 +78,58 @@ export declare enum EEncoding {
     base45 = "base45",
     url = "url",
     urlc = "urlc",
-    url2 = "url2",
     binary = "binary",
     hex = "hex"
 }
+export interface IConfig {
+    /**
+     * There's a whole number of reasons why you don't want AMP links,
+     * too many to fit in this description.
+     * See this link for more info: https://redd.it/ehrq3z
+     */
+    allowAMP: boolean;
+    /**
+     * Custom handlers for specific websites that use tricky URLs
+     * that make it harder to "clean"
+     */
+    allowCustomHandlers: boolean;
+    /**
+     * Used to auto-redirect to a different URL based on the parameter.
+     * This is used to skip websites that track external links.
+     */
+    allowRedirects: boolean;
+    /** Nothing logged to console */
+    silent: boolean;
+}
+export interface IHandlerArgs {
+    /** The attemp made at decoding the string, may be invalid */
+    decoded: string;
+    /** The last part of the URL path, split by a forward slash */
+    lastPath: string;
+    /** The full URL path exclduing the host */
+    fullPath: string;
+    /** A fresh copy of URLSearchParams */
+    urlParams: URLSearchParams;
+    /** The original URL */
+    readonly originalURL: string;
+}
 export interface IHandler {
-    exec: (str: string, ...args: any[]) => {
+    readonly note?: string;
+    exec: (
+    /** The original URL */
+    str: string, 
+    /** Various args that can be used when writing a handler */
+    args: IHandlerArgs) => {
+        /** The original URL */
         url: string;
         error?: any;
     };
+}
+export interface ILinkDiff {
+    /** @deprecated Please use isNewHost */
+    is_new_host: boolean;
+    /** If the compared links have different hosts */
+    isNewHost: boolean;
+    difference: number;
+    reduction: number;
 }

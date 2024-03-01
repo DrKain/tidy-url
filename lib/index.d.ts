@@ -1,27 +1,29 @@
 import { IRule, IData } from './interface';
+import { TidyConfig } from './config';
 export declare class TidyCleaner {
     rules: IRule[];
-    /**
-     * Don't log anything to the console.
-     */
+    /** @deprecated Please use `config.silent` */
     silent: boolean;
-    /**
-     * There's a whole number of reasons why you don't want AMP links,
-     * too many to fit in this description.
-     * See this link for more info: https://redd.it/ehrq3z
-     */
+    /** @deprecated Please use `config.allowAMP` */
     allow_amp: boolean;
-    /**
-     * Used to auto-redirect to a different URL based on the parameter.
-     * This is used to skip websites that track external links.
-     */
+    /** @deprecated Please use `config.allowRedirects` */
     allow_redirects: boolean;
-    /**
-     * Custom handlers for specific websites that use tricky URLs
-     * that make it harder to "clean"
-     */
+    /** @deprecated Please use `config.allowCustomHandlers` */
     allow_custom_handlers: boolean;
+    /**
+     * Stores config options for this cleaner. If you would like to
+     * use multiple configs simply create a new instance
+     */
+    config: TidyConfig;
+    /**
+     * Contains all logged information from the last clean, even if `config.silent` was `true`.
+     * This will be reset when a new URL is cleaned. This is for debugging and not to be relied upon
+     */
     loglines: string[];
+    /**
+     * The full list of all rules with default value
+     * that are not used in the main rules file to save space.
+     */
     get expandedRules(): IRule[];
     constructor();
     /**
@@ -30,26 +32,24 @@ export declare class TidyCleaner {
      */
     private log;
     /**
-     * Determine if the input is a valid URL or not
-     * @param url Any URL
-     * @returns true/false
-     */
-    validate(url: string): boolean;
-    /**
      * Rebuild to ensure trailing slashes or encoded characters match.
      * @param url Any URL
      */
     rebuild(url: string): string;
-    hasParams(url: string): boolean;
-    private isJSON;
-    private getDiff;
     private decode;
+    /**
+     * This lets users know when they are using the deprecated variables that will
+     * be removed in a few updates.
+     */
+    private syncDeprecatedToConfig;
+    /** @deprecated Import `validateURL` instead */
+    validate(url: string): boolean;
     /**
      * Clean a URL
      * @param _url Any URL
      * @returns IData
      */
-    clean(_url: string, allow_reclean?: boolean): IData;
+    clean(_url: string, allowReclean?: boolean): IData;
 }
 export declare const TidyURL: TidyCleaner;
 export declare const clean: (url: string) => IData;
