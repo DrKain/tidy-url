@@ -9,32 +9,32 @@ import { decodeBase64 } from './utils';
 export const handlers: { [key: string]: IHandler } = {};
 
 handlers['patchbot.io'] = {
-    exec: (str, args) => {
+    exec: (_str, args) => {
         try {
             const dec = args.decoded.replace(/%3D/g, '=');
             return { url: decodeURIComponent(dec.split('|')[2]) };
         } catch (error) {
             if (`${error}`.startsWith('URIError')) error = 'Unable to decode URI component. The URL may be invalid';
-            return { url: str, error };
+            return { url: args.originalURL, error };
         }
     }
 };
 
 handlers['urldefense.proofpoint.com'] = {
-    exec: (str, args) => {
+    exec: (_str, args) => {
         try {
             const arg = args.urlParams.get('u');
             if (arg === null) throw new Error('Target parameter (u) was null');
             const url = decodeURIComponent(arg.replace(/-/g, '%')).replace(/_/g, '/').replace(/%2F/g, '/');
             return { url };
         } catch (error) {
-            return { url: str, error };
+            return { url: args.originalURL, error };
         }
     }
 };
 
 handlers['stardockentertainment.info'] = {
-    exec: (str) => {
+    exec: (str, args) => {
         try {
             const target = str.split('/').pop();
             let url = '';
@@ -49,13 +49,13 @@ handlers['stardockentertainment.info'] = {
 
             return { url: url };
         } catch (error) {
-            return { url: str, error };
+            return { url: args.originalURL, error };
         }
     }
 };
 
 handlers['0yxjo.mjt.lu'] = {
-    exec: (str) => {
+    exec: (str, args) => {
         try {
             const target = str.split('/').pop();
             let url = '';
@@ -66,13 +66,13 @@ handlers['0yxjo.mjt.lu'] = {
 
             return { url: url };
         } catch (error) {
-            return { url: str, error };
+            return { url: args.originalURL, error };
         }
     }
 };
 
 handlers['click.redditmail.com'] = {
-    exec: (str) => {
+    exec: (str, args) => {
         try {
             const reg = /https:\/\/click\.redditmail\.com\/CL0\//gi;
             const url = decodeURIComponent(str.replace(reg, ''));
@@ -81,13 +81,13 @@ handlers['click.redditmail.com'] = {
 
             return { url };
         } catch (error) {
-            return { url: str, error };
+            return { url: args.originalURL, error };
         }
     }
 };
 
 handlers['deals.dominos.co.nz'] = {
-    exec: (str) => {
+    exec: (str, args) => {
         try {
             const target = str.split('/').pop();
             let url = '';
@@ -97,7 +97,7 @@ handlers['deals.dominos.co.nz'] = {
 
             return { url };
         } catch (error) {
-            return { url: str, error };
+            return { url: args.originalURL, error };
         }
     }
 };
