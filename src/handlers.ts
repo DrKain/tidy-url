@@ -41,11 +41,7 @@ handlers['stardockentertainment.info'] = {
 
             if (typeof target == 'undefined') throw new Error('Undefined target');
 
-            if (typeof atob === 'undefined') {
-                url = Buffer.from(target, 'base64').toString('binary');
-            } else {
-                url = atob(target);
-            }
+            url = decodeBase64(target);
 
             return { url: url };
         } catch (error) {
