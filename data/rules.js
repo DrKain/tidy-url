@@ -1046,7 +1046,10 @@ const $kurlc_rules = [
     {
         name: 'urldefense.proofpoint.com',
         match: /urldefense.proofpoint.com/i,
-        decode: { param: 'u', encoding: 'url2' }
+        decode: {
+            param: 'u',
+            handler: 'urldefense.proofpoint.com'
+        }
     },
     {
         name: 'curseforge.com',
