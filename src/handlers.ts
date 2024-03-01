@@ -73,7 +73,7 @@ handlers['click.redditmail.com'] = {
             const reg = /https:\/\/click\.redditmail\.com\/CL0\/(.*?)\//gi;
             const matches = regexExtract(reg, str);
 
-            if (typeof matches[1] === 'undefined') throw Error('regexExtract failed to find a URL');
+            if (typeof matches[1] === 'undefined') throw new Error('regexExtract failed to find a URL');
             const url = decodeURIComponent(matches[1]);
 
             return { url: url };
