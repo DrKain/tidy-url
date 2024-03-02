@@ -26,25 +26,33 @@ export interface IRule {
         /**
          * Standard AMP handling using RegExp capture groups.
          */
-        regex?: RegExp | null;
+        regex?: RegExp;
         /**
          * Replace text in the URL. If `with` is used the text will be
          * replaced with what you set instead of removing it.
          */
         replace?: {
+            /** The text or RegEx you want to replace */
             text: string | RegExp;
+            /** The text you want to replace it with. Optional */
             with?: string;
+            /** Currently has no effect, this will change in another update */
+            target?: 'host' | 'full';
         };
     };
     /**
-     * @experimental
      * Used to decode a parameter or path, then redirect based on the returned object
      */
     decode: {
+        /** Target parameter */
         param?: string;
+        /** If the decoded response is JSON, this will look for a certain key */
         lookFor?: string;
+        /** Decide what encoding to use */
         encoding?: EEncoding;
+        /** Target the full path instead of a parameter */
         targetPath?: boolean;
+        /** Use a custom handler found in handlers.ts */
         handler?: string;
     };
     /** Remove empty values */
@@ -54,6 +62,7 @@ export interface IRule {
 export interface IData {
     /** Cleaned URL */
     url: string;
+    /** Some debugging information about what was changed */
     info: {
         /** Original URL before cleaning */
         original: string;
