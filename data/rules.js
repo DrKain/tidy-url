@@ -149,7 +149,9 @@ const $kurlc_rules = [
             'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr', 'rlz',
             'gs_lp', 'sca_esv', 'si', 'gs_l'
         ],
-        amp: /www\.google\.(?:.*)\/amp\/s\/(.*)/gim,
+        amp: {
+            regex: /www\.google\.(?:.*)\/amp\/s\/(.*)/gim,
+        },
         redirect: 'url'
     },
     {
@@ -256,10 +258,7 @@ const $kurlc_rules = [
             'upsellTrk', 'upsellTrackingId', 'src', 'trackingId',
             'midToken', 'midSig', 'trkEmail', 'eid'
         ],
-        allow: [
-            // One Time Password Token
-            'otpToken'
-        ]
+        allow: [ 'otpToken' ]
     },
     {
         name: 'indeed.com',
@@ -450,7 +449,9 @@ const $kurlc_rules = [
         name: 'ampproject.org',
         match: /cdn.ampproject.org/i,
         rules: ['amp_gsa', 'amp_js_v', 'usqp', 'outputType'],
-        amp: /cdn\.ampproject\.org\/v\/s\/(.*)\#(aoh|csi|referrer|amp)/gim
+        amp: {
+            regex: /cdn\.ampproject\.org\/v\/s\/(.*)\#(aoh|csi|referrer|amp)/gim
+        }
     },
     {
         name: 'nbcnews.com',
@@ -535,7 +536,9 @@ const $kurlc_rules = [
     {
         name: 'anrdoezrs.net',
         match: /anrdoezrs.net/i,
-        amp: /(?:.*)\/links\/(?:.*)\/type\/dlg\/sid\/\[subid_value\]\/(.*)/gi
+        amp: {
+            regex: /(?:.*)\/links\/(?:.*)\/type\/dlg\/sid\/\[subid_value\]\/(.*)/gi
+        }
     },
     {
         name: 'emjcd.com',
@@ -558,7 +561,7 @@ const $kurlc_rules = [
     {
         name: 'tvguide.com',
         match: /^www.tvguide.com/i,
-        amp: /(.*)\#link=/i
+        amp: { regex: /(.*)\#link=/i }
     },
     {
         name: 'ranker.com',
@@ -627,7 +630,7 @@ const $kurlc_rules = [
     {
         name: 'awstrack.me',
         match: /^.*awstrack.me/i,
-        amp: /awstrack.me\/L0\/(.*)/
+        amp: { regex: /awstrack.me\/L0\/(.*)/ }
     },
     {
         name: 'express.co.uk',
@@ -721,7 +724,12 @@ const $kurlc_rules = [
     {
         name: 'amp.scmp.com',
         match: /amp\.scmp\.com/i,
-        amp: /amp\.(.*)/i
+        amp: {
+            replace: {
+                text: 'amp.scmp.com',
+                with: 'scmp.com'
+            }
+        }
     },
     {
         name: 'justwatch.com',
@@ -876,7 +884,12 @@ const $kurlc_rules = [
     {
         name: 'amp.dw.com',
         match: /amp.dw.com/i,
-        amp: /amp\.(.*)/i
+        amp: {
+            replace: {
+                text: 'amp.dw.com',
+                with: 'dw.com'
+            }
+        }
     },
     {
         name: 'joybuggy.com',
@@ -912,7 +925,12 @@ const $kurlc_rules = [
     {
         name: 'knowyourmeme.com',
         match: /amp.knowyourmeme.com/i,
-        amp: /(?:\/\/|^)amp\.(.*)$/gim
+        amp: {
+            replace: {
+                text: 'amp.knowyourmeme.com',
+                with: 'knowyourmeme.com'
+            }
+        }
     },
     {
         name: 'ojrq.net',
@@ -922,7 +940,7 @@ const $kurlc_rules = [
     {
         name: 'click.pstmrk.it',
         match: /click.pstmrk.it/i,
-        amp: /click\.pstmrk\.it\/(?:[a-zA-Z0-9]){1,2}\/(.*?)\//gim,
+        amp: { regex: /click\.pstmrk\.it\/(?:[a-zA-Z0-9]){1,2}\/(.*?)\//gim }
     },
     {
         name: 'track.roeye.co.nz',
@@ -938,7 +956,12 @@ const $kurlc_rules = [
         name: 'cbsnews.com',
         match: /www.cbsnews.com/i,
         rules: ['ftag', 'intcid'],
-        replace: ['/amp']
+        amp: {
+            replace: {
+                text: 'cbsnews.com/amp/',
+                with: 'cbsnews.com/'
+            }
+        }
     },
     {
         name: 'jobs.venturebeat.com',
@@ -1165,13 +1188,28 @@ const $kurlc_rules = [
     {
         name: 'hypable.com',
         match: /www.hypable.com/i,
-        amp: /^(.*?)\/amp\//gi
+        amp: { replace: { text: /amp\/$/gi } }
     },
     {
         name: 'theguardian.com',
         match: /theguardian.com/i,
-        amp: /amp\.(.*)$/gi,
+        amp: {
+            replace: {
+                text: 'amp.theguardian.com',
+                with: 'theguardian.com'
+            }
+        },
         rules: ['INTCMP', 'acquisitionData', 'REFPVID']
+    },
+    {
+        name: 'indiatoday.in',
+        match: /www.indiatoday.in/i,
+        amp: {
+            replace: {
+                text: 'www.indiatoday.in/amp/',
+                with: 'www.indiatoday.in/'
+            }
+        }
     }
 ];
 
