@@ -19,7 +19,10 @@ export declare class TidyCleaner {
      * Contains all logged information from the last clean, even if `config.silent` was `true`.
      * This will be reset when a new URL is cleaned. This is for debugging and not to be relied upon
      */
-    loglines: string[];
+    loglines: {
+        type: string;
+        message: string;
+    }[];
     /**
      * The full list of all rules with default value
      * that are not used in the main rules file to save space.

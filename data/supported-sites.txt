@@ -1,4 +1,4 @@
-Total unique rules: 817
+Total unique rules: 822
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -79,6 +79,7 @@ Total unique rules: 817
 | honeycode.aws                 | 12    |
 | hubspot.com                   | 2     |
 | humblebundle.com              | 5     |
+| hypable.com                   | 1     |
 | imdb.com                      | 11    |
 | imgur.com                     | 1     |
 | imp.i305175.net               | 1     |
@@ -163,6 +164,7 @@ Total unique rules: 817
 | support-dev.discord.com       | 1     |
 | syteapi.com                   | 1     |
 | techcrunch.com                | 3     |
+| theguardian.com               | 4     |
 | thewarehouse.co.nz            | 6     |
 | threadless.com                | 3     |
 | ticketmaster.co.nz            | 1     |
