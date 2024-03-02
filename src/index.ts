@@ -2,7 +2,6 @@ import { decodeBase64, getLinkDiff, isJSON, urlHasParams, validateURL } from './
 import { IRule, IData, EEncoding } from './interface';
 import { handlers } from './handlers';
 import { TidyConfig } from './config';
-import { EventEmitter } from 'stream';
 
 const $github = 'https://github.com/DrKain/tidy-url';
 
@@ -29,7 +28,6 @@ export class TidyCleaner {
      * This will be reset when a new URL is cleaned. This is for debugging and not to be relied upon
      */
     public loglines: { type: string; message: string }[] = [];
-    public logger: EventEmitter = new EventEmitter();
 
     /**
      * The full list of all rules with default value
