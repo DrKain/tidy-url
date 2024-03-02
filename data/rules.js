@@ -1166,6 +1166,12 @@ const $kurlc_rules = [
         name: 'hypable.com',
         match: /www.hypable.com/i,
         amp: /^(.*?)\/amp\//gi
+    },
+    {
+        name: 'theguardian.com',
+        match: /theguardian.com/i,
+        amp: /amp\.(.*)$/gi,
+        rules: ['INTCMP', 'acquisitionData', 'REFPVID']
     }
 ];
 
