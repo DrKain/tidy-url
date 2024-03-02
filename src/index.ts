@@ -285,21 +285,44 @@ export class TidyCleaner {
         if (this.config.allowAMP === false) {
             for (const rule of data.info.match) {
                 try {
-                    // Ensure the amp rule matches
-                    if (rule.amp && data.url.match(rule.amp)) {
-                        // Reset the lastIndex
-                        rule.amp.lastIndex = 0;
-                        const result = rule.amp.exec(data.url);
-                        if (result && result[1]) {
+                    // Ensure at least one rule exists
+                    if (rule.amp && (rule.amp.regex || rule.amp.replace)) {
+                        // Handle replacing text in the URL
+                        if (rule.amp.replace) {
+                            data.info.handler = rule.name;
+                            this.log('AMP Replace: ' + rule.amp.replace.text, 'info');
+                            const toReplace = rule.amp.replace.text;
+                            const toReplaceWith = rule.amp.replace.with ?? '';
+                            data.url = data.url.replace(toReplace, toReplaceWith);
+                        }
+
+                        // Use RegEx capture groups
+                        if (rule.amp.regex && data.url.match(rule.amp.regex)) {
+                            data.info.handler = rule.name;
+                            this.log('AMP RegEx: ' + rule.amp.regex, 'info');
+
+                            rule.amp.regex.lastIndex = 0;
+                            const result = rule.amp.regex.exec(data.url);
+
                             // If there is a result, replace the URL
-                            let target = decodeURIComponent(result[1]);
-                            if (!target.startsWith('https')) target = 'https://' + target;
-                            if (validateURL(target)) {
-                                data.url = allowReclean ? this.clean(target, false).url : target;
-                                if (data.url.endsWith('%3Famp')) data.url = data.url.slice(0, -6);
-                                if (data.url.endsWith('amp/')) data.url = data.url.slice(0, -4);
+                            if (result && result[1]) {
+                                let target = decodeURIComponent(result[1]);
+                                // Add the protocol when it's missing
+                                if (!target.startsWith('https')) target = 'https://' + target;
+                                // Valiate the URL to make sure it's still good
+                                if (validateURL(target)) {
+                                    // Sometimes the result is another domain that has its own tracking parameters
+                                    // So a re-clean can be useful.
+                                    data.url = allowReclean ? this.clean(target, false).url : target;
+                                }
+                            } else {
+                                this.log('AMP RegEx failed to get a result for ' + rule.name, 'error');
                             }
                         }
+
+                        // Remove trailing amp/ or /amp
+                        if (data.url.endsWith('%3Famp')) data.url = data.url.slice(0, -6);
+                        if (data.url.endsWith('amp/')) data.url = data.url.slice(0, -4);
                     }
                 } catch (error) {
                     this.log(`${error}`, 'error');

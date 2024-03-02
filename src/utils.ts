@@ -1,4 +1,4 @@
-import { IData, ILinkDiff } from './interface';
+import { ILinkDiff } from './interface';
 
 /**
  * Accepts any base64 string and attempts to decode it.
