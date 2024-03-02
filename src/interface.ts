@@ -22,7 +22,20 @@ export interface IRule {
      * too many to fit in this description.
      * See this link for more info: https://redd.it/ehrq3z
      */
-    amp: RegExp | null;
+    amp: {
+        /**
+         * Standard AMP handling using RegExp capture groups.
+         */
+        regex?: RegExp | null;
+        /**
+         * Replace text in the URL. If `with` is used the text will be
+         * replaced with what you set instead of removing it.
+         */
+        replace?: {
+            text: string | RegExp;
+            with?: string;
+        };
+    };
     /**
      * @experimental
      * Used to decode a parameter or path, then redirect based on the returned object
