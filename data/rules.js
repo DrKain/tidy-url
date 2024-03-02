@@ -1161,6 +1161,11 @@ const $kurlc_rules = [
         match: /s.amazon-adsystem.com/i,
         rules: ['dsig', 'd', 'ex-fch', 'ex-fargs', 'cb'],
         redirect: 'rd'
+    },
+    {
+        name: 'hypable.com',
+        match: /www.hypable.com/i,
+        amp: /^(.*?)\/amp\//gi
     }
 ];
 
