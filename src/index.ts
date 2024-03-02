@@ -2,6 +2,7 @@ import { decodeBase64, getLinkDiff, isJSON, urlHasParams, validateURL } from './
 import { IRule, IData, EEncoding } from './interface';
 import { handlers } from './handlers';
 import { TidyConfig } from './config';
+import { EventEmitter } from 'stream';
 
 const $github = 'https://github.com/DrKain/tidy-url';
 
@@ -27,7 +28,8 @@ export class TidyCleaner {
      * Contains all logged information from the last clean, even if `config.silent` was `true`.
      * This will be reset when a new URL is cleaned. This is for debugging and not to be relied upon
      */
-    public loglines: string[] = [];
+    public loglines: { type: string; message: string }[] = [];
+    public logger: EventEmitter = new EventEmitter();
 
     /**
      * The full list of all rules with default value
@@ -56,7 +58,7 @@ export class TidyCleaner {
             this.rules = require('../data/rules.js');
         } catch (error) {
             // If this fails nothing can be cleaned
-            this.log(`${error}`);
+            this.log(`${error}`, 'error');
             this.rules = [];
         }
     }
@@ -65,9 +67,9 @@ export class TidyCleaner {
      * Only log to the console if debug is enabled
      * @param str Message
      */
-    private log(str: string) {
-        this.loglines.push(str);
-        if (!this.config.silent) console.log(str);
+    private log(str: string, type: 'all' | 'error' | 'info' | 'warn') {
+        this.loglines.push({ type, message: str });
+        if (!this.config.silent) console.log(`[${type}] ${str}`);
     }
 
     /**
@@ -122,19 +124,19 @@ export class TidyCleaner {
 
         if (this.allow_amp !== undefined) {
             this.config.allowAMP = this.allow_amp;
-            this.log('DEPRECATED: Please use `config.allowAMP` instead of `allow_amp`');
+            this.log('DEPRECATED: Please use `config.allowAMP` instead of `allow_amp`', 'warn');
         }
         if (this.allow_redirects !== undefined) {
             this.config.allowRedirects = this.allow_redirects;
-            this.log('DEPRECATED: Please use `config.allowRedirects` instead of `allow_redirects`');
+            this.log('DEPRECATED: Please use `config.allowRedirects` instead of `allow_redirects`', 'warn');
         }
         if (this.allow_custom_handlers !== undefined) {
             this.config.allowCustomHandlers = this.allow_custom_handlers;
-            this.log('DEPRECATED: Please use `config.allowCustomHandlers` instead of `allow_custom_handlers`');
+            this.log('DEPRECATED: Please use `config.allowCustomHandlers` instead of `allow_custom_handlers`', 'warn');
         }
         if (this.silent !== undefined) {
             this.config.silent = this.silent;
-            this.log('DEPRECATED: Please use `config.silent` instead of `silent`');
+            this.log('DEPRECATED: Please use `config.silent` instead of `silent`', 'warn');
         }
     }
 
@@ -175,7 +177,7 @@ export class TidyCleaner {
         // Make sure the URL is valid before we try to clean it
         if (!validateURL(_url)) {
             if (_url !== 'undefined' && _url.length > 0) {
-                this.log('[error] Invalid URL: ' + _url);
+                this.log('Invalid URL: ' + _url, 'error');
             }
             return data;
         }
@@ -275,7 +277,7 @@ export class TidyCleaner {
                         data.url = `${value}` + original.hash;
                         if (allowReclean) data.url = this.clean(data.url, false).url;
                     } else {
-                        this.log('[error] Failed to redirect: ' + value);
+                        this.log('Failed to redirect: ' + value, 'error');
                     }
                 }
             }
@@ -302,7 +304,7 @@ export class TidyCleaner {
                         }
                     }
                 } catch (error) {
-                    this.log(`${error}`);
+                    this.log(`${error}`, 'error');
                 }
             }
         }
@@ -332,7 +334,7 @@ export class TidyCleaner {
                 else continue;
 
                 if (typeof encodedString !== 'string') {
-                    this.log(`[error] Expected ${encodedString} to be a string`);
+                    this.log(`Expected ${encodedString} to be a string`, 'error');
                     continue;
                 }
 
@@ -351,7 +353,7 @@ export class TidyCleaner {
                     const handler = handlers[rule.decode.handler];
 
                     if (typeof handler === 'undefined') {
-                        this.log('[error] Handler was not found for ' + rule.decode.handler);
+                        this.log('Handler was not found for ' + rule.decode.handler, 'error');
                     }
 
                     if (rule.decode.handler && handler) {
@@ -368,7 +370,7 @@ export class TidyCleaner {
 
                         // If the handler threw an error or the URL is invalid
                         if (result.error || validateURL(result.url) === false) {
-                            if (result.url !== 'undefined') this.log('[error] ' + result.error);
+                            if (result.url !== 'undefined') this.log(result.error, 'error');
                         }
 
                         // result.url will always by the original URL when an error is thrown
@@ -387,7 +389,7 @@ export class TidyCleaner {
                     data.url = `${target}` + original.hash;
                 }
             } catch (error) {
-                this.log(`[error] ${error}`);
+                this.log(`${error}`, 'error');
             }
         }
 
@@ -407,7 +409,7 @@ export class TidyCleaner {
 
         // If the link is longer then we have an issue
         if (data.info.reduction < 0) {
-            this.log(`[error] Reduction is ${data.info.reduction}. Please report this link on GitHub: ${$github}/issues`);
+            this.log(`Reduction is ${data.info.reduction}. Please report this link on GitHub: ${$github}/issues`, 'error');
             data.url = data.info.original;
         }
 
