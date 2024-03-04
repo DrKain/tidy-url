@@ -756,7 +756,7 @@ const $kurlc_rules = [
     {
         name: 'syteapi.com',
         match: /syteapi\.com/i,
-        decode: { param: 'url' }
+        decode: { param: 'url', encoding: 'base64' }
     },
     {
         name: 'castorama.fr',
