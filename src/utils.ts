@@ -1,4 +1,4 @@
-import { ILinkDiff } from './interface';
+import { EEncoding, ILinkDiff } from './interface';
 
 /**
  * Accepts any base64 string and attempts to decode it.
@@ -100,4 +100,26 @@ export const regexExtract = (regex: RegExp, str: string): string[] => {
     }
 
     return result;
+};
+
+const _placeholder = (decoded: string) => decoded;
+const decoders: Record<EEncoding, (decoded: string) => string> = {
+    [EEncoding.url]: (decoded: string) => decodeURI(decoded),
+    [EEncoding.urlc]: (decoded: string) => decodeURIComponent(decoded),
+    [EEncoding.base32]: _placeholder,
+    [EEncoding.base45]: _placeholder,
+    [EEncoding.base64]: (decoded: string) => decodeBase64(decoded),
+    [EEncoding.binary]: _placeholder,
+    [EEncoding.hex]: (decoded: string) => {
+        let hex = decoded.toString();
+        let out = '';
+        for (var i = 0; i < hex.length; i += 2) {
+            out += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        }
+        return out;
+    }
+};
+
+export const decodeURL = (str: string, encoding: EEncoding = EEncoding.base64): string => {
+    return decoders[encoding](str);
 };

@@ -1,4 +1,4 @@
-import { decodeBase64, getLinkDiff, isJSON, urlHasParams, validateURL } from './utils';
+import { decodeBase64, decodeURL, getLinkDiff, isJSON, urlHasParams, validateURL } from './utils';
 import { IRule, IData, EEncoding } from './interface';
 import { handlers } from './handlers';
 import { TidyConfig } from './config';
@@ -77,40 +77,6 @@ export class TidyCleaner {
     public rebuild(url: string): string {
         const original = new URL(url);
         return original.protocol + '//' + original.host + original.pathname + original.search + original.hash;
-    }
-
-    private decode(str: string, encoding: EEncoding = EEncoding.base64): string {
-        let decoded = str;
-
-        // Simple base64 decoding
-        if (encoding === EEncoding.base64) {
-            return decodeBase64(decoded);
-        }
-
-        // Decode uri when used in URL parameters
-        if (encoding === EEncoding.url) {
-            decoded = decodeURI(str);
-        }
-
-        // decodeURIComponent
-        if (encoding === EEncoding.urlc) {
-            decoded = decodeURIComponent(str);
-        }
-
-        // hex decode, not the best method but it works.
-        // Open a PR if you want to improve it
-        if (encoding === EEncoding.hex) {
-            let hex = str.toString();
-            let out = '';
-
-            for (var i = 0; i < hex.length; i += 2) {
-                out += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
-            }
-
-            decoded = out;
-        }
-
-        return decoded;
     }
 
     /**
@@ -267,7 +233,7 @@ export class TidyCleaner {
                 let value = cleaner_ci.get(target) as string;
 
                 // Sometimes the parameter is encoded
-                const isEncoded = this.decode(value, EEncoding.urlc);
+                const isEncoded = decodeURL(value, EEncoding.urlc);
                 if (isEncoded !== value && validateURL(isEncoded)) value = isEncoded;
 
                 if (target.length && cleaner_ci.has(target)) {
@@ -359,7 +325,7 @@ export class TidyCleaner {
                     continue;
                 }
 
-                let decoded = this.decode(encodedString, encoding);
+                let decoded = decodeURL(encodedString, encoding);
                 let target = '';
                 let recleanData = null;
 
@@ -396,10 +362,10 @@ export class TidyCleaner {
 
                         // result.url will always by the original URL when an error is thrown
                         recleanData = result.url;
-                    } else {
-                        // If the response is a string we can continue
-                        target = decoded;
                     }
+                } else {
+                    // If the response is a string we can continue
+                    target = decoded;
                 }
 
                 // Re-clean the URL after handler result
