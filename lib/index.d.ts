@@ -39,7 +39,6 @@ export declare class TidyCleaner {
      * @param url Any URL
      */
     rebuild(url: string): string;
-    private decode;
     /**
      * This lets users know when they are using the deprecated variables that will
      * be removed in a few updates.

@@ -1,4 +1,4 @@
-import { ILinkDiff } from './interface';
+import { EEncoding, ILinkDiff } from './interface';
 /**
  * Accepts any base64 string and attempts to decode it.
  * If run through the browser `atob` will be used, otherwise
@@ -35,3 +35,12 @@ export declare const validateURL: (url: string) => boolean;
  */
 export declare const getLinkDiff: (firstURL: string, secondURL: string) => ILinkDiff;
 export declare const regexExtract: (regex: RegExp, str: string) => string[];
+/**
+ * Attempts to decode a URL or string using the selected method.
+ * If the decoding fails the original string will be returned.
+ * `encoding` is optional and will default to base64
+ * @param str String to decode
+ * @param encoding Encoding to use
+ * @returns decoded string
+ */
+export declare const decodeURL: (str: string, encoding?: EEncoding) => string;

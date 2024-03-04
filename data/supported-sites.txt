@@ -1,4 +1,4 @@
-Total unique rules: 822
+Total unique rules: 831
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -67,6 +67,7 @@ Total unique rules: 822
 | gamersgate.com                | 1     |
 | gamesload.com                 | 1     |
 | gamesplanet.com               | 1     |
+| garageclothing.com            | 2     |
 | gate.sc                       | 1     |
 | getmusicbee.com               | 1     |
 | go2cloud.org                  | 1     |
@@ -85,6 +86,7 @@ Total unique rules: 822
 | imp.i305175.net               | 1     |
 | indeed.com                    | 2     |
 | independent.co.uk             | 2     |
+| indiatoday.in                 | 1     |
 | indiegala.com                 | 1     |
 | instagram.com                 | 3     |
 | inyourarea.co.uk              | 3     |
@@ -148,6 +150,9 @@ Total unique rules: 822
 | redirect.viglink.com          | 1     |
 | s.amazon-adsystem.com         | 6     |
 | s.pemsrv.com                  | 10    |
+| seek.co.nz                    | 2     |
+| seekbusiness.com.au           | 2     |
+| seekvolunteer.co.nz           | 2     |
 | shopee.com                    | 8     |
 | sjv.io                        | 1     |
 | solodeportes.com.ar           | 2     |
