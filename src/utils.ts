@@ -102,6 +102,10 @@ export const regexExtract = (regex: RegExp, str: string): string[] => {
     return result;
 };
 
+/**
+ * These are methods that have not been written yet,
+ * the original string will be returned.
+ */
 const _placeholder = (decoded: string) => decoded;
 const decoders: Record<EEncoding, (decoded: string) => string> = {
     [EEncoding.url]: (decoded: string) => decodeURI(decoded),
@@ -120,6 +124,18 @@ const decoders: Record<EEncoding, (decoded: string) => string> = {
     }
 };
 
+/**
+ * Attempts to decode a URL or string using the selected method.
+ * If the decoding fails the original string will be returned.
+ * `encoding` is optional and will default to base64
+ * @param str String to decode
+ * @param encoding Encoding to use
+ * @returns decoded string
+ */
 export const decodeURL = (str: string, encoding: EEncoding = EEncoding.base64): string => {
-    return decoders[encoding](str);
+    try {
+        return decoders[encoding](str);
+    } catch (error) {
+        return str;
+    }
 };
