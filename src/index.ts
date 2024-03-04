@@ -1,4 +1,4 @@
-import { decodeBase64, decodeURL, getLinkDiff, isJSON, urlHasParams, validateURL } from './utils';
+import { decodeURL, getLinkDiff, isJSON, urlHasParams, validateURL } from './utils';
 import { IRule, IData, EEncoding } from './interface';
 import { handlers } from './handlers';
 import { TidyConfig } from './config';
