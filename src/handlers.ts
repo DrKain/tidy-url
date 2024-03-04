@@ -24,8 +24,10 @@ handlers['urldefense.proofpoint.com'] = {
     exec: (_str, args) => {
         try {
             const arg = args.urlParams.get('u');
+
             if (arg === null) throw new Error('Target parameter (u) was null');
             const url = decodeURIComponent(arg.replace(/-/g, '%')).replace(/_/g, '/').replace(/%2F/g, '/');
+
             return { url };
         } catch (error) {
             return { url: args.originalURL, error };
@@ -40,7 +42,6 @@ handlers['stardockentertainment.info'] = {
             let url = '';
 
             if (typeof target == 'undefined') throw new Error('Undefined target');
-
             url = decodeBase64(target);
 
             return { url: url };
@@ -57,7 +58,6 @@ handlers['0yxjo.mjt.lu'] = {
             let url = '';
 
             if (typeof target == 'undefined') throw new Error('Undefined target');
-
             url = decodeBase64(target);
 
             return { url: url };
