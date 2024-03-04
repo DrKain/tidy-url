@@ -1210,6 +1210,11 @@ const $kurlc_rules = [
                 with: 'www.indiatoday.in/'
             }
         }
+    },
+    {
+        name: 'seek.co.nz',
+        match: /www.seek.co.nz/i,
+        rules: ['tracking', 'sc_trk']
     }
 ];
 
