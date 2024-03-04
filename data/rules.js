@@ -1225,6 +1225,11 @@ const $kurlc_rules = [
         name: 'seekbusiness.com.au',
         match: /www.seekbusiness.com.au/i,
         rules: ['tracking', 'cid']
+    },
+    {
+        name: 'garageclothing.com',
+        match: /www.garageclothing.com/i,
+        rules: ['syte_ref', 'site_ref']
     }
 ];
 
