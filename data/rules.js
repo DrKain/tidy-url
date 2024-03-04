@@ -1215,6 +1215,11 @@ const $kurlc_rules = [
         name: 'seek.co.nz',
         match: /www.seek.co.nz/i,
         rules: ['tracking', 'sc_trk']
+    },
+    {
+        name: 'seekvolunteer.co.nz',
+        match: /seekvolunteer.co.nz/i,
+        rules: ['tracking', 'sc_trk']
     }
 ];
 
