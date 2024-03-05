@@ -1230,6 +1230,11 @@ const $kurlc_rules = [
         name: 'garageclothing.com',
         match: /www.garageclothing.com/i,
         rules: ['syte_ref', 'site_ref']
+    },
+    {
+        name: 'urbandictionary.com',
+        match: /urbandictionary.com/i,
+        rules: ['amp']
     }
 ];
 
