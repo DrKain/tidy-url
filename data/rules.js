@@ -1235,6 +1235,11 @@ const $kurlc_rules = [
         name: 'urbandictionary.com',
         match: /urbandictionary.com/i,
         rules: ['amp']
+    },
+    {
+        name: 'norml.org',
+        match: /norml.org/i,
+        rules: ['amp']
     }
 ];
 
