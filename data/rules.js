@@ -1240,6 +1240,11 @@ const $kurlc_rules = [
         name: 'norml.org',
         match: /norml.org/i,
         rules: ['amp']
+    },
+    {
+        name: 'nbcconnecticut.com',
+        match: /www.nbcconnecticut.com/i,
+        rules: ['amp']
     }
 ];
 
