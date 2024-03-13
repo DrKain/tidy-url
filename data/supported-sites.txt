@@ -1,4 +1,4 @@
-Total unique rules: 831
+Total unique rules: 838
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -36,7 +36,7 @@ Total unique rules: 831
 | click.pstmrk.it               | 1     |
 | click.redditmail.com          | 1     |
 | cnbc.com                      | 1     |
-| cnn.com                       | 1     |
+| cnn.com                       | 3     |
 | connect.studentbeans.com      | 1     |
 | cookiepro.com                 | 2     |
 | cooking.nytimes.com           | 10    |
@@ -106,6 +106,7 @@ Total unique rules: 831
 | linksynergy.com               | 3     |
 | local12.com                   | 1     |
 | lowes.com                     | 3     |
+| m.thewire.in                  | 1     |
 | macgamestore.com              | 1     |
 | manymorestores.com            | 1     |
 | marca.com                     | 3     |
@@ -119,12 +120,14 @@ Total unique rules: 831
 | msn.com                       | 3     |
 | music.apple.com               | 5     |
 | myanimelist.net               | 3     |
+| nbcconnecticut.com            | 1     |
 | nbcnews.com                   | 1     |
 | news.artnet.com               | 1     |
 | newsflare.com                 | 1     |
 | newsletter.manor.ch           | 1     |
 | newsweek.com                  | 2     |
 | noctre.com                    | 1     |
+| norml.org                     | 1     |
 | nova.cz                       | 1     |
 | nuuvem.com                    | 3     |
 | office.com                    | 1     |
@@ -132,6 +135,7 @@ Total unique rules: 831
 | optigruen.com                 | 3     |
 | osi.rosenberger.com           | 2     |
 | patchbot.io                   | 1     |
+| pbs.org                       | 1     |
 | pbtech.co.nz                  | 1     |
 | pinterest.com                 | 1     |
 | pixiv.net                     | 3     |
@@ -181,6 +185,7 @@ Total unique rules: 831
 | tvguide.com                   | 1     |
 | twitch.tv                     | 3     |
 | twitter.com                   | 4     |
+| urbandictionary.com           | 1     |
 | urldefense.proofpoint.com     | 1     |
 | voidu.com                     | 1     |
 | walmart.com                   | 30    |
