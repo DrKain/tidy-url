@@ -1261,6 +1261,17 @@ const $kurlc_rules = [
                 with: 'pbs.org/newshour/'
             }
         }
+    },
+    {
+        name: 'm.thewire.in',
+        match: /m.thewire.in/i,
+        amp: {
+            replace: {
+                text: 'm.thewire.in/article/',
+                with: 'thewire.in/'
+            },
+            sliceTrailing: '/amp'
+        }
     }
 ];
 
