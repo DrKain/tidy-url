@@ -18,11 +18,14 @@
 // Use a fresh instance of TidyURL
 const _tidy = new tidyurl.TidyCleaner();
 
-// Enable/disable redirect and amp rules
-_tidy.allow_redirects = true;
-_tidy.allow_amp = false;
-// Don't log invalid links
-_tidy.silent = true;
+_tidy.config.setMany({
+    // Don't log invalid links
+    silent: false,
+    // Enable/disable redirect and amp rules
+    allowAMP: false,
+    allowCustomHandlers: true,
+    allowRedirects: true
+});
 
 // Set to false if you don't want page links to be cleaned
 // If you encounter any problems please report the link on GitHub
@@ -31,7 +34,7 @@ const clean_pages = true;
 // Used for optimization when there's too many links on a page
 const use_optimization = true;
 // Number of links on the page before using optimization
-const opti_threshold = 1000;
+const opti_threshold = 100;
 const opti_dataname = 'tidyurl';
 // Time between each cleanup (in milliseconds)
 const clean_interval = 1000;
@@ -43,7 +46,7 @@ const log = (msg) => console.log(`[tidy-url] ${msg}`);
 
     // If the modified URL is different from the original
     if (link.url !== link.info.original) {
-        if (link.info.is_new_host) window.location.href = link.url;
+        if (link.info.isNewHost) window.location.href = link.url;
         else window.history.pushState('', '', link.url);
     }
 })();
