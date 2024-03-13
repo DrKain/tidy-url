@@ -39,6 +39,11 @@ export interface IRule {
             /** Currently has no effect, this will change in another update */
             target?: 'host' | 'full';
         };
+        /**
+         * Slice off a trailing string, these are usually "/amp" or "amp/"
+         * This setting should help prevent breaking any pages.
+         */
+        sliceTrailing?: string;
     };
     /**
      * Used to decode a parameter or path, then redirect based on the returned object

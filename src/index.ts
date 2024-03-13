@@ -286,6 +286,13 @@ export class TidyCleaner {
                             }
                         }
 
+                        // TODO: Apply to existing rules
+                        if (rule.amp.sliceTrailing) {
+                            if (data.url.endsWith(rule.amp.sliceTrailing)) {
+                                data.url = data.url.slice(0, -rule.amp.sliceTrailing.length);
+                            }
+                        }
+
                         // Remove trailing amp/ or /amp
                         if (data.url.endsWith('%3Famp')) data.url = data.url.slice(0, -6);
                         if (data.url.endsWith('amp/')) data.url = data.url.slice(0, -4);
