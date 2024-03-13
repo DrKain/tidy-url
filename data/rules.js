@@ -1245,6 +1245,16 @@ const $kurlc_rules = [
         name: 'nbcconnecticut.com',
         match: /www.nbcconnecticut.com/i,
         rules: ['amp']
+    },
+    {
+        name: 'pbs.org',
+        match: /www.pbs.org/i,
+        amp: {
+            replace: {
+                text: 'pbs.org/newshour/amp/',
+                with: 'pbs.org/newshour/'
+            }
+        }
     }
 ];
 
