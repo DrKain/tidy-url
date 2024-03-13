@@ -716,7 +716,13 @@ const $kurlc_rules = [
     {
         name: 'cnn.com',
         match: /.*.cnn.com/i,
-        rules: ['hpt'],
+        rules: ['hpt', 'iid'],
+        amp: {
+            replace: {
+                text: 'amp.cnn.com/cnn/',
+                with: 'www.cnn.com/'
+            }
+        },
         exclude: [
             /e.newsletters.cnn.com/gi,
         ]
