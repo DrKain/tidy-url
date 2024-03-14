@@ -1272,6 +1272,11 @@ const $kurlc_rules = [
             },
             sliceTrailing: '/amp'
         }
+    },
+    {
+        name: 'ladysmithchronicle.com',
+        match: /www.ladysmithchronicle.com/i,
+        rules: ['ref']
     }
 ];
 
