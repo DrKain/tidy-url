@@ -365,7 +365,7 @@ const $kurlc_rules = [
     {
         name: 'instagram.com',
         match: /instagram.com/i,
-        rules: ['igshid', 'source'],
+        rules: ['igshid', 'igsh', 'source'],
         redirect: 'u'
     },
     {
