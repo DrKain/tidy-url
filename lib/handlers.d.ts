@@ -1,4 +1,4 @@
-import { IHandler } from './interface';
+import { IHandler } from './interfaces';
 /**
  * This is currently experimental while I decide on how I want to restructure the main code to make it easier to follow.
  * There will need to be handlers for each process of the "clean" as well as these custom cases for sites that mix it up.

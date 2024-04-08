@@ -18,7 +18,7 @@ export class TidyCleaner {
     public allow_redirects!: boolean;
     /** @deprecated Please use `config.allowCustomHandlers` */
     public allow_custom_handlers!: boolean;
-    private redirectHandler: RedirectHandler = new RedirectHandler( new TidyConfig());
+    private redirectHandler: RedirectHandler = new RedirectHandler(new TidyConfig());
     private ampHandler: AmpHandler = new AmpHandler([], this.reapplyClean.bind(this));
 
 
@@ -237,7 +237,6 @@ export class TidyCleaner {
         // Redirect if the redirect parameter exists
         data = this.redirectHandler.handle(data);
 
-        // Instantiate and utilize the AmpHandler class to handle AMP URLs based on provided rules.
         if (this.config.allowAMP === false) {
             this.ampHandler = new AmpHandler(this.rules, this.reapplyClean.bind(this));
             data = this.ampHandler.handle(data);

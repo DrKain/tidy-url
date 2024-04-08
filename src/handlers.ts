@@ -1,4 +1,4 @@
-import { IHandler } from './interface';
+import { IHandler } from './interfaces';
 import { decodeBase64, regexExtract } from './utils';
 
 /**

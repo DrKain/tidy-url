@@ -237,7 +237,6 @@ export class TidyCleaner {
         // Redirect if the redirect parameter exists
         data = this.redirectHandler.handle(data);
 
-        // Instantiate and utilize the AmpHandler class to handle AMP URLs based on provided rules.
         if (this.config.allowAMP === false) {
             this.ampHandler = new AmpHandler(this.rules, this.reapplyClean.bind(this));
             data = this.ampHandler.handle(data);

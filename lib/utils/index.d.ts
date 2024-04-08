@@ -1,4 +1,4 @@
-import { EEncoding, ILinkDiff } from './interface';
+import { EEncoding, ILinkDiff } from '../interfaces';
 /**
  * Accepts any base64 string and attempts to decode it.
  * If run through the browser `atob` will be used, otherwise

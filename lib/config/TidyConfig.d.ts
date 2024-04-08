@@ -1,4 +1,4 @@
-import { IConfig } from './interface';
+import { IConfig } from '../interfaces';
 export declare class TidyConfig implements IConfig {
     allowAMP: boolean;
     allowCustomHandlers: boolean;

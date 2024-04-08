@@ -8,5 +8,5 @@
         "esModuleInterop": true
     },
     "include": ["src"],
-    "exclude": ["node_modules", "src/postbuild.ts"]
+    "exclude": ["node_modules", "src/postbuild.ts", "**/*.test.ts", "**/*.spec.ts"]
 }

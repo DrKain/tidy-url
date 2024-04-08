@@ -63,7 +63,6 @@ export interface IRule {
     /** Remove empty values */
     rev: boolean;
 }
-
 export interface IData {
     /** Cleaned URL */
     url: string;
@@ -78,13 +77,18 @@ export interface IData {
         /** RegEx Replacements */
         replace: any[];
         /** Parameters that were removed */
-        removed: { key: string; value: string }[];
+        removed: {
+            key: string;
+            value: string;
+        }[];
         /** Handler used */
         handler: string | null;
         /** Rules matched */
         match: any[];
         /** The decoded object from the decode parameter (if it exists) */
-        decoded: { [key: string]: any } | null;
+        decoded: {
+            [key: string]: any;
+        } | null;
         /** @deprecated Please use `isNewHost` */
         is_new_host: boolean;
         /** If the compared links have different hosts */
@@ -95,17 +99,15 @@ export interface IData {
         fullClean: boolean;
     };
 }
-
-export enum EEncoding {
-    base64 = 'base64',
-    base32 = 'base32',
-    base45 = 'base45',
-    url = 'url',
-    urlc = 'urlc',
-    binary = 'binary',
-    hex = 'hex'
+export declare enum EEncoding {
+    base64 = "base64",
+    base32 = "base32",
+    base45 = "base45",
+    url = "url",
+    urlc = "urlc",
+    binary = "binary",
+    hex = "hex"
 }
-
 export interface IConfig {
     /**
      * There's a whole number of reasons why you don't want AMP links,
@@ -126,7 +128,6 @@ export interface IConfig {
     /** Nothing logged to console */
     silent: boolean;
 }
-
 export interface IHandlerArgs {
     /** The attemp made at decoding the string, may be invalid */
     decoded: string;
@@ -139,21 +140,18 @@ export interface IHandlerArgs {
     /** The original URL */
     readonly originalURL: string;
 }
-
 export interface IHandler {
     readonly note?: string;
     exec: (
-        /** The original URL */
-        str: string,
-        /** Various args that can be used when writing a handler */
-        args: IHandlerArgs
-    ) => {
+    /** The original URL */
+    str: string, 
+    /** Various args that can be used when writing a handler */
+    args: IHandlerArgs) => {
         /** The original URL */
         url: string;
         error?: any;
     };
 }
-
 export interface ILinkDiff {
     /** @deprecated Please use isNewHost */
     is_new_host: boolean;

@@ -1,4 +1,4 @@
-import { IConfig } from './interface';
+import { IConfig } from '../interfaces';
 
 export class TidyConfig implements IConfig {
     public allowAMP: boolean = false;

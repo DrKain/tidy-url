@@ -1,5 +1,5 @@
-import { IRule, IData } from './interface';
-import { TidyConfig } from './config';
+import { IRule, IData } from './interfaces';
+import { TidyConfig } from './config/TidyConfig';
 export declare class TidyCleaner {
     rules: IRule[];
     /** @deprecated Please use `config.silent` */
@@ -10,6 +10,8 @@ export declare class TidyCleaner {
     allow_redirects: boolean;
     /** @deprecated Please use `config.allowCustomHandlers` */
     allow_custom_handlers: boolean;
+    private redirectHandler;
+    private ampHandler;
     /**
      * Stores config options for this cleaner. If you would like to
      * use multiple configs simply create a new instance
@@ -46,12 +48,14 @@ export declare class TidyCleaner {
     private syncDeprecatedToConfig;
     /** @deprecated Import `validateURL` instead */
     validate(url: string): boolean;
+    private createInitialDataObject;
     /**
      * Clean a URL
      * @param _url Any URL
      * @returns IData
      */
     clean(_url: string, allowReclean?: boolean): IData;
+    private reapplyClean;
 }
 export declare const TidyURL: TidyCleaner;
 export declare const clean: (url: string) => IData;
