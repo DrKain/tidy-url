@@ -2,8 +2,7 @@ import { decodeURL, getLinkDiff, isJSON, urlHasParams, validateURL } from './uti
 import { IRule, IData, EEncoding } from './interfaces';
 import { handlers } from './handlers';
 import { TidyConfig } from './config/TidyConfig';
-import { RedirectHandler }  from './handlers/index';
-import { AmpHandler } from './handlers/AmpHandler';
+import { RedirectHandler, AmpHandler }  from './handlers/index';
 
 const $github = 'https://github.com/DrKain/tidy-url';
 
