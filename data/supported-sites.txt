@@ -1,4 +1,4 @@
-Total unique rules: 838
+Total unique rules: 840
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -88,7 +88,7 @@ Total unique rules: 838
 | independent.co.uk             | 2     |
 | indiatoday.in                 | 1     |
 | indiegala.com                 | 1     |
-| instagram.com                 | 3     |
+| instagram.com                 | 4     |
 | inyourarea.co.uk              | 3     |
 | itch.io                       | 1     |
 | jdoqocy.com                   | 1     |
@@ -100,6 +100,7 @@ Total unique rules: 838
 | ko-fi.com                     | 2     |
 | kqzyfj.com                    | 3     |
 | l.messenger.com               | 1     |
+| ladysmithchronicle.com        | 1     |
 | lenovo.com                    | 6     |
 | lenovo.vzew.net               | 1     |
 | linkedin.com                  | 16    |
