@@ -252,7 +252,7 @@ export class TidyCleaner {
             for (const rule of data.info.match) {
                 try {
                     // Ensure at least one rule exists
-                    if (rule.amp && (rule.amp.regex || rule.amp.replace)) {
+                    if (rule.amp && (rule.amp.regex || rule.amp.replace || rule.amp.sliceTrailing)) {
                         // Handle replacing text in the URL
                         if (rule.amp.replace) {
                             data.info.handler = rule.name;
