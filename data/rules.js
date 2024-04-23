@@ -456,7 +456,13 @@ const $kurlc_rules = [
     {
         name: 'nbcnews.com',
         match: /nbcnews.com/i,
-        rules: ['fbclid']
+        rules: ['fbclid'],
+        amp: {
+            replace: {
+                text: 'www.nbcnews.com/news/amp/',
+                with: 'www.nbcnews.com/news/'
+            }
+        }
     },
     {
         name: 'countdown.co.nz',
