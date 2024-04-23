@@ -1317,7 +1317,7 @@ const $kurlc_rules = [
         rules: ['amp']
     },
     {
-        name: 'www.elprogreso.es',
+        name: 'elprogreso.es',
         match: /www.elprogreso.es/i,
         amp: {
             replace: {
