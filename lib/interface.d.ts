@@ -133,7 +133,7 @@ export interface IHandlerArgs {
     decoded: string;
     /** The last part of the URL path, split by a forward slash */
     lastPath: string;
-    /** The full URL path exclduing the host */
+    /** The full URL path excluding the host */
     fullPath: string;
     /** A fresh copy of URLSearchParams */
     urlParams: URLSearchParams;

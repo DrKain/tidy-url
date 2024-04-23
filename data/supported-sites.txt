@@ -1,4 +1,4 @@
-Total unique rules: 838
+Total unique rules: 847
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -27,6 +27,7 @@ Total unique rules: 838
 | bn5x.net                      | 1     |
 | bostonglobe.com               | 1     |
 | boxofficemojo.com             | 1     |
+| businesstoday.in              | 1     |
 | buyatoyota.com                | 1     |
 | castorama.fr                  | 1     |
 | cbc.ca                        | 3     |
@@ -63,6 +64,7 @@ Total unique rules: 838
 | fiverr.com                    | 6     |
 | flexlinkspro.com              | 1     |
 | frankenergie.nl               | 1     |
+| gadgets360.com                | 1     |
 | gamebillet.com                | 1     |
 | gamersgate.com                | 1     |
 | gamesload.com                 | 1     |
@@ -88,7 +90,7 @@ Total unique rules: 838
 | independent.co.uk             | 2     |
 | indiatoday.in                 | 1     |
 | indiegala.com                 | 1     |
-| instagram.com                 | 3     |
+| instagram.com                 | 4     |
 | inyourarea.co.uk              | 3     |
 | itch.io                       | 1     |
 | jdoqocy.com                   | 1     |
@@ -100,6 +102,7 @@ Total unique rules: 838
 | ko-fi.com                     | 2     |
 | kqzyfj.com                    | 3     |
 | l.messenger.com               | 1     |
+| ladysmithchronicle.com        | 1     |
 | lenovo.com                    | 6     |
 | lenovo.vzew.net               | 1     |
 | linkedin.com                  | 16    |
@@ -107,6 +110,7 @@ Total unique rules: 838
 | local12.com                   | 1     |
 | lowes.com                     | 3     |
 | m.thewire.in                  | 1     |
+| m10news.com                   | 1     |
 | macgamestore.com              | 1     |
 | manymorestores.com            | 1     |
 | marca.com                     | 3     |
@@ -121,7 +125,7 @@ Total unique rules: 838
 | music.apple.com               | 5     |
 | myanimelist.net               | 3     |
 | nbcconnecticut.com            | 1     |
-| nbcnews.com                   | 1     |
+| nbcnews.com                   | 2     |
 | news.artnet.com               | 1     |
 | newsflare.com                 | 1     |
 | newsletter.manor.ch           | 1     |
@@ -174,6 +178,7 @@ Total unique rules: 838
 | syteapi.com                   | 1     |
 | techcrunch.com                | 3     |
 | theguardian.com               | 4     |
+| thenewsminute.com             | 1     |
 | thewarehouse.co.nz            | 6     |
 | threadless.com                | 3     |
 | ticketmaster.co.nz            | 1     |
@@ -182,6 +187,7 @@ Total unique rules: 838
 | tkqlhce.com                   | 1     |
 | track.roeye.co.nz             | 1     |
 | transparency.fb.com           | 1     |
+| turnto10.com                  | 1     |
 | tvguide.com                   | 1     |
 | twitch.tv                     | 3     |
 | twitter.com                   | 4     |
@@ -196,6 +202,7 @@ Total unique rules: 838
 | wingamestore.com              | 1     |
 | wish.com                      | 1     |
 | wsj.com                       | 1     |
+| www.elprogreso.es             | 1     |
 | xhamster.com                  | 1     |
 | xvideos.com                   | 1     |
 | xvideos.red                   | 3     |

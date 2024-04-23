@@ -1305,16 +1305,6 @@ const $kurlc_rules = [
         }
     },
     {
-        name: 'turnto10.com',
-        match: /turnto10.com/i,
-        amp: {
-            replace: {
-                text: 'turnto10.com/amp/',
-                with: 'turnto10.com/'
-            }
-        }
-    },
-    {
         name: 'gadgets360.com',
         match: /www.gadgets360.com/i,
         amp: {
