@@ -1277,6 +1277,16 @@ const $kurlc_rules = [
         name: 'ladysmithchronicle.com',
         match: /www.ladysmithchronicle.com/i,
         rules: ['ref']
+    },
+    {
+        name: 'businesstoday.in',
+        match: /www.businesstoday.in/i,
+        amp: {
+            replace: {
+                text: 'www.businesstoday.in/amp/markets/',
+                with: 'www.businesstoday.in/markets/'
+            }
+        }
     }
 ];
 
