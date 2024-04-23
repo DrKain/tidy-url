@@ -1313,6 +1313,13 @@ const $kurlc_rules = [
                 with: 'turnto10.com/'
             }
         }
+    },
+    {
+        name: 'gadgets360.com',
+        match: /www.gadgets360.com/i,
+        amp: {
+            sliceTrailing: '/amp'
+        }
     }
 ];
 
