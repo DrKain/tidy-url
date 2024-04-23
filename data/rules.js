@@ -1325,6 +1325,16 @@ const $kurlc_rules = [
         name: 'm10news.com',
         match: /m10news.com/i,
         rules: ['amp']
+    },
+    {
+        name: 'www.elprogreso.es',
+        match: /www.elprogreso.es/i,
+        amp: {
+            replace: {
+                text: '.amp.html',
+                with: '.html'
+            }
+        }
     }
 ];
 
