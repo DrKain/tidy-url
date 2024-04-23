@@ -1335,6 +1335,16 @@ const $kurlc_rules = [
                 with: '.html'
             }
         }
+    },
+    {
+        name: 'thenewsminute.com',
+        match: /www.thenewsminute.com/i,
+        amp: {
+            replace: {
+                text: 'www.thenewsminute.com/amp/story/',
+                with: 'www.thenewsminute.com/'
+            }
+        }
     }
 ];
 
