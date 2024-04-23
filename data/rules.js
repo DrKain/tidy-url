@@ -1320,6 +1320,11 @@ const $kurlc_rules = [
         amp: {
             sliceTrailing: '/amp'
         }
+    },
+    {
+        name: 'm10news.com',
+        match: /m10news.com/i,
+        rules: ['amp']
     }
 ];
 
