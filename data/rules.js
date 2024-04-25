@@ -1342,7 +1342,12 @@ const $kurlc_rules = [
         amp: {
             sliceTrailing: '.amp'
         }
+    },
+    {
+        name: 'libretro.com',
+        match: /www.libretro.com/i,
+        rules: ['amp']
     }
-];
+]
 
 module.exports = $kurlc_rules;
