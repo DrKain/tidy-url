@@ -1335,6 +1335,13 @@ const $kurlc_rules = [
                 with: 'www.thenewsminute.com/'
             }
         }
+    },
+    {
+        name: 'mirror.co.uk',
+        match: /www.mirror.co.uk/i,
+        amp: {
+            sliceTrailing: '.amp'
+        }
     }
 ];
 
