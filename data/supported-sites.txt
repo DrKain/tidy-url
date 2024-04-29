@@ -1,4 +1,4 @@
-Total unique rules: 847
+Total unique rules: 850
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -51,6 +51,7 @@ Total unique rules: 847
 | dreamgame.com                 | 1     |
 | dyno.gg                       | 1     |
 | ebay.com                      | 21    |
+| elprogreso.es                 | 1     |
 | emjcd.com                     | 1     |
 | etail.market                  | 1     |
 | etsy.com                      | 6     |
@@ -105,6 +106,7 @@ Total unique rules: 847
 | ladysmithchronicle.com        | 1     |
 | lenovo.com                    | 6     |
 | lenovo.vzew.net               | 1     |
+| libretro.com                  | 1     |
 | linkedin.com                  | 16    |
 | linksynergy.com               | 3     |
 | local12.com                   | 1     |
@@ -120,6 +122,7 @@ Total unique rules: 847
 | microsoft.com                 | 2     |
 | mightyape                     | 1     |
 | milkrun.com                   | 2     |
+| mirror.co.uk                  | 1     |
 | mouser.com                    | 1     |
 | msn.com                       | 3     |
 | music.apple.com               | 5     |
@@ -154,7 +157,7 @@ Total unique rules: 847
 | quizlet.com                   | 2     |
 | ranker.com                    | 5     |
 | redbubble.com                 | 1     |
-| reddit.com                    | 15    |
+| reddit.com                    | 16    |
 | redirect.viglink.com          | 1     |
 | s.amazon-adsystem.com         | 6     |
 | s.pemsrv.com                  | 10    |
@@ -202,7 +205,6 @@ Total unique rules: 847
 | wingamestore.com              | 1     |
 | wish.com                      | 1     |
 | wsj.com                       | 1     |
-| www.elprogreso.es             | 1     |
 | xhamster.com                  | 1     |
 | xvideos.com                   | 1     |
 | xvideos.red                   | 3     |
