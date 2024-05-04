@@ -1348,6 +1348,13 @@ const $kurlc_rules = [
         name: 'libretro.com',
         match: /www.libretro.com/i,
         rules: ['amp']
+    },
+    {
+        name: 'the-sun.com',
+        match: /www.the-sun.com/i,
+        amp: {
+            sliceTrailing: 'amp/'
+        }
     }
 ]
 
