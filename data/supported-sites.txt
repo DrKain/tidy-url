@@ -1,4 +1,4 @@
-Total unique rules: 850
+Total unique rules: 852
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -76,7 +76,7 @@ Total unique rules: 850
 | go2cloud.org                  | 1     |
 | gog.com                       | 7     |
 | gog.salesmanago.com           | 4     |
-| google.com                    | 23    |
+| google.com                    | 24    |
 | greenmangaming.com            | 5     |
 | hashnode.com                  | 1     |
 | hbomax.com                    | 1     |
@@ -180,6 +180,7 @@ Total unique rules: 850
 | support-dev.discord.com       | 1     |
 | syteapi.com                   | 1     |
 | techcrunch.com                | 3     |
+| the-sun.com                   | 1     |
 | theguardian.com               | 4     |
 | thenewsminute.com             | 1     |
 | thewarehouse.co.nz            | 6     |
