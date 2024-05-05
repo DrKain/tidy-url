@@ -148,7 +148,7 @@ const $kurlc_rules = [
         rules: [
             'sourceid', 'client', 'aqs', 'sxsrf', 'uact', 'ved', 'iflsig', 'source',
             'ei', 'oq', 'gs_lcp', 'sclient', 'bih', 'biw', 'sa', 'dpr', 'rlz',
-            'gs_lp', 'sca_esv', 'si', 'gs_l'
+            'gs_lp', 'sca_esv', 'si', 'gs_l', 'gs_lcrp'
         ],
         amp: {
             regex: /www\.google\.(?:.*)\/amp\/s\/(.*)/gim,
