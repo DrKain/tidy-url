@@ -1355,6 +1355,13 @@ const $kurlc_rules = [
         amp: {
             sliceTrailing: 'amp/'
         }
+    },
+    {
+        name: 'bostonherald.com',
+        match: /www.bostonherald.com/i,
+        amp: {
+            sliceTrailing: 'amp/'
+        }
     }
 ]
 
