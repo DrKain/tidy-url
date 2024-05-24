@@ -403,7 +403,7 @@ export class TidyCleaner {
 
         // If the link is longer then we have an issue
         if (data.info.reduction < 0) {
-            this.log(`Reduction is ${data.info.reduction}. Please report this link on GitHub: ${$github}/issues`, 'error');
+            this.log(`Reduction is ${data.info.reduction}. Please report this link on GitHub: ${$github}/issues\n${data.info.original}`, 'error');
             data.url = data.info.original;
         }
 
