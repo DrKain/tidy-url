@@ -51,7 +51,7 @@ export class TidyConfig implements IConfig {
             const val: boolean = obj[key] ?? this[key];
 
             if (typeof this[key] === 'undefined') {
-                throw new Error(`Config error: ${key} is a valid config key`);
+                throw new Error(`'${key}' is not a valid config key`);
             }
 
             this.set(key, val);
