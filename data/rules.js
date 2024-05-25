@@ -1376,6 +1376,11 @@ const $kurlc_rules = [
         name: 'playshoptitans.com',
         match: /playshoptitans.com/i,
         rules: ['af_ad', 'pid', 'source_caller', 'shortlink', 'c']
+    },
+    {
+        name: 'news.com.au',
+        match: /www.news.com.au/i,
+        rules: ['sourceCode']
     }
 ]
 
