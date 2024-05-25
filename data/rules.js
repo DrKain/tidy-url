@@ -1363,6 +1363,11 @@ const $kurlc_rules = [
         amp: {
             sliceTrailing: 'amp/'
         }
+    },
+    {
+        name: 'playshoptitans.com',
+        match: /playshoptitans.com/i,
+        rules: ['af_ad', 'pid', 'source_caller', 'shortlink', 'c']
     }
 ]
 
