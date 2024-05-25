@@ -1,4 +1,4 @@
-Total unique rules: 852
+Total unique rules: 875
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -26,6 +26,7 @@ Total unique rules: 852
 | blog.twitch.tv                | 1     |
 | bn5x.net                      | 1     |
 | bostonglobe.com               | 1     |
+| bostonherald.com              | 4     |
 | boxofficemojo.com             | 1     |
 | businesstoday.in              | 1     |
 | buyatoyota.com                | 1     |
@@ -130,6 +131,7 @@ Total unique rules: 852
 | nbcconnecticut.com            | 1     |
 | nbcnews.com                   | 2     |
 | news.artnet.com               | 1     |
+| news.com.au                   | 1     |
 | newsflare.com                 | 1     |
 | newsletter.manor.ch           | 1     |
 | newsweek.com                  | 2     |
@@ -148,6 +150,7 @@ Total unique rules: 852
 | pixiv.net                     | 3     |
 | play.google.com               | 2     |
 | playbook.com                  | 1     |
+| playshoptitans.com            | 5     |
 | plex.tv                       | 4     |
 | porndude.link                 | 1     |
 | primevideo.com                | 2     |
@@ -156,6 +159,7 @@ Total unique rules: 852
 | qflm.net                      | 1     |
 | quizlet.com                   | 2     |
 | ranker.com                    | 5     |
+| realestate.com.au             | 9     |
 | redbubble.com                 | 1     |
 | reddit.com                    | 16    |
 | redirect.viglink.com          | 1     |
@@ -173,6 +177,7 @@ Total unique rules: 852
 | stardockentertainment.info    | 1     |
 | startpage.com                 | 1     |
 | stats.newswire.com            | 1     |
+| steam.gs                      | 1     |
 | steamcommunity.com            | 1     |
 | steamcommunity.com/linkfilter | 1     |
 | store.steampowered.com        | 1     |
@@ -206,6 +211,7 @@ Total unique rules: 852
 | wingamestore.com              | 1     |
 | wish.com                      | 1     |
 | wsj.com                       | 1     |
+| wvva.com                      | 1     |
 | xhamster.com                  | 1     |
 | xvideos.com                   | 1     |
 | xvideos.red                   | 3     |
