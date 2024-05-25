@@ -1164,6 +1164,14 @@ const $kurlc_rules = [
         }
     },
     {
+        name: 'steam.gs',
+        match: /steam.gs/i,
+        decode: {
+            targetPath: true,
+            handler: 'steam.gs'
+        }
+    },
+    {
         name: '0yxjo.mjt.lu',
         match: /0yxjo.mjt.lu/i,
         decode: {

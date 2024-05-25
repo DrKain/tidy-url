@@ -51,6 +51,21 @@ handlers['stardockentertainment.info'] = {
     }
 };
 
+handlers['steam.gs'] = {
+    exec: (str, args) => {
+        try {
+            const target = str.split('%3Eutm_').shift();
+            let url = '';
+
+            if (target) url = target;
+
+            return { url: url };
+        } catch (error) {
+            return { url: args.originalURL, error };
+        }
+    }
+};
+
 handlers['0yxjo.mjt.lu'] = {
     exec: (str, args) => {
         try {
