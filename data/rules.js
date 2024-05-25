@@ -16,7 +16,7 @@ const $kurlc_rules = [
             'itm_audience',
             // INT parameters, another variant of UTM
             'int_source', 'int_cmp_name', 'int_cmp_id', 'int_cmp_creative',
-            'int_medium', 'int_campaign',
+            'int_medium', 'int_campaign', 'int_content',
             // piwik (https://github.com/DrKain/tidy-url/issues/49)
             'pk_campaign', 'pk_cpn', 'pk_source', 'pk_medium',
             'pk_keyword', 'pk_kwd', 'pk_content', 'pk_cid',
