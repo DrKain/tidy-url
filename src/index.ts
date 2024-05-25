@@ -311,6 +311,8 @@ export class TidyCleaner {
                 if (!cleaner.has(rule.decode.param) && rule.decode.targetPath !== true) continue;
                 // These will almost always be clickjacking links, so use the allowRedirects rule if enabled
                 if (!this.config.allowRedirects) continue;
+                // Don't process the decode handler if it's disabled
+                if (this.config.allowCustomHandlers === false && rule.decode.handler) continue;
                 // Decode the string using selected encoding
                 const encoding = rule.decode.encoding || 'base64';
                 // Sometimes the website path is what we need to decode
