@@ -1386,6 +1386,15 @@ const $kurlc_rules = [
         name: 'wvva.com',
         match: /www.wvva.com/i,
         rules: ['outputType']
+    },
+    {
+        name: 'realestate.com.au',
+        match: /www.realestate.com.au/i,
+        rules: [
+            'campaignType', 'campaignChannel', 'campaignName',
+            'campaignContent', 'campaignSource', 'campaignPlacement',
+            'sourcePage', 'sourceElement', 'cid'
+        ]
     }
 ]
 
