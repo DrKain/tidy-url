@@ -1358,7 +1358,8 @@ const $kurlc_rules = [
     },
     {
         name: 'bostonherald.com',
-        match: /www.bostonherald.com/i,
+        match: /bostonherald.com/i,
+        rules: ['g2i_source', 'g2i_medium', 'g2i_campaign'],
         amp: {
             sliceTrailing: 'amp/'
         }
