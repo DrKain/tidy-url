@@ -1381,6 +1381,11 @@ const $kurlc_rules = [
         name: 'news.com.au',
         match: /www.news.com.au/i,
         rules: ['sourceCode']
+    },
+    {
+        name: 'wvva.com',
+        match: /www.wvva.com/i,
+        rules: ['outputType']
     }
 ]
 
