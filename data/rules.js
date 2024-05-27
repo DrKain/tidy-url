@@ -473,7 +473,7 @@ module.exports = [
     {
         name: 'etsy.com',
         match: /www.etsy.com/i,
-        rules: ['click_key', 'click_sum', 'rec_type', 'ref', 'frs', 'sts']
+        rules: ['click_key', 'click_sum', 'rec_type', 'ref', 'frs', 'sts', 'dd_referrer']
     },
     {
         name: 'wattpad.com',
