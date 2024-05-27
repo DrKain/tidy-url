@@ -1,5 +1,5 @@
 import { IHandler } from './interface';
-import { decodeBase64, regexExtract } from './utils';
+import { decodeBase64, regexExtract, validateURL } from './utils';
 
 /**
  * This is currently experimental while I decide on how I want to restructure the main code to make it easier to follow.
@@ -106,6 +106,36 @@ handlers['deals.dominos.co.nz'] = {
 
             if (!target) throw new Error('Missing target');
             url = decodeBase64(target);
+
+            return { url };
+        } catch (error) {
+            return { url: args.originalURL, error };
+        }
+    }
+};
+
+handlers['redirectingat.com'] = {
+    exec(str, args) {
+        try {
+            let url = '';
+            const [host, target, ..._other] = str.split('?id');
+
+            // Make sure the redirect rule hasn't already processed this
+            if (host === 'https://go.redirectingat.com/') {
+                const decoded = decodeURIComponent(target);
+                const corrected = new URL(`${host}?id=${decoded}`);
+                const param = corrected.searchParams.get('url');
+
+                // Make sure the decoded parameters are a valid URL
+                if (param && validateURL(param) === true) {
+                    url = param;
+                } else {
+                    throw Error('Handler failed, result: ' + param ?? 'No param');
+                }
+            } else {
+                // If the host is different nothing needs to be modified
+                url = args.originalURL;
+            }
 
             return { url };
         } catch (error) {

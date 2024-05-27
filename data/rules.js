@@ -1,4 +1,4 @@
-const $kurlc_rules = [
+module.exports = [
     {
         name: 'Global',
         match: /.*/,
@@ -1395,7 +1395,12 @@ const $kurlc_rules = [
             'campaignContent', 'campaignSource', 'campaignPlacement',
             'sourcePage', 'sourceElement', 'cid'
         ]
+    },
+    {
+        name: 'redirectingat.com',
+        match: /redirectingat.com/i,
+        redirect: 'url',
+        rules: ['id', 'xcust', 'xs'],
+        decode: { handler: 'redirectingat.com', targetPath: true }
     }
 ]
-
-module.exports = $kurlc_rules;
