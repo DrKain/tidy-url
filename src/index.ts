@@ -65,7 +65,7 @@ export class TidyCleaner {
      * Only log to the console if debug is enabled
      * @param str Message
      */
-    private log(str: string, type: 'all' | 'error' | 'info' | 'warn') {
+    private log(str: string, type: 'all' | 'error' | 'info' | 'warn' | 'debug') {
         this.loglines.push({ type, message: str });
         if (!this.config.silent) console.log(`[${type}] ${str}`);
     }
@@ -306,6 +306,7 @@ export class TidyCleaner {
         // Decode handler
         for (const rule of data.info.match) {
             try {
+                this.log(`Processing decode rule (${rule.name})`, 'debug');
                 if (!rule.decode) continue;
                 // Make sure the target parameter exists
                 if (!cleaner.has(rule.decode.param) && rule.decode.targetPath !== true) continue;
@@ -365,8 +366,9 @@ export class TidyCleaner {
                         });
 
                         // If the handler threw an error or the URL is invalid
-                        if (result.error || validateURL(result.url) === false) {
-                            if (result.url !== 'undefined') this.log(result.error, 'error');
+                        if (result.error || validateURL(result.url) === false || result.url.trim() === '') {
+                            if (result.error) this.log(result.error, 'error');
+                            else this.log('Unknown error with decode handler, empty response returned', 'error');
                         }
 
                         // result.url will always by the original URL when an error is thrown
