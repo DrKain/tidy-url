@@ -1,4 +1,4 @@
-Total unique rules: 875
+Total unique rules: 881
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -55,7 +55,7 @@ Total unique rules: 875
 | elprogreso.es                 | 1     |
 | emjcd.com                     | 1     |
 | etail.market                  | 1     |
-| etsy.com                      | 6     |
+| etsy.com                      | 7     |
 | eufy.com                      | 1     |
 | eufylife.com                  | 1     |
 | eufylife.com                  | 1     |
@@ -163,6 +163,7 @@ Total unique rules: 875
 | redbubble.com                 | 1     |
 | reddit.com                    | 16    |
 | redirect.viglink.com          | 1     |
+| redirectingat.com             | 5     |
 | s.amazon-adsystem.com         | 6     |
 | s.pemsrv.com                  | 10    |
 | seek.co.nz                    | 2     |
