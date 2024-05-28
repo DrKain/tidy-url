@@ -1402,5 +1402,10 @@ module.exports = [
         redirect: 'url',
         rules: ['id', 'xcust', 'xs'],
         decode: { handler: 'redirectingat.com', targetPath: true }
+    },
+    {
+        name: 'map.sewoon.org',
+        match: /map.sewoon.org/i,
+        rules: ['cid']
     }
 ]
