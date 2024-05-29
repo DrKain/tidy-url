@@ -1407,5 +1407,11 @@ module.exports = [
         name: 'map.sewoon.org',
         match: /map.sewoon.org/i,
         rules: ['cid']
+    },
+    {
+        name: 'vi-control.net',
+        match: /[&?]source=https:\/\/vi-control\.net(?:\/community|$)/gi,
+        match_href: true,
+        rules: ['source']
     }
 ]
