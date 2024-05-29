@@ -1410,7 +1410,7 @@ module.exports = [
     },
     {
         name: 'vi-control.net',
-        match: /[&?]source=https:\/\/vi-control\.net(?:\/community|$)/gi,
+        match: /[&?]source=https:\/\/vi-control\.net\/community$/,
         match_href: true,
         rules: ['source']
     }
