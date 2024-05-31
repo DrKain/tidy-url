@@ -95,6 +95,7 @@ export const regexExtract = (regex: RegExp, str: string): string[] => {
     let result: string[] = [];
     let i = 0;
 
+    // Limit to 10 to avoid infinite loop
     while ((matches = regex.exec(str)) !== null && i !== 10) {
         i++;
         if (matches.index === regex.lastIndex) regex.lastIndex++;
