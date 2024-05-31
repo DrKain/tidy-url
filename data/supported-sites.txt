@@ -1,4 +1,4 @@
-Total unique rules: 883
+Total unique rules: 884
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -201,6 +201,7 @@ Total unique rules: 883
 | turnto10.com                  | 1     |
 | tvguide.com                   | 1     |
 | twitch.tv                     | 3     |
+| twitch.tv-email               | 1     |
 | twitter.com                   | 4     |
 | urbandictionary.com           | 1     |
 | urldefense.proofpoint.com     | 1     |
