@@ -1,5 +1,5 @@
 import { IHandler } from './interface';
-import { decodeBase64, regexExtract, validateURL } from './utils';
+import { decodeBase64, isJSON, regexExtract, validateURL } from './utils';
 
 /**
  * This is currently experimental while I decide on how I want to restructure the main code to make it easier to follow.
@@ -135,6 +135,35 @@ handlers['redirectingat.com'] = {
             } else {
                 // If the host is different nothing needs to be modified
                 url = args.originalURL;
+            }
+
+            return { url };
+        } catch (error) {
+            return { url: args.originalURL, error };
+        }
+    }
+};
+
+handlers['twitch.tv-email'] = {
+    note: 'This is used for email tracking',
+    exec(str, args) {
+        try {
+            // This is the regex used to extract the decodable string
+            const reg = /www\.twitch\.tv\/r\/e\/(.*?)\//;
+            let url = '';
+            // Extract the decodable string from the URL
+            let data = regexExtract(reg, str);
+            // The second result is what we want
+            let decode = decodeBase64(data[1]);
+            // Parse the string, this should be JSON
+            let parse = JSON.parse(decode);
+
+            /**
+             * This one is a bit tricky. I don't use Twitch often so I've limited it to "twitch_favorite_up",
+             * In my case this was when a streamer I follow came online.
+             */
+            if (parse['name'] === 'twitch_favorite_up') {
+                url = 'https://www.twitch.tv/' + parse.channel;
             }
 
             return { url };

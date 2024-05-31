@@ -108,6 +108,12 @@ module.exports = [
         rules: ['tt_medium', 'tt_content', 'tt_email_id']
     },
     {
+        name: 'twitch.tv-email',
+        match_href: true,
+        match: /www.twitch.tv\/r\/e/i,
+        decode: { handler: 'twitch.tv-email', targetPath: true }
+    },
+    {
         name: 'blog.twitch.tv',
         match: /blog.twitch.tv/i,
         rules: ['utm_referrer']
