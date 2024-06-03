@@ -1,4 +1,4 @@
-## ♡ Tidy URL
+# [![Tidy-URL](text-logo.png)](#)
 
 A Node Package & Userscript that removes tracking or garbage parameters from URLs making them shorter, cleaner and a lot nicer to read.
 
