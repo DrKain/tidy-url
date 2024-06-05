@@ -1,4 +1,4 @@
-import { EEncoding, ILinkDiff } from './interface';
+import { EEncoding, IGuessEncoding, ILinkDiff } from './interface';
 
 /**
  * Accepts any base64 string and attempts to decode it.
@@ -70,6 +70,38 @@ export const validateURL = (url: string): boolean => {
         }
         return false;
     }
+};
+
+/**
+ * Check if a string is b64. For now this should only be
+ * used in testing.
+ * @param str Any possible b64 string
+ * @returns true/false
+ */
+export const isB64 = (str: string): boolean => {
+    try {
+        const regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+        return regex.test(str);
+    } catch (error) {
+        // Using try/catch to be safe
+        return false;
+    }
+};
+
+/**
+ * DO NOT USE THIS IN HANDLERS.
+ * This is purely for use in testing to save time.
+ * This is not reliable, there are many incorrect
+ * encodings and it will fail in a lot of cases.
+ * Do not use it anywhere else.
+ * @param str Any string
+ * @returns An object with possible encodings
+ */
+export const guessEncoding = (str: string): IGuessEncoding => {
+    return {
+        base64: isB64(str),
+        isJSON: isJSON(str)
+    };
 };
 
 /**

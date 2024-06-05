@@ -162,3 +162,8 @@ export interface ILinkDiff {
     difference: number;
     reduction: number;
 }
+
+export interface IGuessEncoding {
+    base64: boolean;
+    isJSON: boolean;
+}
