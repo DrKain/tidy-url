@@ -1,4 +1,5 @@
 import { TidyURL } from './src';
+import { decodeBase64, guessEncoding } from './src/utils';
 
 TidyURL.config.setMany({
     silent: false,
@@ -26,7 +27,13 @@ for (const test of tests) {
     if (test === tests[tests.length - 1]) {
         const params = new URL(link.url).searchParams;
         console.log(link);
-        params.forEach((val, key) => console.log({ [key]: val }));
+        params.forEach((val, key) => {
+            // This is just to save time when testing URLs
+            const possible = guessEncoding(val);
+            if (possible.base64) console.log(`'${key}' might be base64: ${decodeBase64(val)}`);
+            if (possible.isJSON) console.log(`'${key}' might be JSON: ${JSON.stringify(val)}`);
+            console.log({ [key]: val });
+        });
     }
 
     console.log(TidyURL.loglines);
