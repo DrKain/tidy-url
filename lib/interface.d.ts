@@ -89,11 +89,11 @@ export interface IData {
         decoded: {
             [key: string]: any;
         } | null;
-        /** @deprecated Please use `isNewHost` */
+        /** @deprecated Please use `isNewHost`. This will be removed in the next major update. */
         is_new_host: boolean;
         /** If the compared links have different hosts */
         isNewHost: boolean;
-        /** @deprecated Please use `fullClean` */
+        /** @deprecated Please use `fullClean`. This will be removed in the next major update. */
         full_clean: boolean;
         /** If the code reached the end of the clean without error */
         fullClean: boolean;
@@ -159,4 +159,8 @@ export interface ILinkDiff {
     isNewHost: boolean;
     difference: number;
     reduction: number;
+}
+export interface IGuessEncoding {
+    base64: boolean;
+    isJSON: boolean;
 }

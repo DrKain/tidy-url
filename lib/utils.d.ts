@@ -1,4 +1,4 @@
-import { EEncoding, ILinkDiff } from './interface';
+import { EEncoding, IGuessEncoding, ILinkDiff } from './interface';
 /**
  * Accepts any base64 string and attempts to decode it.
  * If run through the browser `atob` will be used, otherwise
@@ -27,6 +27,23 @@ export declare const urlHasParams: (url: string) => boolean;
  * @returns true / false
  */
 export declare const validateURL: (url: string) => boolean;
+/**
+ * Check if a string is b64. For now this should only be
+ * used in testing.
+ * @param str Any possible b64 string
+ * @returns true/false
+ */
+export declare const isB64: (str: string) => boolean;
+/**
+ * DO NOT USE THIS IN HANDLERS.
+ * This is purely for use in testing to save time.
+ * This is not reliable, there are many incorrect
+ * matches and it will fail in a lot of cases.
+ * Do not use it anywhere else.
+ * @param str Any string
+ * @returns An object with possible encodings
+ */
+export declare const guessEncoding: (str: string) => IGuessEncoding;
 /**
  * Calculates the difference between two links and returns an object of information.
  * @param firstURL Any valid URL
