@@ -92,7 +92,7 @@ export const isB64 = (str: string): boolean => {
  * DO NOT USE THIS IN HANDLERS.
  * This is purely for use in testing to save time.
  * This is not reliable, there are many incorrect
- * encodings and it will fail in a lot of cases.
+ * matches and it will fail in a lot of cases.
  * Do not use it anywhere else.
  * @param str Any string
  * @returns An object with possible encodings
