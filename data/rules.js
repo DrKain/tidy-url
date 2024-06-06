@@ -1419,5 +1419,11 @@ module.exports = [
         match: /[&?]source=https:\/\/vi-control\.net\/community$/,
         match_href: true,
         rules: ['source']
+    },
+    {
+        name: 'rosequake.com',
+        match: /www.rosequake.com/i,
+        rules: ['edmID', 'linkID', 'userID', 'em', 'taskItemID'],
+        redirect: 'to'
     }
 ]
