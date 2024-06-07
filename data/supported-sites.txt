@@ -1,4 +1,4 @@
-Total unique rules: 890
+Total unique rules: 892
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -165,6 +165,7 @@ Total unique rules: 890
 | reddit.com                    | 16    |
 | redirect.viglink.com          | 1     |
 | redirectingat.com             | 5     |
+| rekrute.com                   | 2     |
 | rosequake.com                 | 6     |
 | s.amazon-adsystem.com         | 6     |
 | s.pemsrv.com                  | 10    |
