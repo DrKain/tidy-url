@@ -27,13 +27,16 @@ for (const test of tests) {
     if (test === tests[tests.length - 1]) {
         const params = new URL(link.url).searchParams;
         console.log(link);
+        console.log('--- start:params ---');
         params.forEach((val, key) => {
             // This is just to save time when testing URLs
             const possible = guessEncoding(val);
             if (possible.base64) console.log(`'${key}' might be base64: ${decodeBase64(val)}`);
             if (possible.isJSON) console.log(`'${key}' might be JSON: ${JSON.stringify(val)}`);
+            if (/script/i.test(val)) console.warn(`'${key}' Possible XSS`);
             console.log({ [key]: val });
         });
+        console.log('--- end:params ---');
     }
 
     console.log(TidyURL.loglines);
