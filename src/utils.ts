@@ -31,7 +31,8 @@ export const decodeBase64 = (str: string): string => {
  */
 export const isJSON = (data: string): boolean => {
     try {
-        JSON.parse(data);
+        const sample = JSON.parse(data);
+        if (typeof sample !== 'object') return false;
         return true;
     } catch (error) {
         return false;
