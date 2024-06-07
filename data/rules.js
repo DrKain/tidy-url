@@ -1425,5 +1425,12 @@ module.exports = [
         match: /www.rosequake.com/i,
         rules: ['edmID', 'linkID', 'userID', 'em', 'taskItemID'],
         redirect: 'to'
+    },
+    {
+        name: 'rekrute.com',
+        match: /www.rekrute.com/i,
+        rules: ['clear'],
+        // Malicious domain. This rule will bypass the XSS attempt
+        redirect: 'keyword'
     }
 ]
