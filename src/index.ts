@@ -58,7 +58,7 @@ export class TidyCleaner {
      */
     private log(str: string, type: 'all' | 'error' | 'info' | 'warn' | 'debug') {
         this.loglines.push({ type, message: str });
-        if (!this.config.silent) console.log(`[${type}] ${str}`);
+        if (this.config.silent !== false) console.log(`[${type}] ${str}`);
     }
 
     /**
