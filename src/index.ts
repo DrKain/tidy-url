@@ -8,15 +8,6 @@ const $github = 'https://github.com/DrKain/tidy-url';
 export class TidyCleaner {
     public rules: IRule[] = [];
 
-    /** @deprecated Please use `config.silent` */
-    public silent!: boolean;
-    /** @deprecated Please use `config.allowAMP` */
-    public allow_amp!: boolean;
-    /** @deprecated Please use `config.allowRedirects` */
-    public allow_redirects!: boolean;
-    /** @deprecated Please use `config.allowCustomHandlers` */
-    public allow_custom_handlers!: boolean;
-
     /**
      * Stores config options for this cleaner. If you would like to
      * use multiple configs simply create a new instance
@@ -83,26 +74,7 @@ export class TidyCleaner {
      * This lets users know when they are using the deprecated variables that will
      * be removed in a few updates.
      */
-    private syncDeprecatedToConfig() {
-        const c = this.config;
-
-        if (this.allow_amp !== undefined) {
-            this.config.allowAMP = this.allow_amp;
-            this.log('DEPRECATED: Please use `config.allowAMP` instead of `allow_amp`', 'warn');
-        }
-        if (this.allow_redirects !== undefined) {
-            this.config.allowRedirects = this.allow_redirects;
-            this.log('DEPRECATED: Please use `config.allowRedirects` instead of `allow_redirects`', 'warn');
-        }
-        if (this.allow_custom_handlers !== undefined) {
-            this.config.allowCustomHandlers = this.allow_custom_handlers;
-            this.log('DEPRECATED: Please use `config.allowCustomHandlers` instead of `allow_custom_handlers`', 'warn');
-        }
-        if (this.silent !== undefined) {
-            this.config.silent = this.silent;
-            this.log('DEPRECATED: Please use `config.silent` instead of `silent`', 'warn');
-        }
-    }
+    private syncDeprecatedToConfig() {}
 
     /** @deprecated Import `validateURL` instead */
     public validate(url: string): boolean {
