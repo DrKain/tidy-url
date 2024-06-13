@@ -1432,5 +1432,11 @@ module.exports = [
         rules: ['clear'],
         // Malicious domain. This rule will bypass the XSS attempt
         redirect: 'keyword'
+    },
+    {
+        name: 'go.skimresources.com',
+        match: /go.skimresources.com/i,
+        rules: ['id', 'xs', 'xcust'],
+        redirect: 'url'
     }
 ]
