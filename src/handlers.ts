@@ -43,6 +43,7 @@ handlers['stardockentertainment.info'] = {
 
             if (typeof target == 'undefined') throw new Error('Undefined target');
             url = decodeBase64(target);
+            if (url.includes('watch>v=')) url = url.replace('watch>v=', 'watch?v=');
 
             return { url: url };
         } catch (error) {
