@@ -1438,5 +1438,14 @@ module.exports = [
         match: /go.skimresources.com/i,
         rules: ['id', 'xs', 'xcust'],
         redirect: 'url'
+    },
+    {
+        name: 'khnum-ezi.com',
+        match: /khnum-ezi.com/i,
+        rules: [
+            'browserWidth', 'browserHeight', 'iframeDetected',
+            'webdriverDetected', 'gpu', 'timezone', 'visitid',
+            'type', 'timezoneName'
+        ]
     }
 ]
