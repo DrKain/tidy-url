@@ -2,14 +2,6 @@ import { IRule, IData } from './interface';
 import { TidyConfig } from './config';
 export declare class TidyCleaner {
     rules: IRule[];
-    /** @deprecated Please use `config.silent` */
-    silent: boolean;
-    /** @deprecated Please use `config.allowAMP` */
-    allow_amp: boolean;
-    /** @deprecated Please use `config.allowRedirects` */
-    allow_redirects: boolean;
-    /** @deprecated Please use `config.allowCustomHandlers` */
-    allow_custom_handlers: boolean;
     /**
      * Stores config options for this cleaner. If you would like to
      * use multiple configs simply create a new instance

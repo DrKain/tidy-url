@@ -1,4 +1,4 @@
-Total unique rules: 892
+Total unique rules: 905
 
 | Match                         | Rules |
 | :---------------------------- | :---- |
@@ -74,6 +74,7 @@ Total unique rules: 892
 | garageclothing.com            | 2     |
 | gate.sc                       | 1     |
 | getmusicbee.com               | 1     |
+| go.skimresources.com          | 4     |
 | go2cloud.org                  | 1     |
 | gog.com                       | 7     |
 | gog.salesmanago.com           | 4     |
@@ -100,6 +101,7 @@ Total unique rules: 892
 | jobs.venturebeat.com          | 1     |
 | joybuggy.com                  | 1     |
 | justwatch.com                 | 5     |
+| khnum-ezi.com                 | 9     |
 | knowyourmeme.com              | 1     |
 | ko-fi.com                     | 2     |
 | kqzyfj.com                    | 3     |
