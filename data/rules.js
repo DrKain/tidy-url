@@ -1447,5 +1447,10 @@ module.exports = [
             'webdriverDetected', 'gpu', 'timezone', 'visitid',
             'type', 'timezoneName'
         ]
+    },
+    {
+        name: 'theatlantic.com',
+        match: /(?:www|accounts)\.theatlantic\.com/i,
+        rules: ['source', 'referral']
     }
 ]
