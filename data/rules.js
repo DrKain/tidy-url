@@ -1471,12 +1471,13 @@ module.exports = [
     },
     {
         name: 'milda-clq.com',
+        // Linked to (khnum-ezi.com) as they are the same
         match: /milda-clq.com/,
         rules: [
             'visitid', 'type', 'browserWidth',
-            'browserHeight', 'browserHeight',
-            'webdriverDetected', 'timezone',
-            'gpu', 'iframeDetected', 'timezoneName'
+            'browserHeight', 'webdriverDetected',
+            'timezone', 'gpu', 'iframeDetected',
+            'timezoneName'
         ]
     }
 ]
