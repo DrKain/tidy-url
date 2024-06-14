@@ -1462,5 +1462,11 @@ module.exports = [
         name: 'cointiply.com',
         match: /cointiply.com/i,
         rules: ['source_cta']
+    },
+    {
+        name: 'dev.to',
+        match: /dev.to/,
+        rules: ['t', 's', 'u'],
+        redirect: 'u'
     }
 ]
