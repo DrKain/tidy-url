@@ -1457,5 +1457,10 @@ module.exports = [
         name: 'rumble.com',
         match: /rumble.com/i,
         rules: ['e9s']
+    },
+    {
+        name: 'cointiply.com',
+        match: /cointiply.com/i,
+        rules: ['source_cta']
     }
 ]
