@@ -1452,5 +1452,10 @@ module.exports = [
         name: 'theatlantic.com',
         match: /(?:www|accounts)\.theatlantic\.com/i,
         rules: ['source', 'referral']
+    },
+    {
+        name: 'rumble.com',
+        match: /rumble.com/i,
+        rules: ['e9s']
     }
 ]
