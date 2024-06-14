@@ -1468,5 +1468,15 @@ module.exports = [
         match: /dev.to/,
         rules: ['t', 's', 'u'],
         redirect: 'u'
+    },
+    {
+        name: 'milda-clq.com',
+        match: /milda-clq.com/,
+        rules: [
+            'visitid', 'type', 'browserWidth',
+            'browserHeight', 'browserHeight',
+            'webdriverDetected', 'timezone',
+            'gpu', 'iframeDetected', 'timezoneName'
+        ]
     }
 ]
